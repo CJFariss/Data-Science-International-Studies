@@ -1,8 +1,8 @@
-## R_DSIS_week1_Introduction_week1.R
+## R_DSIS_week01_Introduction_week1.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022
+## University of Michigan, Winter 2022, Winter 2021, Winter 2020
 ##
 ## week 1
 ##

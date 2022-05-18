@@ -1,10 +1,10 @@
-## R_DSIS_week4_lists_dataframes_tables_week4.R
+## R_DSIS_week04_lists_dataframes_tables_week4.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022
+## University of Michigan, Winter 2022, Winter 2021, Winter 2020
 ##
-## Week 3
+## Week 4 (sometimes week 3 depending on the course schedule)
 ##
 ## Please e-mail me if you find any errors or have and suggestions (either email is fine)
 ## e-mail: cjf0006@gmail.com

@@ -1,4 +1,4 @@
-## R_DSIS_week6_functions.R
+## R_DSIS_week06_functions.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
