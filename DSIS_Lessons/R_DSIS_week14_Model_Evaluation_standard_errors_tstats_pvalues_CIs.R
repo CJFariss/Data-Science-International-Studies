@@ -25,49 +25,50 @@
 ##########################################################################
 ## Introduction to tutorial:
 ## For this R tutorial, we will learn:
-## 
+##
 ## (1) First we will estimate the mean of the estimand (MU)
 ## (2) How to calculate and interpret standard errors
 ## (3) How to calculate and interpret t-statistics (or Z-scores)
 ## (4) How to calculate and interpret p-values
 ## (5) How to calculate and interpret a 95% Confidence Interval (CI)
-## 
-## Warning!: p-value are weird and confusing. Put another way: WTF is a p-value?
+##
+## Warning!: p-values are weird and confusing. Put another way: WTF is a p-value?
 ##
 ## The p-value is a probability but it is not intuitive to think about. Even though p-values are confusing, they are used everywhere so we should try to understand what a p-value means and what it does not mean.
 ##
-## First, to calculate a p-value, we need to first calculate the estimate of interest (e.g., mean, correlation coefficient, regression coefficient). Remember the mean or any other estimate is our representation or summary of our data. Conceptually, we think of the true value of the parameter we are interested in as unobservable so its theoretical in nature. We call this the estimand or sometimes the population parameter (there are lots of ways to denote this idea). 
+## First, to calculate a p-value, we need to first calculate the estimate of interest (e.g., mean, correlation coefficient, regression coefficient). Remember the mean or any other estimate is our representation or summary of our data. Conceptually, we think of the true value of the parameter we are interested in as unobservable so it's theoretical in nature. We call this the estimand or sometimes the population parameter (there are lots of ways to denote this idea).
 ##
-## Second, we calculate the interval around the estimate, which is the standard error of the estimate (the standard error is technically the standard deviation of the estimate but since we only have one estimate and not a distribution of estimates we cannot simply calculate the standard deviation so we estimate it and call it the standard error). We use an estimator, which is just an alogrithim or procedure to calculate the estimate. 
+## Second, we calculate the interval around the estimate, which is the standard error of the estimate (the standard error is technically the standard deviation of the estimate but since we only have one estimate and not a distribution of estimates we cannot simply calculate the standard deviation so we estimate it and call it the standard error). We use an estimator, which is just an algorithm or procedure to calculate the estimate.
 ##
-## Third, we calculate the position of the estimate relative to 0 using a density function dt() or dnorm(). Usually, we use the Student's t distribution dt() but sometimes we use the normal density function dnorm(). Note that we are assuming that the distributions is centered at 0 (more on this assumption below).
+## Third, we calculate the position of the estimate relative to 0 using a density function dt() or dnorm(). Usually, we use the Student's t distribution dt() but sometimes we use the normal density function dnorm(). Note that we are assuming that the distribution is centered at 0 (more on this assumption below).
 ##
 ## Fourth, we calculate the p-value. The p-value is the probability that the estimate is contained in the interval around 0, given that we assumed the estimate was 0 in the first place. But there are many other related but not quite correct interpretations of the p-value that exist so be wary!
 ##
-## Put another way, the p-value is the probability that an estimate (e.g., mean, regression coefficient) is not far away from 0, assuming that 0 is the "Truth". 
+## Put another way, the p-value is the probability that an estimate (e.g., mean, regression coefficient) is not far away from 0, assuming that 0 is the "Truth".
 ##
-## The assumption that the estimate is 0 is the "Truth" is called the null hypothesis (H_{0}). We assume that the estimate is 0 and then see how far away (distance using a density function) it is from the value we actually calculate from the data. So we can define the p-value as the probability of the data given the null hypothesis: p(data | H0). 
+## The assumption that the estimate is 0 is the "Truth" is called the null hypothesis (H_{0}). We assume that the estimate is 0 and then see how far away (distance using a density function) it is from the value we actually calculate from the data. So we can define the p-value as the probability of the data given the null hypothesis: p(data | H0).
 ##
-## p-values that are small, usually less than 0.1, 0.05, or 0.01, are used to make the statement that we "reject the null hypothesis" that the true estimate is 0. 
+## p-values that are small, usually less than 0.1, 0.05, or 0.01, are used to make the statement that we "reject the null hypothesis" that the true estimate is 0.
 ##
 ## If the p-value is relatively large (usually larger than 0.1 or 0.05) then we make the statement that we "fail to reject the null hypothesis" that the true estimate is 0. Note that we do not say (and don't have evidence of) that the estimate is 0.
 ##
-## To review: The p-value is the probability that the estimate is contained in the interval around 0. If the p-value is small, then we reject the null hypothesis and can then say we have evidence that the estimate is different than 0, given that we assumed the estimate was 0 in the first place. 
+## To review: The p-value is the probability that the estimate is contained in the interval around 0. If the p-value is small, then we reject the null hypothesis and can then say we have evidence that the estimate is different than 0, given that we assumed the estimate was 0 in the first place.
 ##
 ## There are more intuitive and easy to understand probability statements that we can use to provide evidence that effects are different than 0 but null-hypothesis testing and its terminology is dominant in many different fields (even if not explicitly so) and are produced by many of the functions we use in R like lm(), t.test(), etc.
 ##
-## We will consider Bayesian version of the probability of an estimate in another lesson. Note here that formally it flips the conditionally probability we defined above from p(data | H0) to p(H | data), where H is the research hypothesis we are testing and not the null hypothesis (H0).
+## We will consider the Bayesian version of the probability of an estimate in another lesson. Note here that formally it flips the conditional probability we defined above from p(data | H0) to p(H | data), where H is the research hypothesis we are testing and not the null hypothesis (H0).
 ##
 ## Fifth, we can use the standard error to construct a confidence interval (CI) around the estimate calculated in step (1). CIs are useful descriptions of the range of possible estimates and the uncertainty we have about the estimate we have produced.
 ##
 ## However, CIs are even stranger to think about than p-values given the above discussion. For the p-value, we assume the truth is 0 and estimate the distance from that point using a density function. For the CIs, we estimate an interval around the value of the estimate (e.g., the mean, regression coefficient, etc). Both the distance and the CI interval are constructed using the standard error of the estimate. For the p-value, we assume the ratio: estimate/se_estimate is a point on a density function, usually distributed according to either the Student's t distribution or the standard normal distribution (or the appropriate discrete density function for binary or count data). The CI is the estimate +/- the standard error * some value (usually 1.96 standard deviations for large samples of data, which corresponds with 95% Confidence).
 ##
 ## So we can say that we have 95% confidence that the interval generated from our data will contain the "True" parameter value or the estimand. But this is not a probability statement. Rather it is a statement about the proportion of times the interval we generate and call a confidence interval will contain 0.
-## 
-## A confidence procedure (CP) is a procedure that generates confidence intervals, and is said to have a confidence coefficient of X % if, in repeated sampling, X % of intervals would contain the true parameter value for all values of the true value (Neyman 1937).  
-## 
-## p-values and CIs are strange statistical ideas to think about. With some tinkering though, we can alter these values and interpret them in more intuitive ways that are based on simple probabilities. We need to use Bayes rule and flip the conditionally probability we defined above from p(data | H0) to p(H | data).
-## 
+##
+## A confidence procedure (CP) is a procedure that generates confidence intervals, and is said to have a confidence coefficient of X % if, in repeated sampling, X % of intervals would contain the true parameter value for all values of the true value (Neyman 1937).
+##
+## p-values and CIs are strange statistical ideas to think about. With some tinkering though, we can alter these values and interpret them in more intuitive ways that are based on simple probabilities. We need to use Bayes rule and flip the conditional probability we defined above from p(data | H0) to p(H | data).
+
+##
 ##########################################################################
 
 library(MASS)
