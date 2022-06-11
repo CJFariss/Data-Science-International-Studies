@@ -44,9 +44,9 @@
 ##
 ## Fourth, we calculate the p-value. The p-value is the probability that the estimate is contained in the interval around 0, given that we assumed the estimate was 0 in the first place. But there are many other related but not quite correct interpretations of the p-value that exist so be wary!
 ##
-## Put another way, the p-value is the probability that an estimate (e.g., mean, regression coefficient) is not far away from 0, assuming that 0 is the "Truth".
+## Put another way, the p-value is the probability that an estimate (e.g., mean, regression coefficient) is not far away from 0, assuming that 0 is the "truth".
 ##
-## The assumption that the estimate is 0 is the "Truth" is called the null hypothesis (H_{0}). We assume that the estimate is 0 and then see how far away (distance using a density function) it is from the value we actually calculate from the data. So we can define the p-value as the probability of the data given the null hypothesis: p(data | H0).
+## The assumption that the estimate is 0 is the "truth" is called the null hypothesis (H_{0}). We assume that the estimate is 0 and then see how far away (distance using a density function) it is from the value we actually calculate from the data. So we can define the p-value as the probability of the data given the null hypothesis: p(data | H0).
 ##
 ## p-values that are small, usually less than 0.1, 0.05, or 0.01, are used to make the statement that we "reject the null hypothesis" that the true estimate is 0.
 ##
@@ -62,7 +62,7 @@
 ##
 ## However, CIs are even stranger to think about than p-values given the above discussion. For the p-value, we assume the truth is 0 and estimate the distance from that point using a density function. For the CIs, we estimate an interval around the value of the estimate (e.g., the mean, regression coefficient, etc). Both the distance and the CI interval are constructed using the standard error of the estimate. For the p-value, we assume the ratio: estimate/se_estimate is a point on a density function, usually distributed according to either the Student's t distribution or the standard normal distribution (or the appropriate discrete density function for binary or count data). The CI is the estimate +/- the standard error * some value (usually 1.96 standard deviations for large samples of data, which corresponds with 95% Confidence).
 ##
-## So we can say that we have 95% confidence that the interval generated from our data will contain the "True" parameter value or the estimand. But this is not a probability statement. Rather it is a statement about the proportion of times the interval we generate and call a confidence interval will contain 0.
+## So we can say that we have 95% confidence that the interval generated from our data will contain the "true" parameter value or the estimand. But this is not a probability statement. Rather it is a statement about the proportion of times the interval we generate and call a confidence interval will contain 0.
 ##
 ## A confidence procedure (CP) is a procedure that generates confidence intervals, and is said to have a confidence coefficient of X % if, in repeated sampling, X % of intervals would contain the true parameter value for all values of the true value (Neyman 1937).
 ##
