@@ -13,19 +13,20 @@
 ## Introduction to tutorial:
 ##
 ## For this R tutorial, we will learn how:
-##  (1) how to create objects: scalars, vectors, matrices, and arrays in R
-##  (2) how to access the coordinate systems of these objects using [] (bracket notation)
-##  (3) learn the difference between [], (), and, {} 
-##  (4) manipulate (rotate, flip, overwrite, append to) each of these data objects
-##  (5) learn to explore these objects using the coordinate system
-##  (6) matrix algebra notation (OPTIONAL)
+##  (1) continue practing with the assignment operator "<-"
+##  (2) how to create objects: scalars, vectors, matrices, and arrays in R
+##  (3) how to access the coordinate systems of these objects using [] (bracket notation)
+##  (4) learn the difference between [], (), and, {}, which are called [] brackets, () parenthesis, and {} curly-brackets or squiggly-brackets 
+##  (5) manipulate (rotate, flip, overwrite, append to) each of these data objects
+##  (6) learn to explore these objects using the coordinate system
+##  (7) matrix algebra notation (OPTIONAL)
 ## 
 ##########################################################################
 
 
 
 ##########################################################################
-## numeric scalars vectors
+## numeric scalars and numeric vectors
 ##########################################################################
 
 ## create a scalar object
@@ -44,7 +45,7 @@ length(s)
 ## we can concatenate numbers to the scalar and create a vector by adding the second arugment to the right of the first argument
 c(s,3)
 
-## we can overwright the s obeject so that the new value concatentated to s is saved as a vector s
+## we can overwrite the s object so that the new value concatenated to s is saved as a vector s
 s <- c(s,3)
 
 ## what is the length of s?

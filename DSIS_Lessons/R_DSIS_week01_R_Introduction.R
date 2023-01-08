@@ -14,7 +14,7 @@
 ##
 ## For this R tutorial, we will learn how:
 ##  (1) to find and change the working directory,
-##  (2) what the assignment operator is and how to use it
+##  (2) what the assignment operator "<-" is and how to use it
 ##  (3) how to create objects in the workspace and save those objects to the working directory
 ##  (4) how to load libraries with additional functions
 ##
@@ -223,5 +223,5 @@ save(obj1, file="Myobject.Rdata")
 save.image(file="Myworkspace.Rdata")
 
 
-## we will use other functions to save datasets later in the course
+## we will use other functions to save datasets later in the course but we often do not need to save dataset files. Instead we will practice saving and updating the .R or R-script file (which is this lesson file is an example of).
 
