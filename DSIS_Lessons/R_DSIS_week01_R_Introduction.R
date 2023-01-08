@@ -2,7 +2,7 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022, Winter 2021, Winter 2020
+## University of Michigan, Winter 2013, Winter 2022, Winter 2021, Winter 2020
 ##
 ## week 1
 ##
@@ -51,12 +51,12 @@
 ## When you open R, you are greeted by a prompt: >
 ## This is the character that indicates you can type in your command
 ## Your output will be prefaced by an index for the line number, such as [1]
-## The # character is what we call the "comment" character. When you want to write something in your code that you don't want to run, you need to "comment it out."
+## The # character is what we call the "comment" character. When you want to write something in your code that you don't want to run, you need to "comment it out." The # chatacter used to be called the "pound sign" or "pound key on a phone. Now though it is probably best known as a hashtag.
 
 # I can write comments to the rigth of the comment character
 
 ##########################################################################
-## the work space and working directoy
+## the work space and working directory
 ##########################################################################
 
 ## The working directory is the location where R will look for outside datasets
@@ -113,6 +113,14 @@ help.search("remove")
 ## you can use the underscore character now but more often dot is used instead
 ## I go back and forth between both
 
+##########################################################################
+## assignment operator
+##########################################################################
+
+## there are special functions called operators, which you are well familiar with like the plus sigh: "+"
+
+## the operator + takes two numeric arguments on it's left-hand and right-hand side and return the sum of those two numbers
+2+2
 
 ## create an object and assign a scalar to it (it's really just a vector with one element)
 obj1 <- 3
@@ -128,9 +136,9 @@ obj1 = 2
 obj1
 
 ## use an object in a calculation
-obj1+2
-obj1*2
-obj1^2
+obj1 + 2
+obj1 * 2
+obj1 ^ 2
 
 ## remove just obj1 from memory
 rm(obj1)
@@ -148,13 +156,13 @@ rm(obj1)
 ## install.packages("LIBRARY")
 
 ## unless you have previously installed this package, the following line should generate an error
-library(ks)
+library(MASS)
 
 ## install the new package
-install.packages("ks")
+install.packages("MASS")
 
-## load the new package once it is installed by the line abvove
-library(ks)
+## load the new package once it is installed by the line above
+library(MASS)
 
 ## this function updates packages (we won't use this one too much)
 #update.packages()
