@@ -14,8 +14,9 @@
 ##
 ## For this R tutorial, we will learn how:
 ##  (1) to find and change the working directory,
-##  (2) how to create objects in the workspace and save those objects to the working directory
-##  (3) how to load libraries with additional functions
+##  (2) what the assignment operator is and how to use it
+##  (3) how to create objects in the workspace and save those objects to the working directory
+##  (4) how to load libraries with additional functions
 ##
 ##########################################################################
 ## There are many additional resources available online:
