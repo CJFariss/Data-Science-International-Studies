@@ -2,7 +2,7 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022, Winter 2021, Winter 2020
+## University of Michigan, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
 ## Week 2
 ##
@@ -15,9 +15,10 @@
 ## For this R tutorial, we will learn how:
 ##  (1) how to create objects: scalars, vectors, matrices, and arrays in R
 ##  (2) how to access the coordinate systems of these objects using [] (bracket notation)
-##  (3) manipuate (rotate, flip, overwright, append to) each of these data objects
-##  (4) explore these objects
-##  (5) matrix algebra notation (optional)
+##  (3) learn the difference between [], (), and, {} 
+##  (4) manipulate (rotate, flip, overwrite, append to) each of these data objects
+##  (5) learn to explore these objects using the coordinate system
+##  (6) matrix algebra notation (OPTIONAL)
 ## 
 ##########################################################################
 
@@ -59,7 +60,7 @@ s[2]
 v <- c(1, 2, 3, 4, 5)
 v
 
-## use the [] notation to access the coordinate system of v
+## use the "bracket" [] notation to access the coordinate system of v
 v[5]
 
 ## calculate the average of the vector

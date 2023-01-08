@@ -64,7 +64,7 @@
 ## what is the current working directory?
 getwd()
 
-## set the working directory to an object using the assignment operator <- or = (more on this later)
+## set the working directory to an object using the assignment operator <- or = (more on this later) but always use <-
 wd <- getwd()
 
 ## set the working directory to another folder (actually the same folder in this example)
@@ -119,8 +119,33 @@ help.search("remove")
 
 ## there are special functions called operators, which you are well familiar with like the plus sigh: "+"
 
-## the operator + takes two numeric arguments on it's left-hand and right-hand side and return the sum of those two numbers
+## the operator + takes two numeric arguments on it's left-hand and right-hand side and returns the sum of those two numbers
 2+2
+
+## the assignment operator is two symbols "<" the left chevron and the "-" minus sign or dash sign
+## put these two symbols together with no space "<-" this is the assignment operator
+## the assignment operator is a special function that takes two arguments
+## the left-hand side argument is the object that R holds in memory
+## the right-hand side argument is any value or function (which returns a value)
+
+## the usage can look like:
+
+## object <- some_value
+object <- 2
+object
+
+## object <- some_function()
+object <- sum(2,2)
+object
+
+## some_other_function <- function() ## note that function() is a function that creates a function() which we will talk about in a few weeks
+some_other_function <- function(){}
+some_other_function
+
+
+##########################################################################
+## more examples using the assignment operator
+##########################################################################
 
 ## create an object and assign a scalar to it (it's really just a vector with one element)
 obj1 <- 3
@@ -149,7 +174,7 @@ rm(obj1)
 
 
 ##########################################################################
-## packages/libraries
+## loading other functions from packages/libraries
 ##########################################################################
 
 ## library(LIBRARY) loads a previously installed library
