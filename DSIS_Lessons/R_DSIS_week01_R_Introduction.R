@@ -52,7 +52,7 @@
 ## When you open R, you are greeted by a prompt: >
 ## This is the character that indicates you can type in your command
 ## Your output will be prefaced by an index for the line number, such as [1]
-## The # character is what we call the "comment" character. When you want to write something in your code that you don't want to run, you need to "comment it out." The # chatacter used to be called the "pound sign" or "pound key on a phone. Now though it is probably best known as a hashtag.
+## The # character is what we call the "comment" character. When you want to write something in your code that you don't want to run, you need to "comment it out." The # character used to be called the "pound sign" or "pound key on a phone. Now though it is probably best known as a hashtag.
 
 # I can write comments to the rigth of the comment character
 
@@ -68,10 +68,23 @@ getwd()
 ## set the working directory to an object using the assignment operator <- or = (more on this later) but always use <-
 wd <- getwd()
 
+## print the wd object to the screen
+## note that wd is a character or string variable which by convention we usually call the "path" or "file path"
+wd
+
 ## set the working directory to another folder (actually the same folder in this example)
 setwd(wd)
 
-setwd("/Users/cjfariss/Documents")
+## two ways to move up one directory level
+setwd("./..") ## or setwd("..")
+getwd()
+
+## move back down one level of the directory (note that you need to know the name of the directory-level or folder to move into)
+setwd("./Data-Science-International-Studies")
+getwd()
+
+## another way to figure out which directory/folder that R is looking into is to use the list.files() function
+list.files()
 
 ## list objects in the working environment
 ls()
@@ -104,15 +117,20 @@ help.search("remove")
 
 
 ##########################################################################
-## naming conventions
+## object naming conventions
 ##########################################################################
 
-## R uses $ in a manner analogous to the way other languages use dot.
-## we will look at the use of $ in more detail later
-## R used dot in a similar way to the underscore
+## Objects in R can be named with any letter or LETTER from the alphabet, number, the dot sign ".", or the underscore sign "_"
+## Objects cannot start with a number or "_" but can technically start with "."
+## No other special characraters or reserved operators can be used (e.g., @ $ & + - * or /)
+##
+## R uses $ in a manner analogous to the way other languages use "." dot.
+## We will look at the use of $ in more detail later
+## R uses "." dot in a similar way to the underscore
 ## The underscore character was once the assignment character in S (R's predecessor)
-## you can use the underscore character now but more often dot is used instead
-## I go back and forth between both
+## You can use the underscore character now but more often dot is used instead
+## I go back and forth between both but I try to avoide using "." most of the time now in my own code.
+
 
 ##########################################################################
 ## assignment operator
