@@ -157,7 +157,7 @@ object
 object <- sum(2,2)
 object
 
-## some_other_function <- function() ## note that function() is a function that creates a function() which we will talk about in a few weeks
+## some_other_function <- function() ## note that function() is a function that creates a function() which we will talk about in a few weeks (week 6 and week 7)
 some_other_function <- function(){}
 some_other_function
 
