@@ -1,4 +1,4 @@
-## R_DSIS_week01_Introduction_week1.R
+## R_DSIS_week01_Introduction.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
@@ -54,7 +54,7 @@
 ## Your output will be prefaced by an index for the line number, such as [1]
 ## The # character is what we call the "comment" character. When you want to write something in your code that you don't want to run, you need to "comment it out." The # character used to be called the "pound sign" or "pound key on a phone. Now though it is probably best known as a hashtag.
 
-# I can write comments to the rigth of the comment character
+# I can write comments to the right of the comment character
 
 ##########################################################################
 ## the work space and working directory
@@ -122,7 +122,7 @@ help.search("remove")
 
 ## Objects in R can be named with any letter or LETTER from the alphabet, number, the dot sign ".", or the underscore sign "_"
 ## Objects cannot start with a number or "_" but can technically start with "."
-## No other special characraters or reserved operators can be used (e.g., @ $ & + - * or /)
+## No other special characters or reserved operators can be used (e.g., @ $ & + - * or /)
 ##
 ## R uses $ in a manner analogous to the way other languages use "." dot.
 ## We will look at the use of $ in more detail later
@@ -132,11 +132,14 @@ help.search("remove")
 ## I go back and forth between both but I try to avoide using "." most of the time now in my own code.
 
 
+dice.roll <- 2
+dice_roll <- 2
+
 ##########################################################################
 ## assignment operator
 ##########################################################################
 
-## there are special functions called operators, which you are well familiar with like the plus sigh: "+"
+## there are special functions called operators, which you are well familiar with like the plus sign: "+"
 
 ## the operator + takes two numeric arguments on it's left-hand and right-hand side and returns the sum of those two numbers
 2+2
@@ -187,7 +190,7 @@ obj1 ^ 2
 ## remove just obj1 from memory
 rm(obj1)
 
-## removing objects is often not necessary but memory managment is sometimes important if your
+## removing objects is often not necessary but memory management is sometimes important if your
 ## code is making new objects from old ones instead of overwriting old objects.
 ## I had to learn this the hard way.
 

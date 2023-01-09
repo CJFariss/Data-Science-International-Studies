@@ -13,7 +13,7 @@
 ## Introduction to tutorial:
 ##
 ## For this R tutorial, we will learn how:
-##  (1) continue practing with the assignment operator "<-"
+##  (1) continue practicing with the assignment operator "<-"
 ##  (2) how to create objects: scalars, vectors, matrices, and arrays in R
 ##  (3) how to access the coordinate systems of these objects using [] (bracket notation)
 ##  (4) learn the difference between [], (), and, {}, which are called [] brackets, () parenthesis, and {} curly-brackets or squiggly-brackets 
@@ -47,6 +47,7 @@ c(s,3)
 
 ## we can overwrite the s object so that the new value concatenated to s is saved as a vector s
 s <- c(s,3)
+s
 
 ## what is the length of s?
 length(s)
@@ -109,7 +110,7 @@ rbind(a,a)
 ## vectors as sequences of numbers
 ##########################################################################
 
-## lets create a seqeuence of values using the seq() function
+## lets create a sequence of values using the seq() function
 ## create a sequence of integers from 1 to 5
 seq(from=1, to=5, by=1)
 
