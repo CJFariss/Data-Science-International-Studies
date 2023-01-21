@@ -62,6 +62,20 @@ one_to_one_mapping(1:10)
 ##########################################################################
 
 
+input_ouput_func <- function(input){
+    
+    ## use the input object to creat the output object
+    output <- input
+    
+    ## return the output object
+    return(output)
+}
+input_ouput_func
+input_ouput_func("stuff")
+input_ouput_func(1)
+input_ouput_func(2)
+
+
 ## This simple function can take a more complex object and return it
 ## This will come in handy later on, see especially the program challenges
 one_to_one_mapping(list(2,TRUE,"message in a list, which is kind of like a message in a bottle"))

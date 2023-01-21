@@ -285,6 +285,19 @@ for(i in 1:length(myvec)){
     print(myvec[i])
 }
 
+##
+## use something other than numeric information as the index
+for(i in letters){
+    print(i)
+}
+
+## use unordered numbers
+for(i in c(1,4,800,5,3)){
+    print(i)
+}
+
+
+
 
 ## declare the object in memory so we can access it later on
 vec <- NA
