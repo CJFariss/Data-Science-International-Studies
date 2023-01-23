@@ -50,7 +50,7 @@ vec[c(1,2)]
 ##########################################################################
 ## tables
 ##########################################################################
-## tables also have the look and feel of a matrix or array and we naviage the coordinate system in a similar way. But in this class we will primarily use tables to summarize information from vectors of dataframes. 
+## tables also have the look and feel of a matrix or array and we navigate the coordinate system in a similar way. But in this class we will primarily use tables to summarize information from vectors of dataframes. 
 
 
 ##########################################################################
@@ -74,7 +74,7 @@ s[[1]]
 s <- list(2,4)
 s
 
-## print the first element (this is a list)
+## print the first element (this is a list): AVOID this 
 s[1]
 
 ## print the first element of the list (this a numeric scalar in a list)
@@ -89,6 +89,8 @@ v[1] + 1
 
 s <- list(1,"a")
 s
+
+s[[1]] + 1
 
 ## s is a list with a two single scalar values,
 ## it list of length 2 with a vector of length 1 as the first element of 
@@ -108,6 +110,12 @@ length(v_list)
 length(v_list[[1]])
 unlist(v_list)
 
+v_vec <- unlist(v_list)
+v_vec
+
+is.vector(v_vec)
+is.list(v_vec)
+
 ## create a list of length 1 that contains 1 vector of length 5
 v_list <- list(c(1, 2, 3, 4, 5))
 v_list
@@ -115,6 +123,11 @@ v_list
 length(v_list)
 length(v_list[[1]])
 unlist(v_list)
+
+c_list <- list(1, "b", "c")
+c_list
+
+unlist(c_list)
 
 ## calculate the average of the vector (hint: these won't work)
 mean(v_list)
@@ -137,18 +150,19 @@ max(unlist(v_list))
 ## let's create a new numeric vector
 a <- c(1,2,5.3,6,-2,4)
 
-## stack the colums together as columns and as rows
+## stack the column together as columns and as rows
 cbind(a,a)
 rbind(a,a)
 
 ## make a dataframe out of the two vectors (the object will look visually like the  output from cbind)
 data.frame(a,a)
 
-dat <- data.frame(var1=c("a", "b"), var2=c(1,2))
+dat <- data.frame(var1=c("a", "b", "c"), var2=c(1,2, 500))
 
 dat
 
 dat[,1]
+dat[1:3,1] ## equivalent to dat[,1]
 
 dat[,2]
 
@@ -166,6 +180,10 @@ year
 
 ## make a simple plot
 plot(year, stop_and_frisks)
+
+"navy"
+"orange"
+
 
 ## make the same plot with several additional arguments to make the plot more interesting and informative
 plot(year, stop_and_frisks,
@@ -192,8 +210,14 @@ stop_and_frisks
 ## make a simple plot (this won't work now)
 plot(year, stop_and_frisks)
 
+
+dat[,1]
+dat[,2]
+
 dat$year
 dat$stop_and_frisks
+
+dat$year
 
 ## make the same plot with several additional arguments using the new dataframe we created
 plot(dat$year, dat$stop_and_frisks,
@@ -242,6 +266,7 @@ dat_list[[2]]
 ## print to screen the dat_list as a dataframe
 data.frame(dat_list)
 
+
 ## list the variables in mydata
 names(dat)
 
@@ -265,9 +290,13 @@ head(dat, n=10)
 tail(dat)
 
 ## alternative syntax to look at rows in a data set
+dat[,]
+
 dat[1:10,]
 
 dat[1:10, 1:2]
+
+dat[seq(1,20,by=2),]
 
 ## return summary statistics from a dataframe
 summary(dat)
@@ -372,7 +401,7 @@ table(social_media_data$Entity=="Facebook")
 ## which() values in the dataset are for Facebook?
 which(social_media_data$Entity=="Facebook")
 
-which(c(TRUE, FALSE))
+which(c(TRUE, FALSE, TRUE))
 
 ## which() values in the dataset are for Youtube?
 which(social_media_data$Entity=="YouTube")
