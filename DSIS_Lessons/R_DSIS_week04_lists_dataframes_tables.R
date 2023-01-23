@@ -2,7 +2,7 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022, Winter 2021, Winter 2020
+## University of Michigan, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
 ## Week 4 (sometimes week 3 depending on the course schedule)
 ##
@@ -20,6 +20,29 @@
 ##
 ##########################################################################
 
+##########################################################################
+## lists, dataframes, and tables are objects, that are similar to vectors, matrices, and arrays,
+##########################################################################
+
+##########################################################################
+## lists
+##########################################################################
+## A list is like a vector because it contains an element at each coordinate position in it's structure. However, what a list contains is very different than a vector. A vector can contain only contain one variable type: numbers, characters, or logical values and vectors can only contain one value at each coordinate position. lists on the other hand can contain any other structure at each coordinate position. So for each example, the information contained at a position in a list can each contain a vector, matrix, table, dataframe, or even another list. We navigate the coordinate system of lists just like vectors but instead of [] we use [[]]. In words, instead of single square-brackets we use double square-brackets.
+
+
+##########################################################################
+## dataframes
+##########################################################################
+## dataframes are special types of lists that have the look and feel of a matrix. The elements in a dataframe are vectors of the same length and each vetor is arranged in the same way as a matrix. But importantly, each column in a dataframe can be a different variable type. A matrix can contain only contain one variable type: numbers, characters, or logical values. But the columns in a dataframe can contain a seperate variable type. We navigate the coordinate system of a dataframe just like the coordinate system of a matrix. [,] where the left-hand (left of the comma) side coordinate represents the row coordinate of the dataframe or matrix and the right-hand (right of the comma) side coordinate  represents the column coordinates of the datafrae or matrix.
+
+
+##########################################################################
+## tables
+##########################################################################
+## tables also have the look and feel of a matrix or array and we naviage the coordinate system in a similar way. But in this class we will primarily use tables to summarize information from vectors of dataframes. 
+
+
+##########################################################################
 ## create a list with a single, scalar value
 s <- list(2)
 
@@ -256,7 +279,8 @@ mean(dat$life_expectancy)
 library(foreign)
 
 ## read data from the current working directory
-social_media_data <- read.csv("users-by-social-media-platform.csv", header=TRUE)
+## source: https://ourworldindata.org/rise-of-social-media
+social_media_data <- read.csv("DSIS_Data/users-by-social-media-platform.csv", header=TRUE)
 
 ## print the dimension of the dataframe
 dim(social_media_data)
