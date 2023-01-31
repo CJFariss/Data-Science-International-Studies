@@ -2,7 +2,7 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022, Winter 2021, Winter 2020
+## University of Michigan, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
 ## Week 5
 ##
@@ -17,6 +17,7 @@
 ## (2) learn to use for loops and while loops
 ## (3) navigate vectors, matrices, lists, dataframes, and tables using logical statements and loops
 ## (4) apply functions to matrices, lists, dataframes, and tables
+## (5) simulation using a for loop
 ##
 ##########################################################################
 
@@ -42,6 +43,7 @@ pi == pi
 1 == 2
 
 1 %% 2 == 0
+2 %% 1
 
 ###############
 ## NOT EQUAL ##
@@ -95,6 +97,11 @@ FALSE & FALSE
 
 FALSE | TRUE
 
+TRUE | FALSE
+
+FALSE | FALSE
+
+
 ## if both statements are true then OR returns TRUE
 1 == 1 | pi == pi
 
@@ -106,7 +113,7 @@ FALSE | TRUE
 ## XOR ##
 #########
 
-## exlcusive OR
+## exclusive OR
 
 ## the xor() function is a function for XOR, 
 ## in which not both conditions must be true  for XOR to return TRUE (we won't use this much if ever)
@@ -131,7 +138,7 @@ xor(1 == pi, pi == 1)
 
 if(TRUE){ print("print this character string") }
 
-if(FALSE){ print("print this character string") }
+if(FALSE){ print("DON'T print this character string") }
 
 if(TRUE & TRUE) print("print this character string")
 
@@ -157,7 +164,7 @@ if(FALSE){
     print(2+2)
 }
 
-## ifelse() takes three arguments, a logical condition and two values to be returned for either the TRUE or FALSE condtion
+## ifelse() takes three arguments, a logical condition and two values to be returned for either the TRUE or FALSE condition
 
 ifelse(TRUE, 1, 0)
 
@@ -169,8 +176,16 @@ ifelse(1 == pi & pi == pi, "print this character string", "is this really a help
 
 
 ## read data from the current working directory
-survey_data <- read.csv("survey_498_20200129.csv", header=TRUE)
+#survey_data <- read.csv("DSIS_data/survey_498_20200129.csv", header=TRUE)
 
+## this doesn't work quite right
+survey_data <- read.csv("DSIS_data/funYesNoQuestions.csv", header=TRUE)
+names(survey_data)
+dim(survey_data)
+
+head(survey_data)
+
+survey_data <- read.csv("DSIS_data/funYesNoQuestions.csv", header=TRUE, sep=";")
 names(survey_data)
 
 dim(survey_data)
@@ -178,14 +193,27 @@ dim(survey_data)
 head(survey_data)
 
 ## use ifelse statement to add an age value for the over_21 question
-ifelse(survey_data$over_21==1, "old person", "not old person")
+#ifelse(survey_data$over_21==1, "old person", "not old person")
 
 ## we can use the same statement above to add a new character variable to the dataframe
-survey_data$old_person <- ifelse(survey_data$over_21==1, "old person", "non old person")
+#survey_data$old_person <- ifelse(survey_data$over_21==1, "old person", "non old person")
 
 survey_data
 
-table(survey_data$old_person)
+table(survey_data[,12])
+table(survey_data$Do.you.think.you.could.win.in.a.fight.against.10.beavers.)
+
+table(survey_data$Have.aliens.ever.seen.earth.)
+
+table(survey_data$Do.you.think.you.could.win.in.a.fight.against.10.beavers., survey_data$Have.aliens.ever.seen.earth.)
+
+head(survey_data)
+
+test <- ifelse(survey_data$Are.dogs.better.than.cats.=="Yes", 1, 0)
+
+table(test)
+
+mean(test)
 
 ##########################################################################
 ## > greater than
@@ -196,6 +224,8 @@ table(survey_data$old_person)
 
 ## 1 is greater than pi is FALSE
 1 > pi
+
+pi > 1
 
 ## pi is less than 1 is FALSE
 pi < 1
@@ -220,7 +250,7 @@ pi > 1
 ##########################################################################
 
 ## read data from the current working directory
-social_media_data <- read.csv("users-by-social-media-platform.csv", header=TRUE)
+social_media_data <- read.csv("DSIS_Data/users-by-social-media-platform.csv", header=TRUE)
 
 ## print only values for facebook using the subset function
 names(social_media_data)
@@ -262,6 +292,9 @@ for(i in 1:10){
 for(i in 1:nrow(social_media_data)){
     print(i)
 }
+
+
+seq(2,10,2)
 
 length(seq(2,10,2))
 
@@ -349,6 +382,7 @@ dice_rolls
 ## this is a vectorized version of the loop version above.
 
 dice_rolls <- sample(1:6, size=simulation_size, replace=TRUE)
+dice_rolls
 
 
 ##########################################################################
@@ -361,6 +395,11 @@ i <- 0
 ## is starts at 0
 i
 
+dice_roll <- 1
+while(dice_roll != 6){
+  dice_roll <- sample(1:6,size=1,T)
+  print(dice_roll)
+}
 ## this structure is similar to the for loop in terms of the process; however it ends when a condition is met instead of iterating through the values of an index
 while(i <= 10){
     i <- i + 1
@@ -435,7 +474,15 @@ for(j in 1:ncol(mat)){
 }
 column_sums
 
+column_proportions <- NA
+for(j in 1:ncol(survey_data)){
+  column_proportions[j] <- mean(ifelse(survey_data[,j]=="Yes", 1, 0))
+}
+column_proportions
 
+data.frame(names(survey_data), column_proportions)
+
+survey_data
 
 ##########################################################################
 ## apply() a function to margins (the rows or columns) of an array or matrix
