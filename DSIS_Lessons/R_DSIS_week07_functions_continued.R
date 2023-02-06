@@ -177,3 +177,37 @@ for(i in 1:length(power)){
 cbind(power, simple_time, apply_time, loop_time)
 
 
+
+
+##########################################################################
+## recursion
+##########################################################################
+
+## recursion means defining a function in terms of itself
+
+## recursive factorial function for integers
+factorial_func <- function(x) {
+  if(x > 1){
+    return(x * factorial_func(x-1)) ## calls itself here
+  } else if(x==1 | x==0){
+    return(1)
+  } else{
+    return(NaN)
+  }
+}
+
+## call function
+factorial_func(5)
+
+## compare to base R factorial function
+factorial(5)
+
+## call function again and compare it to the base R factorial function
+factorial_func(1)
+factorial(1)
+
+factorial_func(0)
+factorial(0)
+
+factorial_func(-1)
+factorial(-1)
