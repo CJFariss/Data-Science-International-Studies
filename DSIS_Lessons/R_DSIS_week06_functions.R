@@ -2,7 +2,7 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022
+## University of Michigan, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
 ## Week 7
 ##
@@ -16,7 +16,9 @@
 ## For this R tutorial, we will learn how:
 ## (1) learn to write functions using the function called function
 ## (2) identify the return() value of a function
-## (3) use the missing() function to
+## (3) use the missing() function to determine if a user-supplied argument is missing in the function 
+## (4) review lots of familiar function examples
+## (5) recursive functions (we will consider this in week 7)
 ##
 ##########################################################################
 
@@ -46,6 +48,8 @@ one_to_one_mapping <- function(value){
     return(value)
 }
 one_to_one_mapping
+
+
 one_to_one_mapping(1)
 one_to_one_mapping(2)
 one_to_one_mapping("this may be dumb")
@@ -64,7 +68,8 @@ one_to_one_mapping(1:10)
 
 input_ouput_func <- function(input){
     
-    ## use the input object to creat the output object
+    ## use the input object to create the output object
+    ## note here that the output object is dependent on the value of the input object
     output <- input
     
     ## return the output object
@@ -90,10 +95,11 @@ one_to_one_mapping(list(2,TRUE,"message in a list, which is kind of like a messa
 add_numbers <- function(a,b){
     a+b
 }
+add_numbers
 add_numbers(1,2)
 
 ## this function and the version above will both return a+b
-## explictly defining the object to return is good programming practice so we will build on this version from here on out
+## explicitly defining the object to return is good programming practice so we will build on this version from here on out
 add_numbers <- function(a,b){
     return(a+b)
 }
@@ -108,17 +114,23 @@ add_numbers(a=2,b=2)
 add_numbers(2,1:10)
 
 
+## a and b are arguments that allow the user of the function to supply two input values into the function, which returns one output value
 add_numbers <- function(a,b){
-    var <- a+b
-    return(var)
+    output <- a+b
+    return(output)
 }
 
 
 
 ## define a function to add or subtract two numbers
 add_numbers <- function(a,b,sign){
-    if(sign=="+") return(a+b)
-    if(sign=="-") return(a-b)
+    if(sign=="+"){
+        return(a+b)
+    }
+    
+    if(sign=="-"){
+        return(a-b)
+    }
 }
 add_numbers
 
@@ -133,7 +145,7 @@ add_numbers(2,2)
 
 ## define a function to add or subtract two numbers with a warning for the sign argument
 add_numbers <- function(a,b,sign){
-    if(missing(sign)) return("missing sign argument") ## print a warning
+    if(missing(sign)) return("WARNING: missing sign argument") ## print a warning
     if(sign=="+") return(a+b)
     if(sign=="-") return(a-b)
 }
@@ -186,6 +198,19 @@ vector_distance(10,7)
 
 vector_distance(100,7)
 
+## practice reverse coding the function
+
+## these are the arguments for the function defined above
+len <- 10
+coordinate_position <- 4
+
+vec <- rep(NA, len)
+coordinates <- 1:length(vec)
+distance <- sqrt((coordinate_position - coordinates)^2)
+distance
+
+
+
 
 ##########################################################################
 ## define the function with one argument (vector is the user defined vector myvec from above)
@@ -193,7 +218,7 @@ vector_distance(100,7)
 ##########################################################################
 my_vector_sort <- function(vector){
     
-    ## same as above but specificed in the function call
+    ## same as above but specified in the function call
     myvec <- vector
     
     ## same as above but inside the function now
@@ -205,10 +230,10 @@ my_vector_sort <- function(vector){
     }
     
     ## inside the function we need to specify which value it returns
-    return(myvec[max_locations])
+    #return(myvec[max_locations])
     
     ## return the coordinates instead
-    #return(max_locations)
+    return(max_locations)
 }
 ## end of the function definition
 
@@ -216,6 +241,39 @@ my_vector_sort <- function(vector){
 my_vector_sort(vector=c(1,2,800,4,5))
 
 
+## same as above but specified in the function call
+myvec <- c(1,500,3,2,0,-1,800,500)
+myvec
+
+## same as above but inside the function now
+max_locations <- which(myvec==max(myvec))
+max_locations
+
+## same as above but inside the function now
+for( i in 2:length(unique(myvec))){
+  max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+}
+max_locations
+myvec[max_locations]
+
+
+myvec <- c(1,500,3,2,0,-1,800,500)
+max_locations <- which(myvec==max(myvec))
+max_locations
+max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+max_locations
+max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+max_locations
+max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+max_locations
+max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+max_locations
+max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+max_locations
+max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+max_locations
+max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+max_locations
 
 ##########################################################################
 ## see R_DSIS_Challenge_shuffle_index_answer.R for more details about this function
@@ -263,6 +321,46 @@ shuffle(1:10, 2)
 shuffle(1:10, 7)
 
 
+
+
+shuffle_vector <- 1:10
+
+## cut_point calcuation
+## this is just the value at the midpoint in the vector (we want equal sized halves of the deck of cards)
+cut_point <- round(length(shuffle_vector)/2)
+cut_point
+
+
+## the for loop iterates based on the number in the times argument supplied by the user
+times <- 2
+for(i in 1:times){
+  
+  ## take the current version of the shuffle_vector and cut it into top and bottom halves
+  top <- shuffle_vector[1:cut_point]
+  bottom <- shuffle_vector[(cut_point+1):length(shuffle_vector)]
+  
+  top
+  bottom
+  
+  ## alternate which half is the top/bottom half so that the first and last position move through the shuffle too
+  i <- 1
+  if(i%%2==TRUE){
+    shuffle_vector <- rbind(top, bottom)
+  }
+  else{
+    shuffle_vector <- rbind(bottom, top)
+    
+  }
+  
+  ## do the shuffle
+  shuffle_vector <- c(shuffle_vector)
+  
+}
+
+## return the shuffled vector
+shuffle_vector
+
+shuffle(1:10, 2)
 
 
 ##########################################################################
