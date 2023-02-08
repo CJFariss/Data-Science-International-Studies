@@ -4,7 +4,7 @@
 ## COURSE NAME: Data Science for International Studies (DSIS)
 ## University of Michigan, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
-## Week 7
+## Week 6
 ##
 ## Please e-mail me if you find any errors or have and suggestions (either email is fine)
 ## e-mail: cjf0006@gmail.com
@@ -58,6 +58,9 @@ one_to_one_mapping("Hello world!")
 
 one_to_one_mapping(1:10)
 
+obj1 <- one_to_one_mapping(1)
+obj1
+
 ##########################################################################
 ## Notes:
 ## This function is probably not that useful but it illustrates an important concept for functions
@@ -76,6 +79,7 @@ input_ouput_func <- function(input){
     return(output)
 }
 input_ouput_func
+
 input_ouput_func("stuff")
 input_ouput_func(1)
 input_ouput_func(2)
@@ -120,6 +124,7 @@ add_numbers <- function(a,b){
     return(output)
 }
 
+add_numbers(1,4)
 
 
 ## define a function to add or subtract two numbers
@@ -153,6 +158,7 @@ add_numbers <- function(a,b,sign){
 ## call the function
 add_numbers(2,2)
 
+add_numbers(2,2, sign="+")
 
 ## define a function to add or subtract two numbers with a warning for the sign argument
 add_numbers <- function(a,b,sign){
@@ -168,6 +174,17 @@ add_numbers <- function(a,b,sign){
 add_numbers(2,2)
 
 add_numbers(2,2,sign="-")
+
+
+## a and b are arguments are assigned default values
+add_numbers <- function(a=3,b=5){
+  output <- a+b
+  return(output)
+}
+
+add_numbers()
+add_numbers(4,6)
+
 
 ##########################################################################
 ## let's look back as some function examples we may have already seen
@@ -198,9 +215,15 @@ vector_distance(10,7)
 
 vector_distance(100,7)
 
+
+
+
+
+
 ## practice reverse coding the function
 
 ## these are the arguments for the function defined above
+
 len <- 10
 coordinate_position <- 4
 
@@ -241,6 +264,10 @@ my_vector_sort <- function(vector){
 my_vector_sort(vector=c(1,2,800,4,5))
 
 
+my_vector_sort(c(1,2))
+
+
+
 ## same as above but specified in the function call
 myvec <- c(1,500,3,2,0,-1,800,500)
 myvec
@@ -258,6 +285,7 @@ myvec[max_locations]
 
 
 myvec <- c(1,500,3,2,0,-1,800,500)
+myvec
 max_locations <- which(myvec==max(myvec))
 max_locations
 max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
