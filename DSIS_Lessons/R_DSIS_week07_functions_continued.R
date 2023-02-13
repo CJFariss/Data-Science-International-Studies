@@ -180,10 +180,20 @@ cbind(power, simple_time, apply_time, loop_time)
 
 
 ##########################################################################
-## recursion
+## recursion function examples
 ##########################################################################
 
 ## recursion means defining a function in terms of itself
+recursion_func_example <- function(x){
+  if(x<100){
+    x <- recursion_func_example(x+1)
+  }else{
+    return(x)
+  }
+  return(x)
+}
+recursion_func_example(-100)
+
 
 ## recursive factorial function for integers
 factorial_func <- function(x) {
