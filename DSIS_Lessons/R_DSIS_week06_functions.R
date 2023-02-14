@@ -411,5 +411,25 @@ myfunc(user_dims=c(4,4,4))
 myfunc(user_dims=c(8,8,8))
 myfunc(user_dims=c(7,11,6))
 
+myfunc(user_dims=c(16,12,8))
+
+
+user_dims <- c(4,4,8)
+user_dims
+
+temp <- array(NA, dim=user_dims)
+temp
+
+even_coords_dim1 <- seq(2,dim(temp)[1],2)
+even_coords_dim2 <- seq(2,dim(temp)[2],2)
+even_coords_dim3 <- seq(2,dim(temp)[3],2)
+
+even_coords_dim1
+even_coords_dim2
+even_coords_dim3
+
+value <- length(temp[even_coords_dim1,even_coords_dim2,even_coords_dim3])/length(temp)
+value
+
 
 
