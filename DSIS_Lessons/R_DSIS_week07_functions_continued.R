@@ -113,7 +113,7 @@ truehist(unlist(simulation_values_list), col="steelblue1")
 power <- c(2,3,4)
 
 ## don't go above 5!
-power <- c(2,3,4,5)
+#power <- c(2,3,4,5)
 
 ## calculate the time taken for each operation
 simple_time <- NA
@@ -194,6 +194,7 @@ recursion_func_example <- function(x){
 }
 recursion_func_example(-100)
 
+recursion_func_example(120)
 
 ## recursive factorial function for integers
 factorial_func <- function(x) {
