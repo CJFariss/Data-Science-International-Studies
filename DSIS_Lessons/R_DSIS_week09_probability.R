@@ -2,7 +2,7 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022, Winter 2021, Winter 2020
+## University of Michigan, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
 ## Week 9
 ##
@@ -131,14 +131,63 @@ single_roll_4sided_die_sample_space[c(-1, -2, -3, -4)] ## roll 1 or roll 2 or ro
 ## The intersection of each event with every other event which is 8^2 all of which are also empty sets {Ø}.
 
 ## Because we defined each dice roll as mutually exclusive, the union of one event with any other event are also empty sets {Ø}. 
+
 ## This should make sense, we can't both roll 1 and not roll 1 and a 4-sided die can't be simultaneously both 1 or 2 or another combination of values.
 
 ## But wait, there are even more potential events because we could consider the intersections and unions of 2 to 8 of the events. 
+
 ## All of these combinations are potentially meaningful, but because we defined the events for this sample space as mutually exclusive, they are all empty {Ø} but they still exist.
 
 ## Once we allow for unions and intersections in S, the set B increases to a size that is not easy to fully characterize, but difficult to fully list for all events. 
+
 ## We won't try to count all of these combinations in any more of the examples we work with, but you should familiarize yourself with the underlying logic of what the Borel field represents. It is every possible combination of events that could occur for a given set S.
 
+
+## Now we can use the sample() function to see how 
+single_coin_flip_sample_space <- c("Heads", "Tails")
+single_coin_flip_sample_space
+
+## one coin flip
+sample(single_coin_flip_sample_space, size=1, replace=TRUE)
+
+## now we can simulate flips of a coin to see what the probabilities are
+## we can use the sample() function to numerically approximate the true probabilities (which we already know intuitively)
+test <- sample(single_coin_flip_sample_space, size=10000, replace=TRUE)
+
+## tabulate the result
+table(test)
+
+## calculate the proportion of "Heads"
+mean(test=="Heads")
+mean(test!="Tails")
+
+## calculate the proportion of "Tails"
+mean(test=="Tails")
+mean(test!="Heads")
+
+## calculate the proportion of "Heads" AND "Tails" (this should be nothing)
+mean(test=="Heads" & test=="Tails")
+
+## calculate the proportion of "Heads" OR "Tails" (this should be everything)
+mean(test=="Heads" | test=="Tails")
+
+## caculate the proportion of outomces that are NEITHER "Heads" NOR "Tails" (this should be nothing which is the null set {0})
+mean(test!="Heads" & test!="Tails")
+
+## let's run a simulation of the simulation and calculate one of the proportions above many times
+test_value <- c()
+for(i in 1:1000){
+  test <- sample(single_coin_flip_sample_space, size=10000, replace=TRUE, prob=c(0.5,0.5))
+  test_value[i] <- mean(test=="Heads")
+}
+
+## calculate some summary statistics 
+summary(test_value)
+mean(test_value)
+sd(test_value)
+
+## graph the distribution (note that the "::" operator takes two arguments: a package name on the left and a function name on the right)
+MASS::truehist(test_value)
 
 ##########################################################################
 ## We will conduct some in-class activities using legos to further develop intuitions about probability distributions
