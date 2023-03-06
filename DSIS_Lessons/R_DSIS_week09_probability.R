@@ -21,6 +21,9 @@
 ## Probability considers what data will be observed from a given random (stochastic) process. 
 ## Statistics considers what random (stochastic) process gave rise to observed data at hand.
 
+## Let's start with a descriptive analogy: bits and pieces. A probability measure tells us some rules about how to keep track of a bunch of bits and pieces. "bits" are the tiny pieces that together form some "pieces" we might want to keep track of.  We will use a lot of lego examples. The bits using one or more lego blocks are the individual lego units. So a 2x4 brick has 8 pieces. We will define some events using the bits and pieces of legos and then calculate the probability of these different events. We are going to use legos in a separate program challenge file. Below we will define what we mean by event and links these events to a measure of probability. 
+
+##########################################################################
 ## A probability measure, a probability space, or a probability model requires three elements: (S, B, P(.)).
 
 ## S and B are sets and are related to one another.
@@ -60,7 +63,7 @@ single_coin_flip_event2 <- single_coin_flip_sample_space[2]
 single_coin_flip_event1
 single_coin_flip_event2
 
-## the probabilitiy of these two events is exactly 0
+## the probability of these two events is exactly 0
 single_coin_flip_event3 <- single_coin_flip_sample_space[1:2]
 single_coin_flip_event4 <- single_coin_flip_sample_space[c(-1,-2)]
 single_coin_flip_event3
@@ -188,11 +191,14 @@ mean(test!="Heads" & test!="Tails")
 ## create an empty vector to store the calculated proportion from each iteration of the for loop
 test_value <- c()
 
+rm(test)
+
 ## use a for loop to repeatedly generate independent samples of coin flips
 for(i in 1:1000){
   test <- sample(single_coin_flip_sample_space, size=10000, replace=TRUE, prob=c(0.5,0.5))
   test_value[i] <- mean(test=="Heads")
 }
+table(test)
 
 ## calculate some summary statistics 
 summary(test_value)
@@ -201,6 +207,10 @@ sd(test_value)
 
 ## graph the distribution (note that the "::" operator takes two arguments: a package name on the left and a function name on the right)
 MASS::truehist(test_value)
+
+##
+library(MASS)
+truehist(test_value)
 
 ##########################################################################
 ## We will conduct some in-class activities using legos.
