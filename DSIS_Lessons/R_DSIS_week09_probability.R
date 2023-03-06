@@ -143,7 +143,9 @@ single_roll_4sided_die_sample_space[c(-1, -2, -3, -4)] ## roll 1 or roll 2 or ro
 ## We won't try to count all of these combinations in any more of the examples we work with, but you should familiarize yourself with the underlying logic of what the Borel field represents. It is every possible combination of events that could occur for a given set S.
 
 
+##########################################################################
 ## Now we can use the sample() function to see how 
+##########################################################################
 single_coin_flip_sample_space <- c("Heads", "Tails")
 single_coin_flip_sample_space
 
@@ -171,11 +173,17 @@ mean(test=="Heads" & test=="Tails")
 ## calculate the proportion of "Heads" OR "Tails" (this should be everything)
 mean(test=="Heads" | test=="Tails")
 
-## caculate the proportion of outomces that are NEITHER "Heads" NOR "Tails" (this should be nothing which is the null set {0})
+## calculate the proportion of outcomes that are NEITHER "Heads" NOR "Tails" (this should be nothing which is the null set {0})
 mean(test!="Heads" & test!="Tails")
 
+##########################################################################
 ## let's run a simulation of the simulation and calculate one of the proportions above many times
+##########################################################################
+
+## create an empty vector to store the calculated proportion from each iteration of the for loop
 test_value <- c()
+
+## use a for loop to repeatedly generate independent samples of coin flips
 for(i in 1:1000){
   test <- sample(single_coin_flip_sample_space, size=10000, replace=TRUE, prob=c(0.5,0.5))
   test_value[i] <- mean(test=="Heads")
@@ -190,15 +198,16 @@ sd(test_value)
 MASS::truehist(test_value)
 
 ##########################################################################
-## We will conduct some in-class activities using legos to further develop intuitions about probability distributions
-##
+## We will conduct some in-class activities using legos.
+## These activities will help to further develop intuitions about probability distributions.
 ##
 ##########################################################################
-## We will also look at some (but not all) of the distributions in R below
-##
+## We will also look at some (but not all) of the distributions in R below.
+## We will always start with the sample() function, a for loop and sometimes the seq() function to understand each of the distributions we consider.
 ##
 ##########################################################################
 ## discrete random variable distributions
+##########################################################################
 ## Bernoulli
 ## Binomial
 ## Poisson
@@ -209,6 +218,7 @@ MASS::truehist(test_value)
 
 ##########################################################################
 ## continuous random variable distributions
+##########################################################################
 ## uniform
 ## normal
 ## Student's t-distribution
@@ -218,7 +228,7 @@ MASS::truehist(test_value)
 ## gamma distribution
 ## beta distributions
 
-## see other R files
-
+##########################################################################
+## see other R files with probabilities in the title for more information
 ##########################################################################
 
