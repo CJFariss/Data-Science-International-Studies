@@ -13,7 +13,7 @@
 ## Introduction to tutorial:
 ##
 ## For this R tutorial, we will learn how:
-## (1) learn to think about probability in terms of a simple model
+## (1) learn to think about probability in terms of a simple model: (S, B, P(.))
 ## (2) begin estimating discrete and continuous probability distributions
 ##
 ##########################################################################
@@ -26,19 +26,22 @@
 ## S and B are sets and are related to one another.
 ## S is short for sample space.
 ## B (or Beta) is short for Borel field (but it's just another set related to the definition of S)
-## P(.) is a rule about the probability value that each element in B is assigned. For practical purposes, we are mostly concered about P(.) but we should know about the role S and B play as well.
+## P(.) is a rule about the probability value that each element in B is assigned. For practical purposes, we are mostly concerned about P(.) but we should know about the role S and B play as well.
 
 ## For most applications, the set of events in B is too large to consider or even calculate because it is made up of all possible subsets of S. But we can know in principle what the characteristics of B are based on our knowledge of S. This will become more concrete below.
 
 ## Once we have developed a clear definition of S and B, we get to argue about the rules associated with P(.). This is where a lot of conceptual debates in the field of Statistics takes place and where a lot of effort in the social sciences takes place.
 
-## We will start with some very simple examples. These examples will give us an intuition about the model of probability (S, B, P(.)).
+## We will start with some very simple examples. These examples will give us an intuition about the model of probability which is always made up of (S, B, P(.)).
 
-## The bullet points for this lesson may seems complicated so far but you already have a well-developed understanding of the basics of probability in practice. This knowledge is based on many of the activities from class in which we have used our dice, cards, and the sample() function to make probablistic decisions in our R programs. The information here helps us formalize our understanding of the definition of probability that we have been using all along. You may not know it yet, but you already understand everything presented in this lesson so far.
+## The bullet points for this lesson may seems complicated so far but you already have a well-developed understanding of the basics of probability in practice. This knowledge is based on many of the activities from class in which we have used our dice, cards, and the sample() function to make probabilistic decisions in our R programs. The information here helps us formalize our understanding of the definition of probability that we have been using all along. You may not know it yet, but you already understand everything presented in this lesson so far.
 
-## Note that in most texts, any set is formally declared using the squiggly braces {}.
-## I will use the squiggly braces {} to denote a set in the lesson comments. In the R code itself, we will create an object using the c() or vector() that we define as our set.
+## Note that in most texts, any set is formally declared using the curly/squiggly braces {}.
+## I will use the curly/squiggly braces {} to denote a set in the lesson comments. 
+## In the R code itself, we will create an object using the c() or vector() that we define as our set. 
 
+
+##########################################################################
 ## S: the sample space for a single coin flip is S = {Heads, Tails}
 single_coin_flip_sample_space <- c("Heads", "Tails")
 single_coin_flip_sample_space
@@ -51,11 +54,13 @@ single_coin_flip_sample_space
 ## a subset of the sample space S, is an event E
 ## The sample space S, has two possible events E1 = {Heads}; E2 = {Tails}
 
+## the probability of these two events is exactly 0.5
 single_coin_flip_event1 <- single_coin_flip_sample_space[1]
 single_coin_flip_event2 <- single_coin_flip_sample_space[2]
 single_coin_flip_event1
 single_coin_flip_event2
 
+## the probabilitiy of these two events is exactly 0
 single_coin_flip_event3 <- single_coin_flip_sample_space[1:2]
 single_coin_flip_event4 <- single_coin_flip_sample_space[c(-1,-2)]
 single_coin_flip_event3
@@ -63,9 +68,9 @@ single_coin_flip_event4
 
 
 ## Heads and not Heads are complements: the complement of Heads is not Heads; the complement of not Heads is Heads. 
-## Importantly the complement of S is the empty set {Ø}.
+## Importantly the complement of S is the empty set {Ø}. This is because S contains all the possible events and its compliment contains no possible events.
 
-## The union of the sample space Heads U Tails occurs with probability 1 for the single coin flip. 
+## The union of the sample space Heads U Tails occurs with probability 1 for the single coin flip. The union operator U is logigically the same as the OR operator "|"
 ## So the total probability of the sample space is P(S)=1.
 
 ## The sample space for a single coin flip is not equivalent to the sample space for B (the Borel field). 
