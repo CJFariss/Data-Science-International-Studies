@@ -21,9 +21,9 @@
 ##
 ##########################################################################
 
-## Recall: probability mass or probability density: this is just how much probability does each outcome have and it all needs to sum to 1 to be a probability measure (see the less from last week)
+## Recall: probability mass or probability density: this is just how much probability does each event/outcome have and it all needs to sum to 1 to be a probability measure (see the less from last week)
 
-## What is density? Density is the relative probability of sampling an event a specific point along the range of possible values defined by the function.
+## What is density? Density is the relative probability of sampling an event at a specific point along the range of possible values defined by the function.
 
 ##########################################################################
 ## continuous probability distributions usually called density functions
@@ -123,6 +123,7 @@ table(random_draws>=0 & random_draws<=1)/sim_n
 
 ## we can calculate the above with the p-type function in R
 ## the p-type function for a density function tells us the density or probability of a function at a given value along the x-axis
+## the p-type function turns density into probability by calculating the area under the curve at particular points along the real-number-line
 punif(.25)
 
 punif(.25) - punif(0)
@@ -134,6 +135,8 @@ punif(1) - punif(0)
 punif(1) - punif(-1)
 
 punif(.5) - punif(.4)
+
+
 
 
 ##########################################################################
@@ -279,7 +282,7 @@ x_dnorm <- dnorm(x, mean=mu, sd=sigma)
 par(mfrow=c(1,1))
 plot(x_density, x_dnorm)
 
-## plot the x_density variable along each value of x definied in the sequence above:
+## plot the x_density variable along each value of x defined in the sequence above:
 plot(x,x_density, xlab="random variable", ylab="density")
 
 sum(x_density)/sum(x_density)  ## this should approach as we add more values to the sequence 1 either by decreasing the interval between values in the sequence or by increasing the total range of the seqence
@@ -305,7 +308,45 @@ sum(x_density[x<=.0001 & x>=-0.0001])/sum(x_density)
 
 
 
+## let's approximate the normal distribution with a sample() function
+x <- -3:3
+x
 
+## set mean and variance parameters
+mu <- 0
+sigma <- 1
+sigma_pow2 <- sigma^2
+
+## calculate the density using the normal distribution function dnorm() which is built into R
+x_dnorm <- dnorm(x, mean=mu, sd=sigma)
+x_dnorm
+
+## simulate draws from a normal distribution 
+sim_size <- 10000
+x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm, main="N() density approximated using sample()")
+table(x_samples)/sim_size
+barplot(table(x_samples)/sim_size)
+
+## update the sequence so it is more fine grained (more values to draw)
+x <- seq(from=-3, to=3, by=.5)
+x
+x_dnorm <- dnorm(x, mean=mu, sd=sigma)
+sim_size <- 10000
+x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm, main="N() density approximated using sample()")
+barplot(table(x_samples)/sim_size)
+
+## update the sequence so it is more fine grained (more values to draw)
+x <- seq(from=-3, to=3, by=.1)
+#x
+x_dnorm <- dnorm(x, mean=mu, sd=sigma)
+sim_size <- 10000
+x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm, main="N() density approximated using sample()")
+barplot(table(x_samples)/sim_size)
+
+
+## using rnorm()
+x_samples <- rnorm(sim_size, mean=mu, sd=sigma)
+MASS::truehist(x_samples, main="N() density using rnorm()")  
 ## more optional bonus problems 
 
 ##########################################################################
