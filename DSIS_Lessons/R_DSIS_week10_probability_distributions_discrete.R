@@ -23,9 +23,9 @@
 
 ## first we will construct a density function using the now familiar sample() function
 
-## probability mass or probability density: this is just how much probability does each outcome have and it all needs to sum to 1 to be a probability measure (see the less from last week)
+## probability mass or probability density: this is just how much probability does each event/outcome have and it all needs to sum to 1 to be a probability measure (see the less from last week)
 
-## What is density? Density is the relative probability of sampling an event a specific point along the range of possible values defined by the function.
+## What is density? Density is the relative probability of sampling an event at a specific point along the range of possible values defined by the function.
 
 ## let's see density in action by simulating the roll of a D6 in R using the sample() function
 library(MASS)
@@ -114,6 +114,25 @@ values <- dbinom(x=c(0,1), size=1, prob=0.05)
 barplot(values, names.arg=c(0,1), ylim=c(0,1), ylab="Pr(X=x)", xlab="x")
 
 
+## we can simulate the Bernoulli process with the sample() function or the rbinom() function
+
+## simulate a Bernoulli trial with two coin flips using the sample() function
+sim_n <- 10000
+coin_flip_trial <- sample(c(0,1),size=sim_n, replace=TRUE, prob=c(.5,.5))
+table(coin_flip_trial)/sim_n
+
+## graph the simulation from above
+barplot(table(coin_flip_trial)/sim_n, names.arg=c(0,1), ylim=c(0,1), ylab="Pr(X=x)", main="Bernoulli coin flips using sample()")
+
+## simulate a Bernoulli trial with two coin flips using the rbinom() function
+sim_n <- 10000
+coin_flip_trial <- rbinom(sim_n, size=1, prob=.5)
+table(coin_flip_trial)/sim_n
+
+## graph the simulation from above
+barplot(table(coin_flip_trial)/sim_n, names.arg=c(0,1), ylim=c(0,1), ylab="Pr(X=x)", main="Bernoulli coin flips using rbinom()")
+
+
 ##########################################################################
 ##
 ## Binomial distribution
@@ -199,7 +218,15 @@ table(coin_flip_trial2)/sim_n
 table(coin_flip_trial1 + coin_flip_trial2)/sim_n
 
 ## graph the simulation from above
-barplot(table(coin_flip_trial1 + coin_flip_trial2)/sim_n, names.arg=c(0,1,2), ylim=c(0,1), ylab="Pr(X=x)")
+barplot(table(coin_flip_trial1 + coin_flip_trial2)/sim_n, names.arg=c(0,1,2), ylim=c(0,1), ylab="Pr(X=x)", main="Binomial trial (2 coin flips) using sample()")
+
+## simulate a Bernoulli trial with two coin flips using the rbinom() function
+sim_n <- 10000
+coin_flip_trial <- rbinom(sim_n, size=2, prob=.5)
+table(coin_flip_trial)/sim_n
+
+## graph the simulation from above
+barplot(table(coin_flip_trial)/sim_n, names.arg=c(0,1,2), ylim=c(0,1), ylab="Pr(X=x)", main="Binomial trial (2 coin flips) using rbinom()")
 
 
 ## graph the density or mass of the binomial trial with two coin flips
