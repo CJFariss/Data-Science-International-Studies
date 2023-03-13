@@ -137,26 +137,32 @@ punif(1) - punif(-1)
 punif(.5) - punif(.4)
 
 
-## let's approximate the normal distribution with a sample() function
-x <- seq(-1,2,.05)
-x
+## simulation using sample()
 
 ## set parameters
 a <- 0
 b <- 1
+
+## let's approximate the normal distribution with a sample() function
+x <- seq(from=a, to=b, by=.1)
+x
+
 
 ## calculate the density using the normal distribution function dnorm() which is built into R
 x_dunif <- dunif(x, min=a, max=b)
 x_dunif
 
 ## simulate draws from a normal distribution 
-sim_size <- 10000
+sim_size <- 1000000
 x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dunif)
-table(x_samples)/(sim_size / length(table(x_samples)))
-barplot(table(x_samples)/sim_size * length(table(x_samples)), main="U() density approximated using sample()", ylim=c(0,1))
+w <- length(unique(x_samples)) * (1/(b-a))
+x_dunif_estimate <- table(x_samples)/(sim_size / w) ## modify by the length() of the unique vlaues in the x sequence 
+x_dunif_estimate
+barplot(x_dunif_estimate, main="U() density approximated using sample()", ylim=c(0,1))
+MASS::truehist(x_samples, main="U() density using sample()")  
 
 ## simulate draws from the uniform distribution using runif()
-x_samples <- runif(sim_size, min=a, max=b)
+x_samples <- runif(sim_size, min=a, max=b) 
 MASS::truehist(x_samples, main="U() density using runif()")  
 ## more optional bonus problems 
 
@@ -330,18 +336,18 @@ sum(x_density[x<=.001 & x>=-0.001])/sum(x_density)
 sum(x_density[x<=.0001 & x>=-0.0001])/sum(x_density)
 
 
-
+## simulation using sample()
 ## let's approximate the normal distribution with a sample() function
 x <- -6:6
 x
 
 ## set mean and variance parameters
 mu <- 0
-sigma <- 1
+sigma <- 2
 sigma_pow2 <- sigma^2
 
 ## calculate the density using the normal distribution function dnorm() which is built into R
-x_dnorm <- dnorm(x, mean=mu, sd=sigma)
+x_dnorm <- dnorm(x, mean=mu, sd=sigma) ## N(0,1)
 x_dnorm
 
 
@@ -351,10 +357,10 @@ sim_size <- 10000
 ## approximate normal distirbution using sample() function
 x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm)
 table(x_samples)
-table(x_samples)/sim_size
-x_dnorm_estimate <- table(x_samples)/(sim_size*1) ## modify by the same value for the seq() by argument
-## approximate density when x is the mean for N(0,1)
-x_dnorm_estimate['0']
+prob_weigth <- sim_size/sum(x_dnorm) ## calculate a weight so that the densities integrate to 1
+x_dnorm_estimate <- table(x_samples)/prob_weigth ## modify with the weight 
+x_dnorm_estimate[names(x_dnorm_estimate)=='0'] ## approximate density when x is the mean for N(0,1)
+
 barplot(x_dnorm_estimate, main="N() density approximated using sample()")
 truehist(x_samples, main="N() density approximated using sample()")
 
@@ -366,11 +372,12 @@ x_dnorm <- dnorm(x, mean=mu, sd=sigma)
 x_dnorm
 sim_size <- 10000
 
-## approximate normal distirbution using sample() function
+## approximate normal distribution using sample() function
 x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm)
-x_dnorm_estimate <- table(x_samples)/(sim_size*.5) ## modify by the same value for the seq() by argument
-## approximate density when x_samples is 0 is the mean for N(0,1)
-x_dnorm_estimate['0']
+prob_weigth <- sim_size/sum(x_dnorm) ## calculate a weight so that the densities integrate to 1
+x_dnorm_estimate <- table(x_samples)/prob_weigth ## modify with the weight 
+x_dnorm_estimate[names(x_dnorm_estimate)=='0'] ## approximate density when x is the mean for N(0,1)
+
 barplot(x_dnorm_estimate, main="N() density approximated using sample()")
 truehist(x_samples, main="N() density approximated using sample()")
 
@@ -382,9 +389,9 @@ sim_size <- 10000
 
 ## approximate normal distirbution using sample() function
 x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm)
-x_dnorm_estimate <- table(x_samples)/(sim_size*.1) ## modify by the same value for the seq() by argument
-## approximate density when x_samples is 0 is the mean for N(0,1)
-x_dnorm_estimate['0']
+prob_weigth <- sim_size/sum(x_dnorm) ## calculate a weight so that the densities integrate to 1
+x_dnorm_estimate <- table(x_samples)/prob_weigth ## modify with the weight 
+x_dnorm_estimate[names(x_dnorm_estimate)=='0'] ## approximate density when x is the mean for N(0,1)
 barplot(x_dnorm_estimate, main="N() density approximated using sample()")
 truehist(x_samples, main="N() density approximated using sample()")
 
@@ -404,13 +411,15 @@ x_dnorm <- dnorm(x, mean=mu, sd=sigma)
 
 sim_size <- 10000000
 
-## approximate normal distirbution using sample() function
+## approximate normal distribution using sample() function
 x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm)
-x_dnorm_estimate <- table(x_samples)/(sim_size*.001) ## modify by the same value for the seq() by argument
-## approximate density when x_samples is 0 is the mean for N(0,1)
-x_dnorm_estimate['0']
+prob_weigth <- sim_size/sum(x_dnorm) ## calculate a weight so that the densities integrate to 1
+x_dnorm_estimate <- table(x_samples)/prob_weigth ## modify with the weight 
+x_dnorm_estimate[names(x_dnorm_estimate)=='0'] ## approximate density when x is the mean for N(0,1)
+dnorm(0,mean=mu, sd=sigma)
 
 barplot(x_dnorm_estimate, main="N() density approximated using sample()")
+truehist(x_samples, main="N() density approximated using sample()")
 
 
 ##########################################################################
