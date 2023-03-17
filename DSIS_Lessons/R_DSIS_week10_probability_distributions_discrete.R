@@ -32,7 +32,7 @@ library(MASS)
 
 ## total number of rolls 
 ## try changing this value from 100 to 1000 to 10000 to 100000
-sim_n <- 100000
+sim_n <- 100
 sim_n
 
 values <- sample(c(1,2,3,4,5,6), size=sim_n, replace=T)
