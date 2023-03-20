@@ -75,20 +75,20 @@ sum(x)/length(x)
 sigma <- 1
 
 ## let's check to see if the best estimate for the mean is 1
-mu<-1
+mu <- 1
 sum(log(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2)))
 prod(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2))
 
 ## let's check to see if the best estimate for the mean is 2
-mu<-2
+mu <- 2
 sum(log(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2)))
 
 ## let's check to see if the best estimate for the mean is 3
-mu<-3
+mu <- 3
 sum(log(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2)))
 
 ## let's check to see if the best estimate for the mean is 4
-mu<-4
+mu <- 4
 sum(log(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2)))
 
 ## let's check to see if the best estimate for the mean is 5
