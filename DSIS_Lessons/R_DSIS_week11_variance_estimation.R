@@ -24,11 +24,11 @@
 ## Introduction to tutorial:
 ## For this R tutorial, we will learn:
 ##
-## Variance: a measure of the squared distance from the mean value of a variable to all other values of the variable (stricktly positive).
+## Variance: a measure of the squared distance from the mean value of a variable to all other values of the variable (strictly positive).
 ##
-## Standard deviation: a measure of the distance from the mean value of a variable to all other values of the variable (stricktly positive).
+## Standard deviation: a measure of the distance from the mean value of a variable to all other values of the variable (strictly positive).
 ## 
-## Covariance: a measure of the product of the distance from the mean values of two variables from each of the other values of the variable (stricktly positive).
+## Covariance: a measure of the product of the distance from the mean values of two variables from each of the other values of the variable (strictly positive).
 ##
 ## Correlation: standardized measure of covariance that ranges between -1 and 1.
 ##
