@@ -28,7 +28,7 @@ pkgs <- c("MASS")
 invisible(sapply(pkgs, require, character.only = TRUE))
 
 ## create sequence of real numbers
-x <- seq(-3,3,.1)
+#x <- seq(-3,3,.1)
 x <- 1:5
 x
 mean(x)
@@ -57,6 +57,7 @@ normal_density <- function(data, mu, sigma){
     1/(sigma*sqrt(2*pi)) * exp(-(data - mu)^2/2*sigma^2)
 }
 
+## let's change the mean
 normal_density(data=x, mu=3, sigma=1)
 
 ## plot the two estimated densities to verify that they are the same
@@ -78,6 +79,8 @@ sigma <- 1
 mu <- 1
 sum(log(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2)))
 prod(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2))
+
+prod(1:3)
 
 ## let's check to see if the best estimate for the mean is 2
 mu <- 2
@@ -112,7 +115,7 @@ sum_dens_ssqd <- NA
 min_sum_dens_ssqd <- NA
 
 ## candidate values for our estimate of mu, which is the mean value we are trying to estimate
-mu_hat <-seq(-10,10,.1)
+mu_hat <-seq(-10,10,.5)
 mu_hat
 
 ## loop through all the mu_hat values to determine which one is the best using the sum of the logged densities
