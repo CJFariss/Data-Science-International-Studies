@@ -137,7 +137,7 @@ cor(x1,x2)
 ## view the covariance of the standardized values of the two variables 
 cov(scale(x1), scale(x2))
 
-## test if the values of the standardized values of the two variables are equal to the correlation of hte two variables
+## test if the values of the standardized values of the two variables are equal to the correlation of the two variables
 cor(x1,x2) == cov(scale(x1), scale(x2))
 
 
@@ -147,6 +147,8 @@ summary(fit)
 
 ## print the r-squared value
 summary(fit)$r.squared
+
+summary(fit)[[8]]
 
 ## calculate the square root of the r-squared value from the bivariate regression which is the correlation coefficient
 sqrt(summary(fit)$r.squared)
