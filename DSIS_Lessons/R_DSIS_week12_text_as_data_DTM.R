@@ -21,7 +21,7 @@
 ##########################################################################
 
 ## load data
-data <- read.csv("SIMpoliticalTweets.txt", header=FALSE)
+data <- read.csv("DSIS_Data/SIMpoliticalTweets.txt", header=FALSE)
 data
 names(data) <- "text"
 data
