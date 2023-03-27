@@ -34,7 +34,7 @@ data
 head(data)
 
 ## load stop words to remove from text (these are very common words)
-stopwords <- read.delim("stopwords_twitter.txt", header=FALSE)
+stopwords <- read.delim("DSIS_Data/stopwords_twitter.txt", header=FALSE)
 head(stopwords)
 
 ## define a function to remove some characters using the gsub() function
@@ -75,8 +75,11 @@ c(1,2) %in% c(0,3)
 
 c(1,2) %in% c(1,2,3)
 
+c(1,2,4,5,6) %in% c(1,2,3)
+
 c("a") %in% c("a", "b", "c")
 
+letters %in% c("a", "b", "c")
 
 ## view logical sub-setting command to remove stop-words from the first tweet
 tweet.term.list[[1]] %in% as.character(stopwords$V1)
@@ -160,7 +163,7 @@ newdata <- do.call("rbind", data.list)
 newdata
 
 
-## create matric of documents by terms with xtabs() function
+## create matrix of documents by terms with xtabs() function
 DTM <- xtabs(Freq ~ Doc + Var1, data=newdata)
 DTM
 

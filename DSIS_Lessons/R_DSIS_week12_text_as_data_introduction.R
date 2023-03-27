@@ -67,13 +67,17 @@ gregexpr(pattern="a", c("abcabc", "a", "b"))
 ## see ?grep for many more examples for each of the regular expression functions shown above
 
 ## read in fake tweeter data that I made up
-tweets <- readLines("SIMpoliticalTweets.txt", n=-1)
+tweets <- readLines("DSIS_Data/SIMpoliticalTweets.txt", n=-1)
 
 ## print the tweets to screen
 tweets
 
 ## which coordinates of the vector of tweets contains the term "obama" (note that we are assuming everything is lower case for now)
 grep("obama", tweets)
+
+coords <- grep("obama", tweets)
+
+tweets[coords]
 
 ## logical vector
 grepl("obama", tweets)
@@ -103,7 +107,7 @@ tweet_data <- as.data.frame(cbind(obama,love,hate))
 tweet_data
 
 ## write the data frame as a csv file
-write.csv(tweet_data, "tweet_data.csv")
+write.csv(tweet_data, "DSIS_Data/tweet_data.csv")
 
 ## save the tweet data as an R object
 save(tweet_data, file="tweet_data")
@@ -122,7 +126,7 @@ tweet_data
 ##########################################################################
 
 ## read in fake tweeter data that I made up
-tweets <- readLines("SIMpoliticalTweets.txt", n=-1)
+tweets <- readLines("DSIS_Data/SIMpoliticalTweets.txt", n=-1)
 
 ## print the tweets to screen
 tweets
@@ -140,7 +144,7 @@ tweets
 strsplit(tweets, "")
 
 ## splits every tweet into a vector or words contained in a list (each element of the list is the original tweet)
-strsplit(tweets, " ")
+strsplit(tweets, split=" ")
 
 ## make a list of vectors with each word in the tweet as an element of the vector
 all_terms_list <- strsplit(tweets, " ")

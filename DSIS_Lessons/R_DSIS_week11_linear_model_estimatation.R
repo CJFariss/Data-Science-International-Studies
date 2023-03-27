@@ -37,7 +37,7 @@ library(mvtnorm)
 ##########################################################################
 
 ## generate simulated vales
-n <- 50
+n <- 500
 x1 <- rnorm(n,0,1)
 
 ## make design matrix
@@ -45,11 +45,15 @@ X <- cbind(1, x1)
 
 head(X)
 
+## inspect 
+dim(X)
+
 k <- ncol(X)
+k
 
 # select true population parameters
 alpha <- 1.250000
-beta <- 2.500000
+beta <- 3.500000
 
 # generate y with error
 error_term <- rnorm(n)
@@ -64,6 +68,8 @@ par(mfrow=c(1,1))
 plot(x1, y)
 abline(a=alpha, b=beta, col=2)
 
+cor(y, x1)
+
 ## estimate the fit of the linear model
 fit <- lm(y ~ x1)
 fit
@@ -73,6 +79,8 @@ summary(fit)
 
 ## plot the line of best fit
 abline(reg=fit, col=4)
+
+fit$coefficients
 
 ## plot the error lines between the y points and the estimated y_hats (the line of best fit)
 for(i in 1:n){
@@ -89,12 +97,16 @@ beta.hat <- seq(from=-6,6,.05)
 
 sumsquare <- matrix(NA, nrow=length(alpha.hat), ncol=length(beta.hat))
 
+dim(sumsquare)
+
 for(i in 1:length(alpha.hat)){
     for(j in 1:length(beta.hat)){
         y.hat <- alpha.hat[i] * X[,1] + beta.hat[j] * X[,2]
         sumsquare[i,j] <- -sum((y-y.hat)^2)
     }
 }
+
+sumsquare[1:10, 1:10]
 
 ## find the coordinates from the matrix where the minimum of the sum of square residulas resides
 coordinates <- which(sumsquare == sumsquare[-sumsquare==min(-sumsquare)], arr.ind = TRUE)
