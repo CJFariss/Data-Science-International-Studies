@@ -401,7 +401,7 @@ box()
 
 #####################################################################################
 # Replicates Figure 1: Number of physical integrity rights allegations over time by organization
-# Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. "Recording Repression: Identifying Physical Integrity Rights Allegations in Annual Country Human Rights Reports" International Studies Quarterly (Accepted).
+# Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. "Recording Repression: Identifying Physical Integrity Rights Allegations in Annual Country Human Rights Reports" International Studies Quarterly 66(2):sqac016 (June 2022).
 #####################################################################################
 
 ## hard coded numbers in tabular format read in as a character string
