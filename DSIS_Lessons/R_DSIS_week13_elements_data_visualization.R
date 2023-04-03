@@ -47,6 +47,7 @@
 data <- read.csv("DSIS_Data/ny_stop_frisk.csv")
 
 ## inspect the dataset
+data
 names(data)
 head(data)
 
@@ -122,6 +123,7 @@ plot(data$total, type="o", col="navy", bg="lightblue", pch=21, ylim=c(0, 1.1*max
 axis(side=1, at=c(1,2,3,4,5,6,7,8,9,10), label=data$year)
 
 ## go back to just one plot per image
+dev.off()
 par(mfrow=c(1,1))
 
 
@@ -428,11 +430,16 @@ barplot(as.matrix(reports.year[3,]), space=0, las=2, col="mediumseagreen", main=
 ## Always graph your data!
 ## 
 ## see https://en.wikipedia.org/wiki/Anscombe%27s_quartet for more details
+dev.off()
 Anscombes_quartet <- read.csv("http://cfariss.com/code/Anscombes_quartet.csv")
 Anscombes_quartet <- read.csv("DSIS_Data/Anscombes_quartet.csv")
 
 apply(Anscombes_quartet,2,mean)
 apply(Anscombes_quartet,2,var)
+
+cbind(apply(Anscombes_quartet[-1],2,mean),
+      apply(Anscombes_quartet[-1],2,var))
+
 
 lm(y1 ~ x1, data=Anscombes_quartet)
 lm(y2 ~ x2, data=Anscombes_quartet)
