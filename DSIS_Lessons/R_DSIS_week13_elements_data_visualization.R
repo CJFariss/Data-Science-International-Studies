@@ -44,7 +44,7 @@
 
 ## read in data using read.csv() function
 ##data <- read.csv("http://cfariss.com/code/ny_stop_frisk.csv")
-data <- read.csv("ny_stop_frisk.csv")
+data <- read.csv("DSIS_Data/ny_stop_frisk.csv")
 
 ## inspect the dataset
 names(data)
@@ -81,7 +81,7 @@ box() # add box around plot region
 
 ## read in data using read.csv() function
 ##data <- read.csv("http://cfariss.com/code/ny_stop_frisk_black.csv")
-data <- read.csv("ny_stop_frisk_black.csv")
+data <- read.csv("DSIS_Data/ny_stop_frisk_black.csv")
 
 ## make a plot using the plot() function
 par(mfrow=c(1,1))
@@ -107,7 +107,7 @@ par(mfrow=c(1,2))
 
 ## read in data using read.csv() function
 ##data <- read.csv("http://cfariss.com/code/ny_stop_frisk.csv")
-data <- read.csv("ny_stop_frisk.csv")
+data <- read.csv("DSIS_Data/ny_stop_frisk.csv")
 COLOR <- "lightblue"
 
 barplot(data$total, beside=T, space=1, col=COLOR, font=2, font.lab=2, ylab="Total Stop and Frisks", main="Stop and Frisks by Race in 2012", xpd=F, horiz=F, names.arg=data$race, ylim=c(0, 1.1*max(data$total)))
@@ -115,7 +115,7 @@ box()
 
 ## read in data using read.csv() function
 ##data <- read.csv("http://cfariss.com/code/ny_stop_frisk_black.csv")
-data <- read.csv("ny_stop_frisk_black.csv")
+data <- read.csv("DSIS_Data/ny_stop_frisk_black.csv")
 
 ## make a plot using the plot() function
 plot(data$total, type="o", col="navy", bg="lightblue", pch=21, ylim=c(0, 1.1*max(data$total)), xlab="Year", ylab="Total Stop and Frisks", main="Stop and Frisks for African Americans Over Time", xaxt="n")
@@ -429,7 +429,7 @@ barplot(as.matrix(reports.year[3,]), space=0, las=2, col="mediumseagreen", main=
 ## 
 ## see https://en.wikipedia.org/wiki/Anscombe%27s_quartet for more details
 Anscombes_quartet <- read.csv("http://cfariss.com/code/Anscombes_quartet.csv")
-##Anscombes_quartet <- read.csv("data/Anscombes_quartet.csv")
+Anscombes_quartet <- read.csv("DSIS_Data/Anscombes_quartet.csv")
 
 apply(Anscombes_quartet,2,mean)
 apply(Anscombes_quartet,2,var)
