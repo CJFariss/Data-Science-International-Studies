@@ -98,6 +98,9 @@ table(y)
 
 table(y_hat)
 
+table(y, y_hat)
+
+sum(diag(table(y, y_hat)))/sum(table(y, y_hat))
 
 ## tabulate the prediction in the rows and the true value in the columns
 ## these values can go in either column or row.
