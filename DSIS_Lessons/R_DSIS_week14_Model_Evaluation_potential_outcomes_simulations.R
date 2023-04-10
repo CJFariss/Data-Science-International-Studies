@@ -2,7 +2,7 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022, Winter 2021, Winter 2020
+## University of Michigan, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
 ## Week 14 (optional)
 ##
@@ -14,7 +14,7 @@
 ##
 ## For this R tutorial, we will learn how:
 ##
-## (1) Learn how to generate fake data and analyize it using the potential outcomes framework from Rubin.
+## (1) Learn how to generate fake data and analyze it using the potential outcomes framework from Rubin.
 ##
 ## Note that we will know with certainty two distinct values of the dependent variable for each individual subject i.
 ##
@@ -37,7 +37,7 @@ set.seed(1234567)
 n <- 300
 
 ## create subject level error (this information might be important for understanding the outcome variable
-## but it is orthogonol/indpendent of treatment assignement)
+## but it is orthogonal/independent of treatment assignment)
 e_i <- rnorm(n)
 
 ## create summary of subject level error
