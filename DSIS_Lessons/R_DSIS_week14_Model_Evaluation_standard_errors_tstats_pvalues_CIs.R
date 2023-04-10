@@ -13,6 +13,8 @@
 ##
 ## See Davies chapter on Null Hypothesis testing  
 ##
+## Note: there are a lot of issues with this framework that we don't consider. But these issues are important for interpretation and use when using statistical tools today. And for remembering the context in which these tools were developed, which we link to themes in my Human Rights course.
+## 
 ## Check out this additional resources:
 ## https://tinystats.github.io/teacups-giraffes-and-statistics/06_standardError.html
 ##
@@ -103,15 +105,21 @@ x <- 1:5
 #x <- c(-10,-10,3,16,16)
 #x <- c(-20,-20,3,26,26)
 #x <- c(-100,-100,3,106,106)
-#x <- -10:10
+x <- -10:10
 #x <- -9:11
 
+x <- rep(1:5,20)
+length(x)
+x <- 1:5
 
 ## calculate an estimate and measures of the uncertainty of the estimate 
 mean(x) ## mean (estimate)
 mean_se(x) ## standard error (standard deviation of the estimate)
 mean(x)/mean_se(x) ## t-statistic (ratio of the estimate and the standard deviation of the estimate, which is interpreted as the position on a density function for the Student's t distribution or normal distribution if it's called the z-score)
 mean_pvalue(x) ## p-value (probability of an estimated value far away from 0; assuming that 0 is the "Truth")
+
+x <- 1:5
+t.test(x)
 
 t.test(x)$estimate ## mean (estimate)
 t.test(x)$stderr ## standard error (standard deviation of the estimate)
@@ -126,11 +134,14 @@ t.test(x)
 names(t.test(x))
 attributes(t.test(x))
 
-## proofs of equality between algorithims 
+## proofs of equality between algorithms 
 mean(x) == t.test(x)$estimate
 mean_se(x) == t.test(x)$stderr
 mean(x)/mean_se(x) == t.test(x)$statistic
 mean_pvalue(x) == t.test(x)$p.value
+
+mean_pvalue(x)
+t.test(x)$p.value
 
 ## Note that the last test above is FALSE because of a rounding error
 ## Below, we will use the round function to determine how many digits the test above is TRUE before becoming FALSE
