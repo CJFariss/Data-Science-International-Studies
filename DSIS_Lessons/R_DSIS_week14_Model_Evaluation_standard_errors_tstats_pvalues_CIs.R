@@ -137,6 +137,7 @@ mean_pvalue(x) == t.test(x)$p.value
 
 ## plot the Student's t distribution
 x<-1:5
+par(mfrow=c(1,1))
 curve(expr=dt(x,df=length(x)), from=-6,to=6, n=101, xlab="t-statistic")
 abline(v=mean(x)/mean_se(x), col=2)
 
