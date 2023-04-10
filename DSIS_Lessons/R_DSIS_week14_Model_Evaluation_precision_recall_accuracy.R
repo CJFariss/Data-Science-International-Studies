@@ -116,8 +116,8 @@ TP
 TN
 
 ## set false positive and false negatives (the off diagonal)
-FP <- confusion_matrix[1,2]
-FN <- confusion_matrix[2,1]
+FP <- confusion_matrix[2,1] # w.r.t column value
+FN <- confusion_matrix[1,2] # w.r.t column value
 
 FP
 FN
