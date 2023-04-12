@@ -41,6 +41,7 @@
 ## Keep in mind though, that not passing a threshold for statistically significant and thus rejecting a null hypothesis is distinct from estimating the precision of a null effect.
 ##
 ## Usually, these corrections are for large-scale hypothesis testing: i.e., 100s or 1000s of tests. If you had 100s of tests and only a handful produced a significant result, we would want to use a correction to rule out false positives.
+##
 ## On the other hand, 100s of tests in which nearly all produce a significant test statistic probably may provide the researcher with a lot of confidence that the modelled relationships are capturing a true substantive relationship.
 ##
 ## There are several methods of correction available in R. Bonferroni is the most conservative but not too bad in scenarios with a small number of tests. The penalty to the p-value increases as the number of tests increases.
