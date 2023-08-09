@@ -16,11 +16,11 @@
 ##  (1) continue practicing with the assignment operator "<-"
 ##  (2) how to create objects: scalars, vectors, matrices, and arrays in R
 ##  (3) how to access the coordinate systems of these objects using [] (bracket notation)
-##  (4) learn the difference between [], (), and, {}, which are called [] brackets, () parenthesis, and {} curly-brackets or squiggly-brackets 
+##  (4) learn the difference between [], (), and, {}, which are called [] brackets, () parenthesis, and {} curly-brackets or squiggly-brackets
 ##  (5) manipulate (rotate, flip, overwrite, append to) each of these data objects
 ##  (6) learn to explore these objects using the coordinate system
 ##  (7) matrix algebra notation (OPTIONAL)
-## 
+##
 ##########################################################################
 
 
@@ -35,14 +35,14 @@ s <- 2
 ## print s to screen
 s
 
-## print to screen again 
+## print to screen again
 s[1]
 
 ## s is a scalar, it is also a vector of length 1
 ## length of the object s
 length(s)
 
-## we can concatenate numbers to the scalar and create a vector by adding the second arugment to the right of the first argument
+## we can concatenate numbers to the scalar and create a vector by adding the second argument to the right of the first argument
 c(s,3)
 
 ## we can overwrite the s object so that the new value concatenated to s is saved as a vector s
@@ -93,14 +93,14 @@ v[c(-3,-4,-5)]
 ## these two functions let us stack vectors together
 
 ## let's create a new numeric vector
-a <- c(1,2,5.3,6,-2,4)
+a <- c(1, 2, 5.3, 6, -2, 4)
 
 ## print to screen
 a
 
 length(a)
 
-## stack the colums together as columns and as rows
+## stack the column together as columns and as rows
 cbind(a,a)
 rbind(a,a)
 
@@ -129,7 +129,12 @@ seq(from=1, to=5, by=.5)
 ## we can use the seq() function from above to change the distance between values in the vector
 seq(from=1, to=5, by=.5)
 
-## instead of specifing the distance between values we can specify the number of units we wish to produce (i.e., the length of the vector)
+seq(from=1, to=5, by=2)
+
+seq(from=1, to=10, by=2)
+seq(from=2, to=10, by=2)
+
+## instead of specifying the distance between values we can specify the number of units we wish to produce (i.e., the length of the vector)
 seq(from=1, to=5, length.out=3)
 
 seq(from=1, to=5, length.out=5)
@@ -165,6 +170,9 @@ sample(0:1,size=2, replace=TRUE)
 ## coin flip, 10 flips (or 10 independent coins, each flipped)
 sample(0:1,size=10, replace=TRUE)
 
+
+set.seed(12345)
+sample(0:1,size=10, replace=TRUE)
 
 
 ## six-sided die (d6), 1 roll
@@ -216,6 +224,7 @@ which(c(FALSE, TRUE))
 
 ## use a vector of logical values to get multiple elements from a vector
 v <- c(6,7,8,9,10)
+v
 v[c(TRUE,TRUE,FALSE,FALSE,FALSE)]
 
 which(v==6)
@@ -240,6 +249,8 @@ v[which(v==10)]
 ## Note: see Davies Chapter 3 (Matrices and Arrays) and Matloff Chapter 3 (Matrices and Arrays) for more information on the material below
 
 ## a matrix is just a 2D array (note that byrow=FALSE by default so that the values are added one column at a time from left to right)
+matrix(NA, nrow=2, ncol=3)
+
 m <- matrix( c(1,2,3,4,5,6), nrow=2, ncol=3)
 m
 
@@ -280,6 +291,8 @@ nrow(mymat)
 ncol(mymat)
 dim(mymat)[2]
 
+dim(mymat)[1]
+
 
 
 ##########################################################################
@@ -307,6 +320,7 @@ A[2:3,]
 ## print out column 3 and column 1 in matrix A
 A[,c(3,1)]
 
+A[,c(3,2,1)]
 
 ## print out elements that exist only in row 2 and row 3 and column 3 and column 1 in matrix A
 A[c(3,1),2:3]
@@ -375,7 +389,7 @@ t(A)
 t(t(A))
 
 
-## create adiagonal matrix with 3 rows and 3 columns and 1 in the diagnoal positions and 0 otherwise, this is an identity matrix
+## create diagonal matrix with 3 rows and 3 columns and 1 in the diagonal positions and 0 otherwise, this is an identity matrix
 A <- diag(x=4)
 A
 

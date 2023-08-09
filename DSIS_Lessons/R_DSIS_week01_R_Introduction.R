@@ -219,11 +219,13 @@ library(MASS)
 ## save the workspace as a binary file
 ##########################################################################
 
+obj <- 3
+
 ## the save() function allows you to save individual objects that are currently loaded in memory
-save(obj1, file="Myobject.Rdata")
+save(obj1, file="Datasets/Myobject.Rdata")
 
 ## the save.image() function allows you to save all of the objects that are currently loaded in memory
-save.image(file="Myworkspace.Rdata")
+save.image(file="Datasets/Myworkspace.Rdata")
 
 
 ## we will use other functions to save datasets later in the course but we often do not need to save dataset files. Instead we will practice saving and updating the .R or R-script file (which is this lesson file is an example of).
