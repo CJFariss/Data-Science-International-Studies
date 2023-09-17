@@ -76,11 +76,14 @@ max(v)
 
 ## use subscript operator [] to get one element from the v vector we just created
 v <- c(6,7,8,9,10)
+v
+
 v[1]
 v[3]
 
 ## use a negative subscript to get all but that specific element from a vector
 v[-1]
+v[2:5]
 
 ## use a vector of subscripts to get multiple elements from a vector
 v[c(1,2)]
@@ -143,6 +146,8 @@ seq(from=1, to=5, length.out=10)
 
 seq(from=1, to=5, length.out=100)
 
+seq(1,5,1)
+
 ## it might also be useful to generate a vector of the same value n number of times
 ## that is we might want to replicate a specific value n times using rep()
 rep(1,10)
@@ -166,6 +171,8 @@ sample(0:1,size=1, replace=TRUE)
 
 ## coin flip, 2 flips (or 2 independent coins, each flipped)
 sample(0:1,size=2, replace=TRUE)
+
+
 
 ## coin flip, 10 flips (or 10 independent coins, each flipped)
 sample(0:1,size=10, replace=TRUE)
@@ -205,7 +212,7 @@ sample(letters,size=2,replace=T)
 ## sample 1 element from a vector with character string elements
 sample(c("sunny", "partly_cloudy", "cloudy", "rain", "snow", "thunder storm"), size=1, replace=T)
 
-
+sample(c("red", "blue", "yellow"), size=3, replace=FALSE)
 
 ##########################################################################
 ## vectors of logical variables
@@ -226,6 +233,8 @@ which(c(FALSE, TRUE))
 v <- c(6,7,8,9,10)
 v
 v[c(TRUE,TRUE,FALSE,FALSE,FALSE)]
+
+v==6
 
 which(v==6)
 which(v==7)
@@ -250,6 +259,8 @@ v[which(v==10)]
 
 ## a matrix is just a 2D array (note that byrow=FALSE by default so that the values are added one column at a time from left to right)
 matrix(NA, nrow=2, ncol=3)
+
+
 
 m <- matrix( c(1,2,3,4,5,6), nrow=2, ncol=3)
 m
