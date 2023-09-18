@@ -33,7 +33,7 @@
 ##########################################################################
 ## dataframes
 ##########################################################################
-## dataframes are special types of lists that have the look and feel of a matrix. The elements in a dataframe are vectors of the same length and each vetor is arranged in the same way as a matrix. But importantly, each column in a dataframe can be a different variable type. A matrix can contain only contain one variable type: numbers, characters, or logical values. But the columns in a dataframe can contain a seperate variable type. We navigate the coordinate system of a dataframe just like the coordinate system of a matrix. [,] where the left-hand (left of the comma) side coordinate represents the row coordinate of the dataframe or matrix and the right-hand (right of the comma) side coordinate  represents the column coordinates of the datafrae or matrix.
+## dataframes are special types of lists that have the look and feel of a matrix. The elements in a dataframe are vectors of the same length and each vector is arranged in the same way as a matrix. But importantly, each column in a dataframe can be a different variable type. A matrix can contain only contain one variable type: numbers, characters, or logical values. But the columns in a dataframe can contain a seperate variable type. We navigate the coordinate system of a dataframe just like the coordinate system of a matrix. [,] where the left-hand (left of the comma) side coordinate represents the row coordinate of the dataframe or matrix and the right-hand (right of the comma) side coordinate  represents the column coordinates of the datafrae or matrix.
 
 
 ## note the difference: [1,2] vs. [c(1,2)]
@@ -320,7 +320,7 @@ library(foreign)
 
 ## read data from the current working directory
 ## source: https://ourworldindata.org/rise-of-social-media
-social_media_data <- read.csv("DSIS_Data/users-by-social-media-platform.csv", header=TRUE)
+social_media_data <- read.csv("Datasets/users-by-social-media-platform.csv", header=TRUE)
 
 ## print the dimension of the dataframe
 dim(social_media_data)
