@@ -52,10 +52,18 @@ vec[c(1,2)]
 ##########################################################################
 ## tables also have the look and feel of a matrix or array and we navigate the coordinate system in a similar way. But in this class we will primarily use tables to summarize information from vectors of dataframes. 
 
+s <- 2
+s
+
+is.list(s)
+is.vector(s)
 
 ##########################################################################
 ## create a list with a single, scalar value
 s <- list(2)
+
+is.list(s)
+is.vector(s)
 
 ## print the list object s to screen
 s
@@ -69,6 +77,8 @@ v[1]
 
 ## print the first element of the list (this a numeric scalar in a list)
 s[[1]]
+
+list(matrix(NA,4,4))
 
 ## repeat this process for 2 scalars in the list
 s <- list(2,4)
@@ -103,11 +113,13 @@ length(s)
 length(s[[1]])
 
 ## create a list of length 5 that contains 5 vectors of length 1
-v_list <- list(1, 2, 3, 4, 5)
+v_list <- list(1,2,3,4,5)
 v_list
 
 length(v_list)
 length(v_list[[1]])
+length(v_list[[2]])
+
 unlist(v_list)
 
 v_vec <- unlist(v_list)
@@ -115,6 +127,9 @@ v_vec
 
 is.vector(v_vec)
 is.list(v_vec)
+
+v_list <- list(1:10, 2:10, 3:10, 4:10, 5:10)
+v_list
 
 ## create a list of length 1 that contains 1 vector of length 5
 v_list <- list(c(1, 2, 3, 4, 5))
@@ -133,6 +148,11 @@ unlist(c_list)
 mean(v_list)
 sum(v_list)/5
 sum(v_list)/length(v_list)
+
+## 
+mean(v_list[[1]])
+sum(v_list[[1]])/5
+sum(v_list[[1]])/length(v_list[[1]])
 
 ## these will once we unlist() the lists to make a numeric vector
 mean(unlist(v_list))
@@ -157,7 +177,7 @@ rbind(a,a)
 ## make a dataframe out of the two vectors (the object will look visually like the  output from cbind)
 data.frame(a,a)
 
-dat <- data.frame(var1=c("a", "b", "c"), var2=c(1,2, 500))
+dat <- data.frame(var1=c("a", "b", "c"), var2=c(1, 2, 500))
 
 dat
 
@@ -170,6 +190,9 @@ dat[,1] + 1
 
 dat[,2] + 1
 
+dat$var1 ## this is equivalent to dat[,1]
+
+dat$var2 ## this is equivalent to dat[,2]
 
 ## let's make two vectors of time and
 ## stop and frisk data is from New York City for 2003-2012
@@ -183,7 +206,8 @@ plot(year, stop_and_frisks)
 
 "navy"
 "orange"
-
+"chartreuse"
+"chartreuse4"
 
 ## make the same plot with several additional arguments to make the plot more interesting and informative
 plot(year, stop_and_frisks,
