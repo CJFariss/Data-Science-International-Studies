@@ -38,6 +38,11 @@
 
 pi == pi
 
+print(pi, digits=22)
+
+print(pi, digits=5) == print(pi, digits=22)
+
+
 1 == pi
 
 1 == 2
@@ -63,7 +68,7 @@ pi != pi
 
 
 ## so far we have looked at simple statements. 
-## we can make these compond statments using the 
+## we can make these compound statements using the 
 ## AND operator & (also &&), 
 ## the OR operator | (also ||) 
 ## (there are more but let's not worry about these additional operators now)
@@ -91,7 +96,7 @@ FALSE & FALSE
 ## OR ##
 ########
 
-## the OR operator looks for at least one condition in a compond set of conditions to be true
+## the OR operator looks for at least one condition in a compound set of conditions to be true
 ## the following statement return TRUE because at least one of the component conditions is TRUE
 1 == pi | pi == pi
 
@@ -136,9 +141,13 @@ xor(1 == pi, pi == 1)
 
 ## inside an if statement we will use && and || instead of & and |
 
-if(TRUE){ print("print this character string") }
+if(TRUE){ 
+  print("print this character string") 
+}
 
-if(FALSE){ print("DON'T print this character string") }
+if(FALSE){ 
+  print("DON'T print this character string") 
+}
 
 if(TRUE & TRUE) print("print this character string")
 
@@ -167,6 +176,9 @@ if(FALSE){
 ## ifelse() takes three arguments, a logical condition and two values to be returned for either the TRUE or FALSE condition
 
 ifelse(TRUE, 1, 0)
+
+ifelse(FALSE, 1, 0)
+
 
 ifelse(FALSE, 1, 2)
 
