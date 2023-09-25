@@ -191,14 +191,17 @@ ifelse(1 == pi & pi == pi, "print this character string", "is this really a help
 #survey_data <- read.csv("DSIS_data/survey_498_20200129.csv", header=TRUE)
 
 ## this doesn't work quite right
-survey_data <- read.csv("DSIS_data/funYesNoQuestions.csv", header=TRUE)
+#survey_data <- read.csv("DSIS_data/funYesNoQuestions.csv", header=TRUE)
+survey_data <- read.csv("Datasets/373survey.csv")
 names(survey_data)
 dim(survey_data)
-
+nrow(survey_data)
+ncol(survey_data)
 head(survey_data)
 
-survey_data <- read.csv("DSIS_data/funYesNoQuestions.csv", header=TRUE, sep=";")
-names(survey_data)
+
+#survey_data <- read.csv("DSIS_data/funYesNoQuestions.csv", header=TRUE, sep=";")
+#names(survey_data)
 
 dim(survey_data)
 
@@ -212,16 +215,27 @@ head(survey_data)
 
 survey_data
 
-table(survey_data[,12])
+table(survey_data[,3])
+
 table(survey_data$Do.you.think.you.could.win.in.a.fight.against.10.beavers.)
 
-table(survey_data$Have.aliens.ever.seen.earth.)
+table(survey_data$Do.you.like.football.saturdays.)
 
-table(survey_data$Do.you.think.you.could.win.in.a.fight.against.10.beavers., survey_data$Have.aliens.ever.seen.earth.)
+#table(survey_data$Have.aliens.ever.seen.earth.)
+
+table(survey_data$Do.you.think.you.could.win.in.a.fight.against.10.beavers., survey_data$Do.you.like.football.saturdays.)
+
+summary(survey_data)
 
 head(survey_data)
 
-test <- ifelse(survey_data$Are.dogs.better.than.cats.=="Yes", 1, 0)
+#test <- ifelse(survey_data$Are.dogs.better.than.cats.=="Yes", 1, 0)
+
+table(survey_data$Have.you.seen.Game.of.Thrones.)
+
+survey_data$Have.you.seen.Game.of.Thrones.=="Yes"
+
+test <- ifelse(survey_data$Have.you.seen.Game.of.Thrones.=="Yes", 1, 0)
 
 table(test)
 
@@ -262,7 +276,7 @@ pi > 1
 ##########################################################################
 
 ## read data from the current working directory
-social_media_data <- read.csv("DSIS_Data/users-by-social-media-platform.csv", header=TRUE)
+social_media_data <- read.csv("Datasets/users-by-social-media-platform.csv", header=TRUE)
 
 ## print only values for facebook using the subset function
 names(social_media_data)
@@ -301,8 +315,13 @@ for(i in 1:10){
     print(i)
 }
 
+for(i in 1:3){
+
+}
+
 for(i in 1:nrow(social_media_data)){
-    print(i)
+  #print(i)
+  print(social_media_data$monthly_active_users[i])
 }
 
 
@@ -350,11 +369,12 @@ for(i in c(1,4,800,5,3)){
 vec <- NA
 vec
 vec[1]
+length(vec)
 
 vec <- c()
 vec
 vec[1]
-
+length(vec)
 
 ## set i to the ith position of the vector each ith iteration the loop
 for(i in 1:10){
@@ -384,9 +404,9 @@ i
 dice_rolls <- c()
 
 simulation_size <- 10
-
+dice_rolls <- list()
 for(i in 1:simulation_size){
-  dice_rolls[i] <- sample(1:6, size=1, replace=TRUE)
+  dice_rolls[[i]] <- sample(1:6, size=10, replace=TRUE)
 }
 dice_rolls
 
