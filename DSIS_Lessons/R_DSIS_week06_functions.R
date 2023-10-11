@@ -29,6 +29,7 @@ function_name <- function(){
     return()
 }
 
+mean(1:5)
 
 ## print the function definition to the screen
 function_name
@@ -166,8 +167,8 @@ add_numbers <- function(a,b,sign){
         print("warning: missing sign argument, set to + by default") ## print a warning
         sign <- "+"
     }
-    if(sign=="+") return(a+b)
-    if(sign=="-") return(a-b)
+    if(sign=="+"){ return(a+b)}
+    if(sign=="-"){ return(a-b)}
 }
 
 ## call the function
@@ -175,6 +176,7 @@ add_numbers(2,2)
 
 add_numbers(2,2,sign="-")
 
+add_numbers(sign="-")
 
 ## a and b are arguments are assigned default values
 add_numbers <- function(a=3,b=5){
@@ -215,8 +217,12 @@ vector_distance(10,7)
 
 vector_distance(100,7)
 
-
-
+len <- 10
+coordinate_position <- 4
+vec <- rep(NA, len)
+coordinates <- 1:length(vec)
+distance <- sqrt((coordinate_position - coordinates)^2)
+distance
 
 
 

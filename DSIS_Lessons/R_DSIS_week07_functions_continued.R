@@ -52,7 +52,11 @@ function_name
 
 ## simple for loop
 vec <- NA
+vec
+
 vec <- c()
+vec
+
 for(i in 1:5){
     vec[i] <- i*i
 }
@@ -209,6 +213,8 @@ factorial_func <- function(x) {
 
 ## call function
 factorial_func(5)
+factorial_func(4)
+factorial_func(3)
 
 ## compare to base R factorial function
 factorial(5)
