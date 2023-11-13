@@ -26,7 +26,7 @@
 ##
 ## Variance: a measure of the squared distance from the mean value of a variable to all other values of the variable (strictly positive).
 ##
-## Standard deviation: a measure of the distance from the mean value of a variable to all other values of the variable (strictly positive).
+## Standard deviation: a measure of the distance from the mean value of a variable to all other values of the variable (strictly positive). This is the square root of the variance measure. 
 ## 
 ## Covariance: a measure of the product of the distance from the mean values of two variables from each of the other values of the variable (strictly positive).
 ##
