@@ -32,7 +32,7 @@ library(MASS)
 
 ## total number of rolls 
 ## try changing this value from 100 to 1000 to 10000 to 100000
-sim_n <- 100
+sim_n <- 1000
 sim_n
 
 values <- sample(c(1,2,3,4,5,6), size=sim_n, replace=T)
@@ -81,7 +81,7 @@ abline(h=1/6, col=2, lwd=2)
 ## the argument p can take real (continuous) values between 0 and 1
 ## the argument y can take discrete values of 0 or 1
 Bernoulli_function <- function(p,y){
-    p^y * (1-p)^(1-y)
+    return(p^y * (1-p)^(1-y))
 }
 
 ## call our user defined function
@@ -190,6 +190,10 @@ Binomial_function(p=.25, y=1, N=2)
 Binomial_function(p=.25, y=0, N=2)
 
 Binomial_function(p=.25, y=2, N=2) + Binomial_function(p=.25, y=1, N=2) + Binomial_function(p=.25, y=0, N=2)
+
+## probability of rolling D6 1s twice
+Binomial_function(p=1/6, y=2, N=2)
+1/36
 
 ## use R's base function for a Binomial distribution
 dbinom(2,size=2,.5)
