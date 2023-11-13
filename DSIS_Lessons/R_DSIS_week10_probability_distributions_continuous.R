@@ -111,6 +111,7 @@ summary(random_draws)
 
 length(unique(c(1,2,2)))
 
+length(random_draws)
 length(unique(random_draws))
 
 table(random_draws>=0 & random_draws<=.25)
