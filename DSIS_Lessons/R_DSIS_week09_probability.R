@@ -50,7 +50,7 @@ single_coin_flip_sample_space <- c("Heads", "Tails")
 single_coin_flip_sample_space
 
 
-## we could also define the sample space for a single coin flip as the follwing: the sample space for a coin flip is S = {Heads, not Heads}
+## we could also define the sample space for a single coin flip as the following: the sample space for a coin flip is S = {Heads, not Heads}
 single_coin_flip_sample_space <- c("Heads", "not Heads")
 single_coin_flip_sample_space
 
@@ -178,6 +178,8 @@ mean(test!="Heads")
 ## calculate the proportion of "Heads" AND "Tails" (this should be nothing)
 mean(test=="Heads" & test=="Tails")
 
+cbind(test=="Heads", test=="Tails")[1:10,]
+
 ## calculate the proportion of "Heads" OR "Tails" (this should be everything)
 mean(test=="Heads" | test=="Tails")
 
@@ -195,10 +197,12 @@ rm(test)
 
 ## use a for loop to repeatedly generate independent samples of coin flips
 for(i in 1:1000){
-  test <- sample(single_coin_flip_sample_space, size=10000, replace=TRUE, prob=c(0.5,0.5))
+  test <- sample(single_coin_flip_sample_space, size=100, replace=TRUE, prob=c(0.5,0.5))
   test_value[i] <- mean(test=="Heads")
 }
 table(test)
+
+barplot(table(test_value), space=0)
 
 ## calculate some summary statistics 
 summary(test_value)
@@ -210,6 +214,7 @@ MASS::truehist(test_value)
 
 ##
 library(MASS)
+par(mar=c(4,4,1,1))
 truehist(test_value)
 
 ##########################################################################
