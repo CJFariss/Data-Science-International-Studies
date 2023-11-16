@@ -37,7 +37,7 @@ library(mvtnorm)
 ##########################################################################
 
 ## generate simulated vales
-n <- 500
+n <- 80
 x1 <- rnorm(n,0,1)
 
 ## make design matrix
@@ -53,7 +53,7 @@ k
 
 # select true population parameters
 alpha <- 1.250000
-beta <- 3.500000
+beta <- -3.500000
 
 # generate y with error
 error_term <- rnorm(n)
