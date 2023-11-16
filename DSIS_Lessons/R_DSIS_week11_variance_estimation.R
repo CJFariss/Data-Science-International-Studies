@@ -38,7 +38,7 @@
 
 ## Use the normal distribution to simulate two variables 
 sim_n <- 100
-x1 <- rnorm(sim_n, 0, 1)
+x1 <- rnorm(sim_n, 0, 2)
 
 summary(x1)
 #x1
