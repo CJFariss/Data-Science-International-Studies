@@ -16,7 +16,7 @@
 ##
 ## (1a) Use the normal density function to see that it is useful for many applications
 ## (1b) Specifically, we will estimate a mean instead of calculating it directly using a combination of values from the normal density function
-## (1c) Use a normal density function to construct a likelihood function or loss function to evaluate how well close the estimate mean is to the observed data values
+## (1c) Use a normal density function to construct a likelihood function or loss function to evaluate how well/close the estimate mean is to the observed data values
 ## (2) Observe that calculating the true mean is very simple so it is easy to verify that the combination of density functions gives the same answer as the simple calculation
 ## (3) Note that there are more complicated models where estimating the best set of parameters is not as easy as simply calculating the mean. We will use this combination of density function values to find the best set of parameters. Sometimes this is called maximum likelihood estimation or MLE for short
 ##
@@ -61,9 +61,13 @@ normal_density <- function(data, mu, sigma){
 normal_density(data=x, mu=3, sigma=1)
 
 ## plot the two estimated densities to verify that they are the same
-par(mfrow=c(1,1))
+par(mfrow=c(1,1), mar=c(4,4,1,1))
+plot(x, normal_density(data=x, mu=0, sigma=1))
 plot(x, normal_density(data=x, mu=1, sigma=1))
-
+plot(x, normal_density(data=x, mu=2, sigma=1))
+plot(x, normal_density(data=x, mu=3, sigma=1))
+plot(x, normal_density(data=x, mu=4, sigma=1))
+plot(x, normal_density(data=x, mu=5, sigma=1))
 
 ## data (we want the mean estimate for this numeric vector)
 x <- c(1,2,3,4,5)
