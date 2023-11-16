@@ -180,7 +180,7 @@ MASS::truehist(x_samples, main="U() density using runif()")
 ##
 ## The sample space S for the normal distribution, is defined so that the density for any value along the real number line from negative infinity to positive infinity. Instead of directly estimating probabilities as we did above, as with the uniform distribution we will instead estimate density.
 ##
-## What is density? Density is the relative probability of sampling an event a specific point along the range of possible values defined by the function.
+## What is density? Density is the relative probability of sampling an event at a specific point along the range of possible values defined by the function.
 ##
 ## Unlike the uniform distribution the density value for a normal distribution varies (is not uniform) for different values along the real number line.
 ##
@@ -227,11 +227,24 @@ pnorm(0, mean=0, sd=1)
 
 pnorm(1, mean=0, sd=1)
 
+pnorm(1, mean=1, sd=1)
+
+pnorm(2, mean=2, sd=1)
+
+pnorm(3, mean=3, sd=1)
+
+pnorm(4, mean=4, sd=1)
+
+pnorm(6, mean=5, sd=1)
 
 ## What is the probability of observing a value between -1 and 0 for a normally distributed random variable with mean=0 and standard deviation=1 ?
 pnorm(0,0,1) - pnorm(-1,0,1)
 
+pnorm(1,0,1) - pnorm(-1,0,1)
 
+pnorm(2,0,1) - pnorm(-2,0,1)
+
+pnorm(1.96,0,1) - pnorm(-1.96,0,1)
 
 ## Graph the Normal density function using the curve() function
 curve(expr=dnorm, ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1), lwd=3, col="navy", main="N(0,1) Density")
@@ -272,6 +285,9 @@ curve(expr=dnorm, xlim=c(-3,3), col="darkorange", add=TRUE, lwd=2)
 ## (hint: what is the proportion)
 sim_n <- 10000
 random_draws <- rnorm(sim_n)
+
+par(mfrow=c(1,1))
+truehist(random_draws)
 
 table(random_draws>-1 & random_draws<1)/sim_n
 
