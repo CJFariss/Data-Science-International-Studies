@@ -21,7 +21,7 @@
 ##########################################################################
 
 ## load data
-data <- read.csv("DSIS_Data/SIMpoliticalTweets.txt", header=FALSE)
+data <- read.csv("Datasets/SIMpoliticalTweets.txt", header=FALSE)
 data
 names(data) <- "text"
 data
@@ -34,7 +34,7 @@ data
 head(data)
 
 ## load stop words to remove from text (these are very common words)
-stopwords <- read.delim("DSIS_Data/stopwords_twitter.txt", header=FALSE)
+stopwords <- read.delim("Datasets/stopwords_twitter.txt", header=FALSE)
 head(stopwords)
 
 ## define a function to remove some characters using the gsub() function
