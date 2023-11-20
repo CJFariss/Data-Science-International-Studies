@@ -29,7 +29,7 @@ library(SnowballC)
 library(dslabs)
 
 ## load data
-data <- read.csv("DSIS_Data/SIMpoliticalTweets.txt", header=FALSE)
+data <- read.csv("Datasets/SIMpoliticalTweets.txt", header=FALSE)
 data
 names(data) <- "text"
 data
