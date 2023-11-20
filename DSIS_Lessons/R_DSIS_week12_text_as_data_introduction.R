@@ -67,7 +67,7 @@ gregexpr(pattern="a", c("abcabc", "a", "b"))
 ## see ?grep for many more examples for each of the regular expression functions shown above
 
 ## read in fake tweeter data that I made up
-tweets <- readLines("DSIS_Data/SIMpoliticalTweets.txt", n=-1)
+tweets <- readLines("Datasets/SIMpoliticalTweets.txt", n=-1)
 
 ## print the tweets to screen
 tweets
@@ -107,7 +107,7 @@ tweet_data <- as.data.frame(cbind(obama,love,hate))
 tweet_data
 
 ## write the data frame as a csv file
-write.csv(tweet_data, "DSIS_Data/tweet_data.csv")
+write.csv(tweet_data, "Datasets/tweet_data.csv")
 
 ## save the tweet data as an R object
 save(tweet_data, file="tweet_data")
@@ -126,7 +126,7 @@ tweet_data
 ##########################################################################
 
 ## read in fake tweeter data that I made up
-tweets <- readLines("DSIS_Data/SIMpoliticalTweets.txt", n=-1)
+tweets <- readLines("Datasets/SIMpoliticalTweets.txt", n=-1)
 
 ## print the tweets to screen
 tweets
