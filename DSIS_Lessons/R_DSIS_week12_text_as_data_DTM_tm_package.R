@@ -27,6 +27,7 @@ library(stm)
 library(tm)
 library(SnowballC)
 library(dslabs)
+library(quanteda)
 
 ## load data
 data <- read.csv("Datasets/SIMpoliticalTweets.txt", header=FALSE)
@@ -66,7 +67,7 @@ corpus <- tm_map(corpus, removeWords, stopwords("english"))
 corpus <- tm_map(corpus, stemDocument)
 
 ## print to screen
-inspect(corpus[1:10])
+inspect(corpus[1:11])
 
 
 ## make document by term matrix
@@ -76,5 +77,10 @@ DTM
 
 ## print DTM to screen using the inspect() function
 inspect(DTM)
-inspect(DTM[1:10,1:25])
+inspect(DTM[1:11,1:12])
+
+
+names(DTM)
+attributes(DTM)
+
 
