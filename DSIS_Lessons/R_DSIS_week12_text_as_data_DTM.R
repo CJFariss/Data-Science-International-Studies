@@ -71,7 +71,7 @@ tweet.term.list
 table(tweet.term.list[[1]])
 
 ## are the numbers 1 and 2 in the second vector using the %in% function.
-c(1,2) %in% c(0,3)
+c(1,2) %in% c(0,3,4,5)
 
 c(1,2) %in% c(1,2,3)
 
@@ -87,12 +87,19 @@ tweet.term.list[[1]] %in% as.character(stopwords$V1)
 ## remove stopwords with not ! symbol for first elemnet in list of words (! flips FALSE to TRUE and TRUE to FALSE)
 ! FALSE
 
-tweet.term.list[[1]][ ! tweet.term.list[[1]] %in% as.character(stopwords$V1) ]
+! tweet.term.list[[1]] %in% as.character(stopwords$V1)
+
+not_stop_words_index <- ! tweet.term.list[[1]] %in% as.character(stopwords$V1) 
+not_stop_words_index
+
+tweet.term.list[[1]][not_stop_words_index]
 
 
 ## loop through elements of loop and remove stop words from each tweet
 for(i in 1:length(tweet.term.list)){
-  tweet.term.list[[i]] <- tweet.term.list[[i]][! tweet.term.list[[i]] %in% as.character(stopwords$V1) ]
+  not_stop_words_index <- ! tweet.term.list[[i]] %in% as.character(stopwords$V1)
+  
+  tweet.term.list[[i]] <- tweet.term.list[[i]][not_stop_words_index]
 }
 tweet.term.list
 
