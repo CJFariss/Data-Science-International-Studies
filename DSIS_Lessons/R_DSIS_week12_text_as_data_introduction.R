@@ -32,7 +32,7 @@ grepl("b", "abc")
 grepl("c", "abc")
 grepl("d", "abc")
 
-## grep() function that returns the coordinate position of the vector in the second character argumeet (i.e., like the which() function)
+## grep() function that returns the coordinate position of the vector in the second character argument (i.e., like the which() function)
 grep("a", c("a", "b", "c", "d", "e", "f", "g"))
 grep("b", c("a", "b", "c", "d", "e", "f", "g"))
 grep("c", c("a", "b", "c", "d", "e", "f", "g"))
@@ -141,7 +141,7 @@ tweets
 ##########################################################################
 
 ## strsplit() splits every tweet into a vector of letters contained in a list (each element of the list is the original tweet)
-strsplit(tweets, "")
+strsplit(tweets, split="")
 
 ## splits every tweet into a vector or words contained in a list (each element of the list is the original tweet)
 strsplit(tweets, split=" ")
