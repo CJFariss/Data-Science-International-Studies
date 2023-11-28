@@ -44,14 +44,17 @@ summary(x1)
 #x1
 
 library(MASS)
+par(mar=c(4,3,2,.5))
 truehist(x1)
 
-x2 <- 0 + 1*x1 + rnorm(sim_n, 0, 1)
+error_or_distrurbance_term <- rnorm(sim_n, 0, 1)
+x2 <- 0 + 1*x1 + error_or_distrurbance_term
 
 ## check the simulation visually
 plot(x1, x2)
-abline(a=0,b=1,col=2)
+abline(a=0,b=-1,col=2)
 
+cor(x1,x2)
 
 ## calculate the variance and standard deviation of the first variable
 var(x1) ## variance 
@@ -118,6 +121,13 @@ standarize_function <- function(x){
   (x-mean(x))/sd(x)
 }
 
+mean(x1)
+sd(x1)
+
+mean(standarize_function(x1))
+sd(standarize_function(x1))
+
+
 summary(scale(x1))
 summary(standarize_function(x1))
 
@@ -152,6 +162,8 @@ summary(fit)[[8]]
 
 ## calculate the square root of the r-squared value from the bivariate regression which is the correlation coefficient
 sqrt(summary(fit)$r.squared)
+
+cor(x1,x2) 
 
 ## test if the r-squared value from the bivariate regression which is the correlation coefficient
 cor(x1,x2) == sqrt(summary(fit)$r.squared)
