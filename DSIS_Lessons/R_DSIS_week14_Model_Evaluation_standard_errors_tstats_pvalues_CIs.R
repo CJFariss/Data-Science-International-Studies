@@ -58,7 +58,7 @@
 ##
 ## There are more intuitive and easy to understand probability statements that we can use to provide evidence that effects are different than 0 but null-hypothesis testing and its terminology is dominant in many different fields (even if not explicitly so) and are produced by many of the functions we use in R like lm(), t.test(), etc.
 ##
-## We will consider the Bayesian version of the probability of an estimate in another lesson. Note here that formally it flips the conditional probability we defined above from p(data | H0) to p(H | data), where H is the research hypothesis we are testing and not the null hypothesis (H0).
+## We will consider the Bayesian version of the probability of an estimate in another lesson. Note here that formally it flips the conditional probability we defined above from p(data | H0) to p(H | data), where H is the research hypothesis we are testing and not the null hypothesis (H0). Note: see the lego probability lesson as a reminder about what conditional probability is and how to think about it.
 ##
 ## Fifth, we can use the standard error to construct a confidence interval (CI) around the estimate calculated in step (1). CIs are useful descriptions of the range of possible estimates and the uncertainty we have about the estimate we have produced.
 ##
@@ -110,6 +110,8 @@ x <- 1:5
 
 x <- rep(1:5,20)
 length(x)
+
+
 x <- 1:5
 
 ## calculate an estimate and measures of the uncertainty of the estimate 
