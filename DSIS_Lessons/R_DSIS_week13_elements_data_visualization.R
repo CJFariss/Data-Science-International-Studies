@@ -193,6 +193,7 @@ par(mfrow=c(1,1))
 COLORS <- c("#ffffcc", "#a1dab4", "#41b6c4", "#2c7fb8", "#253494")
 
 ## a simple barplot using the colors from above
+barplot(c(1,2,3,4,5))
 barplot(c(1,2,3,4,5), col=COLORS)
 
 
@@ -476,7 +477,7 @@ comps <- read.csv("http://cfariss.com/code/comps_coffee_drinks.csv")
 ##comps <- read.csv("comps_coffee_drinks.csv")
 
 #dev.off() ## resets the plot area if anything weird is happening
-par(mfrow=c(1,1))
+par(mfrow=c(1,1), mar=c(4,4,3,1))
 barplot(as.matrix(t(comps[,c(2,3,4)])), beside=FALSE, col=c(3,4,"orangered"), ylim=c(0,14.5), space=c(0,0) , xlab="", ylab="drink number by type", main="Caffeine Consumption Count-Down \n to Comprehensive Exams", font.lab=2, cex.lab=1.25)
 
 axis(side=1, at=seq(from=0, to=nrow(comps)-1, by=1), labels=comps$date, las=2,cex.axis=0.75)
