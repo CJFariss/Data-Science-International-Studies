@@ -31,7 +31,7 @@
 library(tidyverse)
 
 ## set the number of rows and columns for the plot
-par(mfrow=c(3,2))
+par(mfrow=c(3,2), mar=c(4,4,1,1))
 
 
 SIMS <- 500
@@ -42,6 +42,7 @@ SIMS <- 500
 
 ## simulate two variables and storing 2 variables in a matrix
 x <- matrix(NA, ncol=2, nrow=SIMS)
+dim(x)
 x[,1] <- rnorm(SIMS)
 x[,2] <- rnorm(SIMS)
 ## plot the 2 columns in the x matrix
