@@ -90,6 +90,10 @@ list.files()
 ls()
 
 ## remove all objects in the working environment
+
+rm(wd)
+ls()
+
 rm(list = ls())
 
 ## list objects in the working environment again
@@ -164,6 +168,8 @@ object
 some_other_function <- function(){}
 some_other_function
 
+ls
+rm
 
 ##########################################################################
 ## more examples using the assignment operator
