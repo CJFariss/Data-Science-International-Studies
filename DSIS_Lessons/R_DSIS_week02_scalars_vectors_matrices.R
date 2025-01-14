@@ -319,6 +319,7 @@ A
 ## print out one element in matrix A at row 3, column 2
 A[3,2]
 
+##
 ## print out one column in matrix A at column 2
 A[,2]
 
