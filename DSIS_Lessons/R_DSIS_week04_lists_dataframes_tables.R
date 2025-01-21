@@ -386,7 +386,7 @@ xtabs(monthly_active_users ~ Entity, data= social_media_data)
 ## save the cross-tabs as a vector for making a nice plot
 tabs <- xtabs(monthly_active_users ~ Entity, data= social_media_data)
 
-## tabs is a table
+## tabs is a table bllah blah
 tabs
 
 ## we can prove this using the is.table() function
