@@ -300,10 +300,16 @@ mymat
 dim(mymat)
 nrow(mymat)
 ncol(mymat)
+length(mymat)
+
 dim(mymat)[2]
 
 dim(mymat)[1]
 
+mymat_dim <- dim(mymat)
+mymat_dim
+mymat_dim[1]
+mymat_dim[2]
 
 
 ##########################################################################
