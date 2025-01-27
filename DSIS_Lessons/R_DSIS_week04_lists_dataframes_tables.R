@@ -57,7 +57,7 @@ s
 
 is.list(s)
 is.vector(s)
-
+is.vector()
 ##########################################################################
 ## create a list with a single, scalar value
 s <- list(2)
@@ -86,9 +86,11 @@ s
 
 ## print the first element (this is a list): AVOID this 
 s[1]
+s[1] *2
 
 ## print the first element of the list (this a numeric scalar in a list)
 s[[1]]
+s[[1]] * 2
 
 v <- c("a", "b")
 v
@@ -177,9 +179,21 @@ rbind(a,a)
 ## make a dataframe out of the two vectors (the object will look visually like the  output from cbind)
 data.frame(a,a)
 
+data.frame(c("a", "b", "c"), c(1, 2, 500))
+
+dat <- data.frame("any name I want"=c("a", "b", "c"), var2=c(1, 2, 500))
+dat
+
 dat <- data.frame(var1=c("a", "b", "c"), var2=c(1, 2, 500))
+dat
+t(dat) ## don;t do this with data.frame(); totally okay with matrices
+
+
+t(data.frame(a1=c("a", "b"), a2=c(1, 2), a3=c(1,2)))
+
 
 dat
+dat[,] 
 
 dat[,1]
 dat[1:3,1] ## equivalent to dat[,1]
@@ -193,6 +207,9 @@ dat[,2] + 1
 dat$var1 ## this is equivalent to dat[,1]
 
 dat$var2 ## this is equivalent to dat[,2]
+
+
+test <- data.frame(a1=c("a", "b"), a2=c(1, 2), var1=c(1,2))
 
 ## let's make two vectors of time and
 ## stop and frisk data is from New York City for 2003-2012
@@ -219,7 +236,7 @@ plot(year, stop_and_frisks,
     ylab="Total Stop and Frisks",
     main="Stop and Frisks for African Americans Over Time"
 )
-
+plot(year, stop_and_frisks)
 
 ## make a dataframe object
 dat <- data.frame(year, stop_and_frisks)
