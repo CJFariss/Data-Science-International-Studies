@@ -115,6 +115,7 @@ add_numbers
 add_numbers(2,2)
 
 add_numbers(a=2,b=2)
+add_numbers(b=3,a=2)
 
 add_numbers(2,1:10)
 
@@ -124,7 +125,7 @@ add_numbers <- function(a,b){
     output <- a+b
     return(output)
 }
-
+add_numbers
 add_numbers(1,4)
 
 
@@ -147,13 +148,19 @@ add_numbers(2,2, sign="-")
 ## if one of the arguments is missing, an error will occur
 add_numbers(2,2)
 
-## there are a couple of options, make sure to supply all the necessary arguments of add additional checks in the function to deal with specific situations as they arrise
+## there are a couple of options, make sure to supply all the necessary arguments of add additional checks in the function to deal with specific situations as they arise
 
 ## define a function to add or subtract two numbers with a warning for the sign argument
 add_numbers <- function(a,b,sign){
-    if(missing(sign)) return("WARNING: missing sign argument") ## print a warning
-    if(sign=="+") return(a+b)
-    if(sign=="-") return(a-b)
+    if(missing(sign)){
+      return("WARNING: missing sign argument") ## print a warning
+    }
+    if(sign=="+"){ 
+      return(a+b)
+    }
+    if(sign=="-"){ 
+      return(a-b)
+    }
 }
 
 ## call the function
@@ -192,7 +199,10 @@ add_numbers(4,6)
 ## let's look back as some function examples we may have already seen
 ##########################################################################
 
-
+generic_func <- function(arguments){
+  output <- arguments
+  return(output)
+}
 
 ##########################################################################
 ## create a function that returns the same values as the code above
@@ -228,6 +238,21 @@ distance
 
 ## practice reverse coding the function
 
+
+test_func <- function(coordinate_position, len){
+  #len <- 15
+  #coordinate_position <- 4
+  vec <- rep(NA, len)
+  coordinates <- 1:length(vec)
+  distance <- sqrt((coordinate_position - coordinates)^2)
+  distance
+  return(distance)
+}
+test_func()
+test_func(coordinate_position=5)
+test_func(coordinate_position=5, len=10)
+test_func(coordinate_position=50, len=100)
+
 ## these are the arguments for the function defined above
 
 len <- 10
@@ -245,7 +270,7 @@ distance
 ## define the function with one argument (vector is the user defined vector myvec from above)
 ## see R_DSIS_Challenge_1max_2max_3max_nmax_answer.R for more details about this function
 ##########################################################################
-my_vector_sort <- function(vector){
+my_vector_sort <- function(vector, SORT=FALSE){
     
     ## same as above but specified in the function call
     myvec <- vector
@@ -259,15 +284,18 @@ my_vector_sort <- function(vector){
     }
     
     ## inside the function we need to specify which value it returns
-    #return(myvec[max_locations])
+    if(SORT==TRUE)return(myvec[max_locations])
     
     ## return the coordinates instead
-    return(max_locations)
+    if(SORT==FALSE)return(max_locations)
 }
 ## end of the function definition
 
+sort(c(1,2,800,4,5), decreasing=T)
+order(c(1,2,800,4,5), decreasing=T)
+
 ## call the function
-my_vector_sort(vector=c(1,2,800,4,5))
+my_vector_sort(vector=c(1,2,800,4,5), SORT=TRUE)
 
 
 my_vector_sort(c(1,2))
@@ -319,7 +347,7 @@ shuffle <- function(vector, times){
     ## set the user specificed vector to a local variable called shuffle_vector
     shuffle_vector <- vector
     
-    ## cut_point calcuation
+    ## cut_point calculation
     ## this is just the value at the midpoint in the vector (we want equal sized halves of the deck of cards)
     cut_point <- round(length(shuffle_vector)/2)
     cut_point
@@ -337,7 +365,6 @@ shuffle <- function(vector, times){
         }
         else{
             shuffle_vector <- rbind(bottom, top)
-            
         }
         
         ## do the shuffle
@@ -359,7 +386,7 @@ shuffle(1:10, 7)
 
 shuffle_vector <- 1:10
 
-## cut_point calcuation
+## cut_point calculation
 ## this is just the value at the midpoint in the vector (we want equal sized halves of the deck of cards)
 cut_point <- round(length(shuffle_vector)/2)
 cut_point
