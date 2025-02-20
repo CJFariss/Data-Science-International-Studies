@@ -549,7 +549,7 @@ apply(mat,2,mean)
 ##########################################################################
 
 ## read data from the current working directory
-survey_data <- read.csv("survey_498_20200129.csv", header=TRUE)
+survey_data <- read.csv("Datasets/survey_498_20200129.csv", header=TRUE)
 survey_data
 
 ## use the sum function on the rows (the first dimension of the matrix) but make sure to exclude the first column because it is the subject ids
