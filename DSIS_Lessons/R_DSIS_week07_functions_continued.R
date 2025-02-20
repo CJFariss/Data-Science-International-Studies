@@ -24,9 +24,9 @@
 ## define an empty function called function_name
 ## we use the function called function (which is a little bit confusing)
 function_name <- function(){
-    return()
+  return()
 }
-
+function_name()
 
 ## print the function definition to the screen
 function_name
@@ -53,9 +53,11 @@ function_name
 ## simple for loop
 vec <- NA
 vec
+length(vec)
 
 vec <- c()
 vec
+length(vec)
 
 for(i in 1:5){
     vec[i] <- i*i
@@ -114,7 +116,7 @@ truehist(unlist(simulation_values_list), col="steelblue1")
 ## declare variables
 
 ## to raise the number of simulations
-power <- c(2,3,4)
+power <- c(2,3,4,5)
 
 ## don't go above 5!
 #power <- c(2,3,4,5)
@@ -218,6 +220,8 @@ factorial_func(3)
 
 ## compare to base R factorial function
 factorial(5)
+factorial(4)
+factorial(3)
 
 ## call function again and compare it to the base R factorial function
 factorial_func(1)
