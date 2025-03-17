@@ -32,7 +32,7 @@ library(MASS)
 
 ## total number of rolls 
 ## try changing this value from 100 to 1000 to 10000 to 100000
-sim_n <- 100
+sim_n <- 100000
 sim_n
 
 values <- sample(c(1,2,3,4,5,6), size=sim_n, replace=T)
@@ -93,11 +93,16 @@ Bernoulli_function(p=.5, y=0)
 Bernoulli_function(p=.25, y=1)
 Bernoulli_function(p=.25, y=0)
 
+Bernoulli_function(p=.1, y=1)
+Bernoulli_function(p=.1, y=0)
+
 ## use R's base function for a Bernoulli distribution
 dbinom(1,size=1,.5)
 dbinom(0,size=1,.5)
 dbinom(1,size=1,.25)
 dbinom(0,size=1,.25)
+dbinom(1,size=1,.1)
+dbinom(0,size=1,.1)
 
 dbinom(2,size=1,.25)
 
@@ -161,7 +166,7 @@ barplot(table(coin_flip_trial)/sim_n, names.arg=c(0,1), ylim=c(0,1), ylab="Pr(X=
 ## formula for the mean: N*p
 ## formula for the variance: N*p*(1-p)
 ##
-## let's define our own Bernoulli function
+## let's define our own binomial function
 ## the argument p can take values between 0 and 1
 ## the argument y can take discrete values of 0 or 1
 Binomial_function <- function(p,y,N){
