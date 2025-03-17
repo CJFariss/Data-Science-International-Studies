@@ -32,7 +32,7 @@ library(MASS)
 
 ## total number of rolls 
 ## try changing this value from 100 to 1000 to 10000 to 100000
-sim_n <- 1000
+sim_n <- 100
 sim_n
 
 values <- sample(c(1,2,3,4,5,6), size=sim_n, replace=T)
@@ -51,6 +51,9 @@ par(mfrow=c(1,1), mar=c(4,4,2,.5))
 #par(mfrow=c(1,1), mar=c(6,6,4,4))
 barplot(rep(1/6, 6), names.arg=c(1,2,3,4,5,6), space=0, main="Proportion of D6 Rolls", ylim=c(0,1/6))
 abline(h=1/6, col=2, lwd=2)
+
+mean(values)
+var(values)
 
 ##########################################################################
 ##
@@ -317,4 +320,5 @@ barplot(values, names.arg=c(0:10), ylim=c(0,1), ylab="Pr(X=x)")
 ## rmultinom
 ## dmultinom
 ##
+##########################################################################
 
