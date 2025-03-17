@@ -58,10 +58,28 @@ uniform_function <- function(x,a,b){
 }
 
 ## call our user defined function
-uniform_function(1,0,1)
+uniform_function(x=1,a=0,b=1)
 uniform_function(1,a=0,b=2)
 uniform_function(1,-1,1)
 uniform_function(1,-10,10)
+
+uniform_function(x=.1,a=0,b=1)
+uniform_function(x=.2,a=0,b=1)
+uniform_function(x=.3,a=0,b=1)
+uniform_function(x=.4,a=0,b=1)
+uniform_function(x=.5,a=0,b=1)
+uniform_function(x=.6,a=0,b=1)
+uniform_function(x=.7,a=0,b=1)
+uniform_function(x=.8,a=0,b=1)
+uniform_function(x=.9,a=0,b=1)
+
+uniform_function(.5,a=0,b=2)
+uniform_function(1,a=0,b=2)
+uniform_function(1.5,a=0,b=2)
+
+uniform_function(.5,a=0,b=4)
+uniform_function(1,a=0,b=4)
+uniform_function(1.5,a=0,b=4)
 
 uniform_function(-8,0,1)
 uniform_function(-8,0,2)
