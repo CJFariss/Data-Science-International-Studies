@@ -51,7 +51,6 @@ e_values[sim_n] == exp(1)
 
 ## Gregory-Leibniz series
 ##π=(4/1)-(4/3)+(4/5)-(4/7)+(4/9)-(4/11)+(4/13)-(4/15) ⋯
-##Take 4 and subtract 4 divided by 3. Then add 4 divided by 5. Then subtract 4 divided by 7. Continue alternating between adding and subtracting fractions with a numerator of 4 and a denominator of each subsequent odd number. The more times you do this, the closer you will get to pi.
 (4/1)
 (4/1)-(4/3)
 (4/1)-(4/3)+(4/5)
@@ -116,7 +115,6 @@ abline(h=pi, col=2)
 
 ## Nilakantha series
 ##π=3+4/(2·3·4)-4/(4·5·6)+4/(6·7·8)-4/(8·9·10)+4/(10·11·12)-4/(12·13·14) ⋯
-##For this formula, take three and start alternating between adding and subtracting fractions with numerators of 4 and denominators that are the product of three consecutive integers which increase with every new iteration. Each subsequent fraction begins its set of integers with the highest one used in the previous fraction. Carry this out even a few times and the results get fairly close to pi.
 3
 3+4/(2*3*4)
 3+4/(2*3*4)-4/(4*5*6)
