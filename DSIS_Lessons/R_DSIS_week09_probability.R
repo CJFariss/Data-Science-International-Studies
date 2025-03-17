@@ -70,10 +70,13 @@ single_coin_flip_event3
 single_coin_flip_event4
 
 
+sample(single_coin_flip_sample_space, size=1, replace=TRUE)
+sample(c(single_coin_flip_event1, single_coin_flip_event2, single_coin_flip_event3, single_coin_flip_event4), size=1, replace=TRUE, prob=c(.5,.5,0,0))
+
 ## Heads and not Heads are complements: the complement of Heads is not Heads; the complement of not Heads is Heads. 
 ## Importantly the complement of S is the empty set {Ø}. This is because S contains all the possible events and its compliment contains no possible events.
 
-## The union of the sample space Heads U Tails occurs with probability 1 for the single coin flip. The union operator U is logigically the same as the OR operator "|"
+## The union of the sample space Heads U Tails occurs with probability 1 for the single coin flip. The union operator U is logically the same as the OR operator "|"
 ## So the total probability of the sample space is P(S)=1.
 
 ## The sample space for a single coin flip is not equivalent to the sample space for B (the Borel field). 
@@ -197,7 +200,7 @@ rm(test)
 
 ## use a for loop to repeatedly generate independent samples of coin flips
 for(i in 1:1000){
-  test <- sample(single_coin_flip_sample_space, size=100, replace=TRUE, prob=c(0.5,0.5))
+  test <- sample(single_coin_flip_sample_space, size=10, replace=TRUE, prob=c(0.5,0.5))
   test_value[i] <- mean(test=="Heads")
 }
 table(test)
