@@ -483,6 +483,15 @@ truehist(x_samples, main="N() density approximated using sample()")
 ## rt
 ##
 ##########################################################################
+## log-normal	distribution
+##
+## R function names:
+## dlnorm
+## plnorm
+## qlnorm
+## rlnorm
+##
+##########################################################################
 ## exponential distribution
 ##
 ## R function names:
@@ -537,3 +546,13 @@ truehist(x_samples, main="N() density approximated using sample()")
 ## rcauchy
 ##
 ##########################################################################
+## Weibull distributions
+##
+## R function names:
+## dweibull
+## pweibull
+## qweibull
+## rweibull
+##
+##########################################################################
+
