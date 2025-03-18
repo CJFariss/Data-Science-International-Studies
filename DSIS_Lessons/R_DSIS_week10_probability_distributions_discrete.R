@@ -326,4 +326,12 @@ barplot(values, names.arg=c(0:10), ylim=c(0,1), ylab="Pr(X=x)")
 ## dmultinom
 ##
 ##########################################################################
-
+## Wilcoxon distributions
+##
+## R function names:
+## dwilcox
+## pwilcox
+## qwilcox
+## rwilcox
+##
+##########################################################################
