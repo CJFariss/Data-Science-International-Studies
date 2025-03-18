@@ -59,52 +59,52 @@ uniform_function <- function(x,a,b){
 
 ## call our user defined function
 uniform_function(x=1,a=0,b=1)
-uniform_function(1,a=0,b=2)
-uniform_function(1,-1,1)
-uniform_function(1,-10,10)
+uniform_function(x=1, a=0, b=2)
+uniform_function(x=1, a=-1, b=1)
+uniform_function(x=1, a=-10, b=10)
 
-uniform_function(x=.1,a=0,b=1)
-uniform_function(x=.2,a=0,b=1)
-uniform_function(x=.3,a=0,b=1)
-uniform_function(x=.4,a=0,b=1)
-uniform_function(x=.5,a=0,b=1)
-uniform_function(x=.6,a=0,b=1)
-uniform_function(x=.7,a=0,b=1)
-uniform_function(x=.8,a=0,b=1)
-uniform_function(x=.9,a=0,b=1)
+uniform_function(x=.1, a=0, b=1)
+uniform_function(x=.2, a=0, b=1)
+uniform_function(x=.3, a=0, b=1)
+uniform_function(x=.4, a=0, b=1)
+uniform_function(x=.5, a=0, b=1)
+uniform_function(x=.6, a=0, b=1)
+uniform_function(x=.7, a=0, b=1)
+uniform_function(x=.8, a=0, b=1)
+uniform_function(x=.9, a=0, b=1)
 
-uniform_function(.5,a=0,b=2)
-uniform_function(1,a=0,b=2)
-uniform_function(1.5,a=0,b=2)
+uniform_function(x=0.5, a=0, b=2)
+uniform_function(x=1, a=0, b=2)
+uniform_function(x=1.5, a=0, b=2)
 
-uniform_function(.5,a=0,b=4)
-uniform_function(1,a=0,b=4)
-uniform_function(1.5,a=0,b=4)
+uniform_function(x=0.5, a=0, b=4)
+uniform_function(x=1, a=0, b=4)
+uniform_function(x=1.5, a=0, b=4)
 
-uniform_function(-8,0,1)
-uniform_function(-8,0,2)
-uniform_function(-8,-1,1)
-uniform_function(-8,-10,10)
+uniform_function(x=-8, a=0, b=1)
+uniform_function(x=-8, a=0, b=2)
+uniform_function(x=-8, a=-1, b=1)
+uniform_function(x=-8, a=-10, b=10)
 
 ## use R's based function for a uniform distribution
-dunif(1,0,1)
-dunif(1,0,2)
-dunif(1,-1,1)
-dunif(1,-10,10)
+dunif(x=1, min=0, max=1)
+dunif(x=1, min=0, max=2)
+dunif(x=1, min=-1, max=1)
+dunif(x=1, min=-10, max=10)
 
-dunif(-8,0,1)
-dunif(-8,0,2)
-dunif(-8,-1,1)
-dunif(-8,-10,10)
+dunif(x=-8, min=0, max=1)
+dunif(x=-8, min=0, max=2)
+dunif(x=-8, min=-1, max=1)
+dunif(x=-8, min=-10, max=10)
 
 ## we can use the p or probability version of the uniform function built into R to answer to the following question:
 ## What is the probability of observing a value between 0 and 0.5 for a uniform random variable that spans the range 0 to 1?
-punif(0.5,0,1)
+punif(q=0.5, min=0, max=1)
 
-punif(0.25,0,1)
+punif(q=0.25, min=0, max=1)
 
 ## What is the probability of observing a value between 0.25 and 0.5 for a uniform random variable that spans the range 0 to 1?
-punif(0.5,0,1) - punif(0.25,0,1)
+punif(q=0.5, min=0, max=1) - punif(q=0.25, min=0, max=1)
 
 ## Graph the Uniform density function using the curve() function
 curve(expr=dunif, ylab="Pr(X=x)", type="l", xlim=c(0,1), ylim=c(0,1.05), lwd=3, col="navy", main="U(0,1) Density")
@@ -124,7 +124,7 @@ curve(expr=dunif(x, min = -2, max = 2), n=10001, from=-100,to=100, ylab="Pr(X=x)
 
 ## how many of the draws are very close to the middle of the normal distribution? (hint: what is the proportion)
 sim_n <- 10000
-random_draws <- runif(sim_n,0,1)
+random_draws <- runif(n=sim_n, min=0, max=1)
 summary(random_draws)
 
 length(unique(c(1,2,2)))
@@ -145,17 +145,17 @@ table(random_draws>=0 & random_draws<=1)/sim_n
 ## we can calculate the above with the p-type function in R
 ## the p-type function for a density function tells us the density or probability of a function at a given value along the x-axis
 ## the p-type function turns density into probability by calculating the area under the curve at particular points along the real-number-line
-punif(.25)
+punif(q=.25)
 
-punif(.25) - punif(0)
+punif(q=.25) - punif(q=0)
 
-punif(.5) - punif(0)
+punif(q=.5) - punif(q=0)
 
-punif(1) - punif(0)
+punif(q=1) - punif(q=0)
 
-punif(1) - punif(-1)
+punif(q=1) - punif(q=-1)
 
-punif(.5) - punif(.4)
+punif(q=.5) - punif(q=.4)
 
 
 ## simulation using sample()
@@ -236,11 +236,11 @@ normal_density(y=1, mu=1, sigma=1)
 normal_density(y=1.5, mu=1, sigma=1)
 
 ## use R's based function for a normal distribution
-dnorm(0, mean=0, sd=1)
-dnorm(0, mean=1, sd=1)
-dnorm(-1, mean=1, sd=1)
-dnorm(1, mean=1, sd=1)
-dnorm(1.5, mean=1, sd=1)
+dnorm(x=0, mean=0, sd=1)
+dnorm(x=0, mean=1, sd=1)
+dnorm(x=-1, mean=1, sd=1)
+dnorm(x=1, mean=1, sd=1)
+dnorm(x=1.5, mean=1, sd=1)
 
 ## Remember that for a normal distribution the probability of observing a specific event or value of a variable 
 ## changes depending on where along the real number line the value resides.
