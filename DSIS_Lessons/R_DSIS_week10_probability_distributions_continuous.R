@@ -248,28 +248,28 @@ dnorm(x=1.5, mean=1, sd=1)
 ## we can use the p or probability version of the normal function built into R to answer to the following question:
 
 ## What is the probability of observing a value between negative infinity and 0 for a normally distributed random variable with mean=0 and standard deviation=1 ?
-pnorm(0, mean=0, sd=1)
+pnorm(q=0, mean=0, sd=1)
 
-pnorm(1, mean=0, sd=1)
+pnorm(q=1, mean=0, sd=1)
 
-pnorm(1, mean=1, sd=1)
+pnorm(q=1, mean=1, sd=1)
 
-pnorm(2, mean=2, sd=1)
+pnorm(q=2, mean=2, sd=1)
 
-pnorm(3, mean=3, sd=1)
+pnorm(q=3, mean=3, sd=1)
 
-pnorm(4, mean=4, sd=1)
+pnorm(q=4, mean=4, sd=1)
 
-pnorm(6, mean=5, sd=1)
+pnorm(q=6, mean=5, sd=1)
 
 ## What is the probability of observing a value between -1 and 0 for a normally distributed random variable with mean=0 and standard deviation=1 ?
-pnorm(0,0,1) - pnorm(-1,0,1)
+pnorm(q=0, mean=0, sd=1) - pnorm(q=-1, mean=0, sd=1)
 
-pnorm(1,0,1) - pnorm(-1,0,1)
+pnorm(q=1, mean=0, sd=1) - pnorm(q=-1, mean=0, sd=1)
 
-pnorm(2,0,1) - pnorm(-2,0,1)
+pnorm(q=2, mean=0, sd=1) - pnorm(q=-2, mean=0, sd=1)
 
-pnorm(1.96,0,1) - pnorm(-1.96,0,1)
+pnorm(q=1.96, mean=0, sd=1) - pnorm(q=-1.96, mean=0, sd=1)
 
 ## Graph the Normal density function using the curve() function
 curve(expr=dnorm, ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1), lwd=3, col="navy", main="N(0,1) Density")
@@ -289,27 +289,27 @@ curve(expr=dnorm(x, mean=0, sd=1/2), ylab="Pr(X=x)", type="l", xlim=c(-8,8), yli
 
 par(mfrow=c(2,2))
 
-random_draws <- rnorm(10)
+random_draws <- rnorm(10, mean=0, sd=1)
 random_draws
 truehist(random_draws)
 curve(expr=dnorm, xlim=c(-3,3), col="darkorange", add=TRUE, lwd=2)
 
-random_draws <- rnorm(100)
+random_draws <- rnorm(100, mean=0, sd=1)
 truehist(random_draws)
 curve(expr=dnorm, xlim=c(-3,3), col="darkorange", add=TRUE, lwd=2)
 
-random_draws <- rnorm(1000)
+random_draws <- rnorm(1000, mean=0, sd=1)
 truehist(random_draws)
 curve(expr=dnorm, xlim=c(-3,3), col="darkorange", add=TRUE, lwd=2)
 
-random_draws <- rnorm(10000)
+random_draws <- rnorm(10000, mean=0, sd=1)
 truehist(random_draws)
 curve(expr=dnorm, xlim=c(-3,3), col="darkorange", add=TRUE, lwd=2)
 
 ## how many of the draws are very close to the middle of the uniform distribution? 
 ## (hint: what is the proportion)
 sim_n <- 10000
-random_draws <- rnorm(sim_n)
+random_draws <- rnorm(sim_n, mean=0, sd=1)
 
 par(mfrow=c(1,1))
 truehist(random_draws)
@@ -322,11 +322,11 @@ table(random_draws>-3 & random_draws<3)/sim_n
 
 ## we can calculate the above with a p-type function in R
 ## the p-type function for a density function tells us the density or probability of a function at a given value along the x-axis
-pnorm(1) - pnorm(-1)
+pnorm(q=1) - pnorm(q=-1)
 
-pnorm(2) - pnorm(-2)
+pnorm(q=2) - pnorm(q=-2)
 
-pnorm(3) - pnorm(-3)
+pnorm(q=3) - pnorm(q=-3)
 
 
 
@@ -337,7 +337,7 @@ pkgs <- c("MASS")
 invisible(sapply(pkgs, require, character.only = TRUE))
 
 ## create sequence of real numbers, these are a set of possible values that are estimate of the mean can take
-x <- seq(-3,3,.1)
+x <- seq(from=-3, to=3, by=.1)
 x
 length(x)
 
