@@ -97,14 +97,14 @@ Bernoulli_function(p=.1, y=1)
 Bernoulli_function(p=.1, y=0)
 
 ## use R's base function for a Bernoulli distribution
-dbinom(1,size=1,.5)
-dbinom(0,size=1,.5)
-dbinom(1,size=1,.25)
-dbinom(0,size=1,.25)
-dbinom(1,size=1,.1)
-dbinom(0,size=1,.1)
+dbinom(x=1, size=1, prob=0.5)
+dbinom(x=0, size=1, prob=0.5)
+dbinom(x=1, size=1, prob=0.25)
+dbinom(x=0, size=1, prob=0.25)
+dbinom(x=1, size=1, prob=0.1)
+dbinom(x=0, size=1, prob=0.1)
 
-dbinom(2,size=1,.25)
+dbinom(x=2, size=1, prob=0.25)
 
 ## graph the probability distribution 
 barplot(dbinom(x=1, size=1, prob=0.5), names.arg=c(1), ylim=c(0,1), ylab="Pr(X=1)", xlab="x")
@@ -126,7 +126,7 @@ barplot(values, names.arg=c(0,1), ylim=c(0,1), ylab="Pr(X=x)", xlab="x")
 
 ## simulate a Bernoulli trial with two coin flips using the sample() function
 sim_n <- 10000
-coin_flip_trial <- sample(c(0,1),size=sim_n, replace=TRUE, prob=c(.5,.5))
+coin_flip_trial <- sample(c(0,1), size=sim_n, replace=TRUE, prob=c(.5,.5))
 table(coin_flip_trial)/sim_n
 
 ## graph the simulation from above
@@ -204,12 +204,12 @@ Binomial_function(p=1/6, y=2, N=2)
 1/36
 
 ## use R's base function for a Binomial distribution
-dbinom(2,size=2,.5)
-dbinom(1,size=2,.5)
-dbinom(0,size=2,.5)
-dbinom(2,size=2,.25)
-dbinom(1,size=2,.25)
-dbinom(0,size=2,.25)
+dbinom(x=2, size=2, prob=0.5)
+dbinom(x=1, size=2, prob=0.5)
+dbinom(x=0, size=2, prob=0.5)
+dbinom(x=2, size=2, prob=0.25)
+dbinom(x=1, size=2, prob=0.25)
+dbinom(x=0, size=2, prob=0.25)
 
 ## write out binomial function using the choose() function instead of factorial
 Binomial_function_2 <- function(p,y,N){
@@ -217,7 +217,7 @@ Binomial_function_2 <- function(p,y,N){
 }
 Binomial_function_2(p=.5, y=2, N=2)
 Binomial_function(p=.5, y=2, N=2)
-dbinom(2,size=2,.5)
+dbinom(x=2, size=2, prob=0.5)
 
 
 ## simulate a binomial trial with two coin flips
