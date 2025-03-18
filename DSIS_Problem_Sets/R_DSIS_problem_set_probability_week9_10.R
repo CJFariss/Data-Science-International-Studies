@@ -20,11 +20,13 @@
 ##########################################################################
 ## Problem 1
 ##########################################################################
-## (1a) use the rnorm() function to create 1000 normally distributed random values
-## (1b) use the truehist() function from the MASS library to graph the values created in step (1a)
-## (1c) calculate the distance between the mean value of the variable created in step (1a) and each value in the variable
-## (1d) the square the distance calculated in (1c) and then divide by n and also n-1
-## (1e) compare the two values calculated in step (1d) to the same value calculated using the var() function
+## (1a) use the rnorm() function to create 1000 normally distributed random values as an object
+## (1b) use the truehist() function from the MASS library to graph the values created in object from step (1a)
+## (1c) calculate each of the distances between the mean() value of the object in step (1a) and each value in the object
+## (1d) calculate the square of each of the distances calculated of the object from (1c) 
+## (1e) calculate the sum() of all the squared distances in the object from step (1d) and create a new object for this sum
+## (1f) divide the single sum vakye created in step (1e) by n and also n-1
+## (1g) compare the two values calculated in step (1e) to the same value calculated using the var() function and the original object created in step (1a)
 
 
 
@@ -33,7 +35,7 @@
 ## Problem 2
 ##########################################################################
 ## (2a) write a simulation (a repeated process) for problem 1 in which you create a normally distributed random with an increasing sample size (start at about 10)
-## graph the difference between the variance calculated using the var()  function and the squared distance calculated in (1c) and then divide by n and also n-1
+## (2b) graph the difference between the variance calculated using the var()  function and the squared distance calculated in (1c) and then divide by n and also n-1
 
 
 
@@ -60,7 +62,7 @@
 ##########################################################################
 ## (4a) describe in your own words: Discrete probability distribution
 ## (4b) describe in your own words: Continuous probability distribution
-## (4c) describe in comments the following line of code: pnorm(0,0,1) - pnorm(-1,0,1)
+## (4c) describe in comments the following line of code: pnorm(q=0, mean=0, sd=1) - pnorm(q=-1, mean=0, sd=1)
 
 
 
@@ -95,5 +97,5 @@
 ## You have a standard deck of 52 playing cards. There are two colors (black and red) and four suits (spades are black, clubs are black, hearts are red, and diamonds are red). Each suit has 13 cards, in which there is an ace, number cards from 2 to 10, and three face cards (jack, queen, and king).
 ## 15.1.a. You randomly draw and then replace a card. What's the probability it's an ace?  What's the probability it's the 4 of spades?
 ## 15.1.b You randomly draw a card, and after replacing it, you draw another. Let A be the event that the card is a club; let B be the event that the card is red. What is Pr(A|B)? That is, what is the probability of the second card is a club, given the first one was a red card? Are the two events independent?
-## 15.1.c. Repeate (b), this time assuming that when the first (club) card is drawn, it is not replacted. Would this change your answer to (b) in terms of independence? 
+## 15.1.c. Repeate (b), this time assuming that when the first (club) card is drawn, it is not replicated. Would this change your answer to (b) in terms of independence? 
 
