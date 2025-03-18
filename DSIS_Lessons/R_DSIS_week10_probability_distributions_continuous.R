@@ -364,8 +364,8 @@ sum(x_density)/sum(x_density)  ## this should approach as we add more values to 
 sum(x_density[x<=0])/sum(x_density)
 sum(x_density[x<=0 & x>=-1])/sum(x_density)
 
-pnorm(0,0,1)
-pnorm(0,0,1) - pnorm(-1,0,1)
+pnorm(q=0, mean=0, sd=1)
+pnorm(q=0, mean=0, sd=11) - pnorm(q=-1, mean=0, sd=1)
 
 
 ## fill in the sequence more so that the values converge on the true values from the pnorm functions
@@ -464,7 +464,7 @@ x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm)
 prob_weigth <- sim_size/sum(x_dnorm) ## calculate a weight so that the densities integrate to 1
 x_dnorm_estimate <- table(x_samples)/prob_weigth ## modify with the weight 
 x_dnorm_estimate[names(x_dnorm_estimate)=='0'] ## approximate density when x is the mean for N(0,1)
-dnorm(0,mean=mu, sd=sigma)
+dnorm(0, mean=mu, sd=sigma)
 
 barplot(x_dnorm_estimate, main="N() density approximated using sample()")
 truehist(x_samples, main="N() density approximated using sample()")
@@ -526,5 +526,14 @@ truehist(x_samples, main="N() density approximated using sample()")
 ## pbeta
 ## qbeta
 ## rbeta
+##
+##########################################################################
+## Cauchy distributions
+##
+## R function names:
+## dcauchy
+## pcauchy
+## qcauchy
+## rcauchy
 ##
 ##########################################################################
