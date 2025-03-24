@@ -322,6 +322,10 @@ table(random_draws>-3 & random_draws<3)/sim_n
 
 ## we can calculate the above with a p-type function in R
 ## the p-type function for a density function tells us the density or probability of a function at a given value along the x-axis
+pnorm(q=0)
+
+pnorm(q=1)
+
 pnorm(q=1) - pnorm(q=-1)
 
 pnorm(q=2) - pnorm(q=-2)
@@ -349,9 +353,11 @@ sigma_pow2 <- sigma^2
 ## calculate the density using the normal distribution function
 ## density is a probability measure
 x_density <- 1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2)
+x_density
 
 ## calculate the density using the normal distribution function dnorm() which is built into R
 x_dnorm <- dnorm(x, mean=mu, sd=sigma)
+x_dnorm
 
 ## plot the two estimated densities to verify that they are the same
 par(mfrow=c(1,1))
@@ -381,6 +387,7 @@ sum(x_density[x<=.01 & x>=-0.01])/sum(x_density)
 sum(x_density[x<=.001 & x>=-0.001])/sum(x_density)
 sum(x_density[x<=.0001 & x>=-0.0001])/sum(x_density)
 
+length(unique(rnorm(100000000)))
 
 ## simulation using sample()
 ## let's approximate the normal distribution with a sample() function
@@ -398,7 +405,7 @@ x_dnorm
 
 
 ## simulate draws from a normal distribution 
-sim_size <- 10000
+sim_size <- 1000
 
 ## approximate normal distribution using sample() function
 x_samples <- sample(x, size=sim_size, replace=TRUE, prob=x_dnorm)
