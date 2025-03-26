@@ -276,11 +276,11 @@ curve(expr=dnorm, ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1), lwd=3, co
 
 curve(expr=dnorm, ylab="Pr(X=x)", type="l", xlim=c(-8,8), ylim=c(0,1), lwd=3, col="navy", main="N(0,1) Density")
 
-curve(expr=dnorm(x, mean=0, sd=2), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,2^2) Density")
+curve(expr=dnorm(x, mean=0, sd=1), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,2^2) Density")
 
 curve(expr=dnorm(x, mean=0, sd=2), ylab="Pr(X=x)", type="l", xlim=c(-8,8), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,2^2) Density")
 
-curve(expr=dnorm(x, mean=0, sd=1/2), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,.5^2) Density")
+curve(expr=dnorm(x, mean=3, sd=1), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,.5^2) Density")
 
 curve(expr=dnorm(x, mean=0, sd=1/2), ylab="Pr(X=x)", type="l", xlim=c(-8,8), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,.5^2) Density")
 
@@ -371,7 +371,7 @@ sum(x_density[x<=0])/sum(x_density)
 sum(x_density[x<=0 & x>=-1])/sum(x_density)
 
 pnorm(q=0, mean=0, sd=1)
-pnorm(q=0, mean=0, sd=11) - pnorm(q=-1, mean=0, sd=1)
+pnorm(q=0, mean=0, sd=1) - pnorm(q=-1, mean=0, sd=1)
 
 
 ## fill in the sequence more so that the values converge on the true values from the pnorm functions
@@ -387,7 +387,7 @@ sum(x_density[x<=.01 & x>=-0.01])/sum(x_density)
 sum(x_density[x<=.001 & x>=-0.001])/sum(x_density)
 sum(x_density[x<=.0001 & x>=-0.0001])/sum(x_density)
 
-length(unique(rnorm(100000000)))
+length(unique(rnorm(10000000)))
 
 ## simulation using sample()
 ## let's approximate the normal distribution with a sample() function
