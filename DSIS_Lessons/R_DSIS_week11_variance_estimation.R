@@ -38,7 +38,7 @@
 
 ## Use the normal distribution to simulate two variables 
 sim_n <- 100
-x1 <- rnorm(sim_n, 0, 2)
+x1 <- rnorm(sim_n, mean=0, sd=2)
 
 summary(x1)
 #x1
@@ -48,11 +48,11 @@ par(mar=c(4,3,2,.5))
 truehist(x1)
 
 error_or_distrurbance_term <- rnorm(sim_n, 0, 1)
-x2 <- 0 + 1*x1 + error_or_distrurbance_term
+x2 <- -1 + 2.5*x1 + error_or_distrurbance_term
 
 ## check the simulation visually
 plot(x1, x2)
-abline(a=0,b=-1,col=2)
+abline(a=0,b=1,col=2)
 
 cor(x1,x2)
 
@@ -74,6 +74,9 @@ cor(x1, x2) ## correlation
 ## calculate the distance from the mean
 x1_distance <- x1 - mean(x1)
 x2_distance <- x2 - mean(x2)
+
+x1_distance
+x2_distance
 
 ## calculate the squared distance
 x1_squared_distance <- x1_distance^2
@@ -130,6 +133,8 @@ sd(standarize_function(x1))
 
 summary(scale(x1))
 summary(standarize_function(x1))
+
+1:5-3
 
 ## test that all values returned from the two functions are equal
 all(scale(x1)==standarize_function(x1))
