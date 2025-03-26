@@ -32,6 +32,14 @@ invisible(sapply(pkgs, require, character.only = TRUE))
 x <- 1:5
 x
 mean(x)
+sum(x)/length(x)
+
+
+## reminnders
+curve(expr=dnorm(x, mean=0, sd=1), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,.5^2) Density")
+
+curve(expr=dnorm(x, mean=3, sd=1), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,.5^2) Density")
+
 
 ## set mean and variance parameters
 mu <- 0
@@ -119,7 +127,7 @@ sum_dens_ssqd <- NA
 min_sum_dens_ssqd <- NA
 
 ## candidate values for our estimate of mu, which is the mean value we are trying to estimate
-mu_hat <-seq(-10,10,.5)
+mu_hat <- seq(-10,10,.5)
 mu_hat
 
 ## loop through all the mu_hat values to determine which one is the best using the sum of the logged densities
@@ -159,4 +167,12 @@ abline(v=mean(x), col=2, lwd=3)
 ## plot the ssdq sum of squared differences loss function
 plot(mu_hat, min_sum_dens_ssqd, main="squared differences loss function")
 abline(v=mean(x), col=2, lwd=3)
+
+which(sum_log_dens_dnorm==max(sum_log_dens_dnorm))
+coord <- which(sum_log_dens_dnorm==max(sum_log_dens_dnorm))
+
+mu_hat[coord]
+
+which(sum_dens_ssqd==min(sum_dens_ssqd))
+which(min_sum_dens_ssqd==max(min_sum_dens_ssqd))
 
