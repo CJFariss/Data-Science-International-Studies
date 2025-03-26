@@ -108,7 +108,7 @@ for(i in 1:length(alpha.hat)){
 
 sumsquare[1:10, 1:10]
 
-## find the coordinates from the matrix where the minimum of the sum of square residulas resides
+## find the coordinates from the matrix where the minimum of the sum of square residuals resides
 coordinates <- which(sumsquare == sumsquare[-sumsquare==min(-sumsquare)], arr.ind = TRUE)
 coordinates
 
@@ -131,7 +131,7 @@ ols.func <- function(par, X, iterate=TRUE){
     alpha.hat <- par[1]
     beta.hat <- par[2]
     y.hat <- alpha.hat + beta.hat * X[,2]
-    out <- -sum((y-y.hat)^2)
+    #out <- -sum((y-y.hat)^2)
     out <- sum(log(dnorm(y, mean=y.hat, sd=1)))
     
     if(iterate==TRUE){
@@ -248,7 +248,7 @@ mean(y[x1==1]) - mean(y[x1==0])
 ## this is the proportion of y when x==1
 mean(y[x1==1])
 
-## this is the intercent  (the proportion of y when x==0)
+## this is the interce`pt  (the proportion of y when x==0)
 mean(y[x1==0])
 
 
