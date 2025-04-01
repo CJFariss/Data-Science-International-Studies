@@ -25,44 +25,48 @@
 ##########################################################################
 
 ## g is for get
+## it is liks the which() function
+## think of pattern matching functions like the which() funciton but instead of searching for the coordinate position in a vector, it search through a character string for matches to the pattern and returns whether or not the character string contains the pattern 
 
 ## grepl() is logical function that returns TRUE if the first character argument is contained the second character argument 
-grepl("a", c("abc", "def"))
-grepl("b", "abc")
-grepl("c", "abc")
-grepl("d", "abc")
+grepl(pattern="a", x=c("abc", "def"))
+grepl(pattern="b", x="abc")
+grepl(pattern="c", x="abc")
+grepl(pattern="d", x="abc")
 
 ## grep() function that returns the coordinate position of the vector in the second character argument (i.e., like the which() function)
-grep("a", c("a", "b", "c", "d", "e", "f", "g"))
-grep("b", c("a", "b", "c", "d", "e", "f", "g"))
-grep("c", c("a", "b", "c", "d", "e", "f", "g"))
-grep("d", c("a", "b", "c", "d", "e", "f", "g"))
+grep(pattern="a", x=c("a", "b", "c", "d", "e", "f", "g"))
+grep(pattern="b", x=c("a", "b", "c", "d", "e", "f", "g"))
+grep(pattern="c", x=c("a", "b", "c", "d", "e", "f", "g"))
+grep(pattern="d", x=c("a", "b", "c", "d", "e", "f", "g"))
 
 ## sub() and gsub() look for a character string called the pattern in a vector of characters (third argument x) and replaced it was the character string in the second argument
-gsub(pattern="a", "x", c("abc", "def"))
-gsub(pattern="b", "", "abc")
-gsub(pattern="c", "", "abc")
+gsub(pattern="a", replacement="x", x=c("abc", "def"))
+gsub(pattern="b", replacement="", x="abc")
+gsub(pattern="c", replacement="", x="abc")
+gsub(pattern="c", replacement="", x=letters)
 
 ## let's look at the difference between sub() and gsub()
-sub(pattern="a", "", "abc")
-sub(pattern="b", "", "abc")
-sub(pattern="c", "", "abc")
+sub(pattern="a", replacement="", x="abc")
+sub(pattern="b", replacement="", x="abc")
+sub(pattern="c", replacement="", x="abc")
+sub(pattern="c", replacement="", x=c("abc", letters))
 
 ## gsub() replaces ALL instances of the pattern
-gsub(pattern="a", "", "abcabc")
-gsub(pattern="b", "", "abcabc")
-gsub(pattern="c", "", "abcabc")
+gsub(pattern="a", replacement="", x="abcabc")
+gsub(pattern="b", replacement="", x="abcabc")
+gsub(pattern="c", replacement="", x="abcabc")
 
 ## sub() only replaces the FIRST instance of the pattern
-sub(pattern="a", "", "abcabc")
-sub(pattern="b", "", "abcabc")
-sub(pattern="c", "", "abcabc")
+sub(pattern="a", replacement="", x="abcabc")
+sub(pattern="b", replacement="", x="abcabc")
+sub(pattern="c", replacement="", x="abcabc")
 
 ## regexpr()
-regexpr(pattern="a", c("abcabc", "a", "b"))
+regexpr(pattern="a", text=c("abcabc", "a", "b"))
 
 ## gregexpr() tells us the position(s) of the pattern in each element of the pattern (i.e., like the which() function)
-gregexpr(pattern="a", c("abcabc", "a", "b"))
+gregexpr(pattern="a", text=c("abcabc", "a", "b"))
 
 ## see ?grep for many more examples for each of the regular expression functions shown above
 
