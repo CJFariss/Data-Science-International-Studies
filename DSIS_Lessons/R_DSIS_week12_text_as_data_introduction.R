@@ -77,9 +77,10 @@ tweets <- readLines("Datasets/SIMpoliticalTweets.txt", n=-1)
 tweets
 
 ## which coordinates of the vector of tweets contains the term "obama" (note that we are assuming everything is lower case for now)
-grep("obama", tweets)
+grep(pattern="obama", x=tweets)
 
-coords <- grep("obama", tweets)
+coords <- grep(pattern="obama", x=tweets)
+coords
 
 tweets[coords]
 
@@ -87,12 +88,12 @@ tweets[coords]
 grepl("obama", tweets)
 
 ## logical vector as binary data
-as.numeric(grepl("obama", tweets))
+as.numeric(grepl(pattern="obama", x=tweets))
 
 ## create binary vectors where 1 indicates if the term was present in the tweet and 0 otherwise
-obama <- as.numeric(grepl("obama", tweets))
-love <- as.numeric(grepl("love", tweets))
-hate <- as.numeric(grepl("hate", tweets))
+obama <- as.numeric(grepl(pattern="obama", x=tweets))
+love <- as.numeric(grepl(pattern="love", x=tweets))
+hate <- as.numeric(grepl(pattern="hate", x=tweets))
 
 ## print out the vectors
 obama
@@ -145,13 +146,13 @@ tweets
 ##########################################################################
 
 ## strsplit() splits every tweet into a vector of letters contained in a list (each element of the list is the original tweet)
-strsplit(tweets, split="")
+strsplit(x=tweets, split="")
 
 ## splits every tweet into a vector or words contained in a list (each element of the list is the original tweet)
-strsplit(tweets, split=" ")
+strsplit(x=tweets, split=" ")
 
 ## make a list of vectors with each word in the tweet as an element of the vector
-all_terms_list <- strsplit(tweets, " ")
+all_terms_list <- strsplit(x=tweets, split=" ")
 all_terms_list
 
 ## make one long vector all the words
