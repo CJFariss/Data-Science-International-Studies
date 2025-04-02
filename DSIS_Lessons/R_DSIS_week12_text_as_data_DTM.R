@@ -41,6 +41,7 @@ head(stopwords)
 textEdit <- function(text.vector){
   TEXT <- text.vector
   ## ----- remove stuff ---------- #
+  ## gsub(pattern, replacement, x, ...) ## usage
   TEXT <- gsub("http:.*$", "", TEXT) # replace just the urls/http/www part
   TEXT <- gsub("https:.*$", "", TEXT) # replace just the urls/http/www part
   TEXT <- gsub("www.*$", "", TEXT) #
@@ -61,11 +62,12 @@ textEdit <- function(text.vector){
 newtext <- textEdit(as.character(data$text))
 head(newtext)
 
+newtext
 
 ## create list object
 ## each element is a tweet
 ## within each element are each of terms used in the tweet
-tweet.term.list <- strsplit(newtext, split=" ")
+tweet.term.list <- strsplit(x=newtext, split=" ")
 tweet.term.list
 
 table(tweet.term.list[[1]])
