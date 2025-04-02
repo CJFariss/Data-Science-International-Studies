@@ -25,14 +25,18 @@
 ##########################################################################
 
 ## g is for get
-## it is liks the which() function
-## think of pattern matching functions like the which() funciton but instead of searching for the coordinate position in a vector, it search through a character string for matches to the pattern and returns whether or not the character string contains the pattern 
+## it is like the which() function
+## think of pattern matching functions like the which() function but instead of searching for the coordinate position in a vector, it search through a character string for matches to the pattern and returns whether or not the character string contains the pattern 
 
 ## grepl() is logical function that returns TRUE if the first character argument is contained the second character argument 
 grepl(pattern="a", x=c("abc", "def"))
 grepl(pattern="b", x="abc")
 grepl(pattern="c", x="abc")
 grepl(pattern="d", x="abc")
+
+c(TRUE, FALSE, TRUE)
+which(c(TRUE, FALSE, TRUE))
+which(grepl(pattern="a", x=c("abc", "def")))
 
 ## grep() function that returns the coordinate position of the vector in the second character argument (i.e., like the which() function)
 grep(pattern="a", x=c("a", "b", "c", "d", "e", "f", "g"))
@@ -67,6 +71,8 @@ regexpr(pattern="a", text=c("abcabc", "a", "b"))
 
 ## gregexpr() tells us the position(s) of the pattern in each element of the pattern (i.e., like the which() function)
 gregexpr(pattern="a", text=c("abcabc", "a", "b"))
+
+gregexpr(pattern="a", text=c("abcabc", "a", "b", letters))
 
 ## see ?grep for many more examples for each of the regular expression functions shown above
 
@@ -151,6 +157,8 @@ strsplit(x=tweets, split="")
 ## splits every tweet into a vector or words contained in a list (each element of the list is the original tweet)
 strsplit(x=tweets, split=" ")
 
+tweets <- gsub(pattern="pea soup", replacement="peasoup",x=tweets)
+
 ## make a list of vectors with each word in the tweet as an element of the vector
 all_terms_list <- strsplit(x=tweets, split=" ")
 all_terms_list
@@ -161,6 +169,7 @@ all_terms
 
 ## look at the frequency of the words:
 table(all_terms)
+
 
 ## take the unique terms
 unique_terms <- unique(all_terms)
