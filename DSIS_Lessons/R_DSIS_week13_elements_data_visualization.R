@@ -63,7 +63,7 @@ par(mfrow=c(1,1), mar=c(5,4,4,4))
 barplot(data$total)
 
 barplot(data$total,
-  beside=T,
+  beside=TRUE,
   space=0,
   col=COLOR, # I used the named variable defined above instead of naming here
   font=2,
@@ -75,6 +75,19 @@ barplot(data$total,
   names.arg=data$race,
   ylim=c(0, 1.1*max(data$total)) # I made the top of the plot a little bit larger than the largest value
 )
+
+test <- c(1,2,3,4,5)
+barplot(test)
+
+tab <- matrix(1:6,2)
+tab
+barplot(tab, beside=TRUE)
+
+t(tab)
+
+barplot(t(tab), beside=TRUE)
+
+
 
 ## additional plot elements
 box() # add box around plot region
@@ -369,7 +382,7 @@ COLORS_SEQUENTIAL <- c("#ffffcc", "#a1dab4", "#41b6c4", "#2c7fb8", "#253494")
 COLORS_SEQUENTIAL_9 <- c("#ffffd9", "#edf8b1", "#c7e9b4", "#7fcdbb", "#41b6c4", "#1d91c0", "#225ea8", "#253494", "#081d58")
 
 ## same versions as above with the lightest color replicated for all the rest after the first 9
-COLORS_SEQUENTIAL_9_rep <- c(rep("#ffffd9", length(values)-9), COLORS_SEQUENTIAL_9)
+COLORS_SEQUENTIAL_9_rep <- c(rep("#ffffd9", length(values)-8), COLORS_SEQUENTIAL_9)
 
 ## same versions as above with the lightest color replicated for all the rest after the first 9
 COLORS_SEQUENTIAL_9_rep_each <- c(rep(COLORS_SEQUENTIAL_9, each=length(values)/9))
@@ -402,30 +415,6 @@ box()
 
 
 
-#####################################################################################
-# Replicates Figure 1: Number of physical integrity rights allegations over time by organization
-# Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. "Recording Repression: Identifying Physical Integrity Rights Allegations in Annual Country Human Rights Reports" International Studies Quarterly 66(2):sqac016 (June 2022).
-#####################################################################################
-
-## hard coded numbers in tabular format read in as a character string
-reports.year <- read.table(text = "1999  2000  2001   2002   2003   2004   2005   2006    2007   2008   2009   2010   2011   2012  2013  2014  2015  2016
-                            H 804  821 1029  897    0  463  559  641  717  717  757  798  980  941  962  991 1002  991
-                            A 1841 2074 1915 1902 1768 1639 1482 1549 1539 1539 1568 1673 1768 1748    0 1606 1578 1473
-                            S 6976 8749 9298 7654 6654 6302 6385 7294 6538 6538 7202 7166 5555 5909 5636 5750 5493 5557", header = TRUE,check.names = FALSE)
-reports.year
-
-# generate the plot
-par(mar=c(6, 5, 5, 9), xpd=TRUE)
-reports<-barplot(as.matrix(reports.year),
-                 col = c("darkslategrey", "darkcyan", "mediumseagreen"),
-                 legend.text=c("Human Rights Watch", "Amnesty International", "US State Department"), xlab="Year", ylab="Number of Allegations", font.main = 4,args.legend = list(x = "topright", bty = "n", inset=c(-0.25, 0), title="Organization"))
-
-par(mar=c(5,5.5,2,.5), mfrow=c(1,3), cex.lab=1.25, font=2)
-barplot(as.matrix(reports.year[1,]), space=0, las=2, col="darkslategrey", main="Human Rights Watch", ylim=c(0,10000))
-mtext(side=2, "Number of Allegations", line=4.0, cex.lab=1.25)
-barplot(as.matrix(reports.year[2,]), space=0, las=2, col="darkcyan", main="Amnesty International", ylim=c(0,10000))
-barplot(as.matrix(reports.year[3,]), space=0, las=2, col="mediumseagreen", main="US State Department", xlab="", ylim=c(0,10000))
-
 
 #####################################################################################
 ## Always graph your data!
@@ -435,6 +424,13 @@ dev.off()
 Anscombes_quartet <- read.csv("http://cfariss.com/code/Anscombes_quartet.csv")
 Anscombes_quartet <- read.csv("Datasets/Anscombes_quartet.csv")
 
+##inspect the data
+dim(Anscombes_quartet)
+head(Anscombes_quartet)
+Anscombes_quartet
+
+
+## 
 apply(Anscombes_quartet,2,mean)
 apply(Anscombes_quartet,2,var)
 
@@ -469,6 +465,61 @@ axis(side=1, at=c(4,6,8,10,12,14,16,18))
 plot(Anscombes_quartet$x4, Anscombes_quartet$y4, ylim=c(3,13), xlim=c(3,19), pch=21, bg="darkorange", col="darkorange4", xaxt="n")
 abline(reg=lm(y1 ~ x1, data=Anscombes_quartet), col="blue")
 axis(side=1, at=c(4,6,8,10,12,14,16,18))
+
+
+
+
+#####################################################################################
+# Replicates Figure 1: Number of physical integrity rights allegations over time by organization
+# Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. "Recording Repression: Identifying Physical Integrity Rights Allegations in Annual Country Human Rights Reports" International Studies Quarterly 66(2):sqac016 (June 2022).
+#####################################################################################
+dev.off()
+
+## hard coded numbers in tabular format read in as a character string
+reports.year <- read.table(text = "1999  2000  2001   2002   2003   2004   2005   2006    2007   2008   2009   2010   2011   2012  2013  2014  2015  2016
+                            H 804  821 1029  897    0  463  559  641  717  717  757  798  980  941  962  991 1002  991
+                            A 1841 2074 1915 1902 1768 1639 1482 1549 1539 1539 1568 1673 1768 1748    0 1606 1578 1473
+                            S 6976 8749 9298 7654 6654 6302 6385 7294 6538 6538 7202 7166 5555 5909 5636 5750 5493 5557", header = TRUE,check.names = FALSE)
+reports.year
+
+# generate the plot
+par(mar=c(6, 5, 5, 9), xpd=TRUE)
+reports<-barplot(as.matrix(reports.year),
+                 col = c("darkslategrey", "darkcyan", "mediumseagreen"),
+                 legend.text=c("Human Rights Watch", "Amnesty International", "US State Department"), xlab="Year", ylab="Number of Allegations", font.main = 4,args.legend = list(x = "topright", bty = "n", inset=c(-0.25, 0), title="Organization"))
+
+par(mar=c(5,5.5,2,.5), mfrow=c(1,3), cex.lab=1.25, font=2)
+barplot(as.matrix(reports.year[1,]), space=0, las=2, col="darkslategrey", main="Human Rights Watch", ylim=c(0,10000))
+mtext(side=2, "Number of Allegations", line=4.0, cex.lab=1.25)
+barplot(as.matrix(reports.year[2,]), space=0, las=2, col="darkcyan", main="Amnesty International", ylim=c(0,10000))
+barplot(as.matrix(reports.year[3,]), space=0, las=2, col="mediumseagreen", main="US State Department", xlab="", ylim=c(0,10000))
+
+
+
+#####################################################################################
+## replication of an Rplot from Eck and Fariss (2018) that was not included in the published article
+
+dev.off()
+par(mar=c(5,4,2,10))
+
+## you can get the dataset from severl places including here: https://dataverse.harvard.edu/dataverse/HumanRightsScores
+
+## data are hard coded here
+dat <- -1 * c(2, 2, 1, 2, 2, 2,  2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, NA, NA)
+
+plot(dat, pch=22, xlim=c(1,31), ylim=c(-2.5,0.5), col=grey(.1), bg=grey(.9), cex=2.25, yaxt="n", xaxt="n", ylab="", xlab="")
+
+#axis(2, at=c(0,-1,-2), labels=c(0,1,2), las=2)
+axis(2, at=c(0,-1,-2), labels=c("","",""), las=2)
+axis(4, at=c(0,-1,-2), labels=c("Practiced \nFrequently", "Practiced \nOccasionally", "Has not occurred\n   or Unreported"), las=2)
+
+axis(1, at=c(1,5,10,15,20,25,30), labels=c(1981,1985,1990,1995,2000,2005,2010), las=1)
+axis(1, at=c(1:31), labels=rep("", length(1:31)), las=1)
+
+mtext(side=2, "CIRI Torture Category", line=2.5, font=2, cex=1.25)
+mtext(side=1, "Year", line=3.5, font=2,  cex=1.25)
+mtext(side=3, "Torture in Sweden", line=0.5, font=2,  cex=1.25)
+
 
 
 #####################################################################################
