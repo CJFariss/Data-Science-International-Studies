@@ -56,6 +56,8 @@ mean(Y_i0)
 mean(Y_i1)
 
 ## calculate true difference in means for the potential outcome of subjects with treatment and without treatment effect
+mean(Y_i1 - Y_i0)
+
 mean(Y_i1) - mean(Y_i0)
 
 ## create vector of treatment assignments for the units (W_i==1 if treated, W_i==0 if control)
