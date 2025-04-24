@@ -38,7 +38,7 @@
 ##
 ## The p-value is a probability but it is not intuitive to think about. Even though p-values are confusing, they are used everywhere so we should try to understand what a p-value means and what it does not mean.
 ##
-## First, to calculate a p-value, we need to first calculate the estimate of interest (e.g., mean, correlation coefficient, regression coefficient). Remember the mean or any other estimate is our representation or summary of our data. Conceptually, we think of the true value of the parameter we are interested in as unobservable so it's theoretical/conceptual in nature. We call this the estimand or sometimes the population parameter (there are lots of ways to denote this idea). We cannot observe this etity but we can estiamte it.
+## First, to calculate a p-value, we need to first calculate the estimate of interest (e.g., mean, correlation coefficient, regression coefficient). Remember the mean or any other estimate is our representation or summary of our data. Conceptually, we think of the true value of the parameter we are interested in as unobservable so it's theoretical/conceptual in nature. We call this the estimand or sometimes the population parameter (there are lots of ways to denote this idea). We cannot observe this entity but we can estimate it.
 ##
 ## Second, once we have our estimate, we calculate the interval around the estimate, which is the standard error of the estimate (the standard error is technically the standard deviation of the estimate but since we only have one estimate and not a distribution of estimates we cannot simply calculate the standard deviation so we estimate it and call it the standard error). We use an estimator, which is just an algorithm or procedure to calculate this estimate of the standard error.
 ##
@@ -46,7 +46,7 @@
 ##
 ## Fourth, we calculate the p-value. The p-value is the probability that the estimate is contained in the interval around 0, given that we assumed the estimate was 0 in the first place. But there are many other related but not quite correct interpretations of the p-value that exist so be wary!
 ##
-## Put another way, the p-value is the probability that an estimate (e.g., mean, regression coefficient) is not far away from 0, assuming that 0 is the "truth". Rember we cannot observe the theoretical estimand, we can only estimate it.
+## Put another way, the p-value is the probability that an estimate (e.g., mean, regression coefficient) is not far away from 0, assuming that 0 is the "truth". Remember we cannot observe the theoretical estimand, we can only estimate it.
 ##
 ## The assumption that the estimate is 0 is the "truth" is called the null hypothesis (H_{0}). We assume that the estimate is 0 and then see how far away (distance using a density function) it is from the value we actually calculate from the data. So we can define the p-value as the probability of the data given the null hypothesis: p(data | H0).
 ##
@@ -58,7 +58,7 @@
 ##
 ## There are more intuitive and easy to understand probability statements that we can use to provide evidence that effects are different than 0 but null-hypothesis testing and its terminology is dominant in many different fields (even if not explicitly so) and are produced by many of the functions we use in R like lm(), t.test(), etc.
 ##
-## We will consider the Bayesian version of the probability of an estimate in another lesson. Note here that formally it flips the conditional probability we defined above from p(data | H0) to p(H | data), where H is the research hypothesis we are testing and not the null hypothesis (H0). Note: see the lego probability lesson or weather probability challange for reminders about what conditional probability is and how to think about it.
+## We will consider the Bayesian version of the probability of an estimate in another lesson. Note here that formally it flips the conditional probability we defined above from p(data | H0) to p(H | data), where H is the research hypothesis we are testing and not the null hypothesis (H0). Note: see the lego probability lesson or weather probability challenge for reminders about what conditional probability is and how to think about it.
 ##
 ## Fifth, we can use the standard error to construct a confidence interval (CI) around the estimate calculated in step (1). CIs are useful descriptions of the range of possible estimates and the uncertainty we have about the estimate we have produced.
 ##
@@ -151,12 +151,17 @@ t.test(x)$p.value
 ## Below, we will use the round function to determine how many digits the test above is TRUE before becoming FALSE
 
 ## plot the Student's t distribution
-x<-1:5
+x<- c(1:5)
+mean(x)
+mean_se(x)
+mean(x)/mean_se(x)
+
 par(mfrow=c(1,1))
 curve(expr=dt(x,df=length(x)), from=-6,to=6, n=101, xlab="t-statistic")
 abline(v=mean(x)/mean_se(x), col=2)
 
-## 95% CI
+## 95% CI (this is wrong)
+## note to FARISS describe why this is a common mistake
 t.test(x)$estimate + 1.96*t.test(x)$stderr
 t.test(x)$estimate - 1.96*t.test(x)$stderr
 
@@ -227,8 +232,9 @@ for(i in 1:1000){
 library(MASS)
 
 ## plot the results
-par(mfrow=c(1,2))
+par(mfrow=c(1,2), mar=c(3,3,1,1))
 truehist(test_mean)
+abline(v=MU, col=2)
 truehist(test_p)
 
 ##
