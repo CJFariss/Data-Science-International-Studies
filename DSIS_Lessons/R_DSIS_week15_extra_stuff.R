@@ -62,6 +62,8 @@ plot(x, col=3)
 ## using the base pipe operator
 x <- rnorm(SIMS) |>
   matrix(ncol = 2)
+x <- rnorm(SIMS) |> matrix(ncol = 2)
+
 ## plot the 2 columns in the x matrix
 plot(x, col=4)
 
@@ -86,6 +88,10 @@ rnorm(SIMS) %>%
   matrix(ncol = 2) %>%
   plot(col=6) 
 
+
+x <- rnorm(SIMS)
+x <-  matrix(x, ncol = 2)
+plot(x, col=6) 
 
 
 
