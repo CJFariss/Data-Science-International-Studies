@@ -36,37 +36,47 @@ Suggested Book: Matloff, Norman. 2011. Art of R Programming: A Tour of Statistic
 
 ## Schedule of Lessons and Program Challenges
 ### Week 2 Lessons and Program Challenges
-- [Introduction](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
-- [scalars, vectors, and matrices](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
+- Lesson: [Introduction](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
+- Lesson: [scalars, vectors, and matrices](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
 
 ### Week 3 Lessons and Program Challenges 
 - No lesson this week
 
 ### Week 4 Lessons and Program Challenges
- - [lists, dataframes and tables](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
+ - Lesson: [lists, dataframes and tables](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
 
 ### Week 5 Lessons and Program Challenges
- - [loops, logic, lists, dataframes, and tables](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
+ - Lesson: [loops, logic, lists, dataframes, and tables](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
    
 ### Week 6 Lessons and Program Challenges
-
+ - Lesson: [functions](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
+ 
 ### Week 7 Lessons and Program Challenges
-
+ - Lesson: []()
+   
 ### Week 8 Lessons and Program Challenges
+ - Lesson: []()
 
 ### Week 9 Lessons and Program Challenges
+ - Lesson: []()
 
 ### Week 10 Lessons and Program Challenges
+ - Lesson: []()
 
 ### Week 11 Lessons and Program Challenges
+ - Lesson: []()
 
 ### Week 12 Lessons and Program Challenges
+ - Lesson: []()
 
 ### Week 13 Lessons and Program Challenges
+ - Lesson: []()
 
 ### Week 14 Lessons and Program Challenges
+ - Lesson: []()
 
 ### Week 15 Lessons and Program Challenges
+ - Lesson: []()
 
 ## Chat GPT Policy
 - My advice for this class: *don't use Chat GPT or google search*. But ...  
