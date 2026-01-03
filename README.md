@@ -29,6 +29,11 @@ The primary learning tool in this  course is participation with a set of \textbf
 Students learn in my course by finding the challenging steps in the Program Challenge that we use each week of the course. Students discover which steps in the Program Challenge are difficult for them and grow by tackling these steps. I encourage my students to show me where they are getting stuck so that I can help them make progress. Not finishing all the steps is expected and encouraged because the extensible structure of each Program Challenge means that any student can learn from making it through just a few steps. As students learn and gain confidence, they can return to the more difficult step in a Program Challenge from an earlier week in the course to learn and grow even more. This is an important requirement in my course, because at the midterm and final exam period, I ask my students to go back and complete additional difficult steps from their favorite program challenges.
 
 
+## Books
+Required Book: Davies, Tilman M. 2016. The Book of R: A First Course in Programming and Statistics. no starch press. 
+Suggested Book: Matloff, Norman. 2011. Art of R Programming: A Tour of Statistical Software Design. no starch press. 
+
+
 ## Schedule of Lessons and Program Challenges
 ### Week 2 Lessons and Program Challenges
 - [Introduction](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
@@ -41,7 +46,8 @@ Students learn in my course by finding the challenging steps in the Program Chal
  - [lists, dataframes and tables](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
 
 ### Week 5 Lessons and Program Challenges
-
+ - [loops, logic, lists, dataframes, and tables](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
+   
 ### Week 6 Lessons and Program Challenges
 
 ### Week 7 Lessons and Program Challenges
