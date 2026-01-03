@@ -29,21 +29,42 @@ The primary learning tool in this  course is participation with a set of \textbf
 Students learn in my course by finding the challenging steps in the Program Challenge that we use each week of the course. Students discover which steps in the Program Challenge are difficult for them and grow by tackling these steps. I encourage my students to show me where they are getting stuck so that I can help them make progress. Not finishing all the steps is expected and encouraged because the extensible structure of each Program Challenge means that any student can learn from making it through just a few steps. As students learn and gain confidence, they can return to the more difficult step in a Program Challenge from an earlier week in the course to learn and grow even more. This is an important requirement in my course, because at the midterm and final exam period, I ask my students to go back and complete additional difficult steps from their favorite program challenges.
 
 
-## Schedule of Lessons
-### Week 2 Lessons
+## Schedule of Lessons and Program Challenges
+### Week 2 Lessons and Program Challenges
 - [Introduction](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
 - [scalars, vectors, and matrices](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
 
-### Week 3 Lessons 
-- NA
+### Week 3 Lessons and Program Challenges 
+- No lesson this week
 
-### Week 4 Lessons
+### Week 4 Lessons and Program Challenges
  - [lists, dataframes and tables](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
 
+### Week 5 Lessons and Program Challenges
+
+### Week 6 Lessons and Program Challenges
+
+### Week 7 Lessons and Program Challenges
+
+### Week 8 Lessons and Program Challenges
+
+### Week 9 Lessons and Program Challenges
+
+### Week 10 Lessons and Program Challenges
+
+### Week 11 Lessons and Program Challenges
+
+### Week 12 Lessons and Program Challenges
+
+### Week 13 Lessons and Program Challenges
+
+### Week 14 Lessons and Program Challenges
+
+### Week 15 Lessons and Program Challenges
 
 ## Chat GPT Policy
 - My advice for this class: *don't use Chat GPT or google search*. But ...  
 - You may choose to use U-M GPT or another Chat GPT program in this course. 
-- The University of Michigan provides access to a U-M GPT tool, which you read more about here: \url{https://its.umich.edu/computing/ai/gpt-in-depth}
+- The University of Michigan provides access to a U-M GPT tool, which you read more about here: https://its.umich.edu/computing/ai/gpt-in-depth
 - If you choose to use U-M GPT or another Chat GPT program, you must submit (1) the prompt used to generate the output, (2) the specific GPT program used, and (3) the date and time you entered the prompt.} 
 - You can read more about creating effective prompts here: https://teamdynamix.umich.edu/TDClient/30/Portal/KB/ArticleDet?ID=10680.
