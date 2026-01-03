@@ -53,7 +53,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
    
 ### Week 8 Lessons and Program Challenges
-
+ - Midterm Examination
+   
 ### Week 9 Lessons and Program Challenges
  - Lesson: [probabilitiy with legos in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week09_probability.R)
 
