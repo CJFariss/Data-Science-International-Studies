@@ -36,11 +36,16 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 
 ## Schedule of Lessons and Program Challenges
-### Week 1 and 2 Lessons and Program Challenges
+### Week 1 Lessons and Program Challenges
 - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
+
+### Week 2 Lessons and Program Challenges
 - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
 
-### Week 3 and 4 Lessons and Program Challenges
+### Week 3 Lessons and Program Challenges
+- Lesson: no lesson this week
+  
+### Week 4 Lessons and Program Challenges
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
 
 ### Week 5 Lessons and Program Challenges
@@ -78,7 +83,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: []()
 
 ### Week 15 Lessons and Program Challenges
- - Lesson: []()
+ - Lesson: no lesson this week
 
 ## Chat GPT Policy
 - My advice for this class: *don't use Chat GPT or google search*. But ...  
