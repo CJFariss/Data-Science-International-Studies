@@ -80,7 +80,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: [Introduction to Neural Networks in R]()
 
 ### Week 13 Lessons and Program Challenges
- - Lesson: []()
+ - Lesson: [Elements of data visualization in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week13_elements_data_visualization.R)
 
 ### Week 14 Lessons and Program Challenges
  - Lesson: []()
