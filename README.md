@@ -28,3 +28,6 @@ The primary learning tool in this  course is participation with a set of \textbf
 
 Students learn in my course by finding the challenging steps in the Program Challenge that we use each week of the course. Students discover which steps in the Program Challenge are difficult for them and grow by tackling these steps. I encourage my students to show me where they are getting stuck so that I can help them make progress. Not finishing all the steps is expected and encouraged because the extensible structure of each Program Challenge means that any student can learn from making it through just a few steps. As students learn and gain confidence, they can return to the more difficult step in a Program Challenge from an earlier week in the course to learn and grow even more. This is an important requirement in my course, because at the midterm and final exam period, I ask my students to go back and complete additional difficult steps from their favorite program challenges.
 
+
+## Lessons
+[Introduction](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
