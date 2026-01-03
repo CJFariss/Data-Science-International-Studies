@@ -32,6 +32,10 @@ Students learn in my course by finding the challenging steps in the Program Chal
 ## Schedule of Lessons
 ### Week 2 Lessons
 - [Introduction](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
-- [Scalars, Vectors, and Matrices](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
+- [scalars, vectors, and matrices](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
 
 ### Week 3 Lessons 
+- NA
+
+### Week 4 Lessons
+ - [lists, dataframes and tables](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
