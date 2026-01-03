@@ -42,7 +42,7 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
 
 ## Chat GPT Policy
-- My advise for this class: *don't use Chat GPT or google search*. But ...  
+- My advice for this class: *don't use Chat GPT or google search*. But ...  
 - You may choose to use U-M GPT or another Chat GPT program in this course. 
 - The University of Michigan provides access to a U-M GPT tool, which you read more about here: \url{https://its.umich.edu/computing/ai/gpt-in-depth}
 - If you choose to use U-M GPT or another Chat GPT program, you must submit (1) the prompt used to generate the output, (2) the specific GPT program used, and (3) the date and time you entered the prompt.} 
