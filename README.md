@@ -36,7 +36,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 
 ## Schedule of Lessons and Program Challenges
-### Week 1 Lessons and Program Challenges
+### Numbers in R and other stuff in R too
+#### Week 1 Lessons and Program Challenges
 - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
 
 ### Week 2 Lessons and Program Challenges
