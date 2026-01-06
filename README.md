@@ -212,8 +212,13 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
 ## Final Exam Period
  - Thursday, April 23	1:30 pm - 3:30 pm
+ <br>
 
 # Additional Course Information 
+## Office Hours
+The best way to contact me in order to ask additional questions about course material is to attend office hours. I hold extensive office hours each week online on zoom and in-person in the atrium area on the first floor of the Institute for Social Research (ISR) building, which is located at 426 Thompson St., Ann Arbor, MI 48104. Just like in the class room, office hours sessions are designed to be an open and inclusive learning environment for my students. The ISR atrium offers an open space that accommodates small to medium size groups. There will often be more than one student seeking feedback during office hours. Each of you are welcome to join the group office hours session and ask questions or participate in discussion. I am also available outside of office hours via a message on the course management software (Canvas) or ay my umich email address: cjfariss@umich.edu.
+ <br>
+
 ## Chat GPT Policy
 - My advice for this class: *don't use Chat GPT or google search*. But ...  
 - You may choose to use U-M GPT or another Chat GPT program in this course. 
