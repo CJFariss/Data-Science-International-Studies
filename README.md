@@ -30,7 +30,6 @@ Students learn in my course by finding the challenging steps in the Program Chal
 Required Book: Davies, Tilman M. 2016. [The Book of R: A First Course in Programming and Statistics](https://nostarch.com/bookofr). no starch press. 
 Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press. 
 <br> 
-<br> 
 
 
 # Schedule of Lessons and Program Challenges
@@ -42,8 +41,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 ## Week 1: Getting Started with R
 - Lesson: 3 sets of 3 lecture 
-- Program Challenge: Download and install
-  -- [R](https://cran.r-project.org/), (2) [Rstudio](https://posit.co/download/rstudio-desktop/), and (3) [github desktop](https://desktop.github.com/download/).
+- Program Challenge: Download and install (1) [R](https://cran.r-project.org/), (2) [Rstudio](https://posit.co/download/rstudio-desktop/), and (3) [github desktop](https://desktop.github.com/download/).
 <br> 
 
 ## Week 2: Numbers and Storing Numbers in R
