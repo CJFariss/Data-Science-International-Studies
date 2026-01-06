@@ -111,6 +111,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 ## Week 11: Statistical Model Development in R
  - Required Readings: Davies Ch.13 *Elementary Statistics*; Davies Ch. 20 *Simple Linear Regression*
+ - Optional Readings: Davies 21 *Multiple Linear Regression*; Davies 22 *Linear Model Selection and Diagnostics*
  - Lesson: [mean estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_mean_estimation.R)
  - Lesson: [variance estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_variance_estimation.R)
  - Lesson: [linear model estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_linear_model_estimatation.R)
