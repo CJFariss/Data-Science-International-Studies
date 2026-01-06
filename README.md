@@ -84,28 +84,41 @@ Students learn in my course by finding the challenging steps in the Program Chal
 <br>
 
 ## Week 5: Programming Structures in R
+### Monday
 - Required Readings: Davies Ch.10 *Conditions and Loops* 
 - Optional Readings: Matloff Ch.7 *R Programming Structures*
- - Lesson: [loops, logic, lists, dataframes, and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
- - Program Challenge: [R_Challenge_simulation_shuffle_index.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_shuffle_index.R)
+- Lesson: [loops, logic, lists, dataframes, and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
+
+### Wednesday
+- Program Challenge: [R_Challenge_simulation_shuffle_index.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_shuffle_index.R)
  <br>
  
 ## Week 6: User Defined Functions in R
+### Monday
 - Required Reading: Davies Ch.9 *Calling Functions*; Davies Ch.11 *Writing Functions*; Davies Ch.8 *Reading and Writing Files*
 - Optional Readings: Matloff Ch.10 *Input/Output*
- - Lesson: [functions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
- - Program Challenge: [R_Challenge_simulation_weather_forecast.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_weather_forecast.R)
- - Optional Problem Set: [R_DSIS_problem_set_loops_and_functions_week6.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_loops_and_functions_week6.R)
+- Lesson: [functions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
+- Optional Problem Set: [R_DSIS_problem_set_loops_and_functions_week6.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_loops_and_functions_week6.R)
+
+### Wednesday
+- Program Challenge: [R_Challenge_simulation_weather_forecast.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_weather_forecast.R)
 <br>
 
 ## Week 7: Functions in R continued
-- Optional Readings: Davies Ch.12 *Exceptions, Timing, and Visibility*; Matloff Ch.13 *Debugging*
+### Monday
+ - Optional Readings: Davies Ch.12 *Exceptions, Timing, and Visibility*; Matloff Ch.13 *Debugging*
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
-  - Program Challenge: [R_Challenge_matrix_Sudoku_check.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Sudoku_check.R)
+ 
+ ### Wednesday
+ - Program Challenge: [R_Challenge_matrix_Sudoku_check.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Sudoku_check.R)
  <br>
  
 ## Week 8: Midterm Examination Review Week
- - Midterm Examination (Monday) and Selected Program Challenges due (Wednesday)
+ ### Monday
+  - Midterm Examination
+  
+ ### Wednesday
+  - Student Selected Program Challenges due
  <br>
 
 ## Spring Break
@@ -114,9 +127,12 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
  
 ## Week 9: Introduction to Probabilities Distibutions in R
+ ### Monday
  - Required Readings: Davies Ch.15 *Probability*
  - Optional Readings: Matloff Ch.8 *Doing Math and Simulations in R*
  - Lesson: [probabilitiy with legos in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week09_probability.R)
+ 
+ ### Wednesday
  - Program Challenge: [R_Challenge_probability_legos.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_probability_legos.R)
  - Optional Program Challenge: [R_Challenge_simulation_bball_bracket_sampler.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_bball_bracket_sampler.R)
  - Optional Program Challenge: [R_Challenge_simulation_high_card_draw.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_high_card_draw.R)
@@ -124,29 +140,38 @@ Students learn in my course by finding the challenging steps in the Program Chal
  <br>
 
 ## Week 10: Probabilities Distibutions and Visual Summaries of Data in R
+ ### Monday
  - Required Readings: Davies Ch.16 *Common Probability Distributions*
  - Lesson: [discrete probabilitiy distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_discrete.R)
  - Lesson: [continuous probability distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_continuous.R)
  - Bonus Lesson: [Approximating Euler's number and pi in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_Euler_pi.R)
- - Program Challenge: [R_Challenge_probability_distributions.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_probability_distributions.R)
- - Optional Problem Set: [R_DSIS_problem_set_probability_week9_10.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_probability_week9_10.R)
+  - Optional Problem Set: [R_DSIS_problem_set_probability_week9_10.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_probability_week9_10.R)
+
+ ### Wednesday
+  - Program Challenge: [R_Challenge_probability_distributions.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_probability_distributions.R)
  <br>
 
 ## Week 11: Statistical Model Development in R
- - Required Readings: Davies Ch.13 *Elementary Statistics*; Davies Ch. 20 *Simple Linear Regression*
+  ### Monday
+  - Required Readings: Davies Ch.13 *Elementary Statistics*; Davies Ch. 20 *Simple Linear Regression*
  - Optional Readings: Davies 21 *Multiple Linear Regression*; Davies 22 *Linear Model Selection and Diagnostics*
  - Lesson: [mean estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_mean_estimation.R)
  - Lesson: [variance estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_variance_estimation.R)
  - Lesson: [linear model estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_linear_model_estimatation.R)
- - Program Challenge: []()
+ 
+  ### Wednesday
+  - Program Challenge: []()
  <br>
 
 ## Week 12: Introduction to Text as Data and Neural Networks in R
- - Optional Required Readings: Matloff Ch.11 *String Manipulation*
+  ### Monday
+  - Optional Readings: Matloff Ch.11 *String Manipulation*
  - Lesson: [Introduction to text as data in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_introduction.R)
  - Lesson: [Creating Document-by-Term matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM.R)
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
  - Lesson: [Introduction to Neural Networks in R]()
+ 
+ ### Wednesday
  - Program Challenge: [R_Challenge_text_character_sort.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_character_sort.R)
  - Optional Program Challenge: [R_Challenge_text_letters_and_logic.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_letters_and_logic.R)
  - Optional Program Challenge: [R_Challenge_text_non_repeating_chatacter.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_non_repeating_chatacter.R)
@@ -155,24 +180,34 @@ Students learn in my course by finding the challenging steps in the Program Chal
  <br>
 
 ## Week 13: Data Visualization in R
- - Required Readings: Davies Ch.14 *Basic Data Visualization*; Davies Ch.23 *Advanced Plot Customization*  
+  ### Monday
+  - Required Readings: Davies Ch.14 *Basic Data Visualization*; Davies Ch.23 *Advanced Plot Customization*  
  - Optional Readings: Matloff Ch.12 *Graphics*; Davies Ch.24 *Going Further with the Grammar of Graphics*; Davies Ch.25 *Defining Colors and Plotting in Higher Dimension* 
  - Lesson: [Elements of data visualization in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week13_elements_data_visualization.R)
+ 
+ ### Wednesday
  - Program Challenge: [R_Challenge_analysis_OurWorldindata.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_OurWorldindata.R)
  - Optional Program Challenge: [R_Challenge_analysis_flowingdata.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_flowingdata.R)
  <br>
 
 ## Week 14: Methods of Model Evaluation in R
+ ### Monday
  - Required Readings: Davies Ch. 18 *Hypothesis Testing*; Davies Ch.17 *Sampling Distributions and Confidence*
  - Lesson: [standard errors, t-test, p-value, confidence intervals in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_standard_errors_tstats_pvalues_CIs.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_false_discovery_rate.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_potential_outcomes_simulations.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_potential_outcomes_simulations.R)
- - Program Challenge: []()
+ 
+ ### Wednesday
+  - Program Challenge: []()
  <br>
 
 ## Week 15: Final Examination Review Week
- - Lesson: Review
+ ### Monday
+ - Course Review
+
+ ### Wednesday
+ - No class
  <br>
 
 # Additional Course Information 
