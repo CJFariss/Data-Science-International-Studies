@@ -50,7 +50,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 ### Week 3 Lessons and Program Challenges
 - Lesson: no lesson this week
-- Program Challenge:
+- Program Challenge: [R_Challenge_vector_1max_2max_3max_nmax.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_1max_2max_3max_nmax.R)
 <br>
 
 ### Week 4 Lessons and Program Challenges
