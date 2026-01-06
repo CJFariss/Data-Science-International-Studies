@@ -42,7 +42,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 ## Week 1: Getting Started with R
 - Lesson: 3 sets of 3 lecture 
-- Program Challenge: Download and install (1) [R](https://cran.r-project.org/), (2) [Rstudio](https://posit.co/download/rstudio-desktop/), and (3) [github desktop](https://desktop.github.com/download/).
+- Program Challenge: Download and install
+  -- [R](https://cran.r-project.org/), (2) [Rstudio](https://posit.co/download/rstudio-desktop/), and (3) [github desktop](https://desktop.github.com/download/).
 <br> 
 
 ## Week 2: Numbers and Storing Numbers in R
