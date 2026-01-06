@@ -55,22 +55,22 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 ### Week 4: Data Structures in R
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
- - Program Challenge:
+ - Program Challenge: []()
  <br>
 
 ### Week 5: Programming Structures in R
  - Lesson: [loops, logic, lists, dataframes, and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
- - Program Challenge:
+ - Program Challenge: [R_Challenge_simulation_shuffle_index.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_shuffle_index.R)
  <br>
  
 ### Week 6: User Defined Functions in R
  - Lesson: [functions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
- - Program Challenge:
+ - Program Challenge: []()
  <br>
 
 ### Week 7: Functions in R continued
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
-  - Program Challenge:
+  - Program Challenge: []()
  <br>
  
 ### Week 8: Midterm Examination Review Week
@@ -79,21 +79,22 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  
 ### Week 9: Introduction to Probabilities Distibutions in R
  - Lesson: [probabilitiy with legos in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week09_probability.R)
- - Program Challenge:
+ - Program Challenge: [R_Challenge_probability_legos.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_probability_legos.R)
+ - Program Challenge: [R_Challenge_simulation_weather_forecast.R]([https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_probability_legos.](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_weather_forecast.R)
  <br>
 
 ### Week 10: Probabilities Distibutions and Visual Summaries of Data in R
  - Lesson: [discrete probabilitiy distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_discrete.R)
  - Lesson: [continuous probability distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_continuous.R)
  - Bonus Lesson: [Approximating Euler's number and pi in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_Euler_pi.R)
- - Program Challenge:
+ - Program Challenge: []()
  <br>
 
 ### Week 11: Statistical Model Development in R
  - Lesson: [mean estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_mean_estimation.R)
  - Lesson: [variance estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_variance_estimation.R)
  - Lesson: [linear model estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_linear_model_estimatation.R)
- - Program Challenge:
+ - Program Challenge: []()
  <br>
 
 ### Week 12: Introduction to Text as Data and Neural Networks in R
@@ -101,12 +102,12 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: [Creating Document-by-Term matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM.R)
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
  - Lesson: [Introduction to Neural Networks in R]()
- - Program Challenge:
+ - Program Challenge: []()
  <br>
 
 ### Week 13: Data Visualization in R
  - Lesson: [Elements of data visualization in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week13_elements_data_visualization.R)
- - Program Challenge:
+ - Program Challenge: []()
  <br>
 
 ### Week 14: Methods of Model Evaluation in R
@@ -114,11 +115,12 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: [R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R)
  - Lesson: [DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_potential_outcomes_simulations.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_potential_outcomes_simulations.R)
- - Program Challenge:
+ - Program Challenge: []()
  <br>
 
 ### Week 15: Final Examination Review Week
  - Lesson: Review
+ <br>
 
 ## Chat GPT Policy
 - My advice for this class: *don't use Chat GPT or google search*. But ...  
@@ -126,3 +128,4 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 - The University of Michigan provides access to a U-M GPT tool, which you read more about here: https://its.umich.edu/computing/ai/gpt-in-depth
 - **If you choose to use U-M GPT or another Chat GPT program, you must submit (1) the prompt used to generate the output, (2) the specific GPT program used, and (3) the date and time you entered the prompt.**
 - You can read more about creating effective prompts here: https://teamdynamix.umich.edu/TDClient/30/Portal/KB/ArticleDet?ID=10680.
+ <br>
