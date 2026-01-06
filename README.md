@@ -69,6 +69,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 <br>
 
 ## Week 5: Programming Structures in R
+- Required Readings: Davies Ch.10 *Conditions and Loops* 
+- Optional Readings: Matloff Ch.7 *R Programming Structures*
  - Lesson: [loops, logic, lists, dataframes, and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
  - Program Challenge: [R_Challenge_simulation_shuffle_index.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_shuffle_index.R)
  <br>
