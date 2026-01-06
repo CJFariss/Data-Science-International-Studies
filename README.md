@@ -210,6 +210,9 @@ Students learn in my course by finding the challenging steps in the Program Chal
  - No class
  <br>
 
+## Final Exam Period
+ - Thursday, April 23	1:30 pm - 3:30 pm
+
 # Additional Course Information 
 ## Chat GPT Policy
 - My advice for this class: *don't use Chat GPT or google search*. But ...  
