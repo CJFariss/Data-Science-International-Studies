@@ -60,16 +60,23 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 ### Week 5 Lessons and Program Challenges
  - Lesson: [loops, logic, lists, dataframes, and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
-   
+ - Program Challenge:
+ <br>
+ 
 ### Week 6 Lessons and Program Challenges
  - Lesson: [functions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
- 
+ - Program Challenge:
+ <br>
+
 ### Week 7 Lessons and Program Challenges
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
-   
+  - Program Challenge:
+ <br>
+ 
 ### Week 8 Lessons and Program Challenges
- - Midterm Examination
-   
+ - Midterm Examination and Program Challenges due 
+ <br>
+ 
 ### Week 9 Lessons and Program Challenges
  - Lesson: [probabilitiy with legos in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week09_probability.R)
 
