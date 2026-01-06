@@ -66,6 +66,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
  - Program Challenge: [R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_as_list.R)
  - Optional Program Challenge: [R_Challenge_matrix_Toeplitz_diagnols.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/[R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Toeplitz_diagnols.R))
+ - Optional Program Challenge: [R_Challenge_matrix_count_of_submatrices.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_count_of_submatrices.R)
  - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
 <br>
 
