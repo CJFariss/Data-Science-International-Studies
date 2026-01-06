@@ -227,6 +227,13 @@ The best way to contact me in order to ask additional questions about course mat
 - You can read more about creating effective prompts here: https://teamdynamix.umich.edu/TDClient/30/Portal/KB/ArticleDet?ID=10680.
  <br>
 
+## Active Learning Attendence Policy 
+- As students, we learn more when we actively engage with material instead of passively consuming it. This insight is supported by extensive research from college-level courses. Participation and therefore attendance is critical for achieving our shared learning goals and is therefore mandatory. We will program in class together each week during our class sessions. 
+- **Participation**: 40% of your grade will be based on participation in our in classroom discussions about the assigned readings, participating in the active learning tasks (program challenges), and several short surveys.  I will award half of the participation points for the first half (week 1-8) of the semester and half of the participation points for the second half of the semester (week 9-15). Active learning tasks (synchronous) and Class Video events (synchronous or asynchronous) both count towards the participation grade.  The purpose of the participation component in this class, particularly during the Wednesday labs and office hours, is to participate in the intellectual learning environment with both the instructors and your peers in addition to demonstrating your individual learning process and learning accomplishments over the course of the semester. Participation is both a critical component to learning and one of the primary methods by which I evaluate learning progress in this course.
+- Monday lessons will be recorded via zoom and available online. If you cannot attend class in person, you are welcome to join class virtually via zoom or watch the recorded lesson at a later time. If you are sick, I want you to take the time to rest and recover fully. I will help you catch up with the course material. If you miss a Monday lesson session, you will need to schedule a makeup session with the instructor during Office Hours.
+- Wednesday lab sessions will focus on the program challenges and attendance is required. The program challenges are available to work on outside of class and during office hours as well. Please feel free to use office hours to ask questions about these challenges as you work through them. If you miss a Wednesday lab session, you will need to schedule a makeup session with the instructor.
+<br>
+
  ## Past Course Syllabi 
 - [2025 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2025.pdf)
 - [2023 Fall Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Fall2023.pdf)
