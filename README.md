@@ -94,11 +94,13 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
  
 ## Week 9: Introduction to Probabilities Distibutions in R
+ - Required Readings: Davies Ch.15 *Probability*
  - Lesson: [probabilitiy with legos in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week09_probability.R)
  - Program Challenge: [R_Challenge_probability_legos.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_probability_legos.R)
  <br>
 
 ## Week 10: Probabilities Distibutions and Visual Summaries of Data in R
+ - Required Readings: Davies Ch.16 *Common Probability Distributions*
  - Lesson: [discrete probabilitiy distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_discrete.R)
  - Lesson: [continuous probability distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_continuous.R)
  - Bonus Lesson: [Approximating Euler's number and pi in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_Euler_pi.R)
@@ -107,6 +109,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
 
 ## Week 11: Statistical Model Development in R
+ - Required Readings: Davies Ch.13 *Elementary Statistics*
  - Lesson: [mean estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_mean_estimation.R)
  - Lesson: [variance estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_variance_estimation.R)
  - Lesson: [linear model estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_linear_model_estimatation.R)
