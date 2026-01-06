@@ -46,13 +46,18 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 <br> 
 
 ## Week 2: Numbers and Storing Numbers in R
- - Readings: Davies Ch.2 *Numerics, Arithmetic, Assignment, and Vectors*; Matloff Ch.2 *Vectors* (optional); Davies Ch.3 *Matrices and Arrays*; Matloff Ch.4 *Matrices and Arrays* (optional)
+ - Required Readings: Davies Ch.2 *Numerics, Arithmetic, Assignment, and Vectors*; Davies Ch.3 *Matrices and Arrays*
+ - Optional Readings: Matloff Ch.2 *Vectors* (optional); Matloff Ch.4 *Matrices and Arrays* (optional)
 <br> 
 
 - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
 - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
+<br> 
+
 - Program Challenge: [R_Challenge_1st_challenge.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_1st_challenge.R)
 - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
+<br> 
+
 - Optional Problem Set: [R_DSIS_problem_set_vectors_matrices_week2.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_vectors_matrices_week2.R)
 <br>
 
