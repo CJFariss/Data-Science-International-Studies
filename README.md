@@ -27,9 +27,9 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
 
 ## Course Books
-Required Book: Davies, Tilman M. 2016. [The Book of R: A First Course in Programming and Statistics](https://nostarch.com/bookofr). no starch press. 
-Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press. 
-<br> 
+ - Required Book: Davies, Tilman M. 2016. [The Book of R: A First Course in Programming and Statistics](https://nostarch.com/bookofr). no starch press. 
+ -Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press. 
+ <br> 
 
 
 # Schedule of Lessons and Program Challenges
