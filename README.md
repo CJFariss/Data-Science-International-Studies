@@ -93,6 +93,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: [continuous probability distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_continuous.R)
  - Bonus Lesson: [Approximating Euler's number and pi in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_Euler_pi.R)
  - Program Challenge: []()
+ - Optional Problem Set: [R_DSIS_problem_set_probability_week9_10.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_probability_week9_10.R)
  <br>
 
 ## Week 11: Statistical Model Development in R
