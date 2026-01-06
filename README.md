@@ -3,7 +3,6 @@ Data science course content for undergraduate political science and internationa
 
 # Course Index
 [schedule-of-lessons-and-program-challenges](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/README.md#schedule-of-lessons-and-program-challenges)
-[schedule-of-lessons-and-program-challenges](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/README.md#schedule-of-lessons-and-program-challenges)
 <br>
 
 # Introduction
