@@ -130,6 +130,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
 
 ## Week 14: Methods of Model Evaluation in R
+ - Required Readings: Davies Ch.17 *Sampling Distributions and Confidence*
  - Lesson: [standard errors, t-test, p-value, confidence intervals in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_standard_errors_tstats_pvalues_CIs.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R)
  - Lesson: [DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R)
