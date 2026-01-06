@@ -76,6 +76,9 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
  
 ## Week 6: User Defined Functions in R
+- Required Reading: Davies Ch.9 *Calling Functions*; Davies Ch.11 *Writing Functions*; Davies Ch.8 *Reading and Writing Files*
+- Optional Readings: Matloff Ch.10 *Input/Output*
+
  - Lesson: [functions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
  - Program Challenge: []()
  - Optional Problem Set: [R_DSIS_problem_set_loops_and_functions_week6.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_loops_and_functions_week6.R)
