@@ -47,7 +47,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 ## Week 2: Numbers and Storing Numbers in R
  - Required Readings: Davies Ch.2 *Numerics, Arithmetic, Assignment, and Vectors*; Davies Ch.3 *Matrices and Arrays*
- - Optional Readings: Matloff Ch.2 *Vectors* (optional); Matloff Ch.4 *Matrices and Arrays* (optional)
+ - Optional Readings: Matloff Ch.2 *Vectors*; Matloff Ch.4 *Matrices and Arrays*
  - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
  - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
  - Program Challenge: [R_Challenge_1st_challenge.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_1st_challenge.R)
@@ -61,6 +61,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 <br>
 
 ## Week 4: Data Structures in R
+ - Required Readings: Davies Ch.8 *Lists and Data Frames*
+ - Optional Readings: Matloff Ch.4 *Lists*; Matloff Ch.5 *Dataframes*; Matloff Ch.6 *Factors and Tables*
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
  - Program Challenge: [R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_as_list.R)
  - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
