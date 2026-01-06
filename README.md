@@ -48,6 +48,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
 - Program Challenge: [R_Challenge_1st_challenge.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_1st_challenge.R)
 - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
+- Optional Problem Set: [R_DSIS_problem_set_vectors_matrices_week2.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_vectors_matrices_week2.R)
 <br>
 
 ## Week 3: Numbers and Storing Numbers in R continued
@@ -58,7 +59,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 ## Week 4: Data Structures in R
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
  - Program Challenge: []()
- <br>
+ - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
+<br>
 
 ## Week 5: Programming Structures in R
  - Lesson: [loops, logic, lists, dataframes, and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
@@ -68,7 +70,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 ## Week 6: User Defined Functions in R
  - Lesson: [functions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
  - Program Challenge: []()
- <br>
+ - Optional Problem Set: [R_DSIS_problem_set_loops_and_functions_week6.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_loops_and_functions_week6.R)
+<br>
 
 ## Week 7: Functions in R continued
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
