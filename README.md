@@ -1,6 +1,11 @@
 # Data-Science-International-Studies 
 Data science course content for undergraduate political science and international studies students programming in R. See the course syllabus for additional details.
 
+# Course Index
+[schedule-of-lessons-and-program-challenges](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/README.md#schedule-of-lessons-and-program-challenges)
+[schedule-of-lessons-and-program-challenges](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/README.md#schedule-of-lessons-and-program-challenges)
+<br>
+
 # Introduction
 ## Course Content
 Learn to program, program to learn. This class will provide undergraduate students with an introduction to the scientific method and programming tools for data science. Students will learn the fundamentals of the scientific method and, through programming and research design, how to improve both causal inference and the measurement of international political phenomena.
