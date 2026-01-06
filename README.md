@@ -84,6 +84,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 <br>
 
 ## Week 7: Functions in R continued
+- Optional Readings: Davies Ch.12 *Exceptions, Timing, and Visibility*; Matloff Ch.13 *Debugging*
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
   - Program Challenge: [R_Challenge_matrix_Sudoku_check.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Sudoku_check.R)
  <br>
