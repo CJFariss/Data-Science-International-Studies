@@ -41,62 +41,62 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 - Program Challenge: Download and install [R](https://cran.r-project.org/), [Rstudio](https://posit.co/download/rstudio-desktop/), and [github desktop](https://desktop.github.com/download/).
 <br> 
 
-### Week 2: Numbers in R and other stuff in R too
+### Week 2: Numbers and Storing Numbers in R
 - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
 - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
 - Program Challenge: [R_Challenge_1st_challenge.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_1st_challenge.R)
 - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
 <br>
 
-### Week 3: 
+### Week 3: Numbers and Storing Numbers in R continued
 - Lesson: no lesson this week
 - Program Challenge: [R_Challenge_vector_1max_2max_3max_nmax.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_1max_2max_3max_nmax.R)
 <br>
 
-### Week 4: Data inside and outside of R
+### Week 4: Data Structures in R
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
  - Program Challenge:
  <br>
 
-### Week 5:
+### Week 5: Programming Structures in R
  - Lesson: [loops, logic, lists, dataframes, and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
  - Program Challenge:
  <br>
  
-### Week 6:
+### Week 6: User Defined Functions in R
  - Lesson: [functions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
  - Program Challenge:
  <br>
 
-### Week 7:
+### Week 7: Functions in R continued
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
   - Program Challenge:
  <br>
  
-### Week 8:
+### Week 8: Midterm Examination Review Week
  - Midterm Examination and Program Challenges due 
  <br>
  
-### Week 9:
+### Week 9: Introduction to Probabilities Distibutions in R
  - Lesson: [probabilitiy with legos in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week09_probability.R)
  - Program Challenge:
  <br>
 
-### Week 10:
+### Week 10: Probabilities Distibutions and Visual Summaries of Data in R
  - Lesson: [discrete probabilitiy distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_discrete.R)
  - Lesson: [continuous probability distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_continuous.R)
  - Bonus Lesson: [Approximating Euler's number and pi in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_Euler_pi.R)
  - Program Challenge:
  <br>
 
-### Week 11:
+### Week 11: Statistical Model Development in R
  - Lesson: [mean estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_mean_estimation.R)
  - Lesson: [variance estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_variance_estimation.R)
  - Lesson: [linear model estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_linear_model_estimatation.R)
  - Program Challenge:
  <br>
 
-### Week 12:
+### Week 12: Introduction to Text as Data and Neural Networks in R
  - Lesson: [Introduction to text as data in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_introduction.R)
  - Lesson: [Creating Document-by-Term matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM.R)
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
@@ -104,12 +104,12 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Program Challenge:
  <br>
 
-### Week 13:
+### Week 13: Data Visualization in R
  - Lesson: [Elements of data visualization in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week13_elements_data_visualization.R)
  - Program Challenge:
  <br>
 
-### Week 14:
+### Week 14: Methods of Model Evaluation in R
  - Lesson: [standard errors, t-test, p-value, confidence intervals in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_standard_errors_tstats_pvalues_CIs.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R)
  - Lesson: [DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R)
@@ -117,7 +117,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Program Challenge:
  <br>
 
-### Week 15:
+### Week 15: Final Examination Review Week
  - Lesson: Review
 
 ## Chat GPT Policy
