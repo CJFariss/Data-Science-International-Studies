@@ -56,7 +56,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
 
 ## Week 3: Numbers and Storing Numbers in R continued
-- Lesson: no lesson this week
+- Required Readings: NA
+- Lesson: NA
 - Program Challenge: [R_Challenge_vector_1max_2max_3max_nmax.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_1max_2max_3max_nmax.R)
 <br>
 
