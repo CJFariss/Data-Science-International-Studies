@@ -65,6 +65,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Optional Readings: Matloff Ch.4 *Lists*; Matloff Ch.5 *Dataframes*; Matloff Ch.6 *Factors and Tables*
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
  - Program Challenge: [R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_as_list.R)
+ - Optional Program Challenge: [R_Challenge_matrix_Toeplitz_diagnols.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/[R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Toeplitz_diagnols.R))
  - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
 <br>
 
@@ -125,9 +126,9 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
  - Lesson: [Introduction to Neural Networks in R]()
  - Program Challenge: [R_Challenge_text_character_sort.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_character_sort.R)
- - Optional  Program Challenge: [R_Challenge_text_letters_and_logic.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_letters_and_logic.R)
- - Optional  Program Challenge: [R_Challenge_text_non_repeating_chatacter.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_non_repeating_chatacter.R)
- - Optional  Program Challenge: [R_Challenge_text_character_graph.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_character_graph.R)
+ - Optional Program Challenge: [R_Challenge_text_letters_and_logic.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_letters_and_logic.R)
+ - Optional Program Challenge: [R_Challenge_text_non_repeating_chatacter.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_non_repeating_chatacter.R)
+ - Optional Program Challenge: [R_Challenge_text_character_graph.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_character_graph.R)
  - Optional Program Challenge: [R_Challenge_matrix_MNIST_images.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_MNIST_images.R)
  <br>
 
@@ -136,7 +137,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Optional Readings: Matloff Ch.12 *Graphics*; Davies Ch.24 *Going Further with the Grammar of Graphics*; Davies Ch.25 *Defining Colors and Plotting in Higher Dimension* 
  - Lesson: [Elements of data visualization in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week13_elements_data_visualization.R)
  - Program Challenge: [R_Challenge_analysis_OurWorldindata.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_OurWorldindata.R)
- - Program Challenge: [R_Challenge_analysis_flowingdata.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_flowingdata.R)
+ - Optional Program Challenge: [R_Challenge_analysis_flowingdata.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_flowingdata.R)
  <br>
 
 ## Week 14: Methods of Model Evaluation in R
