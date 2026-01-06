@@ -46,6 +46,11 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 <br> 
 
 ## Week 2: Numbers and Storing Numbers in R
+ - Davies Ch.2 ``Numerics, Arithmetic, Assignment, and Vectors
+ - Matloff Ch.2 ``Vectors'' (optional)
+ - Davies Ch.3 ``Matrices and Arrays'' 
+ - Matloff Ch.4 ``Matrices and Arrays'' (optional)
+
 - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
 - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
 - Program Challenge: [R_Challenge_1st_challenge.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_1st_challenge.R)
