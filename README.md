@@ -51,7 +51,6 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
  - Program Challenge: [R_Challenge_1st_challenge.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_1st_challenge.R)
  - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
- - Optional Program Challenge: [R-Program-Challenges/R_Challenge_vector_sqrt_search.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_sqrt_search.R)
  - Optional Problem Set: [R_DSIS_problem_set_vectors_matrices_week2.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_vectors_matrices_week2.R)
  <br>
 
@@ -59,6 +58,9 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 - Required Readings: NA
 - Lesson: NA
 - Program Challenge: [R_Challenge_vector_1max_2max_3max_nmax.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_1max_2max_3max_nmax.R)
+- Optional Program Challenge: [R-Program-Challenges/R_Challenge_vector_sqrt_search.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_sqrt_search.R)
+- Optional Program Challenge: [R_Challenge_vector_Pythagorean_triple.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_Pythagorean_triple.R)
+- Optional Program Challenge: [R_Challenge_vector_sum_and_more_sums.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_sum_and_more_sums.R)
 <br>
 
 ## Week 4: Data Structures in R
