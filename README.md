@@ -117,6 +117,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
 
 ## Week 12: Introduction to Text as Data and Neural Networks in R
+ - Required Readings: Matloff Ch.11 *String Manipulation*
  - Lesson: [Introduction to text as data in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_introduction.R)
  - Lesson: [Creating Document-by-Term matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM.R)
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
@@ -125,6 +126,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
 
 ## Week 13: Data Visualization in R
+ - Required Readings: Davies Ch.14 *Basic Data Visualization*
+ - Optional Readings: Matloff Ch.12 *Graphics*
  - Lesson: [Elements of data visualization in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week13_elements_data_visualization.R)
  - Program Challenge: []()
  <br>
