@@ -40,18 +40,21 @@ Students learn in my course by finding the challenging steps in the Program Chal
 <br> 
 
 ## Week 1: Getting Started with R
-- Lesson: 3 sets of 3 lecture 
+### Wednesday
 - Program Challenge: Download and install (1) [R](https://cran.r-project.org/), (2) [Rstudio](https://posit.co/download/rstudio-desktop/), and (3) [github desktop](https://desktop.github.com/download/).
 <br> 
 
 ## Week 2: Numbers and Storing Numbers in R
- - Required Readings: Davies Ch.2 *Numerics, Arithmetic, Assignment, and Vectors*; Davies Ch.3 *Matrices and Arrays*
+### Monday
+- Required Readings: Davies Ch.2 *Numerics, Arithmetic, Assignment, and Vectors*; Davies Ch.3 *Matrices and Arrays*
  - Optional Readings: Matloff Ch.2 *Vectors*; Matloff Ch.4 *Matrices and Arrays*; Davies Ch.6 *Special Values, Classes, and Coercion*
  - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
  - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
+ - Optional Problem Set: [R_DSIS_problem_set_vectors_matrices_week2.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_vectors_matrices_week2.R)
+
+### Wednesday
  - Program Challenge: [R_Challenge_1st_challenge.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_1st_challenge.R)
  - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
- - Optional Problem Set: [R_DSIS_problem_set_vectors_matrices_week2.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_vectors_matrices_week2.R)
  <br>
 
 ## Week 3: Numbers and Storing Numbers in R continued
