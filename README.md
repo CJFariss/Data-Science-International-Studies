@@ -36,20 +36,26 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 
 
 ## Schedule of Lessons and Program Challenges
-### Week 1: Numbers in R and other stuff in R too
+### Week 1: Getting Started with R
+- Lesson: 3 sets of 3 lecture 
 - Program Challenge: Download and install [R](https://cran.r-project.org/), [Rstudio](https://posit.co/download/rstudio-desktop/), and [github desktop](https://desktop.github.com/download/).
 <br> 
 
-### Week 2 Lessons and Program Challenges
-- Programming Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
-- Programming Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
+### Week 2: Numbers in R and other stuff in R too
+- Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
+- Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
+- Program Challenge:
 <br>
 
 ### Week 3 Lessons and Program Challenges
 - Lesson: no lesson this week
-  
+- Program Challenge:
+<br>
+
 ### Week 4 Lessons and Program Challenges
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
+ - Program Challenge:
+ <br>
 
 ### Week 5 Lessons and Program Challenges
  - Lesson: [loops, logic, lists, dataframes, and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week05_loops_logic_lists_dataframes_tables.R)
