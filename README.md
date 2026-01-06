@@ -95,7 +95,7 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
 
 ## Spring Break
- - Program Challenge: [R_Challenge_matrix_dungeon_crawler.R]([https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_shuffle_index.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_dungeon_crawler.R))
+ - Optional Program Challenge: [R_Challenge_matrix_dungeon_crawler.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_dungeon_crawler.R)
  <br>
 
  
