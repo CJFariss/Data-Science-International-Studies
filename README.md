@@ -1,14 +1,7 @@
 # Data-Science-International-Studies 
 
+# Summary
 Data science course content for undergraduate political science and international studies students programming in R. See the course syllabus for additional details.
-
-### Past Course Syllabi 
-- [2025 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2025.pdf)
-- [2023 Fall Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Fall2023.pdf)
-- [2023 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2023.pdf)
-- [2022 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2022.pdf)
-- [2021 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2021.pdf)
-- [2020 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2020.pdf)
 
 # Introduction
 ## Course Content
@@ -129,3 +122,13 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 - **If you choose to use U-M GPT or another Chat GPT program, you must submit (1) the prompt used to generate the output, (2) the specific GPT program used, and (3) the date and time you entered the prompt.**
 - You can read more about creating effective prompts here: https://teamdynamix.umich.edu/TDClient/30/Portal/KB/ArticleDet?ID=10680.
  <br>
+
+ ## Past Course Syllabi 
+- [2025 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2025.pdf)
+- [2023 Fall Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Fall2023.pdf)
+- [2023 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2023.pdf)
+- [2022 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2022.pdf)
+- [2021 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2021.pdf)
+- [2020 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2020.pdf)
+ <br>
+
