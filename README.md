@@ -58,8 +58,11 @@ Students learn in my course by finding the challenging steps in the Program Chal
  <br>
 
 ## Week 3: Numbers and Storing Numbers in R continued
+### Monday
 - Required Readings: NA
 - Lesson: NA
+
+### Wednesday
 - Program Challenge: [R_Challenge_vector_1max_2max_3max_nmax.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_1max_2max_3max_nmax.R)
 - Optional Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
 - Optional Program Challenge: [R_Challenge_vector_Pythagorean_triple.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_Pythagorean_triple.R)
@@ -68,13 +71,16 @@ Students learn in my course by finding the challenging steps in the Program Chal
 <br>
 
 ## Week 4: Data Structures in R
+### Monday
  - Required Readings: Davies Ch.8 *Lists and Data Frames*
  - Optional Readings: Matloff Ch.4 *Lists*; Matloff Ch.5 *Dataframes*; Matloff Ch.6 *Factors and Tables*
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
- - Program Challenge: [R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_as_list.R)
+ - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
+
+### Wednesday
+- Program Challenge: [R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_as_list.R)
  - Optional Program Challenge: [R_Challenge_matrix_Toeplitz_diagnols.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/[R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Toeplitz_diagnols.R))
  - Optional Program Challenge: [R_Challenge_matrix_count_of_submatrices.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_count_of_submatrices.R)
- - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
 <br>
 
 ## Week 5: Programming Structures in R
