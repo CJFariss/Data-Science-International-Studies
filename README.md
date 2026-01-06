@@ -25,11 +25,12 @@ The primary learning tool in this  course is participation with a set of \textbf
 Students learn in my course by finding the challenging steps in the Program Challenge that we use each week of the course. Students discover which steps in the Program Challenge are difficult for them and grow by tackling these steps. I encourage my students to show me where they are getting stuck so that I can help them make progress. Not finishing all the steps is expected and encouraged because the extensible structure of each Program Challenge means that any student can learn from making it through just a few steps. As students learn and gain confidence, they can return to the more difficult step in a Program Challenge from an earlier week in the course to learn and grow even more. This is an important requirement in my course, because at the midterm and final exam period, I ask my students to go back and complete additional difficult steps from their favorite program challenges.
 
 
-## Course Books
+# Course Books
 Required Book: Davies, Tilman M. 2016. [The Book of R: A First Course in Programming and Statistics](https://nostarch.com/bookofr). no starch press. 
 Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press. 
 <br> 
 
+# Schedule of Lessons and Program Challenges
 ### Description of Weekly Lessons
 Each monday, we will spend 1 to 2 hours of class time in which I review R programming concepts. Please make sure to read the assigned chapters and view the video lectures before each weeks classes so that you are ready to program in class. These weekly lessons will review key information from the weekly reading assignments. Lessons will also be recorded and will be available online.
 
@@ -37,7 +38,6 @@ Each monday, we will spend 1 to 2 hours of class time in which I review R progra
 These challenges are meant to be just that, challenging. They should also be fun. I encourage you to think creatively and collaboratively. Getting stuck or not finishing all the steps is expected and encouraged. This is how learning works. Always start with step (1) and then continue to each step as time permits. Don't worry about completing each step. Document your code for each step. You may wish to come back to some of the harder steps as you progress through the course. Note that some of the steps may ask you to use skills we have not yet covered in the course. Don't worry about these steps now but definitely think through the programming logic if you are stuck and make plans to come back to try them once you feel ready. The program challenges will occur on Wednesdays throughout the semester. 
 <br> 
 
-## Schedule of Lessons and Program Challenges
 ### Week 1: Getting Started with R
 - Lesson: 3 sets of 3 lecture 
 - Program Challenge: Download and install [R](https://cran.r-project.org/), [Rstudio](https://posit.co/download/rstudio-desktop/), and [github desktop](https://desktop.github.com/download/).
