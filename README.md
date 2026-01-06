@@ -78,25 +78,23 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
 ## Week 6: User Defined Functions in R
 - Required Reading: Davies Ch.9 *Calling Functions*; Davies Ch.11 *Writing Functions*; Davies Ch.8 *Reading and Writing Files*
 - Optional Readings: Matloff Ch.10 *Input/Output*
-
  - Lesson: [functions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week06_functions.R)
- - Program Challenge: []()
+ - Program Challenge: [R_Challenge_simulation_weather_forecast.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_weather_forecast.R)
  - Optional Problem Set: [R_DSIS_problem_set_loops_and_functions_week6.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_loops_and_functions_week6.R)
 <br>
 
 ## Week 7: Functions in R continued
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
-  - Program Challenge: []()
+  - Program Challenge: [R_Challenge_matrix_Sudoku_check.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Sudoku_check.R)
  <br>
  
 ## Week 8: Midterm Examination Review Week
- - Midterm Examination and Program Challenges due 
+ - Midterm Examination (Monday) and Selected Program Challenges due (Wednesday)
  <br>
  
 ## Week 9: Introduction to Probabilities Distibutions in R
  - Lesson: [probabilitiy with legos in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week09_probability.R)
  - Program Challenge: [R_Challenge_probability_legos.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_probability_legos.R)
- - Program Challenge: [R_Challenge_simulation_weather_forecast.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_weather_forecast.R)
  <br>
 
 ## Week 10: Probabilities Distibutions and Visual Summaries of Data in R
