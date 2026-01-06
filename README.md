@@ -127,8 +127,8 @@ Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statisti
  <br>
 
 ## Week 13: Data Visualization in R
- - Required Readings: Davies Ch.14 *Basic Data Visualization*
- - Optional Readings: Matloff Ch.12 *Graphics*
+ - Required Readings: Davies Ch.14 *Basic Data Visualization*; Davies Ch.23 *Advanced Plot Customization*  
+ - Optional Readings: Matloff Ch.12 *Graphics*; Davies Ch.24 *Going Further with the Grammar of Graphics*; Davies Ch.25 *Defining Colors and Plotting in Higher Dimension* 
  - Lesson: [Elements of data visualization in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week13_elements_data_visualization.R)
  - Program Challenge: []()
  <br>
