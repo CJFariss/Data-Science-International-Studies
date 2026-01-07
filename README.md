@@ -33,16 +33,19 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
 
 # Schedule of Lessons and Program Challenges
-Descriptions of weekly, lessons, bonus lessons, program challenges, bonus challenges, and optional problem sets. 
+Descriptions of weekly, lessons, program challenges, bonus challenges, and optional problem sets. 
 <br>
 
-**Description of Weekly Lessons:** Each monday, we will spend 1 to 2 hours of class time in which I review R programming concepts. Please make sure to read the assigned chapters and view the video lectures before each weeks classes so that you are ready to program in class. These weekly lessons will review key information from the weekly reading assignments. Lessons will also be recorded and will be available online. Bonus lessons may or may not be covered during class. 
+**Lessons:** Each monday, we will spend 1 to 2 hours of class time in which I review R programming concepts. Please make sure to read the assigned chapters and view the video lectures before each weeks classes so that you are ready to program in class. These weekly lessons will review key information from the weekly reading assignments. Lessons will also be recorded and will be available online.  
 <br> 
 
-**Description of Program Challenges:** On Wednesday, we will work together in a lab-base setting to complete a program challenge in R. These program challenges are meant to be just that, challenging. They should also be fun. I encourage you to think creatively and collaboratively. Getting stuck or not finishing all the steps is expected and encouraged. This is how learning works. Always start with step (1) and then continue to each step as time permits. Don't worry about completing each step. Document your code for each step. You may wish to come back to some of the harder steps as you progress through the course. Note that some of the steps may ask you to use skills we have not yet covered in the course. Don't worry about these steps now but definitely think through the programming logic if you are stuck and make plans to come back to try them once you feel ready. The program challenges will occur on Wednesdays throughout the semester. Optional program challanges are avaiable for additional practice.
+**Program Challenges:** On Wednesday, we will work together in a lab-base setting to complete a program challenge in R. These program challenges are meant to be just that, challenging. They should also be fun. I encourage you to think creatively and collaboratively. Getting stuck or not finishing all the steps is expected and encouraged. This is how learning works. Always start with step (1) and then continue to each step as time permits. Don't worry about completing each step. Document your code for each step. You may wish to come back to some of the harder steps as you progress through the course. Note that some of the steps may ask you to use skills we have not yet covered in the course. Don't worry about these steps now but definitely think through the programming logic if you are stuck and make plans to come back to try them once you feel ready. The program challenges will occur on Wednesdays throughout the semester. 
 <br> 
 
-**Description of Optional Problem Sets:** Optional problem set cover material presented in the weekly lessons or the required weekly readings. These are designed to practice key base R programming concepts. These are not required but will help students learn and make progress with the program challenges.
+**Optional Program Challenges:** Avaiable for additional program challenging practice.
+<br> 
+
+**Optional Problem Sets:** Optional problem set cover material presented in the weekly lessons or the required weekly readings. These are designed to practice key base R programming concepts. These are not required but will help students learn and make progress with the program challenges.
 <br>
 
 ## Week 1: Getting Started with R
@@ -156,7 +159,7 @@ Descriptions of weekly, lessons, bonus lessons, program challenges, bonus challe
  - Required Readings: Davies Ch.16 *Common Probability Distributions*
  - Lesson: [discrete probabilitiy distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_discrete.R)
  - Lesson: [continuous probability distributions in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_probability_distributions_continuous.R)
- - Bonus Lesson: [Approximating Euler's number and pi in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_Euler_pi.R)
+ - Lesson: [Approximating Euler's number and pi in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week10_Euler_pi.R)
   - Optional Problem Set: [R_DSIS_problem_set_probability_week9_10.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_probability_week9_10.R)
 
  ### Wednesday
@@ -181,7 +184,7 @@ Descriptions of weekly, lessons, bonus lessons, program challenges, bonus challe
  - Lesson: [Introduction to text as data in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_introduction.R)
  - Lesson: [Creating Document-by-Term matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM.R)
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
- - Bonus Lesson: [Introduction to Neural Networks in R]()
+ - Lesson: [Introduction to Neural Networks in R]()
  
  ### Wednesday
  - Program Challenge: [R_Challenge_text_character_sort.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_character_sort.R)
