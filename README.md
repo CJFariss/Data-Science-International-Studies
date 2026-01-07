@@ -33,7 +33,7 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
 ## Readings and Optional Readings
  - Required Reading: Davies, Tilman M. 2016. [The Book of R: A First Course in Programming and Statistics](https://nostarch.com/bookofr). no starch press. 
  - Optional Reading: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press.
- - Optional Readings: [Rubin, Donald B. 2008. "For Objective Causal Inference, Design Trumps Analysis." *Annals of Applied Statistics* 2(3):808-840.](https://arxiv.org/pdf/0811.1640)
+ - Optional Reading: [Rubin, Donald B. 2008. "For Objective Causal Inference, Design Trumps Analysis." *Annals of Applied Statistics* 2(3):808-840.](https://arxiv.org/pdf/0811.1640)
  <br>
 
 ## Lessons
