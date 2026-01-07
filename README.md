@@ -62,7 +62,7 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
 - Program Challenge: Download and install (1) [R](https://cran.r-project.org/), (2) [Rstudio](https://posit.co/download/rstudio-desktop/), and (3) [github desktop](https://desktop.github.com/download/).
 <br> 
 
-## Week 2: Numbers and Storing Numbers in R
+## Week 2: Numbers in R, Storing Numbers in R, and other stuff in R too
 ### Monday
 - Required Readings: Davies Ch.2 *Numerics, Arithmetic, Assignment, and Vectors*; Davies Ch.3 *Matrices and Arrays*
  - Optional Readings: Matloff Ch.2 *Vectors*; Matloff Ch.4 *Matrices and Arrays*; Davies Ch.6 *Special Values, Classes, and Coercion*
@@ -75,7 +75,7 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
  - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
  <br>
 
-## Week 3: Numbers and Storing Numbers in R continued
+## Week 3: Numbers in R, Storing Numbers in R, and other stuff in R too continued
 ### Monday
 - No class today
 - Required Readings: NA
