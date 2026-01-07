@@ -50,10 +50,10 @@ Students learn in my course by finding the challenging steps in the Program Chal
  - Optional Readings: Matloff Ch.2 *Vectors*; Matloff Ch.4 *Matrices and Arrays*; Davies Ch.6 *Special Values, Classes, and Coercion*
  - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
  - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
+ - Lesson: [R_DSIS_week02_1st_program_challenge.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_1st_program_challenge.R)
  - Optional Problem Set: [R_DSIS_problem_set_vectors_matrices_week2.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_vectors_matrices_week2.R)
 
 ### Wednesday
- - Program Challenge: [R_Challenge_1st_challenge.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_1st_challenge.R)
  - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
  <br>
 
@@ -153,7 +153,7 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
 ## Week 11: Statistical Model Development in R
   ### Monday
-  - Required Readings: Davies Ch.13 *Elementary Statistics*; Davies Ch. 20 *Simple Linear Regression*
+ - Required Readings: Davies Ch.13 *Elementary Statistics*; Davies Ch. 20 *Simple Linear Regression*
  - Optional Readings: Davies 21 *Multiple Linear Regression*; Davies 22 *Linear Model Selection and Diagnostics*
  - Lesson: [mean estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_mean_estimation.R)
  - Lesson: [variance estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_variance_estimation.R)
@@ -165,11 +165,11 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
 ## Week 12: Introduction to Text as Data and Neural Networks in R
   ### Monday
-  - Optional Readings: Matloff Ch.11 *String Manipulation*
+ - Optional Readings: Matloff Ch.11 *String Manipulation*
  - Lesson: [Introduction to text as data in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_introduction.R)
  - Lesson: [Creating Document-by-Term matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM.R)
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
- - Lesson: [Introduction to Neural Networks in R]()
+ - Bonus Lesson: [Introduction to Neural Networks in R]()
  
  ### Wednesday
  - Program Challenge: [R_Challenge_text_character_sort.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_character_sort.R)
@@ -199,9 +199,9 @@ Students learn in my course by finding the challenging steps in the Program Chal
  - Lesson: [R_DSIS_week14_Model_Evaluation_potential_outcomes_simulations.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_potential_outcomes_simulations.R)
  
  ### Wednesday
-  - Program Challenge: [R_Challenge_analysis_ACLED.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED.R)
-  - Program Challenge: [R_Challenge_analysis_ACLED_visualization.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED_visualization.R)
-  - Program Challenge: [R_Challenge_analysis_ACLED_text_as_data.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED_text_as_data.R)
+  - Optional Program Challenge: [R_Challenge_analysis_ACLED.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED.R)
+  - Optional Program Challenge: [R_Challenge_analysis_ACLED_visualization.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED_visualization.R)
+  - Optional Program Challenge: [R_Challenge_analysis_ACLED_text_as_data.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED_text_as_data.R)
  <br>
 
 ## Week 15: Final Examination Review Week
