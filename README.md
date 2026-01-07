@@ -33,6 +33,7 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
 ## Readings and Optional Readings
  - Required Reading: Davies, Tilman M. 2016. [The Book of R: A First Course in Programming and Statistics](https://nostarch.com/bookofr). no starch press. 
  - Optional Reading: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press.
+ - Optional Reading: [Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. 2022. "Disaggregating Repression: Identifying Physical Integrity Rights Allegations in Human Rights Reports" *International Studies Quarterly* 66(2):sqac016.](https://doi.org/10.1093/isq/sqac016)
  - Optional Reading: [Rubin, Donald B. 2008. "For Objective Causal Inference, Design Trumps Analysis." *Annals of Applied Statistics* 2(3):808-840.](https://arxiv.org/pdf/0811.1640)
  - Optional Reading: [Raleigh, Clionadh, Andrew Linke, Håvard Hegre and Joakim Karlsen. 2010. "Introducing ACLED-Armed Conflict Location and Event Data" *Journal of Peace Research* 47(5):651-660.](https://journals.sagepub.com/doi/10.1177/0022343310378914)
 
@@ -183,7 +184,7 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
 
 ## Week 12: Introduction to Text as Data and Neural Networks in R
   ### Monday
- - Optional Readings: Matloff Ch.11 *String Manipulation*
+ - Optional Readings: Matloff Ch.11 *String Manipulation*; [Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. 2022. "Disaggregating Repression: Identifying Physical Integrity Rights Allegations in Human Rights Reports" *International Studies Quarterly* 66(2):sqac016.](https://doi.org/10.1093/isq/sqac016)
  - Lesson: [Introduction to text as data in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_introduction.R)
  - Lesson: [Creating Document-by-Term matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM.R)
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
@@ -211,8 +212,7 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
 ## Week 14: Methods of Model Evaluation in R
  ### Monday
  - Required Readings: Davies Ch. 18 *Hypothesis Testing*; Davies Ch.17 *Sampling Distributions and Confidence*
- - Optional Readings: [Rubin, Donald B. 2008. "For Objective Causal Inference, Design Trumps Analysis." *Annals of Applied Statistics* 2(3):808-840.](https://arxiv.org/pdf/0811.1640)
- - Optional Reading: [Raleigh, Clionadh, Andrew Linke, Håvard Hegre and Joakim Karlsen. 2010. "Introducing ACLED-Armed Conflict Location and Event Data" *Journal of Peace Research* 47(5):651-660.](https://journals.sagepub.com/doi/10.1177/0022343310378914)
+ - Optional Readings: [Rubin, Donald B. 2008. "For Objective Causal Inference, Design Trumps Analysis." *Annals of Applied Statistics* 2(3):808-840.](https://arxiv.org/pdf/0811.1640); [Raleigh, Clionadh, Andrew Linke, Håvard Hegre and Joakim Karlsen. 2010. "Introducing ACLED-Armed Conflict Location and Event Data" *Journal of Peace Research* 47(5):651-660.](https://journals.sagepub.com/doi/10.1177/0022343310378914)
  - Lesson: [standard errors, t-test, p-value, confidence intervals in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_standard_errors_tstats_pvalues_CIs.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_false_discovery_rate.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R)
