@@ -27,7 +27,7 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
 
 # Schedule of Lessons and Program Challenges
-Descriptions of weekly, readings, lessons, program challenges, and optional problem sets. 
+Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (4) optional problem sets. 
 <br>
 
 ## Readings and Optional Readings
