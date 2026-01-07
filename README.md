@@ -259,8 +259,9 @@ Students learn in my course by finding the challenging steps in the Program Chal
 <br>
 
 ## Resources for Harassment
-- Title IX makes it clear that violence and harassment based on sex and gender, including violence and harassment based on sexual orientation, are a Civil Rights offense subject to the same kinds of accountability and the same kinds of support applied to offenses against other protected categories such as race, national origin, etc. If you or someone you know has been harassed or assaulted, you can find the appropriate resources here: www.bw.edu/resources/hr/harass/policy.pdf}. 
-- For information about help and resources at University of Michigan please contact the Sexual Assault Prevention and Awareness Center (SAPAC) https://sapac.umich.edu/SupportServices; 734-764-7771; or sapac@umich.edu. - For information about filing a report or complaint with the Title IX office at the University of Michigan see https://sexualmisconduct.umich.edu/reporting-process/reporting-to-the-university/. Please note that Title IX offices often distinguish between making a "report", which does not launch an investigation, and filing a "complaint", which does.
+- Title IX makes it clear that violence and harassment based on sex and gender, including violence and harassment based on sexual orientation, are a Civil Rights offense subject to the same kinds of accountability and the same kinds of support applied to offenses against other protected categories such as race, national origin, etc. If you or someone you know has been harassed or assaulted, you can find the appropriate resources here: www.bw.edu/resources/hr/harass/policy.pdf. 
+- For information about help and resources at University of Michigan please contact the Sexual Assault Prevention and Awareness Center (SAPAC) https://sapac.umich.edu/SupportServices; 734-764-7771; or sapac@umich.edu.
+- For information about filing a report or complaint with the Title IX office at the University of Michigan see https://sexualmisconduct.umich.edu/reporting-process/reporting-to-the-university/. Please note that Title IX offices often distinguish between making a "report", which does not launch an investigation, and filing a "complaint", which does.
 <br>
 
  ## Past Course Syllabi 
