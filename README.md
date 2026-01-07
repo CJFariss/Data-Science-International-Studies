@@ -40,6 +40,9 @@ Students learn in my course by finding the challenging steps in the Program Chal
 <br> 
 
 ## Week 1: Getting Started with R
+### Monday
+- No class today (the semester begins on Wednesday this week)
+
 ### Wednesday
 - Program Challenge: Download and install (1) [R](https://cran.r-project.org/), (2) [Rstudio](https://posit.co/download/rstudio-desktop/), and (3) [github desktop](https://desktop.github.com/download/).
 <br> 
