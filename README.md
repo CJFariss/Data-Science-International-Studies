@@ -29,20 +29,17 @@ Students learn in my course by finding the challenging steps in the Program Chal
 ## Course Books
  - Required Book: Davies, Tilman M. 2016. [The Book of R: A First Course in Programming and Statistics](https://nostarch.com/bookofr). no starch press. 
  - Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press. 
- <br> 
+ <br>
 
 # Schedule of Lessons and Program Challenges
 Descriptions of weekly, lessons, program challenges, bonus challenges, and optional problem sets. 
 <br>
 
 **Lessons:** Each monday, we will spend 1 to 2 hours of class time in which I review R programming concepts. Please make sure to read the assigned chapters and view the video lectures before each weeks classes so that you are ready to program in class. These weekly lessons will review key information from the weekly reading assignments. Lessons will also be recorded and will be available online.  
-<br> 
 
 **Program Challenges:** On Wednesday, we will work together in a lab-base setting to complete a program challenge in R. These program challenges are meant to be just that, challenging. They should also be fun. I encourage you to think creatively and collaboratively. Getting stuck or not finishing all the steps is expected and encouraged. This is how learning works. Always start with step (1) and then continue to each step as time permits. Don't worry about completing each step. Document your code for each step. You may wish to come back to some of the harder steps as you progress through the course. Note that some of the steps may ask you to use skills we have not yet covered in the course. Don't worry about these steps now but definitely think through the programming logic if you are stuck and make plans to come back to try them once you feel ready. The program challenges will occur on Wednesdays throughout the semester. 
-<br> 
 
 **Optional Program Challenges:** Avaiable for additional program challenging practice.
-<br> 
 
 **Optional Problem Sets:** Optional problem set cover material presented in the weekly lessons or the required weekly readings. These are designed to practice key base R programming concepts. These are not required but will help students learn and make progress with the program challenges.
 <br>
