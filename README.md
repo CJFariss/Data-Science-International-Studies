@@ -184,7 +184,8 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
 
 ## Week 12: Introduction to Text as Data and Neural Networks in R
   ### Monday
- - Optional Readings: Matloff Ch.11 *String Manipulation*; [Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. 2022. "Disaggregating Repression: Identifying Physical Integrity Rights Allegations in Human Rights Reports" *International Studies Quarterly* 66(2):sqac016.](https://doi.org/10.1093/isq/sqac016)
+ - Required Readings: Matloff Ch.11 *String Manipulation*
+ - Optional Readings: [Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. 2022. "Disaggregating Repression: Identifying Physical Integrity Rights Allegations in Human Rights Reports" *International Studies Quarterly* 66(2):sqac016.](https://doi.org/10.1093/isq/sqac016)
  - Lesson: [Introduction to text as data in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_introduction.R)
  - Lesson: [Creating Document-by-Term matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM.R)
  - Lesson: [Creating Document-by-Term matrices in R with the tm package](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week12_text_as_data_DTM_tm_package.R)
