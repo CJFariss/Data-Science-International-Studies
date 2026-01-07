@@ -76,7 +76,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  - Optional Problem Set: [R_DSIS_problem_set_vectors_matrices_week2.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_vectors_matrices_week2.R)
 
 ### Wednesday
- - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
+ - Program Challenge: [R_Challenge_vector_matrix_array_coordinate_distances.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_coordinate_distances.R)
  <br>
 
 ## Week 3: Numbers in R, Storing Numbers in R, and other stuff in R too continued
