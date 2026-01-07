@@ -217,7 +217,7 @@ Students learn in my course by finding the challenging steps in the Program Chal
 # Additional Course Information 
 ## Office Hours
 The best way to contact me in order to ask additional questions about course material is to attend office hours. I hold extensive office hours each week online on zoom and in-person in the atrium area on the first floor of the Institute for Social Research (ISR) building, which is located at 426 Thompson St., Ann Arbor, MI 48104. Just like in the class room, office hours sessions are designed to be an open and inclusive learning environment for my students. The ISR atrium offers an open space that accommodates small to medium size groups. There will often be more than one student seeking feedback during office hours. Each of you are welcome to join the group office hours session and ask questions or participate in discussion. I am also available outside of office hours via a message on the course management software (Canvas) or ay my umich email address: cjfariss@umich.edu.
- <br>
+<br>
 
 ## Chat GPT Policy
 - My advice for this class: *don't use Chat GPT or google search*. But ...  
@@ -240,7 +240,17 @@ The best way to contact me in order to ask additional questions about course mat
 - For help, contact Counseling and Psychological Services (CAPS) at (734) 764-8312 and https://caps.umich.edu/ during and after hours, on weekends and holidays, or through its counselors physically located in schools on both North and Central Campus. 
 - You may also consult University Health Service (UHS) at (734) 764-8320 and https://www.uhs.umich.edu/mentalhealthsvcs, or for alcohol or drug concerns, see www.uhs.umich.edu/aodresources.  
 - For a listing of other mental health resources available on and off campus, visit: \\ {\tt \small http://umich.edu/~mhealth/}.
+<br>
 
+## Accommodations for Students with Disabilities
+If you think you need an accommodation for a disability, please let me know at your earliest convenience. Some aspects of this course, the assignments, the in-class activities, and the way the course is usually taught may be modified to facilitate your participation and progress. As soon as you make me aware of your needs, we can work with the Services for Students with Disabilities (SSD) office to help us determine appropriate academic accommodations. SSD (734-763-3000; http://ssd.umich.edu) typically recommends accommodations through a Verified Individualized Services and Accommodations (VISA) form. Any information you provide is private and confidential and will be treated as such. 
+<br>
+
+## Religious and Academic Conflicts}
+- This language comes from the Provost's Office's Guidance to Students on Conflicts between the Academic and Religious Calendars.
+- Although the University of Michigan, as an institution, does not observe religious holidays, it has long been the University's policy that every reasonable effort should be made to help students avoid negative academic consequences when their religious obligations conflict with academic requirements.  Absence from classes or examinations for religious reasons does not relieve students from responsibility for any part of the course work required during the period of absence.  Students who expect to miss classes, examinations, or other assignments as a consequence of their religious observance shall be provided with a reasonable alternative opportunity to complete such academic responsibilities. 
+- It is the obligation of students to provide faculty with reasonable notice of the dates of religious holidays on which they will be absent.  Such notice must be given by the drop/add deadline of the given term. Students who are absent on days of examinations or class assignments shall be offered an opportunity to make up the work, without penalty, unless it can be demonstrated that a make-up opportunity would interfere unreasonably with the delivery of the course.  Should disagreement arise over any aspect of this policy, the parties involved should contact the Director of Undergraduate Studies/Director of Graduate Studies.  Final appeals will be resolved by the Provost. 
+<br>
 
  ## Past Course Syllabi 
 - [2025 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2025.pdf)
