@@ -50,7 +50,7 @@ Students learn in my course by finding the challenging steps in the Program Chal
  - Optional Readings: Matloff Ch.2 *Vectors*; Matloff Ch.4 *Matrices and Arrays*; Davies Ch.6 *Special Values, Classes, and Coercion*
  - Lesson: [Introduction to R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_R_Introduction.R)
  - Lesson: [scalars, vectors, and matrices in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_scalars_vectors_matrices.R)
- - Lesson: [R_DSIS_week02_1st_program_challenge.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_1st_program_challenge.R)
+ - Lesson: [Introduction to program challenges](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week02_1st_program_challenge.R)
  - Optional Problem Set: [R_DSIS_problem_set_vectors_matrices_week2.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_vectors_matrices_week2.R)
 
 ### Wednesday
