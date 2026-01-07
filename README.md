@@ -52,6 +52,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
 
 ## Optional Problem Sets
 - Optional problem set cover material presented in the weekly lessons or the required weekly readings. These are designed to practice key base R programming concepts. These are not required but will help students learn and make progress with the program challenges.
+- Optional problem sets are avaiable below and at [DSIS_Problem_Sets](https://github.com/CJFariss/Data-Science-International-Studies/tree/master/DSIS_Problem_Sets).
 <br>
 
 ## Week 1: Getting Started with R
