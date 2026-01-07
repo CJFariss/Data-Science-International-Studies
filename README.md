@@ -1,5 +1,5 @@
 # Data-Science-International-Studies 
-Data science course content for undergraduate political science and international studies students programming in R. Currently scheduled for the Winter 2026 semester at the University of Michigan.
+Data science course content for undergraduate political science and international studies students programming in R. Currently scheduled for the Winter 2026 semester at the University of Michigan. This course also makes use of [R-Program-Challenges](https://github.com/CJFariss/R-Program-Challenges).
 
 ## Course Index
 - [Introduction](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/README.md#introduction)
