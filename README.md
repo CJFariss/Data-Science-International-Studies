@@ -266,6 +266,10 @@ Students learn in my course by finding the challenging steps in the Program Chal
 - For information about filing a report or complaint with the Title IX office at the University of Michigan see https://sexualmisconduct.umich.edu/reporting-process/reporting-to-the-university/. Please note that Title IX offices often distinguish between making a "report", which does not launch an investigation, and filing a "complaint", which does.
 <br>
 
+## Language and Gender
+"Language is gender-inclusive and non-sexist when we use words that affirm and respect how people describe, express, and experience their gender. Just as sexist language excludes women's experiences, non-gender-inclusive language excludes the experiences of individuals whose identities may not fit the gender binary, and/or who may not identify with the sex they were assigned at birth. Identities including trans, intersex, and genderqueer reflect personal descriptions, expressions, and experiences. Gender-inclusive/non-sexist language acknowledges people of any gender (for example, first year student versus freshman, chair versus chairman, humankind versus mankind, etc.). It also affirms non-binary gender identifications, and recognizes the difference between biological sex and gender expression. Teachers and students should use gender-inclusive words and language whenever possible in the classroom and in writing. *Students, faculty, and staff may share their preferred pronouns and names, either to the class or privately to the professor, and these gender identities and gender expressions should be honored.*'' For more information: www.wstudies.pitt.edu/faculty/gender-inclusivenon-sexist-language-syllabi-statement.
+<br>
+
  ## Past Course Syllabi 
 - [2025 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2025.pdf)
 - [2023 Fall Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Fall2023.pdf)
