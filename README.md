@@ -34,6 +34,8 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
  - Required Reading: Davies, Tilman M. 2016. [The Book of R: A First Course in Programming and Statistics](https://nostarch.com/bookofr). no starch press. 
  - Optional Reading: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press.
  - Optional Reading: [Rubin, Donald B. 2008. "For Objective Causal Inference, Design Trumps Analysis." *Annals of Applied Statistics* 2(3):808-840.](https://arxiv.org/pdf/0811.1640)
+ - Optional Reading: [Raleigh, Clionadh, Andrew Linke, Håvard Hegre and Joakim Karlsen. 2010. "Introducing ACLED-Armed Conflict Location and Event Data" *Journal of Peace Research* 47(5):651-660.](https://journals.sagepub.com/doi/10.1177/0022343310378914)
+
  <br>
 
 ## Lessons
@@ -210,6 +212,7 @@ Descriptions of weekly, readings, lessons, program challenges, and optional prob
  ### Monday
  - Required Readings: Davies Ch. 18 *Hypothesis Testing*; Davies Ch.17 *Sampling Distributions and Confidence*
  - Optional Readings: [Rubin, Donald B. 2008. "For Objective Causal Inference, Design Trumps Analysis." *Annals of Applied Statistics* 2(3):808-840.](https://arxiv.org/pdf/0811.1640)
+ - Optional Reading: [Raleigh, Clionadh, Andrew Linke, Håvard Hegre and Joakim Karlsen. 2010. "Introducing ACLED-Armed Conflict Location and Event Data" *Journal of Peace Research* 47(5):651-660.](https://journals.sagepub.com/doi/10.1177/0022343310378914)
  - Lesson: [standard errors, t-test, p-value, confidence intervals in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_standard_errors_tstats_pvalues_CIs.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_false_discovery_rate.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R)
