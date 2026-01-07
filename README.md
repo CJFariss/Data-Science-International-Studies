@@ -31,7 +31,6 @@ Students learn in my course by finding the challenging steps in the Program Chal
  - Suggested Book: Matloff, Norman. 2011. [Art of R Programming: A Tour of Statistical Software Design](https://nostarch.com/artofr.htm). no starch press. 
  <br> 
 
-
 # Schedule of Lessons and Program Challenges
 Descriptions of weekly, lessons, program challenges, bonus challenges, and optional problem sets. 
 <br>
