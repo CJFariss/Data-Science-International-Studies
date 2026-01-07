@@ -42,6 +42,8 @@ Students learn in my course by finding the challenging steps in the Program Chal
 ## Week 1: Getting Started with R
 ### Monday
 - No class today (the semester begins on Wednesday this week)
+- Required Readings: NA
+- Lesson: NA
 
 ### Wednesday
 - Program Challenge: Download and install (1) [R](https://cran.r-project.org/), (2) [Rstudio](https://posit.co/download/rstudio-desktop/), and (3) [github desktop](https://desktop.github.com/download/).
@@ -62,6 +64,7 @@ Students learn in my course by finding the challenging steps in the Program Chal
 
 ## Week 3: Numbers and Storing Numbers in R continued
 ### Monday
+- No class today
 - Required Readings: NA
 - Lesson: NA
 
@@ -212,7 +215,7 @@ Students learn in my course by finding the challenging steps in the Program Chal
  - Course Review
 
  ### Wednesday
- - No class
+ - No class (final exam study period begins)
  <br>
 
 ## Final Exam Period
