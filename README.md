@@ -234,6 +234,14 @@ The best way to contact me in order to ask additional questions about course mat
 - Wednesday lab sessions will focus on the program challenges and attendance is required. The program challenges are available to work on outside of class and during office hours as well. Please feel free to use office hours to ask questions about these challenges as you work through them. If you miss a Wednesday lab session, you will need to schedule a makeup session with the instructor.
 <br>
 
+## Student Mental Health and Wellbeing
+- This is a recommendation made by the Central Student Government and endorsed by the LSA Associate Dean for Undergraduate Education.
+- University of Michigan is committed to advancing the mental health and wellbeing of its students. If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available. \\
+- For help, contact Counseling and Psychological Services (CAPS) at (734) 764-8312 and https://caps.umich.edu/ during and after hours, on weekends and holidays, or through its counselors physically located in schools on both North and Central Campus. 
+- You may also consult University Health Service (UHS) at (734) 764-8320 and https://www.uhs.umich.edu/mentalhealthsvcs, or for alcohol or drug concerns, see www.uhs.umich.edu/aodresources.  
+- For a listing of other mental health resources available on and off campus, visit: \\ {\tt \small http://umich.edu/~mhealth/}.
+
+
  ## Past Course Syllabi 
 - [2025 Winter Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Winter2025.pdf)
 - [2023 Fall Syllabus](http://cfariss.com/documents/U-M_Data_Science_IntlStudies_Fall2023.pdf)
