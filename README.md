@@ -192,7 +192,7 @@ Descriptions of weekly, lessons, program challenges, bonus challenges, and optio
 
 ## Week 13: Data Visualization in R
   ### Monday
-  - Required Readings: Davies Ch.14 *Basic Data Visualization*; Davies Ch.23 *Advanced Plot Customization*  
+ - Required Readings: Davies Ch.14 *Basic Data Visualization*; Davies Ch.23 *Advanced Plot Customization*  
  - Optional Readings: Matloff Ch.12 *Graphics*; Davies Ch.24 *Going Further with the Grammar of Graphics*; Davies Ch.25 *Defining Colors and Plotting in Higher Dimension* 
  - Lesson: [Elements of data visualization in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week13_elements_data_visualization.R)
  
@@ -204,6 +204,7 @@ Descriptions of weekly, lessons, program challenges, bonus challenges, and optio
 ## Week 14: Methods of Model Evaluation in R
  ### Monday
  - Required Readings: Davies Ch. 18 *Hypothesis Testing*; Davies Ch.17 *Sampling Distributions and Confidence*
+ - Optional Readings: [Rubin, Donald B. 2008. "For Objective Causal Inference, Design Trumps Analysis." *Annals of Applied Statistics* 2(3):808-840.](https://arxiv.org/pdf/0811.1640)
  - Lesson: [standard errors, t-test, p-value, confidence intervals in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_standard_errors_tstats_pvalues_CIs.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_precision_recall_accuracy.R)
  - Lesson: [R_DSIS_week14_Model_Evaluation_false_discovery_rate.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_false_discovery_rate.R)
