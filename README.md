@@ -199,7 +199,9 @@ Students learn in my course by finding the challenging steps in the Program Chal
  - Lesson: [R_DSIS_week14_Model_Evaluation_potential_outcomes_simulations.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week14_Model_Evaluation_potential_outcomes_simulations.R)
  
  ### Wednesday
-  - Program Challenge: []()
+  - Program Challenge: [R_Challenge_analysis_ACLED.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED.R)
+  - Program Challenge: [R_Challenge_analysis_ACLED_visualization.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED_visualization.R)
+  - Program Challenge: [R_Challenge_analysis_ACLED_text_as_data.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_ACLED_text_as_data.R)
  <br>
 
 ## Week 15: Final Examination Review Week
