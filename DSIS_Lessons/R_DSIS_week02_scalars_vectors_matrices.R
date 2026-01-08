@@ -456,8 +456,8 @@ A %*% solve(A)
 
 ## The matrix generated after the matrix multiplication is the number of rows of the first matrices first dimension (the rows) and the number of columns of the second matrix. But, the length of the second dimension of the first matrix has to be equal to the lenght of the first dimension of the second matrix. See the example code below
 
-mat1 <- matrix(sample(1:10,20,T), nrow=2,ncol=10)
-mat2 <- matrix(sample(1:10,10,T), nrow=10, ncol=3)
+mat1 <- matrix(sample(1:10, size=20, replace=TRUE), nrow=2,ncol=10)
+mat2 <- matrix(sample(1:10, size=10, replace=TRUE), nrow=10, ncol=3)
 
 ## check to see if this works
 mat1 %*% mat2
