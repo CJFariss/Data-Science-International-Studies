@@ -2,9 +2,9 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2024, Fall 2023, Winter 2023, Winter 2022, Winter 2021, Winter 2020
+## University of Michigan, Winter 2026, Winter 2025, Fall 2023, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
-## Week 14 (optional)
+## Week 14
 ##
 ## Please e-mail me if you find any errors or have and suggestions (either email is fine)
 ## e-mail: cjf0006@gmail.com

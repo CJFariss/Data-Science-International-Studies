@@ -2,7 +2,7 @@
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2024, Fall 2023, Winter 2023, Winter 2022, Winter 2021, Winter 2020
+## University of Michigan, Winter 2026, Winter 2025, Fall 2023, Winter 2023, Winter 2022, Winter 2021, Winter 2020
 ##
 ## week 2 (Week 1 sometimes depending on the schedule)
 ##
@@ -29,6 +29,7 @@
 ##
 ## Quick-R for SAS/SPSS/Stata Users
 ## http://www.statmethods.net
+## https://www.datacamp.com/doc/r/category/r-documentation
 ##
 ## UCLA Statistical Computing (R and Stata)
 ## http://www.ats.ucla.edu/stat/
