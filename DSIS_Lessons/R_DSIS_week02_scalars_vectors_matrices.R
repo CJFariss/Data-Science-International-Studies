@@ -115,14 +115,19 @@ rbind(a,a)
 
 ## lets create a sequence of values using the seq() function
 ## create a sequence of integers from 1 to 5
-seq(from=1, to=5, by=1)
+ouput <- seq(from=1, to=5, by=1)
+ouput
 
 ?seq
 
-seq(from=1, to=5, by=.5)
+ouput <- seq(from=1, to=5, by=.5)
+ouput
 
 ## we can create the same sequence as above using the : operator
 1:5
+
+ouput <- 1:5
+output
 
 ## : only produces sequences so that the values are 1 unit distance from one another but the start and end values do not need to be integers
 1.5:5.5
@@ -160,6 +165,14 @@ rep(c(1,2,3), times=2)
 ## notice the difference between using the times argument compared to the each argument
 rep(c(1,2,3), each=2)
 
+
+## generate a vector of a certain length with empty positions (i.e., no values are contained in the vector)
+my_vec <- c(NA, NA, NA, NA, NA, NA, NA, NA, NA, NA)
+my_vec
+
+## empty vector of length 10
+my_vec <- rep(NA, 10)
+my_vec
 
 
 ##########################################################################
@@ -271,26 +284,26 @@ m
 c(m)
 
 ## this is the same function as above but the values are added one row at at time from top to bottom
-m <- matrix( c(1,2,3,4,5,6), nrow=2, ncol=3, byrow = TRUE)
-m
+mat <- matrix( c(1,2,3,4,5,6), nrow=2, ncol=3, byrow = TRUE)
+mat
 
 ## covert the matrix back into a vector (note the order of the values)
-c(m)
+c(mat)
 
 ## 2D arrays using the array function which produces the same object as matrix( c(1,2,3,4,5,6), nrow=2, ncol=3)
-m <- array( c(1,2,3,4,5,6), dim=c(2,3))
-m
+mat <- array( c(1,2,3,4,5,6), dim=c(2,3))
+mat
 
 ## 2D arrays using the array function which produces the same object as matrix( c(1,2,3,4,5,6), nrow=2, ncol=3, byrow = TRUE)
-m <- array( c(1,2,3,4,5,6), dim=c(2,3), byrow = TRUE)
-m
+mat <- array( c(1,2,3,4,5,6), dim=c(2,3), byrow = TRUE)
+mat
 
 ## arrays with more than 3 dimensions
-m3 <- array( c(1:18), dim=c(2,3,3))
-m3
+mat3 <- array( c(1:18), dim=c(2,3,3))
+mat3
 
 ## covert the array back into a vector
-c(m3)
+c(mat3)
 
 ## create a new matrix
 mymat <- rbind(c(1,3,4),5:3,c(100,20,90),11:13)
