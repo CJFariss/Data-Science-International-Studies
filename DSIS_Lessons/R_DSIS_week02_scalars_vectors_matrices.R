@@ -206,6 +206,8 @@ sample(1:6, size=6, replace=TRUE)
 
 
 
+sample(c("orange", "blue", "purple"), size=1, repace=FALSE)
+
 ## 20-sided die (d20), 1 roll
 sample(1:20, size=1, replace=TRUE)
 
