@@ -95,7 +95,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
 
 ## Week 4: Data Structures in R
 ### Monday
- - Required Readings: Davies Ch.8 *Lists and Data Frames*
+ - Required Readings: Davies Ch.5 *Lists and Data Frames*
  - Optional Readings: Matloff Ch.4 *Lists*; Matloff Ch.5 *Dataframes*; Matloff Ch.6 *Factors and Tables*
  - Lesson: [lists, dataframes and tables in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week04_lists_dataframes_tables.R)
  - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
