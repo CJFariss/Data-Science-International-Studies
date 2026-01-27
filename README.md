@@ -137,6 +137,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  - Lesson: [functions  in R continued](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week07_functions_continued.R)
  
  ### Wednesday
+ - Program Challenge: Work on any program challenge or optional program challenge from the past 6 weeks.
  <br>
  
 ## Week 8: Midterm Examination Review Week
