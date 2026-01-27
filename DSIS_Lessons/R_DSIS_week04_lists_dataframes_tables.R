@@ -38,14 +38,43 @@
 
 ## note the difference: [1,2] vs. [c(1,2)]
 
-mat <- matrix(c(1,2,3,4),2,2)
+mat <- matrix(c(100,200,300,400), nrow=2, ncol=2)
 mat
 
 mat[1,2]
 
+## note that this prints everything to screen. why?
+mat[1:2,]
+mat[,1:2]
+mat[1:2,1:2]
+mat[,]
+
+mat[1,1]
+mat[1,2]
+mat[2,1]
+mat[2,2]
+
+mat[,]
+
+
 vec <- c(40,50,60)
 vec[c(1,2)]
+vec[1:2]
 
+
+vec <- rep(0:1, each=50)
+vec
+
+sample(vec)
+
+id <- 1:length(vec)
+id
+id_permuted <- sample(1:length(vec))
+id_permuted
+
+vec
+vec[]
+vec[id_permuted]
 
 ##########################################################################
 ## tables
@@ -57,10 +86,16 @@ s
 
 is.list(s)
 is.vector(s)
-is.vector()
+is.numeric(s)
+
+
+
+
 ##########################################################################
 ## create a list with a single, scalar value
 s <- list(2)
+
+length(s)
 
 is.list(s)
 is.vector(s)
@@ -71,6 +106,33 @@ s
 ## print the first element (this is a list)
 s[1]
 
+
+list(vec)
+
+test <- list(vec, id, id_permuted)
+
+test
+length(test)
+test[[1]]
+test[[2]]
+test[[3]]
+
+## return list
+test[1]
+
+## return vector
+test[[1]]
+
+mean(test[1])
+mean(test[[1]])
+
+summary(test)
+summary(test[[1]])
+summary(test[[2]])
+summary(test[[3]])
+
+
+##
 v <- c(2,3)
 v
 v[1]
@@ -78,7 +140,9 @@ v[1]
 ## print the first element of the list (this a numeric scalar in a list)
 s[[1]]
 
-list(matrix(NA,4,4))
+mat <- list(matrix(NA, nrow=4, ncol=4))
+mat
+mat[[1]]
 
 ## repeat this process for 2 scalars in the list
 s <- list(2,4)
@@ -86,7 +150,7 @@ s
 
 ## print the first element (this is a list): AVOID this 
 s[1]
-s[1] *2
+s[1] * 2
 
 ## print the first element of the list (this a numeric scalar in a list)
 s[[1]]
@@ -186,7 +250,7 @@ dat
 
 dat <- data.frame(var1=c("a", "b", "c"), var2=c(1, 2, 500))
 dat
-t(dat) ## don;t do this with data.frame(); totally okay with matrices
+t(dat) ## don't do this with data.frame(); totally okay with matrices
 
 
 t(data.frame(a1=c("a", "b"), a2=c(1, 2), a3=c(1,2)))
@@ -208,8 +272,13 @@ dat$var1 ## this is equivalent to dat[,1]
 
 dat$var2 ## this is equivalent to dat[,2]
 
+dat$any.name.I.want
+dat$var2
+
 
 test <- data.frame(a1=c("a", "b"), a2=c(1, 2), var1=c(1,2))
+test
+
 
 ## let's make two vectors of time and
 ## stop and frisk data is from New York City for 2003-2012
@@ -403,7 +472,7 @@ xtabs(monthly_active_users ~ Entity, data= social_media_data)
 ## save the cross-tabs as a vector for making a nice plot
 tabs <- xtabs(monthly_active_users ~ Entity, data= social_media_data)
 
-## tabs is a table bllah blah
+## tabs is a table blah blah
 tabs
 
 ## we can prove this using the is.table() function
