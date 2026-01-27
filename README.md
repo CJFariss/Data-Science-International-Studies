@@ -145,7 +145,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
   - Midterm Examination
   
  ### Wednesday
-  - Student Selected Program Challenges due
+  - Program Challenge: **Student Selected Program Challenges due by the end of the work week (Friday at 11:59 EST).**
  <br>
 
 ## Spring Break
