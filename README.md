@@ -101,9 +101,8 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
 
 ### Wednesday
- - Program Challenge: [R_Challenge_matrix_Sudoku_check.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Sudoku_check.R)
  - Optional Program Challenge: [R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_as_list.R)
- - Optional Program Challenge: [R_Challenge_matrix_Toeplitz_diagnols.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/[R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Toeplitz_diagnols.R))
+ - Optional Program Challenge: [R_Challenge_matrix_Toeplitz_diagnols.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Toeplitz_diagnols.R)
  - Optional Program Challenge: [R_Challenge_matrix_count_of_submatrices.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_count_of_submatrices.R)
  - Optional Program Challenge: [R_Challenge_matrix_flip_rotation.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_flip_rotation.R)
 <br>
@@ -116,6 +115,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
 
 ### Wednesday
 - Program Challenge: [R_Challenge_simulation_shuffle_index.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_shuffle_index.R)
+- Optional Program Challenge: [R_Challenge_matrix_Sudoku_check.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Sudoku_check.R)
 - Optional Program Challenge: [R_Challenge_simulation_high_card_draw.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_high_card_draw.R)
  <br>
  
