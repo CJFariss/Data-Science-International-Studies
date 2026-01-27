@@ -117,7 +117,6 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
 ### Wednesday
 - Program Challenge: [R_Challenge_simulation_shuffle_index.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_shuffle_index.R)
 - Optional Program Challenge: [R_Challenge_simulation_high_card_draw.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_high_card_draw.R)
-- Optional Program Challenge: [R_Challenge_simulation_5card_hands.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_5card_hands.R)
  <br>
  
 ## Week 6: User Defined Functions in R
@@ -162,7 +161,6 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  ### Wednesday
  - Program Challenge: [R_Challenge_probability_legos.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_probability_legos.R)
  - Optional Program Challenge: [R_Challenge_simulation_bball_bracket_sampler.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_bball_bracket_sampler.R)
- - Optional Program Challenge: [R_Challenge_simulation_high_card_draw.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_high_card_draw.R)
  - Optional Program Challenge: [R_Challenge_simulation_5card_hands.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_simulation_5card_hands.R)
  <br>
 
