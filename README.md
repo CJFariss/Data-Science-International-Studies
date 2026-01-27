@@ -87,7 +87,6 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
 
 ### Wednesday
 - Program Challenge: [R_Challenge_vector_1max_2max_3max_nmax.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_1max_2max_3max_nmax.R)
-- Optional Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
 - Optional Program Challenge: [R_Challenge_vector_Pythagorean_triple.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_Pythagorean_triple.R)
 - Optional Program Challenge: [R_Challenge_vector_sqrt_search.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_sqrt_search.R)
 - Optional Program Challenge: [R_Challenge_vector_sum_and_more_sums.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_sum_and_more_sums.R)
@@ -101,6 +100,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  - Optional Problem Set: [R_DSIS_problem_set_lists_dataframes_tables_week4.R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Problem_Sets/R_DSIS_problem_set_lists_dataframes_tables_week4.R)
 
 ### Wednesday
+ - Program Challenge: [R_Challenge_vector_matrix_array_even_coordinates.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_vector_matrix_array_even_coordinates.R)
  - Optional Program Challenge: [R_Challenge_matrix_as_list.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_as_list.R)
  - Optional Program Challenge: [R_Challenge_matrix_Toeplitz_diagnols.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_Toeplitz_diagnols.R)
  - Optional Program Challenge: [R_Challenge_matrix_count_of_submatrices.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_matrix_count_of_submatrices.R)
