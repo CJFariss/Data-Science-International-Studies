@@ -14,10 +14,10 @@
 ##
 ## For this R tutorial, we will learn how:
 ## (1) learn to work with logical statements
-## (2) learn to use for loops and while loops
+## (2) learn to use iterators like repeat, for loops, and while loops
 ## (3) navigate vectors, matrices, lists, dataframes, and tables using logical statements and loops
 ## (4) apply functions to matrices, lists, dataframes, and tables
-## (5) simulation using a for loop
+## (5) simulation example using a for loop
 ##
 ##########################################################################
 
@@ -603,6 +603,7 @@ data.frame(names(survey_data), column_proportions)
 
 survey_data
 
+
 ##########################################################################
 ## apply() a function to margins (the rows or columns) of an array or matrix
 ##########################################################################
@@ -728,11 +729,15 @@ sample(1:6, size=20, replace=TRUE)
 ## or 
 mean(1:6)
 
-## true variance is approximately 2.916667 or exactly 70/24 
+## true variance is approximately 2.916667 or exactly 70/24 or the following expression:
 (1 - 3.5)^2 * (1/6) + (2 - 3.5)^2 * (1/6) + (3 - 3.5)^2 * (1/6) + (4 - 3.5)^2 * (1/6) + (5 - 3.5)^2 * (1/6) + (6 - 3.5)^2 * (1/6)
 
-## or
+## or the following expression:
 sum((1:6 - mean(1:6))^2 * (1/6))
+
+## or the following expression:
+sum((1:6 - mean(1:6))^2)/6
+
 
 ## repeat the simulation 10,000 times and calculate the average
 n_sims <- 2000
