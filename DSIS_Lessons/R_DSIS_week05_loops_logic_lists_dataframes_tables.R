@@ -49,6 +49,8 @@ print(pi, digits=5) == print(pi, digits=22)
 1 == 2
 
 ## modulo operator 
+10 %% 2
+11 %% 2
 1 %% 2 == 0
 2 %% 1
 
@@ -56,12 +58,15 @@ print(pi, digits=5) == print(pi, digits=22)
 1 == 1:5
 
 
-## elemtwise or pairwise comparisons (compares values at the same coordiante position in each vector)
+## elementwise or pairwise comparisons (compares values at the same coordiante position in each vector)
 1:5 == 1:5
 
 letters == letters
 
 2:6 == 1:5
+
+c(1,2,4,4,4) == 1:5
+
 
 ###############
 ## NOT EQUAL ##
@@ -104,6 +109,12 @@ TRUE & TRUE
 1 == pi & 1 == 2
 
 FALSE & FALSE
+
+##
+FALSE & FALSE
+TRUE & FALSE
+FALSE & TRUE
+TRUE & TRUE
 
 
 ## the double AND '&&' works on a single logical statement on each sideo && operator
