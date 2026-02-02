@@ -40,6 +40,7 @@ pi == pi
 
 print(pi, digits=22)
 
+## notice that the printed values are different but the underlying test shows that values are the same
 print(pi, digits=5) == print(pi, digits=22)
 
 
@@ -47,8 +48,20 @@ print(pi, digits=5) == print(pi, digits=22)
 
 1 == 2
 
+## modulo operator 
 1 %% 2 == 0
 2 %% 1
+
+## also works with vectors 
+1 == 1:5
+
+
+## elemtwise or pairwise comparisons (compares values at the same coordiante position in each vector)
+1:5 == 1:5
+
+letters == letters
+
+2:6 == 1:5
 
 ###############
 ## NOT EQUAL ##
@@ -92,6 +105,22 @@ TRUE & TRUE
 
 FALSE & FALSE
 
+
+## the double AND '&&' works on a single logical statement on each sideo && operator
+
+## legal
+1 && 5
+
+## legal
+FALSE && FALSE
+
+## Not-legal 
+c(FALSE, TRUE) && c(TRUE, TRUE)
+
+## legal with the single AND operator for element-wise comparisons 
+c(FALSE, TRUE) & c(TRUE, TRUE)
+
+
 ########
 ## OR ##
 ########
@@ -106,12 +135,36 @@ TRUE | FALSE
 
 FALSE | FALSE
 
+## the above statements work with the double OR operator too
+1 == pi || pi == pi
+
+FALSE || TRUE
+
+TRUE || FALSE
+
+FALSE || FALSE
+
 
 ## if both statements are true then OR returns TRUE
 1 == 1 | pi == pi
 
 ## if both statements are false then OR returns FALSE
 1 == pi | 2 == pi
+
+
+## Not-legal 
+c(FALSE, TRUE) || c(TRUE, TRUE)
+
+## legal with the single OR operator for element-wise comparisons 
+c(FALSE, TRUE, FALSE, TRUE) | c(TRUE, TRUE, FALSE, FALSE)
+
+
+## the above is equivalent to the following 4 comparisons:
+FALSE | TRUE
+TRUE | TRUE
+FALSE | FALSE
+TRUE | FALSE
+
 
 
 #########
@@ -133,6 +186,7 @@ xor(1 == pi, 1 == 1)
 
 ## this statement is FALSE because both statements are FALSE
 xor(1 == pi, pi == 1)
+
 
 
 ##########################################################################
@@ -241,6 +295,8 @@ table(test)
 
 mean(test)
 
+
+
 ##########################################################################
 ## > greater than
 ## < less than
@@ -294,10 +350,41 @@ subset(social_media_data, Entity!="Facebook" & Year>=2016)
 
 
 ##########################################################################
-## loops
+## loops and other iterators 
 ##########################################################################
 
 ## Note: see Matloff Chapter 7 (Control Structures) for more information on the material below
+
+## it's like jumping rope!
+
+
+
+##########################################################################
+## repeat
+##########################################################################
+
+## infinite repetitions
+repeat{
+  ## do something 
+  ## when does this stop?
+}
+
+
+## one repetition 
+repeat{
+  
+  break
+}
+
+## conditional number of repetition 
+condition <- 0
+repeat{
+  condition <- condition + 1
+  if(condition==10){
+    break
+  }
+}
+
 
 
 
@@ -549,12 +636,18 @@ apply(mat,2,mean)
 ##########################################################################
 
 ## read data from the current working directory
-survey_data <- read.csv("Datasets/survey_498_20200129.csv", header=TRUE)
+#survey_data <- read.csv("Datasets/survey_498_20200129.csv", header=TRUE)
+survey_data <- read.csv("Datasets/373survey.csv")
 survey_data
 
 ## use the sum function on the rows (the first dimension of the matrix) but make sure to exclude the first column because it is the subject ids
 apply(survey_data[,-1], MARGIN=1, FUN=sum)
 
+
+ifelse(survey_data[,-1]=="Yes", 1,0)
+
+survey_data[,-1] <- ifelse(survey_data[,-1]=="Yes", 1,0)
+dim(survey_data)
 
 ## we can add extra arguments to apply
 ## note that any additional arguments that we add in the apply() function are used for and in reference to the function we specify for the FUN argument in apply()
@@ -698,6 +791,7 @@ lines(value)
 abline(h=2.916667, col="orange", lwd=2, lty=2)
 
 
+## recall the variance
 sqrt(2.916667)
 
 ## the values converge towards normality 
@@ -707,6 +801,4 @@ var((sim_mean_values - 3.5))
 
 
 
-var(sim_mean_values)
-var(sim_var_values)
 
