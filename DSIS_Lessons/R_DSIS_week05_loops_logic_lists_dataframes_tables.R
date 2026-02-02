@@ -156,6 +156,12 @@ TRUE || FALSE
 FALSE || FALSE
 
 
+##
+FALSE | FALSE
+TRUE | FALSE
+FALSE | TRUE
+TRUE | TRUE
+
 ## if both statements are true then OR returns TRUE
 1 == 1 | pi == pi
 
@@ -198,6 +204,14 @@ xor(1 == pi, 1 == 1)
 ## this statement is FALSE because both statements are FALSE
 xor(1 == pi, pi == 1)
 
+
+
+
+TRUE & TRUE
+
+TRUE | FALSE
+
+(TRUE | FALSE) & (TRUE | FALSE)
 
 
 ##########################################################################
@@ -254,10 +268,9 @@ ifelse(1 == pi & pi == pi, "print this character string", "is this really a help
 
 ## read data from the current working directory
 #survey_data <- read.csv("DSIS_data/survey_498_20200129.csv", header=TRUE)
-
-## this doesn't work quite right
 #survey_data <- read.csv("DSIS_data/funYesNoQuestions.csv", header=TRUE)
-survey_data <- read.csv("Datasets/373survey.csv")
+#survey_data <- read.csv("Datasets/373survey.csv")
+survey_data <- read.csv("Datasets/POLSCI_INTLSTD 373 2_2 In-Class Survey (Responses) - Form Responses 1.csv")
 names(survey_data)
 dim(survey_data)
 nrow(survey_data)
