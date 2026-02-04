@@ -295,13 +295,16 @@ survey_data
 
 table(survey_data[,3])
 
-table(survey_data$Do.you.think.you.could.win.in.a.fight.against.10.beavers.)
+#table(survey_data$Do.you.think.you.could.win.in.a.fight.against.10.beavers.)
+table(survey_data$Does.pineapple.belong.on.pizza.)
 
-table(survey_data$Do.you.like.football.saturdays.)
+#table(survey_data$Do.you.like.football.saturdays.)
 
 #table(survey_data$Have.aliens.ever.seen.earth.)
 
-table(survey_data$Do.you.think.you.could.win.in.a.fight.against.10.beavers., survey_data$Do.you.like.football.saturdays.)
+table(survey_data$Is.NYPD.better.than.Joe.s.Pizza.)
+
+table(survey_data$Does.pineapple.belong.on.pizza., survey_data$Is.NYPD.better.than.Joe.s.Pizza.)
 
 summary(survey_data)
 
@@ -309,16 +312,24 @@ head(survey_data)
 
 #test <- ifelse(survey_data$Are.dogs.better.than.cats.=="Yes", 1, 0)
 
-table(survey_data$Have.you.seen.Game.of.Thrones.)
+#table(survey_data$Have.you.seen.Game.of.Thrones.)
 
-survey_data$Have.you.seen.Game.of.Thrones.=="Yes"
+survey_data$Is.NYPD.better.than.Joe.s.Pizza.
 
-test <- ifelse(survey_data$Have.you.seen.Game.of.Thrones.=="Yes", 1, 0)
+table(survey_data$Is.NYPD.better.than.Joe.s.Pizza.)
+
+survey_data$Is.NYPD.better.than.Joe.s.Pizza.=="Yes"
+
+test <- ifelse(survey_data$Is.NYPD.better.than.Joe.s.Pizza.=="Yes", 1, 0)
 
 table(test)
 
 mean(test)
 
+17/33
+
+test_mat <- ifelse(survey_data[,-1]=="Yes", 1, 0)
+dim(test_mat)
 
 
 ##########################################################################
@@ -407,6 +418,7 @@ repeat{
   if(condition==10){
     break
   }
+  print(condition)
 }
 
 
@@ -425,6 +437,11 @@ repeat{
 for(i in 1:10){
     print(i)
 }
+
+for(i in letters){
+  print(i)
+}
+
 
 for(i in 1:3){
 
@@ -459,7 +476,7 @@ myvec <- c("a", "b", "c", "d", "e")
 myvec
 
 for(i in 1:length(myvec)){
-    print(myvec[i])
+    print(c(myvec[i], i))
 }
 
 ##
@@ -499,7 +516,7 @@ for(i in 1:10){
     vec[i] <- i*i
 }
 vec
-
+1:10 * 1:10
 
 ## we can declared a variable and add 1 to it each iteration of the loop
 count <- 0
