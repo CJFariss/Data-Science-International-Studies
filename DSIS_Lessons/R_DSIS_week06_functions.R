@@ -34,6 +34,7 @@ mean(1:5)
 ## print the function definition to the screen
 function_name
 
+lm 
 
 ## the function called function makes a new function instead of an object
 ## this is the first time we have seen something other than an object created on the left hand side of the <- assignment operator
@@ -215,6 +216,7 @@ vector_distance <- function(len, coordinate_position){
     distance <- sqrt((coordinate_position - coordinates)^2)
     return(distance)
 }
+vector_distance
 
 ## call the function
 vector_distance(5,4)
@@ -237,33 +239,20 @@ distance
 
 
 ## practice reverse coding the function
+## these are the arguments for the function defined above
 
-
-test_func <- function(coordinate_position, len){
-  #len <- 15
+new_func <- function(len=10, coordinate_position=4){
+  #len <- 10
   #coordinate_position <- 4
+  
   vec <- rep(NA, len)
   coordinates <- 1:length(vec)
   distance <- sqrt((coordinate_position - coordinates)^2)
-  distance
   return(distance)
 }
-test_func()
-test_func(coordinate_position=5)
-test_func(coordinate_position=5, len=10)
-test_func(coordinate_position=50, len=100)
-
-## these are the arguments for the function defined above
-
-len <- 10
-coordinate_position <- 4
-
-vec <- rep(NA, len)
-coordinates <- 1:length(vec)
-distance <- sqrt((coordinate_position - coordinates)^2)
-distance
-
-
+new_func()
+new_func(20, 15)
+new_func(-1, 30)
 
 
 ##########################################################################
@@ -296,12 +285,14 @@ order(c(1,2,800,4,5), decreasing=T)
 
 ## call the function
 my_vector_sort(vector=c(1,2,800,4,5), SORT=TRUE)
+my_vector_sort(vector=c(1,2,800,4,5), SORT=FALSE)
 
 
 my_vector_sort(c(1,2))
 
 
 
+## practice reverse coding the function
 ## same as above but specified in the function call
 myvec <- c(1,500,3,2,0,-1,800,500)
 myvec
@@ -310,9 +301,12 @@ myvec
 max_locations <- which(myvec==max(myvec))
 max_locations
 
+which(myvec==max(myvec[-max_locations], na.rm=TRUE))
+
 ## same as above but inside the function now
-for( i in 2:length(unique(myvec))){
+for(i in 2:length(unique(myvec))){
   max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
+  print(max_locations)
 }
 max_locations
 myvec[max_locations]
@@ -337,6 +331,32 @@ max_locations
 max_locations <- c(max_locations, which(myvec==max(myvec[-max_locations], na.rm=TRUE)))
 max_locations
 
+new_func <- function(myvec){
+  
+  max_locations <- which(myvec==max(myvec))
+  
+  repeat{
+    temp <- which(myvec==max(myvec[-max_locations], na.rm=TRUE))
+    max_locations <- c(max_locations, temp)
+    if(length(myvec[-max_locations])==0) break
+  }
+  return(max_locations)
+}
+new_func
+
+
+new_func(myvec = c(1,500,3,2,0,-1,800,500))
+
+new_func(myvec=c(4,50,3))
+
+count <- 0
+repeat{
+  print(count)
+  count <- count+1
+  
+  if(count==10)break
+}
+
 ##########################################################################
 ## see R_DSIS_Challenge_shuffle_index_answer.R for more details about this function
 ##########################################################################
@@ -344,7 +364,7 @@ max_locations
 ## define the shuffle function
 shuffle <- function(vector, times){
     
-    ## set the user specificed vector to a local variable called shuffle_vector
+    ## set the user specified vector to a local variable called shuffle_vector
     shuffle_vector <- vector
     
     ## cut_point calculation
@@ -385,12 +405,32 @@ shuffle(1:10, 7)
 
 
 shuffle_vector <- 1:10
+shuffle_vector
 
 ## cut_point calculation
 ## this is just the value at the midpoint in the vector (we want equal sized halves of the deck of cards)
 cut_point <- round(length(shuffle_vector)/2)
 cut_point
 
+top <- shuffle_vector[1:cut_point]
+bottom <- shuffle_vector[(cut_point+1):length(shuffle_vector)]
+
+top
+bottom
+
+rbind(top, bottom)
+cbind(top, bottom)
+
+c(cbind(top, bottom))
+
+
+c(rbind(top, bottom))
+c(cbind(top, bottom))
+
+shuffle_vector <- rbind(top, bottom)
+shuffle_vector
+shuffle_vector <- c(shuffle_vector)
+shuffle_vector
 
 ## the for loop iterates based on the number in the times argument supplied by the user
 times <- 2
@@ -404,18 +444,20 @@ for(i in 1:times){
   bottom
   
   ## alternate which half is the top/bottom half so that the first and last position move through the shuffle too
-  i <- 1
+  #i <- 1
   if(i%%2==TRUE){
+    print("top/bottom")
     shuffle_vector <- rbind(top, bottom)
   }
   else{
+    print("bottom/top")
     shuffle_vector <- rbind(bottom, top)
-    
   }
   
   ## do the shuffle
   shuffle_vector <- c(shuffle_vector)
   
+  print(shuffle_vector)
 }
 
 ## return the shuffled vector
@@ -428,7 +470,7 @@ shuffle(1:10, 2)
 ## see R_DSIS_Challenge_matrix_exploration.R for more details about this function
 ##########################################################################
 
-myfunc <- function(user_dims){
+find_even_coordinates_3d_array <- function(user_dims){
     
     temp <- array(NA, dim=user_dims)
     
@@ -440,11 +482,11 @@ myfunc <- function(user_dims){
 }
 
 
-myfunc(user_dims=c(4,4,4))
-myfunc(user_dims=c(8,8,8))
-myfunc(user_dims=c(7,11,6))
+find_even_coordinates_3d_array(user_dims=c(4,4,4))
+find_even_coordinates_3d_array(user_dims=c(8,8,8))
+find_even_coordinates_3d_array(user_dims=c(7,11,6))
 
-myfunc(user_dims=c(16,12,8))
+find_even_coordinates_3d_array(user_dims=c(16,12,8))
 
 
 user_dims <- c(4,4,8)
@@ -460,6 +502,8 @@ even_coords_dim3 <- seq(2,dim(temp)[3],2)
 even_coords_dim1
 even_coords_dim2
 even_coords_dim3
+
+temp[even_coords_dim1,even_coords_dim2,even_coords_dim3]
 
 value <- length(temp[even_coords_dim1,even_coords_dim2,even_coords_dim3])/length(temp)
 value
