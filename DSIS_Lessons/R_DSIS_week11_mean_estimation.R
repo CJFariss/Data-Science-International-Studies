@@ -35,7 +35,7 @@ mean(x)
 sum(x)/length(x)
 
 
-## reminnders
+## reminders
 curve(expr=dnorm(x, mean=0, sd=1), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,.5^2) Density")
 
 curve(expr=dnorm(x, mean=3, sd=1), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,.5^2) Density")
@@ -168,11 +168,13 @@ abline(v=mean(x), col=2, lwd=3)
 plot(mu_hat, min_sum_dens_ssqd, main="squared differences loss function")
 abline(v=mean(x), col=2, lwd=3)
 
+## which position in the distance vector is the maximum estimate
 which(sum_log_dens_dnorm==max(sum_log_dens_dnorm))
 coord <- which(sum_log_dens_dnorm==max(sum_log_dens_dnorm))
 
 mu_hat[coord]
 
+## notice it is the same coordinate position for each distance vector
 which(sum_dens_ssqd==min(sum_dens_ssqd))
 which(min_sum_dens_ssqd==max(min_sum_dens_ssqd))
 

@@ -47,12 +47,20 @@ library(MASS)
 par(mar=c(4,3,2,.5))
 truehist(x1)
 
+## simulate a correlational relationship between two variables 
 error_or_distrurbance_term <- rnorm(sim_n, 0, 1)
-x2 <- -1 + 2.5*x1 + error_or_distrurbance_term
+x2 <- -1 + 2.5 * x1 + error_or_distrurbance_term
+
+## or sometimes:
+alpha <- -1
+beta <- 2.5
+x2 <- alpha + beta * x1 + error_or_distrurbance_term
+
 
 ## check the simulation visually
 plot(x1, x2)
-abline(a=0,b=1,col=2)
+abline(a=0,b=1,col=1)
+abline(a=-1,b=2.5,col=2)
 
 cor(x1,x2)
 

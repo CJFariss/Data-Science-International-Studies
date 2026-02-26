@@ -15,8 +15,7 @@
 ##
 ## For this R tutorial, we will learn how:
 ## (1) learn to write functions using the function called function
-## (2) identify the return() value of a function
-## (3) use the missing() function to
+##
 ##
 ##########################################################################
 
@@ -74,14 +73,19 @@ vec
 unlist(vec)
 
 
-## this is a powerful reformulation of the for loop but we can think about the two structures in exactly the same way
+## this used to be a powerful reformulation of the for loop but we can think about the two structures in exactly the same way
 
 
 ## let's do something computationally difficult with a for loop (don't worry about the guts of the function for now)
 start_time <- Sys.time()
+start_time
+Sys.time() - start_time
+
+
+start_time <- Sys.time()
 simulation_values <- NA
 for(i in 1:10000){
-    simulation_values[i] <- sum(rnorm(100000))
+    simulation_values[i] <- mean(rnorm(100000))
 }
 summary(simulation_values)
 
@@ -93,12 +97,14 @@ Sys.time() - start_time
 start_time <- Sys.time()
 
 simulation_values_list <- lapply(1:10000, function(i){
-    return(sum(rnorm(100000)))
+    return(mean(rnorm(100000)))
 })
 summary(unlist(simulation_values_list))
 
 ## calculate the elapsed time
 Sys.time() - start_time
+
+## these time differences used to be different. Now they are the same. Why?
 
 ## let's graph the results for comparison
 library(MASS)

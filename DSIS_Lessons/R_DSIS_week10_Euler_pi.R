@@ -196,3 +196,5 @@ print(pi, digits=22)
 test <- lapply(1:1000, Nilakantha_series_fast)
 plot(unlist(test), type="l", col=grey(.5))
 abline(h=pi, col=2)
+
+

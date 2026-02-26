@@ -92,51 +92,54 @@ beta_estimate <- solve(t(X) %*% X) %*% t(X)%*%y
 beta_estimate
 
 ## generate vector of possible values for the parameter estimates of alpha and beta by brute force
-alpha.hat <- seq(from=-6,6,.05)
-beta.hat <- seq(from=-6,6,.05)
+alpha_hat <- seq(from=-6,6,.05)
+beta_hat <- seq(from=-6,6,.05)
 
 sumsquare <- matrix(NA, nrow=length(alpha.hat), ncol=length(beta.hat))
 
 dim(sumsquare)
 
-for(i in 1:length(alpha.hat)){
-    for(j in 1:length(beta.hat)){
-        y.hat <- alpha.hat[i] * X[,1] + beta.hat[j] * X[,2]
-        sumsquare[i,j] <- -sum((y-y.hat)^2)
+## grid search for best linear model parameters
+for(i in 1:length(alpha_hat)){
+    for(j in 1:length(beta_hat)){
+        y_hat <- alpha_hat[i] * X[,1] + beta_hat[j] * X[,2]
+        sumsquare[i,j] <- -sum((y-y_hat)^2)
     }
 }
 
 sumsquare[1:10, 1:10]
 
 ## find the coordinates from the matrix where the minimum of the sum of square residuals resides
-coordinates <- which(sumsquare == sumsquare[-sumsquare==min(-sumsquare)], arr.ind = TRUE)
+coordinates <- which(sumsquare == sumsquare[-sumsquare==min(-sumsquare)], arr.ind = TRUE) ## this is hard to think about 
+coordinates
+coordinates <- which(sumsquare == max(sumsquare), arr.ind = TRUE)
 coordinates
 
 ## these coordinates match the best estimates of the alpha and beta parameters
-par <- c(alpha.hat[coordinates[1]], beta.hat[coordinates[2]])
-par # notice that these estimates are much less precise than the estimates obtained below
+parameters <- c(alpha_hat[coordinates[1]], beta_hat[coordinates[2]])
+parameters # notice that these estimates are much less precise than the estimates obtained below
 
 ## counter plot from the brute force method (logged for visualization)
 par(mar=c(5,5,1,1))
-contour(alpha.hat,beta.hat,log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
-abline(v=par[1], col=2, lwd=2)
-abline(h=par[2], col=2, lwd=2)
+contour(alpha_hat, beta_hat, log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
+abline(v=parameters[1], col=2, lwd=2, lty=2)
+abline(h=parameters[2], col=2, lwd=2, lty=2)
 
 ## generate variables for monitoring the function
 eval <- array(dim=c(1000,3))
 iter <- 1
 
 # user defined function passed to optim
-ols.func <- function(par, X, iterate=TRUE){
-    alpha.hat <- par[1]
-    beta.hat <- par[2]
-    y.hat <- alpha.hat + beta.hat * X[,2]
-    #out <- -sum((y-y.hat)^2)
-    out <- sum(log(dnorm(y, mean=y.hat, sd=1)))
+ols_func <- function(par, X, iterate=TRUE){
+    alpha_hat <- par[1]
+    beta_hat <- par[2]
+    y_hat <- alpha_hat + beta_hat * X[,2]
+    #out <- -sum((y-y_hat)^2)
+    out <- sum(log(dnorm(y, mean=y_hat, sd=1)))
     
     if(iterate==TRUE){
-        eval[iter,1] <<- alpha.hat
-        eval[iter,2] <<- beta.hat
+        eval[iter,1] <<- alpha_hat
+        eval[iter,2] <<- beta_hat
         eval[iter,3] <<- out
         iter <<- iter+1
     }
@@ -144,12 +147,12 @@ ols.func <- function(par, X, iterate=TRUE){
 }
 
 ## pass function to optim with initial values
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
-optim.out
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+optim_out
 
 ## estiamte additional quantities of interest
-se <- sqrt(diag(solve(-optim.out$hessian))) #calculate standard errors
-VCV <- solve(-optim.out$hessian) #compute variance-covariance matrix
+se <- sqrt(diag(solve(-optim_out$hessian))) #calculate standard errors
+VCV <- solve(-optim_out$hessian) #compute variance-covariance matrix
 se
 VCV
 
@@ -160,36 +163,36 @@ summary(lm(y~x1))
 ## plot gradient paths for the following algorithims: "Nelder-Mead", "BGFS", "CG", "L-BFGS-B", "SANN"
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim.out <- optim(par = c(-2,-2), ols.func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
-contour(alpha.hat,beta.hat,log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
+optim_out <- optim(par = c(-2,-2), ols.func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
+contour(alpha_hat, beta_hat, log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
 lines(eval[1:iter,1], eval[1:iter,2], col="purple", lwd=4)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
 lines(eval[1:iter,1], eval[1:iter,2], col=2, lwd=4)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="CG", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="CG", control=list(fnscale = -1), hessian = TRUE)
 lines(eval[1:iter,1], eval[1:iter,2], col=3, lwd=4)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="L-BFGS-B", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="L-BFGS-B", control=list(fnscale = -1), hessian = TRUE)
 lines(eval[1:iter,1], eval[1:iter,2], col=4, lwd=4)
 optim.out$par
 iter
 
 eval <- array(dim=c(20000,4))
 iter <- 1
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="SANN", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="SANN", control=list(fnscale = -1), hessian = TRUE)
 lines(eval[1:iter,1], eval[1:iter,2], col=5, lwd=4)
 optim.out$par
 iter
@@ -254,29 +257,31 @@ mean(y[x1==0])
 
 
 ## generate vector of possible values for the parameter estimates of alpha and beta by brute force
-alpha.hat <- seq(from=-6,6,.05)
-beta.hat <- seq(from=-6,6,.05)
+alpha_hat <- seq(from=-6,6,.05)
+beta_hat <- seq(from=-6,6,.05)
 
 sumsquare <- matrix(NA, nrow=length(alpha.hat), ncol=length(beta.hat))
 for(i in 1:length(alpha.hat)){
     for(j in 1:length(beta.hat)){
-        y.hat <- alpha.hat[i] + beta.hat[j] * X[,2]
-        sumsquare[i,j] <- -sum((y-y.hat)^2)
+        y_hat <- alpha_hat[i] + beta_hat[j] * X[,2]
+        sumsquare[i,j] <- -sum((y-y_hat)^2)
     }
 }
 
 ## find the coordinates from the matrix where the minimum of the sum of square residulas resides
-coordinates <- which(sumsquare == sumsquare[-sumsquare==min(-sumsquare)], arr.ind = TRUE)
+coordinates <- which(sumsquare == sumsquare[-sumsquare==min(-sumsquare)], arr.ind = TRUE) ## this is weird 
+coordinates <- which(sumsquare == max(sumsquare), arr.ind = TRUE)
+coordinates
 
 ## these coordinates match the best estimates of the alpha and beta parameters
-par <- c(alpha.hat[coordinates[1]], beta.hat[coordinates[2]])
-par # notice that these estimates are much less precise than the estiamtes obtained below
+parameters <- c(alpha_hat[coordinates[1]], beta_hat[coordinates[2]])
+parameters # notice that these estimates are much less precise than the estiamtes obtained below
 
 ## counter plot from the brute force method (logged for visualization)
 par(mar=c(5,5,1,1))
-contour(alpha.hat,beta.hat,log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
-abline(v=par[1], col=2, lwd=2)
-abline(h=par[2], col=2, lwd=2)
+contour(alpha_hat, beta_hat, log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
+abline(v=parameters[1], col=2, lwd=2)
+abline(h=parameters[2], col=2, lwd=2)
 
 
 ## generate variables for monitoring the function
@@ -287,12 +292,12 @@ iter <- 1
 ## see above
 
 ## pass function to optim with initial values
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
-optim.out
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+optim_out
 
 ## estiamte additional quantities of interest
-se <- sqrt(diag(solve(-optim.out$hessian))) #calculate standard errors
-VCV <- solve(-optim.out$hessian) #compute variance-covariance matrix
+se <- sqrt(diag(solve(-optim_out$hessian))) #calculate standard errors
+VCV <- solve(-optim_out$hessian) #compute variance-covariance matrix
 se
 VCV
 
@@ -303,36 +308,36 @@ summary(lm(y~x1))
 ## plot gradient paths for the following algorithims: "Nelder-Mead", "BGFS", "CG", "L-BFGS-B", "SANN"
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim.out <- optim(par = c(-2,-2), ols.func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
-contour(alpha.hat,beta.hat,log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
+optim_out <- optim(par = c(-2,-2), ols.func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
+contour(alpha_hat, beta_hat, log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
 lines(eval[1:iter,1], eval[1:iter,2], col="purple", lwd=4)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
 lines(eval[1:iter,1], eval[1:iter,2], col=2, lwd=4)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="CG", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="CG", control=list(fnscale = -1), hessian = TRUE)
 lines(eval[1:iter,1], eval[1:iter,2], col=3, lwd=4)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="L-BFGS-B", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="L-BFGS-B", control=list(fnscale = -1), hessian = TRUE)
 lines(eval[1:iter,1], eval[1:iter,2], col=4, lwd=4)
 optim.out$par
 iter
 
 eval <- array(dim=c(20000,4))
 iter <- 1
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="SANN", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(0,0), ols_func, X=X, method="SANN", control=list(fnscale = -1), hessian = TRUE)
 lines(eval[1:iter,1], eval[1:iter,2], col=5, lwd=4)
 optim.out$par
 iter
