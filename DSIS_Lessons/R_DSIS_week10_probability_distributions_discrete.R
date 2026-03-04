@@ -276,6 +276,27 @@ values
 barplot(values, names.arg=c(0:10), ylim=c(0,1), ylab="Pr(X=x)")
 
 
+
+
+
+
+## coin flipping with sample
+## return to this graph the density or mass of the binomial trial with ten coin flips
+values <- dbinom(x=0:4, size=4, prob=.5)
+values
+barplot(values, names.arg=c(0:4), ylim=c(0,1), ylab="Pr(X=x)")
+
+## empirical approximation with the sample function
+sample_sum <- c()
+sim_n <- 10000
+for(i in 1:sim_n){
+  sample_sum[i] <- sum(sample(0:1, size=4, replace = TRUE, prob=c(.5,.5)))
+}
+table(sample_sum)/sim_n
+barplot(table(sample_sum)/sim_n, add=TRUE, density=10 , angle=45, col="orange")
+
+
+
 ## here is where the program challenge questions start
 
 ##########################################################################

@@ -255,3 +255,45 @@ truehist(test_value)
 ## see other R files with probabilities in the title for more information
 ##########################################################################
 
+
+##########################################################################
+## Appendix to the lesson
+##########################################################################
+y <- sample(0:1, size=1000, replace=TRUE, prob=c(.95,.05))
+table(y)
+  
+## generate vector of possible values for the parameter estimates of alpha and beta by brute force
+prob_hat <- seq(from=0,1,.01)
+
+## inspect prob hat
+prob_hat
+
+sum_square_diff <- rep(NA, length(prob_hat))
+for(i in 1:length(prob_hat)){
+  sum_square_diff[i] <- sum((y-prob_hat[i])^2)
+  #sum_square_diff[i] <- mean((y-prob_hat[i])^2)
+}
+
+## inspect sum_square_diff
+sum_square_diff
+
+## find the coordinates from the matrix where the minimum of the sum of square residulas resides
+coordinates <- which(sum_square_diff == min(sum_square_diff), arr.ind = TRUE)
+coordinates
+
+## these coordinates match the best estimates of the p parameters
+parameters <- prob_hat[coordinates[1]]
+parameters # notice that these estimates are much less precise than the estimates obtained below
+
+## counter plot from the brute force method 
+par(mar=c(5,5,1,1))
+plot(prob_hat, sum_square_diff, xlab=expression(hat(p)), cex.lab=1.5)
+abline(v=parameters[1], col=2, lwd=2)
+
+## (logged for visualization)
+plot(prob_hat, log(sum_square_diff), xlab=expression(hat(p)), cex.lab=1.5, ylab="distance measure")
+abline(v=parameters[1], col=2, lwd=2)
+
+
+
+

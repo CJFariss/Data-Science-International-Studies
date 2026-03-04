@@ -273,8 +273,10 @@ pnorm(q=1.96, mean=0, sd=1) - pnorm(q=-1.96, mean=0, sd=1)
 
 ## Graph the Normal density function using the curve() function
 curve(expr=dnorm, ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1), lwd=3, col="navy", main="N(0,1) Density")
+curve(expr=pnorm, ylab="Pr(X=x)", type="l", xlim=c(-6,6), ylim=c(0,1), lwd=3, col="navy", main="")
 
 curve(expr=dnorm, ylab="Pr(X=x)", type="l", xlim=c(-8,8), ylim=c(0,1), lwd=3, col="navy", main="N(0,1) Density")
+curve(expr=pnorm, ylab="Pr(X=x)", type="l", xlim=c(-8,8), ylim=c(0,1), lwd=3, col="navy", main="N(0,1) Density")
 
 curve(expr=dnorm(x, mean=0, sd=1), ylab="Pr(X=x)", type="l", xlim=c(-4,4), ylim=c(0,1.05), lwd=3, col="navy", main="N(0,2^2) Density")
 
