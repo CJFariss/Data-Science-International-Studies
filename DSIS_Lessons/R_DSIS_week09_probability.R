@@ -141,6 +141,8 @@ single_roll_4sided_die_sample_space[c(-1, -2, -4)] ## not roll 1 or not roll 2 o
 single_roll_4sided_die_sample_space[c(-2, -3, -4)] ## not roll 2 or not roll 3 or not roll 4;
 single_roll_4sided_die_sample_space[c(-1, -2, -3, -4)] ## not roll 1 or not roll 2 or not roll 3 or not roll 4
 
+## the total number of possible complementary events is:  
+choose(4,4) + choose(4,3) + choose(4,2) + choose(4,1) + choose(4,0)
 
 ## Each of the events E in B have a P(E) >= 0. 
 ## For the four-sided die example, there are 16 conceptually meaningful events.
