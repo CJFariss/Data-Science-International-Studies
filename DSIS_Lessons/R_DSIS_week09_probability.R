@@ -14,14 +14,18 @@
 ##
 ## For this R tutorial, we will learn how:
 ## (1) learn to think about probability in terms of a simple model: (S, B, P(.))
-## (2) begin estimating discrete and continuous probability distributions
+## (2) use Legos to think about conditional probability
+## (3) create some simulations of coin flips using the sample() function
+## (3) estimate probabilities and conditional probabilities of War between two states
+## (4) estimate probabilities of simulated coin flips using distances (Appendix)
+## (5) begin estimating discrete and continuous probability distributions (Appendix)
 ##
 ##########################################################################
 
-## Probability considers what data will be observed from a given random (stochastic) process. 
-## Statistics considers what random (stochastic) process gave rise to observed data at hand.
+## Probability considers what events or data will be observed from a given random (stochastic) process. 
+## Statistics considers what random (stochastic) process gave rise to observed events or data.
 
-## Let's start with a descriptive analogy: bits and pieces. A probability measure tells us some rules about how to keep track of a bunch of bits and pieces. "bits" are the tiny pieces that together form some "pieces" we might want to keep track of.  We will use a lot of lego examples. The bits using one or more lego blocks are the individual lego units. So a 2x4 brick has 8 pieces. We will define some events using the bits and pieces of legos and then calculate the probability of these different events. We are going to use legos in a separate program challenge file. Below we will define what we mean by event and links these events to a measure of probability. 
+## Let's start with a descriptive analogy for an event space: bits and pieces. A probability measure tells us some rules about how to keep track of a bunch of bits and pieces. "bits" are the tiny pieces that together form some "pieces" we might want to keep track of.  We will use a lot of lego examples. The bits using one or more lego blocks are the individual lego units. So a 2x4 brick has 8 pieces. We will define some events using the bits and pieces of legos and then calculate the probability of these different events. We are going to use legos in a separate program challenge file. Below we will define what we mean by event and links these events to a measure of probability. Later we will define the bits and pieces under different density functions.
 
 ##########################################################################
 ## A probability measure, a probability space, or a probability model requires three elements: (S, B, P(.)).
@@ -31,7 +35,7 @@
 ## B (or Beta) is short for Borel field (but it's just another set related to the definition of S)
 ## P(.) is a rule about the probability value that each element in B is assigned. For practical purposes, we are mostly concerned about P(.) but we should know about the role S and B play as well.
 
-## For most applications, the set of events in B is too large to consider or even calculate because it is made up of all possible subsets of S. But we can know in principle what the characteristics of B are based on our knowledge of S. This will become more concrete below.
+## For most applications, the set of events in B is to large to consider or even calculate because it is made up of all possible subsets of S. But we can know in principle what the characteristics of B are based on our knowledge of S. This will become more concrete below.
 
 ## Once we have developed a clear definition of S and B, we get to argue about the rules associated with P(.). This is where a lot of conceptual debates in the field of Statistics takes place and where a lot of effort in the social sciences takes place.
 
@@ -82,7 +86,7 @@ sample(c(single_coin_flip_event1, single_coin_flip_event2, single_coin_flip_even
 ## The sample space for a single coin flip is not equivalent to the sample space for B (the Borel field). 
 ## The sample space contains 4 events. The reasons this is the case in this simple example is because the events for the single coin flip are disjoint or mutually exclusive.
 
-## The set B (the Borel field) contains every possible combination of unions, intersections, and complements of the events in set S. For the sample space for a single coin flip, there are only two events, which are by definition of complements of one another. There are no unions or intersections (which we will consider below).
+## The set B (the Borel field) contains every possible combination of unions, intersections, and complements of the events in set S. For the sample space for a single coin flip, there are only two events, which are by definition of complements of one another. There are no unions or intersections (which we will consider below). Or put another way, the probability of both heads and tails occuring at the same time is 0.
 
 ## To see how quickly complicated a set S can get, let's consider a single roll of a 4-sided dice (this is equivalent to two-coin flips).
 
@@ -111,11 +115,13 @@ single_roll_4sided_die_sample_space[c(2, 3)] ## roll 2 or roll 3; the compliment
 single_roll_4sided_die_sample_space[c(2, 4)] ## roll 2 or roll 4; the compliment is roll 1 or roll 3;
 single_roll_4sided_die_sample_space[c(3, 4)] ## roll 3 or roll 4; the compliment is roll 1 or roll 2;
 single_roll_4sided_die_sample_space[c(1, 2, 3)] ## roll 1 or roll 2 or roll 3;
-single_roll_4sided_die_sample_space[c(1, 3, 4)] ## roll 1 or roll 3;
-single_roll_4sided_die_sample_space[c(1, 2, 4)] ## roll 1 or roll 4;
-single_roll_4sided_die_sample_space[c(2, 3, 4)] ## roll 1 or roll 4;
+single_roll_4sided_die_sample_space[c(1, 3, 4)] ## roll 1 or roll 3 or roll 4;
+single_roll_4sided_die_sample_space[c(1, 2, 4)] ## roll 1 or roll 2 or roll 4;
+single_roll_4sided_die_sample_space[c(2, 3, 4)] ## roll 2 or roll 3 or roll 4;
 single_roll_4sided_die_sample_space[c(1, 2, 3, 4)] ## roll 1 or roll 2 or roll 3 or roll 4;
 
+## the total number of possible events is:  
+choose(4,4) + choose(4,3) + choose(4,2) + choose(4,1) + choose(4,0)
 
 ## here are the same as the above but as the compliments
 single_roll_4sided_die_sample_space[c(1, 2, 3, 4)]
@@ -123,17 +129,17 @@ single_roll_4sided_die_sample_space[-1] ## roll not 1; the compliment is roll 2 
 single_roll_4sided_die_sample_space[-2] ## roll not 2; the compliment is roll 1 or 3 or 4
 single_roll_4sided_die_sample_space[-3] ## roll not 3; the compliment is roll  2 or 3 or 4
 single_roll_4sided_die_sample_space[-4] ## roll not 4; the compliment is roll 1 or 2 or 3
-single_roll_4sided_die_sample_space[c(-1, -2)] ## roll not 1 or roll not 2; the compliment is roll 1 or roll 2
-single_roll_4sided_die_sample_space[c(-1, -3)] ## roll 1 or roll 3; the compliment is roll 2 or roll 4
-single_roll_4sided_die_sample_space[c(-1, -4)] ## roll 1 or roll 4; the compliment is roll 2 or roll 3
-single_roll_4sided_die_sample_space[c(-2, -3)] ## roll 2 or roll 3; the compliment is roll 1 or roll 4
-single_roll_4sided_die_sample_space[c(-2, -4)] ## roll 2 or roll 4; the compliment is roll 1 or roll 3
-single_roll_4sided_die_sample_space[c(-3, -4)] ## roll 3 or roll 4; the compliment is roll 1 or roll 2
-single_roll_4sided_die_sample_space[c(-1, -2, -3)] ## roll 1 or roll 2 or roll 3
-single_roll_4sided_die_sample_space[c(-1, -3, -4)] ## roll 1 or roll 3;
-single_roll_4sided_die_sample_space[c(-1, -2, -4)] ## roll 1 or roll 4;
-single_roll_4sided_die_sample_space[c(-2, -3, -4)] ## roll 1 or roll 4;
-single_roll_4sided_die_sample_space[c(-1, -2, -3, -4)] ## roll 1 or roll 2 or roll 3 or roll 4
+single_roll_4sided_die_sample_space[c(-1, -2)] ## roll not 1 or not roll not 2; the compliment is roll 1 or roll 2
+single_roll_4sided_die_sample_space[c(-1, -3)] ## roll not 1 or not roll 3; the compliment is roll 2 or roll 4
+single_roll_4sided_die_sample_space[c(-1, -4)] ## roll not 1 or not roll 4; the compliment is roll 2 or roll 3
+single_roll_4sided_die_sample_space[c(-2, -3)] ## roll not 2 or not roll 3; the compliment is roll 1 or roll 4
+single_roll_4sided_die_sample_space[c(-2, -4)] ## roll not 2 or not roll 4; the compliment is roll 1 or roll 3
+single_roll_4sided_die_sample_space[c(-3, -4)] ## roll not 3 or not roll 4; the compliment is roll 1 or roll 2
+single_roll_4sided_die_sample_space[c(-1, -2, -3)] ## not roll 1 or not roll 2 or not roll 3;
+single_roll_4sided_die_sample_space[c(-1, -3, -4)] ## not roll 1 or not roll 3 or not roll 4;
+single_roll_4sided_die_sample_space[c(-1, -2, -4)] ## not roll 1 or not roll 2 or not roll 4;
+single_roll_4sided_die_sample_space[c(-2, -3, -4)] ## not roll 2 or not roll 3 or not roll 4;
+single_roll_4sided_die_sample_space[c(-1, -2, -3, -4)] ## not roll 1 or not roll 2 or not roll 3 or not roll 4
 
 
 ## Each of the events E in B have a P(E) >= 0. 
@@ -220,10 +226,129 @@ library(MASS)
 par(mar=c(4,4,1,1))
 truehist(test_value)
 
+
 ##########################################################################
 ## We will conduct some in-class activities using legos.
 ## These activities will help to further develop intuitions about probability distributions.
 ##
+##########################################################################
+
+
+
+##########################################################################
+## The Democratic Peace 
+##########################################################################
+## Doyle, Michael W. “Kant, Liberal Legacies, and Foreign Affairs.” Philosophy & Public Affairs, vol. 12, no. 3, 1983, pp. 205–35. JSTOR, http://www.jstor.org/stable/2265298. Accessed 4 Mar. 2026.
+##
+#install.packages("peacesciencer")
+library(peacesciencer)
+
+## this is the way we have been creating function calls in R (you can also use the pipe operator which I'll teach you later in the course: %>% or |>)
+df <- create_dyadyears(system="cow", mry=FALSE, directed = FALSE, subset_years=1946:2014)  ## look at the post WWII period for this example
+df <-  add_cow_wars(data=df, type = "inter") ## allows you to add war variable from the correlates of war dataset (these are custom merge functions)
+df <-  add_democracy(data=df) ## allows you to add estimates of democracy from two datasets (Polity and VDEM).
+
+## inspect the dataset 
+dim(df)
+head(df)
+
+## create a base-R data.frame object
+df <- as.data.frame(df)
+dim(df)
+head(df)
+
+## tabulate some of the values
+table(df$polity21)
+table(df$polity22)
+table(df$polity21, df$polity22)
+
+df$democracy_1 <- 0
+df$democracy_2 <- 0
+df$democracy_1[df$polity21>=6] <- 1
+df$democracy_2[df$polity22>=6] <- 1
+               
+table(df$democracy_1, df$democracy_2)
+
+df$joint_democracy <- 0
+df$joint_democracy[df$democracy_1==1 & df$democracy_2==1]<-1
+
+table(df$cowinteronset)
+table(df$cowinterongoing)
+table(df$joint_democracy)
+
+## also check NAs
+table(is.na(df$cowinteronset))
+table(is.na(df$cowinterongoing))
+table(is.na(df$joint_democracy))
+
+df$cowinteronset[is.na(df$cowinteronset)] <- 0
+df$cowinterongoing[is.na(df$cowinterongoing)] <- 0
+
+table(df$cowinteronset)
+table(df$cowinterongoing)
+
+
+## Analysis of probabilities
+##cowinteronset
+table(df$cowinteronset)
+xtabs(~ cowinteronset, data=df)
+tab_cowinteronset <- table(df$cowinteronset, df$joint_democracy)
+tab_cowinteronset
+prop.table(tab_cowinteronset)
+
+par(mar=c(5,4,3,1))
+barplot(c(prop.table(tab_cowinteronset)), names.arg=c("non-joint-dem/no war", "non-joint-dem/war", "joint-dem/no-war", "joint-dem/war"))
+
+##cowinterongoing
+table(df$cowinterongoing)
+tab_cowinterongoing <- table(df$cowinterongoing, df$joint_democracy)
+tab_cowinterongoing
+prop.table(tab_cowinterongoing)
+
+## proportions of all dyads
+barplot(c(prop.table(tab_cowinterongoing)), names.arg=c("non-joint-dem/no war", "non-joint-dem/war", "joint-dem/no-war", "joint-dem/war"))
+
+## conditional proportions for joint-democracy, given war-only dyads
+prop.table(tab_cowinterongoing[2,])
+barplot(c(prop.table(tab_cowinterongoing[2,])), names.arg=c("non-joint-dem/war", "joint-dem/war"), main="Conditional Probability ")
+
+## conditional proportions of war, given war, given joint-democracy-only dyads 
+prop.table(tab_cowinterongoing[,2])
+barplot(c(prop.table(tab_cowinterongoing[,2])), names.arg=c("war/non-joint-dem", "war/joint-dem"))
+
+
+## Note: we are using the proportions calculated above as our "estimates" of the probabilities and conditional probabilities of dyad-types in the international system.
+
+## probabilities of each combination using the mean() function 
+prop.table(tab_cowinterongoing)
+mean(df$cowinterongoing==0 & df$joint_democracy==0, na.rm=TRUE)
+mean(df$cowinterongoing==0 & df$joint_democracy==1, na.rm=TRUE)
+mean(df$cowinterongoing==1 & df$joint_democracy==0, na.rm=TRUE)
+mean(df$cowinterongoing==1 & df$joint_democracy==1, na.rm=TRUE)
+
+## we can also estimate these conditional probabilities of joint_democracy given war with the mean() function
+prop.table(tab_cowinterongoing[2,])
+mean(1-df$joint_democracy[df$cowinterongoing==1], na.rm=TRUE)
+mean(df$joint_democracy[df$cowinterongoing==1], na.rm=TRUE)
+
+## we can also estimate these conditional probabilities of war given joint_democracy with the mean() function
+## this is the famous democratic peace result
+prop.table(tab_cowinterongoing[,2])
+mean(1-df$cowinterongoing[df$joint_democracy==1], na.rm=TRUE)
+mean(df$cowinterongoing[df$joint_democracy==1], na.rm=TRUE)
+
+
+
+## Note 
+## check the unexpected cases which are Turkey and Cyprus in 1974
+subset(df, joint_democracy==1 & cowinteronset==1)
+subset(df, joint_democracy==1 & cowinterongoing==1)
+## see Adamson, Fiona B. “Democratization and the Domestic Sources of Foreign Policy: Turkey in the 1974 Cyprus Crisis.” Political Science Quarterly, vol. 116, no. 2, 2001, pp. 277–303. JSTOR, https://doi.org/10.2307/798062. Accessed 4 Mar. 2026.
+
+
+
+##########################################################################
+## Next Steps
 ##########################################################################
 ## We will also look at some (but not all) of the distributions in R below.
 ## We will always start with the sample() function, a for loop and sometimes the seq() function to understand each of the distributions we consider.
@@ -238,7 +363,7 @@ truehist(test_value)
 ## negative binomial
 ## hypergeometric
 ## multinomial
-
+##
 ##########################################################################
 ## continuous random variable distributions
 ##########################################################################
@@ -250,18 +375,20 @@ truehist(test_value)
 ## f-distribution
 ## gamma distribution
 ## beta distributions
-
+##
 ##########################################################################
 ## see other R files with probabilities in the title for more information
 ##########################################################################
 
 
+
 ##########################################################################
 ## Appendix to the lesson
+## simulate coin flips and estiamte the probabilities using distances 
 ##########################################################################
 y <- sample(0:1, size=1000, replace=TRUE, prob=c(.95,.05))
 table(y)
-  
+
 ## generate vector of possible values for the parameter estimates of alpha and beta by brute force
 prob_hat <- seq(from=0,1,.01)
 
@@ -287,13 +414,11 @@ parameters # notice that these estimates are much less precise than the estimate
 
 ## counter plot from the brute force method 
 par(mar=c(5,5,1,1))
-plot(prob_hat, sum_square_diff, xlab=expression(hat(p)), cex.lab=1.5)
+plot(prob_hat, sum_square_diff, xlab=expression(hat(p)), cex.lab=1.5, ylab="distance measure")
 abline(v=parameters[1], col=2, lwd=2)
 
 ## (logged for visualization)
 plot(prob_hat, log(sum_square_diff), xlab=expression(hat(p)), cex.lab=1.5, ylab="distance measure")
 abline(v=parameters[1], col=2, lwd=2)
-
-
 
 
