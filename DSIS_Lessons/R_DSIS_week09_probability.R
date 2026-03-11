@@ -75,6 +75,8 @@ single_coin_flip_event4
 
 
 sample(single_coin_flip_sample_space, size=1, replace=TRUE)
+
+
 sample(c(single_coin_flip_event1, single_coin_flip_event2, single_coin_flip_event3, single_coin_flip_event4), size=1, replace=TRUE, prob=c(.5,.5,0,0))
 
 ## Heads and not Heads are complements: the complement of Heads is not Heads; the complement of not Heads is Heads. 
@@ -208,7 +210,7 @@ rm(test)
 
 ## use a for loop to repeatedly generate independent samples of coin flips
 for(i in 1:1000){
-  test <- sample(single_coin_flip_sample_space, size=10, replace=TRUE, prob=c(0.5,0.5))
+  test <- sample(single_coin_flip_sample_space, size=30, replace=TRUE, prob=c(0.5,0.5))
   test_value[i] <- mean(test=="Heads")
 }
 table(test)
@@ -222,6 +224,9 @@ sd(test_value)
 
 ## graph the distribution (note that the "::" operator takes two arguments: a package name on the left and a function name on the right)
 MASS::truehist(test_value)
+
+library(MASS)
+truehist(test_value)
 
 ##
 library(MASS)
@@ -386,9 +391,9 @@ subset(df, joint_democracy==1 & cowinterongoing==1)
 
 ##########################################################################
 ## Appendix to the lesson
-## simulate coin flips and estiamte the probabilities using distances 
+## simulate coin flips and estimate the probabilities using distances 
 ##########################################################################
-y <- sample(0:1, size=1000, replace=TRUE, prob=c(.95,.05))
+y <- sample(0:1, size=1000, replace=TRUE, prob=c(.9,.1))
 table(y)
 
 ## generate vector of possible values for the parameter estimates of alpha and beta by brute force
