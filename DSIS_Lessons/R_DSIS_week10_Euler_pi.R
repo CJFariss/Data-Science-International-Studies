@@ -16,7 +16,8 @@
 ##
 ## Note, we use e and pi in a lot of probability distributions so let's see what the numbers are and why they're interesting (and have been interesting for a long time).
 ##
-## (1) Learn about the number e and pi using an iteration to estimate a close value to the "hard-coded" value available in our computer. 
+## (1) Learn about the number Euler's number: e and π: pi using an iteration to estimate a close value to the "hard-coded" value available in our computer using exp(1) and pi respectively.
+##
 ## (2) Calculate how close the estimate is to the "hard-coded" value.
 ##
 ##########################################################################
