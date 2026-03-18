@@ -22,7 +22,7 @@
 ##
 ##########################################################################
 ##
-## e
+## Euler's number: e
 ## based on a Taylor expansion
 
 e_values <- c()
@@ -30,10 +30,12 @@ sim_n <- 17
 out <- 0
 x<-1
 for(i in 0:sim_n){
-  out <- out + ((x^i)/factorial(i))
+  #out <- out + ((x^i)/factorial(i))
+  out <- out + exp(log(x^i) - log(factorial(i)))
   #out <- out + (1/factorial(i))
   e_values[i+1] <- out
 }
+
 print(e_values, digits=22)
 print(exp(1), digits=22)
 
@@ -41,7 +43,7 @@ print(exp(1), digits=22)
 test <- sum(1/factorial(0:sim_n)) 
 
 
-print(e_values[sim_n], digits=22)
+print(e_values[sim_n+1], digits=22)
 print(test, digits=22)
 print(exp(1), digits=22)
 

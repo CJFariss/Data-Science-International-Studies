@@ -107,9 +107,12 @@ punif(q=0.25, min=0, max=1)
 punif(q=0.5, min=0, max=1) - punif(q=0.25, min=0, max=1)
 
 ## Graph the Uniform density function using the curve() function
-curve(expr=dunif, ylab="Pr(X=x)", type="l", xlim=c(0,1), ylim=c(0,1.05), lwd=3, col="navy", main="U(0,1) Density")
+curve(expr=dunif, ylab="Pr(X=x)", type="l", xlim=c(-0.1,1.1), ylim=c(0,1.05), lwd=3, col="navy", main="U(0,1) Density")
+
+curve(expr=punif, ylab="Pr(X=x)", type="l", xlim=c(-0.1,1.1), ylim=c(0,1.05), lwd=3, col="navy", main="U(0,1) Density")
 
 curve(expr=dunif, n=10001, from=-2,to=2, ylab="Pr(X=x)", type="l", xlim=c(-2,2), ylim=c(0,1.05), lwd=3, col="navy", main="U(0,1) Density")
+
 
 curve(expr=dunif(x, min = 0, max = 1), n=10001, from=-2,to=2, ylab="Pr(X=x)", type="l", xlim=c(-2,2), ylim=c(0,1.05), lwd=3, col="navy", main="U(0,1) Density")
 
@@ -308,7 +311,8 @@ random_draws <- rnorm(10000, mean=0, sd=1)
 truehist(random_draws)
 curve(expr=dnorm, xlim=c(-3,3), col="darkorange", add=TRUE, lwd=2)
 
-## how many of the draws are very close to the middle of the uniform distribution? 
+
+## how many of the draws are very close to the middle of the normal distribution? 
 ## (hint: what is the proportion)
 sim_n <- 10000
 random_draws <- rnorm(sim_n, mean=0, sd=1)
