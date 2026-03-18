@@ -330,6 +330,8 @@ table(random_draws>-3 & random_draws<3)/sim_n
 ## the p-type function for a density function tells us the density or probability of a function at a given value along the x-axis
 pnorm(q=0)
 
+pnorm(q=-1)
+
 pnorm(q=1)
 
 pnorm(q=1) - pnorm(q=-1)
@@ -479,8 +481,8 @@ x_dnorm_estimate <- table(x_samples)/prob_weigth ## modify with the weight
 x_dnorm_estimate[names(x_dnorm_estimate)=='0'] ## approximate density when x is the mean for N(0,1)
 dnorm(0, mean=mu, sd=sigma)
 
-barplot(x_dnorm_estimate, main="N() density approximated using sample()")
-truehist(x_samples, main="N() density approximated using sample()")
+barplot(x_dnorm_estimate, main="N() density approximated using sample()", border = NA)
+truehist(x_samples, main="N() density approximated using sample()", border = NA)
 
 
 ##########################################################################
