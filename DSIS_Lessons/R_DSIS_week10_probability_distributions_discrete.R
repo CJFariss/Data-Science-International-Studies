@@ -35,7 +35,7 @@ library(MASS)
 sim_n <- 100000
 sim_n
 
-values <- sample(c(1,2,3,4,5,6), size=sim_n, replace=T)
+values <- sample(c(1,2,3,4,5,6), size=sim_n, replace=TRUE)
 table(values)
 table(values)/sim_n
 
@@ -288,7 +288,7 @@ barplot(values, names.arg=c(0:4), ylim=c(0,1), ylab="Pr(X=x)")
 
 ## empirical approximation with the sample function
 sample_sum <- c()
-sim_n <- 10000
+sim_n <- 1000
 for(i in 1:sim_n){
   sample_sum[i] <- sum(sample(0:1, size=4, replace = TRUE, prob=c(.5,.5)))
 }
@@ -356,3 +356,56 @@ barplot(table(sample_sum)/sim_n, add=TRUE, density=10 , angle=45, col="orange")
 ## rwilcox
 ##
 ##########################################################################
+
+
+## Appnedix
+## examples of nomalizing constants (to normaize numbers to the [0,1] interval) ## the [low_number,high_number] brackets here indicate the values are inclusive of 0 to 1 interval. Each set of probabilities sum to 1.
+prop.table(table(sample(1:16, size=100000, replace=TRUE, prob=16:1)))
+(16:1)/sum(16:1)
+
+sum((16:1)/sum(16:1))
+
+prop.table(table(sample(1:8, size=100000, replace=TRUE, prob=8:1)))
+(8:1)/sum(8:1)
+
+prop.table(table(sample(1:4, size=100000, replace=TRUE, prob=4:1)))
+(4:1)/sum(4:1)
+
+prop.table(table(sample(1:2, size=100000, replace=TRUE, prob=2:1)))
+(2:1)/sum(2:1)
+
+
+
+## nomalizing constants for the bracket probabilities. Each pair of probabilities sums to 1.
+prop.table(table(sample(c(1,16), size=100000, replace=TRUE, prob=c(16,1))))
+c(16,1)/17
+c(16,1)/sum(c(16,1))
+
+prop.table(table(sample(c(2,15), size=100000, replace=TRUE, prob=c(15,2))))
+c(15,2)/17
+c(15,2)/sum(c(15,2))
+
+prop.table(table(sample(c(3,14), size=100000, replace=TRUE, prob=c(14,3))))
+c(14,3)/17
+c(14,3)/sum(c(14,3))
+
+prop.table(table(sample(c(4,13), size=100000, replace=TRUE, prob=c(13,4))))
+c(13,4)/17
+c(13,4)/sum(c(13,4))
+
+prop.table(table(sample(c(5,12), size=100000, replace=TRUE, prob=c(12,5))))
+c(12,5)/17
+c(12,5)/sum(c(12,5))
+
+prop.table(table(sample(c(6,11), size=100000, replace=TRUE, prob=c(11,6))))
+c(11,6)/17
+c(11,6)/sum(c(11,6))
+
+prop.table(table(sample(c(7,10), size=100000, replace=TRUE, prob=c(10,7))))
+c(10,7)/17
+c(10,7)/sum(c(10,7))
+
+prop.table(table(sample(c(8,9), size=100000, replace=TRUE, prob=c(9,8))))
+c(9,8)/17
+c(9,8)/sum(c(9,8))
+
