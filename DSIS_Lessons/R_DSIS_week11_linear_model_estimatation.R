@@ -95,7 +95,7 @@ beta_estimate
 alpha_hat <- seq(from=-6,6,.05)
 beta_hat <- seq(from=-6,6,.05)
 
-sumsquare <- matrix(NA, nrow=length(alpha.hat), ncol=length(beta.hat))
+sumsquare <- matrix(NA, nrow=length(alpha_hat), ncol=length(beta_hat))
 
 dim(sumsquare)
 
@@ -163,7 +163,7 @@ summary(lm(y~x1))
 ## plot gradient paths for the following algorithims: "Nelder-Mead", "BGFS", "CG", "L-BFGS-B", "SANN"
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim_out <- optim(par = c(-2,-2), ols.func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(-2,-2), ols_func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
 contour(alpha_hat, beta_hat, log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
 lines(eval[1:iter,1], eval[1:iter,2], col="purple", lwd=4)
 optim.out$par
@@ -260,9 +260,9 @@ mean(y[x1==0])
 alpha_hat <- seq(from=-6,6,.05)
 beta_hat <- seq(from=-6,6,.05)
 
-sumsquare <- matrix(NA, nrow=length(alpha.hat), ncol=length(beta.hat))
-for(i in 1:length(alpha.hat)){
-    for(j in 1:length(beta.hat)){
+sumsquare <- matrix(NA, nrow=length(alpha_hat), ncol=length(beta_hat))
+for(i in 1:length(alpha_hat)){
+    for(j in 1:length(beta_hat)){
         y_hat <- alpha_hat[i] + beta_hat[j] * X[,2]
         sumsquare[i,j] <- -sum((y-y_hat)^2)
     }
@@ -308,7 +308,7 @@ summary(lm(y~x1))
 ## plot gradient paths for the following algorithims: "Nelder-Mead", "BGFS", "CG", "L-BFGS-B", "SANN"
 eval <- array(dim=c(1500,4))
 iter <- 1
-optim_out <- optim(par = c(-2,-2), ols.func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
+optim_out <- optim(par = c(-2,-2), ols_func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
 contour(alpha_hat, beta_hat, log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
 lines(eval[1:iter,1], eval[1:iter,2], col="purple", lwd=4)
 optim.out$par
@@ -342,5 +342,128 @@ lines(eval[1:iter,1], eval[1:iter,2], col=5, lwd=4)
 optim.out$par
 iter
 
+
+## Appendix
+## logistic regression simulation
+
+# One variable simulation of a binary dependent variable y and one independent variable x
+# using (1) a user defined numerical function, (2) a user defined function optimized with the
+# optim function in R, (3) the generalized linear model function glm in R, (4) a Gibbs sampler
+
+#install.packages("graphics")
+library(graphics)
+
+# simulate x1 and set the "true" population values alpha and beta
+n <- 100
+x1 <- rnorm(n,0,1)
+alpha <- 1.250000
+beta <- 2.500000
+
+# systematic component of the model
+xb <-  alpha + beta * x1
+
+# transform the linear term xb using the logit function so that theta is bound from 0 to 1
+prob_y <-  1 / (1 + exp(-xb))
+
+# generate the dependent variable y with theta and measurment error
+#error <- runif(n,0,1)
+#y <- ifelse(error < prob_y,1,0)
+y <- rbinom(n, size=1, prob=prob_y)
+
+# column bind all x variables (there is only one x in this version of the simulation)
+x <- cbind(x1)
+
+# generate the number of k variables in the regression
+k <- ncol(x) 
+
+# column bind the x variables to a vector of 1s to form the X-variable matrix
+X <- cbind(1, x)
+
+# create a likelihood-matrix of possible values for beta0 and beta1 as the corrdinates within that matrix
+alpha_hat <- seq(-5, 5, 0.1)  # these sequences should technically range from -Inf to Inf
+beta_hat <- seq(-5, 5, 0.1)  # but we know that the parameter values that maximize the likelihood lie within their range
+likelihood <- matrix(NA, nrow=length(b0), ncol=length(b1))
+
+
+
+inverse_logit_func <- function(value){
+  1/(1 + exp(-value))
+}
+
+# fill in the values of the matrix using the coordiates in b0 and b1 as possible parameter values that will maximize the likelihood
+for(i in 1:length(b0)){
+  for(j in 1:length(b1)){ 
+    prob_hat <- inverse_logit_func(alpha_hat[i] + beta_hat[j] * X[,2])
+    likelihood[i,j] <- sum(log(dbinom(y, size=1, prob=prob_hat)))
+  }
+}
+
+coordinates <- which(likelihood == max(likelihood), arr.ind = TRUE)
+coordinates
+
+## these coordinates match the best estimates of the alpha and beta parameters
+parameters <- c(alpha_hat[coordinates[1]], beta_hat[coordinates[2]])
+parameters # notice that these estimates are much less precise than the estiamtes obtained below
+
+## counter plot from the brute force method (logged for visualization)
+par(mar=c(5,5,1,1), mfrow=c(1,1))
+contour(alpha_hat, beta_hat, likelihood, xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
+abline(v=parameters[1], col=2, lwd=2)
+abline(h=parameters[2], col=2, lwd=2)
+
+
+# print the maximum value from the matrix, which should approximate the maximum likelihood estimate
+max(likelihood)
+
+# find the coordinates from the matrix where the likelihood resides
+max(likelihood) == likelihood[coordinates[1], coordinates[2]]
+
+
+
+
+# use the optim function R for faster and more precise results
+
+# create a function that is passed to the optim function below
+# par is the initial parameter values that optim starts with to maximize the function
+# X is the matrix of covariates with a column of 1s, y is the observed dependent variable
+# out the value of the log likelihood function that is returned by the function
+
+
+logit_loglikelihood <- function(par, X, y){
+  alpha_hat <- par[1]
+  beta_hat <- par[2]
+  prob_hat <- inverse_logit_func(alpha_hat + beta_hat * X[,2])
+  out <- sum(log(dbinom(y, size=1, prob=prob_hat)))
+  return(out)
+}
+
+# pass the user defind function to optim with 0s as starting values for each parameter estimate
+optim_out <- optim(par = c(0,0), logit_loglikelihood, y = y, X = X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+
+se <- sqrt(diag(solve(-optim_out$hessian))) #calculate standard errors
+VCV <- solve(-optim_out$hessian) #compute variance-covariance matrix
+
+# print the maximum likelihood, parameter estimates and standard errors of the parameter estimates
+optim_out$value
+optim_out$par
+se
+
+# check the values using the glm function
+model <- glm(y ~ x1, binomial(link = "logit"))
+logLik(model)
+summary(model)$coefficients
+
+
+# plot the likelihood function in space 
+# 3D plot
+persp(alpha_hat, beta_hat,  likelihood, theta = 45, phi = 30, shade=NA, col=5)
+
+# 2D plots
+par(mfrow=c(1,2))
+plot(alpha_hat, likelihood[,coordinates[2]], type="l", ylim=c(min(likelihood), max(likelihood)), lwd=3, col=4, xlab="alpha", ylab="Likelihood Function")
+points(alpha_hat[coordinates[1]], likelihood[coordinates[1],coordinates[2]], col=2, pch=19)
+
+plot(beta_hat, likelihood[coordinates[1],], type="l", ylim=c(min(likelihood), max(likelihood)), lwd=3, col=4, xlab="beta", ylab="Likelihood Function")
+points(beta_hat[coordinates[2]], likelihood[coordinates[1],coordinates[2]], col=2, pch=19)
 
 
