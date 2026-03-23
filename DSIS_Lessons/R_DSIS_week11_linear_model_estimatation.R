@@ -37,7 +37,7 @@ library(mvtnorm)
 ##########################################################################
 
 ## generate simulated vales
-n <- 80
+n <- 100
 x1 <- rnorm(n,0,1)
 
 ## make design matrix
@@ -385,7 +385,7 @@ beta_hat <- seq(-5, 5, 0.1)  # but we know that the parameter values that maximi
 likelihood <- matrix(NA, nrow=length(b0), ncol=length(b1))
 
 
-
+##
 inverse_logit_func <- function(value){
   1/(1 + exp(-value))
 }
@@ -465,5 +465,63 @@ points(alpha_hat[coordinates[1]], likelihood[coordinates[1],coordinates[2]], col
 
 plot(beta_hat, likelihood[coordinates[1],], type="l", ylim=c(min(likelihood), max(likelihood)), lwd=3, col=4, xlab="beta", ylab="Likelihood Function")
 points(beta_hat[coordinates[2]], likelihood[coordinates[1],coordinates[2]], col=2, pch=19)
+
+
+## More appendix
+## relationship between coefficients in a linear model and logistic regression model
+inverse_logit_func <- function(value){
+  1/(1 + exp(-value))
+}
+
+n <- 10000
+
+x <- c(rep(0,n/2),rep(1,n/2))
+
+y <- -0.1 + .5 * x + rnorm(n)
+
+mean(y[x==0])
+mean(y[x==1])
+
+mean(y[x==1]) - mean(y[x==0])
+
+t.test(y~x)
+
+lm(y~x)
+
+
+## transform the linear component xb into a probability using the inverse logit function
+xb <- -0.1 + .5 * x + rnorm(n)
+prob_y <- inverse_logit_func(xb)
+summary(prob_y)
+
+mean(prob_y[x==0])
+mean(prob_y[x==1])
+
+y <- rbinom(n, size=1, prob=prob_y)
+
+mean(y[x==0])
+mean(y[x==1])
+mean(y[x==1]) - mean(y[x==0])
+
+fit <- glm(y ~ x, family=binomial("logit"))
+summary(fit)
+
+lm(y ~ x)
+
+
+inverse_logit_func(fit$coefficients[1] + fit$coefficients[2] * 1)
+
+inverse_logit_func(fit$coefficients[1] + fit$coefficients[2] * 0)
+
+inverse_logit_func(fit$coefficients[1] + fit$coefficients[2] * 1) - inverse_logit_func(fit$coefficients[1] + fit$coefficients[2] * 0)
+
+
+fit1 <- glm(I(y[x==1]) ~ 1, family=binomial("logit"))
+summary(fit1)
+
+fit2 <- glm(I(y[x==0]) ~ 1, family=binomial("logit"))
+summary(fit2)
+
+inv.logit(fit1$coefficients[1]) - inv.logit(fit2$coefficients[1])
 
 
