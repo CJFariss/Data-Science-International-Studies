@@ -108,6 +108,10 @@ variance_x2
 ## calculate the variance of x2
 var(x2)
 
+## test that the values are same for both calculations
+variance_x1 == var(x1)
+variance_x2 == var(x2)
+
 
 ## multiply each distance variable, which is called the crossproduct
 x1x2_distance_product <- x1_distance * x2_distance
@@ -118,9 +122,15 @@ covariance_x1x2 <- sum(x1x2_distance_product)/(sim_n - 1)
 covariance_x1x2
 cov(x1, x2)
 
+## test
+covariance_x1x2 == cov(x1, x2)
+
 ## standardize the covariance by dividing by the product of the two standard deviations
 covariance_x1x2/(sd(x1)*sd(x2))
 cor(x1, x2)
+
+## test 
+covariance_x1x2/(sd(x1)*sd(x2)) == cor(x1, x2)
 
 
 ##########################################################################
@@ -142,7 +152,13 @@ sd(standarize_function(x1))
 summary(scale(x1))
 summary(standarize_function(x1))
 
+
+## simple 5 observation example
+1:5
 1:5-3
+(1:5-3)/sd(1:5)
+var((1:5-3)/sd(1:5))
+
 
 ## test that all values returned from the two functions are equal
 all(scale(x1)==standarize_function(x1))
@@ -150,6 +166,10 @@ all(scale(x1)==standarize_function(x1))
 ## view the variance from the returned values of the two function
 var(scale(x1))
 var(standarize_function(x1))
+
+## test
+var(scale(x1)) == var(standarize_function(x1))
+
 
 ## view the covariance of the two variables 
 cov(x1,x2)
