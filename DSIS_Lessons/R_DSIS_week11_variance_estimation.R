@@ -32,7 +32,9 @@
 ##
 ## Correlation: standardized measure of covariance that ranges between -1 and 1.
 ##
+## Appendix: Democracy and Human rights correlational analysis 
 ##
+## Appendix: numerical sensitivity
 ##
 ##########################################################################
 
@@ -217,6 +219,35 @@ summary(fit)
 cor(x1, x2)
 
 ## test 
+summary(fit)$coefficients[1] == cor(x1, x2)
+
+##########################################################################
+## Appendix: Democracy and Human Rights
+##########################################################################
+##
+#install.packages("peacesciencer")
+library(peacesciencer)
+
+## this is the way we have been creating function calls in R (you can also use the pipe operator which I'll teach you later in the course: %>% or |>)
+df <- create_stateyears(system="cow", mry=TRUE, subset_years=1946:2019)  ## look at the post WWII period for this example
+df <-  add_democracy(data=df) ## allows you to add war variable from the correlates of war dataset (these are custom merge functions)
+hr <- read.csv("Datasets/HumanRightsProtectionScores_v4.01.csv")
+df <- merge(df, hr, by.x=c("ccode","year"), by.y=c("COW","YEAR"))
+
+## inspect the dataset 
+dim(df)
+head(df)
+summary(df)
+
+##
+cor(x=df$v2x_polyarchy, y=df$theta_mean, use="pairwise")
+
+
+##########################################################################
+## Appendix: numerical sensitivity
+##########################################################################
+
+##recall
 summary(fit)$coefficients[1] == cor(x1, x2)
 
 ## the test above is false because of a round error
