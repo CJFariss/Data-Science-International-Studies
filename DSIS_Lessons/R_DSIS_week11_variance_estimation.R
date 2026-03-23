@@ -32,7 +32,7 @@
 ##
 ## Correlation: standardized measure of covariance that ranges between -1 and 1.
 ##
-## Appendix: Democracy and Human rights correlational analysis 
+## Appendix: Democracy and Human rights correlation analysis 
 ##
 ## Appendix: numerical sensitivity
 ##
@@ -55,7 +55,7 @@ x2 <- -1 + 2.5 * x1 + error_or_distrurbance_term
 
 ## or sometimes:
 alpha <- -1
-beta <- 2.5
+beta <- 0.5
 x2 <- alpha + beta * x1 + error_or_distrurbance_term
 
 
