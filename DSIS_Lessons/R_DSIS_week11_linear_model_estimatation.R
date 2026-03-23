@@ -14,15 +14,15 @@
 ##
 ## For this R tutorial, we will learn how:
 ##
-## (1) Simulates two variable OLS regression in R.
+## (1) Simulates two variable OLS regression in R (ordinary least squares regression).
 ## (2) Find the coordinates of the best estimates using the a "brute force" method.
 ## (3) Find the best estimates using the linear model lm() function.
-## (4) Matrix algebra
-## (5) Find the best estimates using a user defined function which is passed to the optim function
-## (6) Visualize the results using the contour plot function from the graphics library
-## (7) Simulate the model where the independent variable x is continuous and binary
-## (8) Appendix details for logistic regression with a binary Dependent Variable
-## (9) Appendix showing relationship between coefficients in a linear model and logistic regression model
+## (4) Find the best estimates using a user defined function which is passed to the optim function
+## (5) Visualize the results using the contour plot function from the graphics library
+## (6) Simulate the model where the independent variable x is continuous and binary
+## (7) Appendix details for logistic regression with a binary Dependent Variable
+## (8) Appendix showing relationship between coefficients in a linear model and logistic regression model
+##
 ##########################################################################
 
 ## install the library if necessary
