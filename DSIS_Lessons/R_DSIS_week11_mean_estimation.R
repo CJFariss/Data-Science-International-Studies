@@ -178,3 +178,4 @@ mu_hat[coord]
 which(sum_dens_ssqd==min(sum_dens_ssqd))
 which(min_sum_dens_ssqd==max(min_sum_dens_ssqd))
 
+
