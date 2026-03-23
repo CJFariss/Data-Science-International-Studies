@@ -15,9 +15,13 @@
 ## For this R tutorial, we will learn how:
 ##
 ## (1a) Use the normal density function to see that it is useful for many applications
+##
 ## (1b) Specifically, we will estimate a mean instead of calculating it directly using a combination of values from the normal density function
+##
 ## (1c) Use a normal density function to construct a likelihood function or loss function to evaluate how well/close the estimate mean is to the observed data values
+##
 ## (2) Observe that calculating the true mean is very simple so it is easy to verify that the combination of density functions gives the same answer as the simple calculation
+##
 ## (3) Note that there are more complicated models where estimating the best set of parameters is not as easy as simply calculating the mean. We will use this combination of density function values to find the best set of parameters. Sometimes this is called maximum likelihood estimation or MLE for short
 ##
 ##########################################################################
