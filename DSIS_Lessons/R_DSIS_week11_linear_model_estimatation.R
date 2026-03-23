@@ -20,8 +20,9 @@
 ## (4) Matrix algebra
 ## (5) Find the best estimates using a user defined function which is passed to the optim function
 ## (6) Visualize the results using the contour plot function from the graphics library
-## (7) Simulate the model where the independent variable x is continous and binary
-##
+## (7) Simulate the model where the independent variable x is continuous and binary
+## (8) Appendix details for logistic regression with a binary Dependent Variable
+## (9) Appendix showing relationship between coefficients in a linear model and logistic regression model
 ##########################################################################
 
 ## install the library if necessary
@@ -343,8 +344,10 @@ optim.out$par
 iter
 
 
+##########################################################################
 ## Appendix
 ## logistic regression simulation
+##########################################################################
 
 # One variable simulation of a binary dependent variable y and one independent variable x
 # using (1) a user defined numerical function, (2) a user defined function optimized with the
@@ -385,16 +388,17 @@ beta_hat <- seq(-5, 5, 0.1)  # but we know that the parameter values that maximi
 likelihood <- matrix(NA, nrow=length(b0), ncol=length(b1))
 
 
-##
+## define inverse logit function
 inverse_logit_func <- function(value){
-  1/(1 + exp(-value))
+  return(as.numeric(1/(1 + exp(-value))))
 }
 
-# fill in the values of the matrix using the coordiates in b0 and b1 as possible parameter values that will maximize the likelihood
-for(i in 1:length(b0)){
-  for(j in 1:length(b1)){ 
+# fill in the values of the matrix using the coordinates in b0 and b1 as possible parameter values that will maximize the likelihood
+for(i in 1:length(alpha_hat)){
+  for(j in 1:length(beta_hat)){ 
     prob_hat <- inverse_logit_func(alpha_hat[i] + beta_hat[j] * X[,2])
-    likelihood[i,j] <- sum(log(dbinom(y, size=1, prob=prob_hat)))
+    #likelihood[i,j] <- sum(log(dbinom(y, size=1, prob=prob_hat)))
+    likelihood[i,j] <- sum(log((prob_hat^y * (1-prob_hat)^(1-y)))) ## p^y * (1-p)^(1-y) from the Bernoulli distribution
   }
 }
 
@@ -433,7 +437,8 @@ logit_loglikelihood <- function(par, X, y){
   alpha_hat <- par[1]
   beta_hat <- par[2]
   prob_hat <- inverse_logit_func(alpha_hat + beta_hat * X[,2])
-  out <- sum(log(dbinom(y, size=1, prob=prob_hat)))
+  #out <- sum(log(dbinom(y, size=1, prob=prob_hat)))
+  out <- sum(log(prob_hat^y * (1-prob_hat)^(1-y))) ## p^y * (1-p)^(1-y) from the Bernoulli distribution
   return(out)
 }
 
@@ -467,10 +472,15 @@ plot(beta_hat, likelihood[coordinates[1],], type="l", ylim=c(min(likelihood), ma
 points(beta_hat[coordinates[2]], likelihood[coordinates[1],coordinates[2]], col=2, pch=19)
 
 
-## More appendix
+##########################################################################
+## Appendix
 ## relationship between coefficients in a linear model and logistic regression model
+## note that the relationships below become more comlicated in models with more than 1 variable
+##########################################################################
+
+## define inverse logit function
 inverse_logit_func <- function(value){
-  1/(1 + exp(-value))
+  return(as.numeric(1/(1 + exp(-value))))
 }
 
 n <- 10000
@@ -506,9 +516,11 @@ mean(y[x==1]) - mean(y[x==0])
 fit <- glm(y ~ x, family=binomial("logit"))
 summary(fit)
 
-lm(y ~ x)
+fit_lm <- lm(y ~ x)
+summary(fit_lm)
 
 
+## notice when we transform the logistic regression coefficients using the inverse logit function, we return the same coefficients from the linear model
 inverse_logit_func(fit$coefficients[1] + fit$coefficients[2] * 1)
 
 inverse_logit_func(fit$coefficients[1] + fit$coefficients[2] * 0)
@@ -519,9 +531,10 @@ inverse_logit_func(fit$coefficients[1] + fit$coefficients[2] * 1) - inverse_logi
 fit1 <- glm(I(y[x==1]) ~ 1, family=binomial("logit"))
 summary(fit1)
 
-fit2 <- glm(I(y[x==0]) ~ 1, family=binomial("logit"))
-summary(fit2)
+fit0 <- glm(I(y[x==0]) ~ 1, family=binomial("logit"))
+summary(fit0)
 
-inv.logit(fit1$coefficients[1]) - inv.logit(fit2$coefficients[1])
+inverse_logit_func(fit1$coefficients[1])
+inverse_logit_func(fit0$coefficients[1])
 
 
