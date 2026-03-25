@@ -181,6 +181,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  - Required Readings: Davies Ch.13 *Elementary Statistics*; Davies Ch. 20 *Simple Linear Regression*
  - Optional Readings: Davies 21 *Multiple Linear Regression*; Davies 22 *Linear Model Selection and Diagnostics*
   - Optional Readings: [Fariss, Christopher J. 2014. "Respect for Human Rights has Improved Over Time: Modeling the Changing Standard of Accountability" *American Political Science Review* 108(2):297-318.](http://dx.doi.org/10.1017/S0003055414000070)
+  - Optional Readings: [Fariss, Christopher J., Michael R. Kenwick, and Kevin Reuning. 2020. “Estimating one-sided-killings from a Robust Measurement Model of Human Rights” Journal of Peace Research 57(6):801-814.](https://doi.org/10.1177/0022343320965670)
 - Lesson: [mean estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_mean_estimation.R)
  - Lesson: [variance estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_variance_estimation.R)
  - Lesson: [linear model estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_linear_model_estimatation.R)
