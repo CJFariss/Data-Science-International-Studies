@@ -70,6 +70,7 @@ normal_density <- function(data, mu, sigma){
 }
 
 ## let's change the mean
+normal_density(data=x, mu=0, sigma=1)
 normal_density(data=x, mu=3, sigma=1)
 
 ## plot the two estimated densities to verify that they are the same
@@ -91,12 +92,16 @@ sum(x)/length(x)
 ## fix sigma to 1
 sigma <- 1
 
+## reminders
+sum(1:5)
+prod(1:5)
+
+
 ## let's check to see if the best estimate for the mean is 1
 mu <- 1
 sum(log(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2)))
 prod(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2))
-
-prod(1:3)
+exp(sum(log(1/(sigma*sqrt(2*pi)) * exp(-(x - mu)^2/2*sigma^2))))
 
 ## let's check to see if the best estimate for the mean is 2
 mu <- 2
