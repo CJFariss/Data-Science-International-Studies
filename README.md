@@ -185,7 +185,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  - Lesson: [linear model estimation in R](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/DSIS_Lessons/R_DSIS_week11_linear_model_estimatation.R)
  
   ### Wednesday
-  - Program Challenge: []()
+  - Program Challenge: [R_Challenge_analysis_human_rights_statistics.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_human_rights_statistics.R)
  <br>
 
 ## Week 12: Introduction to Text as Data and Neural Networks in R
