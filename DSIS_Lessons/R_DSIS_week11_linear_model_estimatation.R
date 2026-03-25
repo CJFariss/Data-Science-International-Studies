@@ -17,7 +17,7 @@
 ## (1) Simulates two variable OLS regression in R (ordinary least squares regression).
 ## (2) Find the coordinates of the best estimates using the a "brute force" method.
 ## (3) Find the best estimates using the linear model lm() function.
-## (4) Find the best estimates using a user defined function which is passed to the optim function
+## (4) Find the best estimates using a user defined function which is passed to the optim() function
 ## (5) Visualize the results using the contour plot function from the graphics library
 ## (6) Simulate the model where the independent variable x is continuous and binary
 ## (7) Appendix details for logistic regression with a binary Dependent Variable
@@ -61,6 +61,7 @@ error_term <- rnorm(n)
 summary(error_term)
 
 y <- alpha * X[,1] + beta * X[,2] + error_term
+#y <- alpha + beta * x1 + error_term
 
 summary(y)
 
