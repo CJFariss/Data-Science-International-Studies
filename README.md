@@ -188,7 +188,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  
   ### Wednesday
   - Program Challenge: [R_Challenge_analysis_human_rights_statistics.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_human_rights_statistics.R)
-  - Dataset for program challenge: [HumanRightsProtectionScores_v4.01.csv](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/Datasets/HumanRightsProtectionScores_v4.01.csv)
+    - Dataset for program challenge: [HumanRightsProtectionScores_v4.01.csv](https://github.com/CJFariss/Data-Science-International-Studies/blob/master/Datasets/HumanRightsProtectionScores_v4.01.csv)
  <br>
 
 ## Week 12: Introduction to Text as Data and Neural Networks in R
