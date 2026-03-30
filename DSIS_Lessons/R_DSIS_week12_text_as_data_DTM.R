@@ -75,13 +75,31 @@ table(tweet.term.list[[1]])
 ## are the numbers 1 and 2 in the second vector using the %in% function.
 c(1,2) %in% c(0,3,4,5)
 
+
+## are the numbers 1 and 2 NOT in the second vector using the %in% function.
+! c(1,2) %in% c(0,3,4,5)
+
+## are the numbers 1 and 2 in the second vector using the %in% function.
 c(1,2) %in% c(1,2,3)
 
+## are the numbers 1 and 2 NOT in the second vector using the %in% function.
+! c(1,2) %in% c(1,2,3)
+
+## additional examples
 c(1,2,4,5,6) %in% c(1,2,3)
 
 c("a") %in% c("a", "b", "c")
 
 letters %in% c("a", "b", "c")
+
+
+## the data.table library contains a %notin% function
+libray(data.table)
+
+## are the numbers 1 and 2 NOT in the second vector using the %in% function.
+c(1,2) %notin% c(0,3,4,5)
+
+
 
 ## view logical sub-setting command to remove stop-words from the first tweet
 tweet.term.list[[1]] %in% as.character(stopwords$V1)
