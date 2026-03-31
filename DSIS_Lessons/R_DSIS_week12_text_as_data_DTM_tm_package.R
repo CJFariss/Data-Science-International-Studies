@@ -58,7 +58,7 @@ data$newtext <- newtext
 
 ## convert to corpus object using additional functions from the tm package
 ## the tm_map function takes as its first argument the vector of text and a function as its second argument
-corpus <-Corpus(VectorSource(newtext))
+corpus <-Corpus(VectorSource(data$newtext))
 corpus <- tm_map(corpus, removePunctuation)
 corpus <- tm_map(corpus, removeNumbers)
 corpus <- tm_map(corpus, stripWhitespace)
