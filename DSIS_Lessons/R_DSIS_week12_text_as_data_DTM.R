@@ -75,6 +75,7 @@ table(tweet.term.list[[1]])
 ## are the numbers 1 and 2 in the second vector using the %in% function.
 c(1,2) %in% c(0,3,4,5)
 
+c(0,3,4,5) %in% c(1,2)
 
 ## are the numbers 1 and 2 NOT in the second vector using the %in% function.
 ! c(1,2) %in% c(0,3,4,5)
