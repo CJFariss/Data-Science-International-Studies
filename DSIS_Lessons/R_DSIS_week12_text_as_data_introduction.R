@@ -70,7 +70,9 @@ sub(pattern="c", replacement="", x="abcabc")
 regexpr(pattern="a", text=c("abcabc", "a", "b"))
 
 ## gregexpr() tells us the position(s) of the pattern in each element of the pattern (i.e., like the which() function)
-gregexpr(pattern="a", text=c("abcabc", "a", "b"))
+test <- gregexpr(pattern="a", text=c("abcabc", "a", "b"))
+test
+is.list(test)
 
 gregexpr(pattern="a", text=c("abcabc", "a", "b", letters))
 
