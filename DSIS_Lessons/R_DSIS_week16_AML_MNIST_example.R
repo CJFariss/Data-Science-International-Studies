@@ -61,7 +61,7 @@ x_test <- mnist$test$images/255
 y_test <- mnist$test$labels
 y_train <- mnist$train$labels
 
-matrix(x_train[1,], nrow=28, ncol=28)
+round(matrix(x_train[1,], nrow=28, ncol=28), digits=2)
 
 image(x=1:28, y=1:28, matrix(x_train[1,], nrow=28, ncol=28)[1:28,28:1])
 
