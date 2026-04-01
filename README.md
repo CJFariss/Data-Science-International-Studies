@@ -202,6 +202,7 @@ Descriptions of weekly, (1) readings, (2) lessons, (3) program challenges, and (
  
  ### Wednesday
  - Program Challenge: [R_Challenge_text_character_sort.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_character_sort.R)
+ - Program Challenge: [R_Challenge_analysis_Amnesty_International.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_analysis_Amnesty_International.R)
  - Optional Program Challenge: [R_Challenge_text_letters_and_logic.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_letters_and_logic.R)
  - Optional Program Challenge: [R_Challenge_text_non_repeating_chatacter.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_non_repeating_chatacter.R)
  - Optional Program Challenge: [R_Challenge_text_character_graph.R](https://github.com/CJFariss/R-Program-Challenges/blob/main/R-Program-Challenges/R_Challenge_text_character_graph.R)
