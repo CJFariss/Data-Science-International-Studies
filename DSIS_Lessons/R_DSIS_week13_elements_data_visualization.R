@@ -423,6 +423,10 @@ box()
 ## Always graph your data!
 ## 
 ## see https://en.wikipedia.org/wiki/Anscombe%27s_quartet for more details
+## Anscombe, F. J. (1973). "Graphs in Statistical Analysis". American Statistician. 27 (1): 17–21. doi:10.1080/00031305.1973.10478966.
+##
+#####################################################################################
+
 dev.off()
 Anscombes_quartet <- read.csv("http://cfariss.com/code/Anscombes_quartet.csv")
 Anscombes_quartet <- read.csv("Datasets/Anscombes_quartet.csv")
