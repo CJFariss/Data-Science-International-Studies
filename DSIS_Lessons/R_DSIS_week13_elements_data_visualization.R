@@ -473,8 +473,8 @@ axis(side=1, at=c(4,6,8,10,12,14,16,18))
 
 
 #####################################################################################
-# Replicates Figure 1: Number of physical integrity rights allegations over time by organization
-# Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. "Recording Repression: Identifying Physical Integrity Rights Allegations in Annual Country Human Rights Reports" International Studies Quarterly 66(2):sqac016 (June 2022).
+## Replicates Figure 1: Number of physical integrity rights allegations over time by organization
+## Cordell, Rebecca, K. Chad Clay, Christopher J. Fariss, Reed M. Wood, and Thorin M. Wright. "Recording Repression: Identifying Physical Integrity Rights Allegations in Annual Country Human Rights Reports" International Studies Quarterly 66(2):sqac016 (June 2022).
 #####################################################################################
 dev.off()
 
@@ -501,6 +501,8 @@ barplot(as.matrix(reports.year[3,]), space=0, las=2, col="mediumseagreen", main=
 
 #####################################################################################
 ## replication of an Rplot from Eck and Fariss (2018) that was not included in the published article
+## Eck, Kristine and Christopher J. Fariss. 2018. “Ill Treatment and Torture in Sweden: A Critique of Cross-Case Comparisons” Human Rights Quarterly 40(3):591-604
+#####################################################################################
 
 dev.off()
 par(mar=c(5,4,2,10))
@@ -527,6 +529,9 @@ mtext(side=3, "Torture in Sweden", line=0.5, font=2,  cex=1.25)
 
 #####################################################################################
 ## replication of an Rplot I made in 2010 when I took my PhD exams (comprehensive exams)
+## hint: make graphs with data that you generated yourself.
+#####################################################################################
+
 comps <- read.csv("http://cfariss.com/code/comps_coffee_drinks.csv")
 ##comps <- read.csv("comps_coffee_drinks.csv")
 
@@ -563,8 +568,10 @@ mu.final <- mean(na.omit(comps$dew))
 text(16, 11.5, labels=substitute(mu==mu.final, list(mu.final=mu.final)), cex=1.00, col=3, font=2)
 
 
-
-## more examples
+#####################################################################################
+## Appendix: more examples
+#####################################################################################
+## see https://friendly.github.io/HistData/reference/Minard.html
 #install.packages("HistData")
 library(HistData)
 data(Minard.troops, package="HistData")
@@ -581,7 +588,11 @@ for(i in (nrow(Minard.troops)-1):1){
 }
 
 
-##
+
+#####################################################################################
+## Appendix: more examples
+#####################################################################################
+## joint work with Miriam Barnum and Jonathan Markowitz
 min_max <- function(x){
   return((x - min(x))/(max(x) - min(x)))
 }
