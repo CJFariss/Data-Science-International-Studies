@@ -531,7 +531,6 @@ mtext(side=3, "Torture in Sweden", line=0.5, font=2,  cex=1.25)
 ## replication of an Rplot I made in 2010 when I took my PhD exams (comprehensive exams)
 ## hint: make graphs with data that you generated yourself.
 #####################################################################################
-
 comps <- read.csv("http://cfariss.com/code/comps_coffee_drinks.csv")
 ##comps <- read.csv("comps_coffee_drinks.csv")
 
@@ -662,6 +661,7 @@ legend("topright", legend=c("exponential decay (new version)", "inverse logged (
 
 COLOR <- rep(grey(.8), length(degree_values))
 COLOR[which(degree_values==10000)] <- "#1b7837"
+
 
 ## degree curve
 par(mfrow=c(1,1), mar=c(5,4.4,3,1.5), cex.main=1.5)
