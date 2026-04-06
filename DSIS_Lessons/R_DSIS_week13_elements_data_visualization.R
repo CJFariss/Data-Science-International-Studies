@@ -61,12 +61,14 @@ COLOR <- "lightblue"
 ## make a plot using the barplot() function
 par(mfrow=c(1,1), mar=c(5,4,4,4))
 barplot(data$total)
+barplot(data$total, horiz=TRUE)
+
+## note to check ?par first, then ?plot, ?barplot
 
 barplot(data$total,
   beside=TRUE,
-  space=0,
   col=COLOR, # I used the named variable defined above instead of naming here
-  font=2,
+  font=1,
   font.lab=2,
   ylab="Total Stop and Frisks",
   main="Stop and Frisks by Race in 2012",
@@ -96,6 +98,7 @@ box() # add box around plot region
 ## read in data using read.csv() function
 ##data <- read.csv("http://cfariss.com/code/ny_stop_frisk_black.csv")
 data <- read.csv("Datasets/ny_stop_frisk_black.csv")
+data
 
 ## make a plot using the plot() function
 par(mfrow=c(1,1))
@@ -107,8 +110,8 @@ plot(data$total,
   ylim=c(0, 1.1*max(data$total)), # I made the top of the plot a little bit larger than the largest value
   xlab="Year",
   ylab="Total Stop and Frisks",
-  main="Stop and Frisks for African Americans Over Time",
-  xaxt="n"
+  main="Stop and Frisks for African Americans Over Time"
+  ,xaxt="n"
 )
 
 # additional plot elements
@@ -144,7 +147,7 @@ par(mfrow=c(1,1))
 Louise <- c(.25,0.75,2.5,1.0,.05,2.0)
 Louise_color <- c("black", "burlywood1", "darkolivegreen3", "burlywood1", "black", "pink")
 barplot(Louise)
-barplot(matrix(Louise))
+barplot(matrix(Louise), beside=FALSE)
 barplot(matrix(Louise), col=c(Louise_color), xlim=c(0,5), width=1)
 
 Gene <- c(.15,.15,0.85,1.0,2.0,1.25,1.0)
@@ -558,5 +561,103 @@ text(16, 12.00, labels=substitute(mu==mu.final, list(mu.final=mu.final)), cex=1.
 
 mu.final <- mean(na.omit(comps$dew))
 text(16, 11.5, labels=substitute(mu==mu.final, list(mu.final=mu.final)), cex=1.00, col=3, font=2)
+
+
+
+## more examples
+#install.packages("HistData")
+library(HistData)
+data(Minard.troops, package="HistData")
+
+COLOR <- ifelse(as.character(Minard.troops$direction)=="A", "#E8CBAB", "#1F1A1B")
+SCALE <- findInterval(Minard.troops$survivors, quantile(Minard.troops$survivors,seq(.1,1,.1)))
+#SCALE <- log(Minard.troops$survivors)
+
+dev.off()
+plot(x=Minard.troops$long, y=Minard.troops$lat, type="n", )
+
+for(i in (nrow(Minard.troops)-1):1){
+  lines(x=c(Minard.troops$long[i],Minard.troops$long[i+1]), y=c(Minard.troops$lat[i], Minard.troops$lat[i+1]), col=COLOR[i], lwd=SCALE[i])
+}
+
+
+##
+min_max <- function(x){
+  return((x - min(x))/(max(x) - min(x)))
+}
+
+linear_loss_strength_gradient_func <- function(x, D=21000){
+  return((D-x)/D)
+}
+
+inverse_loss_strength_gradient_func <- function(x){
+  return(1/x)
+}
+
+inverse_log_loss_strength_gradient_func <- function(x){
+  value <- 1/log(x)
+  value <- ifelse((1/log(x))>=1, 1, 1/log(x))
+  return(value)
+}
+
+exp_decay_loss_strength_gradient_func <- function(x, degree=21000){
+  return(exp(-x/degree))
+}
+
+## approximate max distance
+2*pi*6378.137
+
+distance <- 1:20000
+#distance
+
+degree_values <- c(100, 500, seq(1000, 41000, 2000), 10000)
+degree_values <- sort(degree_values)
+
+exp_decay_loss_strength_gradient_func(x=distance, degree=10000)
+
+mat_values <- matrix(NA, nrow=length(distance), ncol=length(degree_values))
+
+for(i in 1:length(degree_values)){
+  mat_values[,i] <- exp_decay_loss_strength_gradient_func(x=distance, degree=degree_values[i])
+}
+
+#par(mfrow=c(1,1))
+#contour(x=distance, y=degree_values, mat_values)
+
+par(mfrow=c(1,1), mar=c(5,4.4,3,1.5), cex.main=1.5)
+plot(y=mat_values[,1], x=distance, type="n", ylim=c(0,1), xlim=c(0,21500),main="Loss of Strength Gradients by Degree Parameter (km)", ylab="", xlab="", las=2, xaxt="n")
+for(i in 1:length(degree_values)){
+  lines(y=mat_values[,i], x=distance, col=grey(.5), lwd=.75)
+}
+lines(y=exp_decay_loss_strength_gradient_func(x=distance, degree=10000), x=distance, col="#1b7837", lwd=3)
+lines(y=inverse_log_loss_strength_gradient_func(distance),  x=distance, col="#762a83", lwd=3)
+lines(y=inverse_loss_strength_gradient_func(distance),  x=distance, col=grey(.5), lwd=3)
+
+text(x=21550, y=mat_values[nrow(mat_values),-(1:3)], labels=degree_values[-(1:3)], cex=.65)
+text(x=1000, y=0.0075, labels=100, cex=.65)
+text(x=3500, y=0.0075, labels=500, cex=.65)
+text(x=7500, y=0.0075, labels=2500, cex=.65)
+mtext(text="Distance (km)", side=1, line=3.9, cex=1.5)
+mtext(text="Degree Parameter (km)", side=4, line=0.2, cex=1.5, at=.25)
+mtext(text="Percentage of Power Remaining", side=2, line=2.9, cex=1.5)
+axis(side=1, at=c(0,2500,5000,7500,10000,12500,15000,17500,20000), las=1)
+box()
+COLOR_LEGEND <- c("#1b7837", "#762a83", grey(.5))
+legend("topright", legend=c("exponential decay (new version)", "inverse logged (original version)", "inverse"), bty="n", col=COLOR_LEGEND, text.col=COLOR_LEGEND, text.font=2, pch=15)
+
+
+1 - mat_values[-1,1] / mat_values[-nrow(mat_values),1]
+
+
+COLOR <- rep(grey(.8), length(degree_values))
+COLOR[which(degree_values==10000)] <- "#1b7837"
+
+## degree curve
+par(mfrow=c(1,1), mar=c(5,4.4,3,1.5), cex.main=1.5)
+barplot(1 - mat_values[1001,] / mat_values[1,], names.arg=degree_values, las=2, main="Percent Decrease in Power per 1,000 km by Degree Parameter", ylim=c(0,1), col=COLOR)
+abline(h=0.1, col=2, lty=2)
+mtext(text="Degree Parameter (km)", side=1, line=3.9, cex=1.5)
+mtext(text="Rate of Change (% Change)", side=2, line=2.9, cex=1.5)
+box()
 
 
