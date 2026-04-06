@@ -33,12 +33,12 @@
 ## A good article on color systems:
 ## https://wtamu.edu/~cbaird/sq/2015/01/22/why-are-red-yellow-and-blue-the-primary-colors-in-painting-but-computer-screens-use-red-green-and-blue/
 ##
-## Notes on the efficacy of color systems:
+## Notes on the efficacy of color systems (summarized from the above source):
 ## Any color system is measured by the number of different colors that are created by combinations of the primary colors of that color system. 
 ## The set of colors is called the "color gamut" of the system. 
 ## We could estimate the probability of any combination of the set of colors in the color gamut using the probability and set theory we developed in week 9 and week 10 of the course. 
 ## Some color systems have more total possible colors than others. 
-## A color system with a large gamut (more possible combinations from the set) can more effectively represent of different colors, which are all combinations of the primary colors.
+## A color system with a large gamut (more possible combinations from the set) can more effectively represent of different colors (parts of the gamut), which are all combinations of the primary colors. "The most effective color systems are ones that closely match the human eye, i.e. color systems that mix red, green, and blue light."
 ## 
 ##########################################################################
 
