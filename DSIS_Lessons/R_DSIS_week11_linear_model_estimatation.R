@@ -539,3 +539,72 @@ inverse_logit_func(fit1$coefficients[1])
 inverse_logit_func(fit0$coefficients[1])
 
 
+
+##########################################################################
+## Apendix: 
+##distances and contour plot
+##########################################################################
+
+## create empty distance matrix
+dist_mat <- matrix(NA, nrow=10, ncol=10)
+
+dim(dist_mat)
+
+coordinate_row <- 4
+coordinate_col <- 4
+
+## nested for loop calculation 
+for(i in 1:10){
+  for(j in 1:10){
+    dist_mat[i,j] <- sqrt((i-coordinate_row)^2 + (j-coordinate_col)^2)
+  }
+}
+
+dist_mat
+
+## find the coordinates from the matrix where the minimum of the sum of square residuals resides
+coordinates <- which(dist_mat == min(dist_mat), arr.ind = TRUE)
+coordinates
+
+## these coordinates match the best estimates of the alpha and beta parameters
+parameters <- c(coordinates[1], coordinates[2])
+parameters # notice that these estimates are mch less precise than the estimates obtained below
+
+## counter plot from the brute force method (logged for visualization)
+par(mar=c(5,5,1,1))
+contour(1:10, 1:10, dist_mat, xlab="", ylab="", cex.lab=1.5)
+abline(v=parameters[1], col=2, lwd=2)
+abline(h=parameters[2], col=2, lwd=2)
+points(parameters[1], parameters[2], col=1, pch="0")
+points(parameters[1], parameters[2], col=2, cex=1.5)
+
+
+## elementwise matrix calculation 
+coordinate_row <- 4
+coordinate_col <- 4
+mat_row_coordinates <- matrix(rep(1:10,times=10), nrow=10, ncol=10)
+mat_row_coordinates
+mat_col_coordinates <- matrix(rep(1:10,each=10), nrow=10, ncol=10) 
+mat_col_coordinates
+dist_mat <- sqrt((mat_row_coordinates - coordinate_row)^2 + (mat_col_coordinates - coordinate_col)^2)
+dist_mat
+
+par(mar=c(5,5,1,1))
+contour(1:10, 1:10, dist_mat, xlab="", ylab="", cex.lab=1.5)
+abline(v=parameters[1], col=2, lwd=2)
+abline(h=parameters[2], col=2, lwd=2)
+points(parameters[1], parameters[2], col=2, cex=3)
+
+
+
+## plots all the distances around the contours of the contour plot
+par(mar=c(5,5,1,1))
+contour(1:10, 1:10, dist_mat, xlab="", ylab="", cex.lab=1.5)
+for(i in 1:10){
+  for(j in 1:10){
+    text(x=i, y=j, labels=as.character(round(dist_mat[i,j], digits=2)))
+  }
+}
+points(parameters[1], parameters[2], col=2, cex=3)
+points(parameters[1], parameters[2], col=2, cex=16)
+
