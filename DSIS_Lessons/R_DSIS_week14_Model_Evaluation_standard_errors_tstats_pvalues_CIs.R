@@ -125,6 +125,8 @@ mean_pvalue(x) ## p-value (probability of an estimated value far away from 0; as
 x <- 1:5
 t.test(x)
 
+attributes(t.test(x))
+
 t.test(x)$estimate ## mean (estimate)
 t.test(x)$stderr ## standard error (standard deviation of the estimate)
 t.test(x)$statistic ## t-statistic (ratio of the estimate and the standard deviation of the estimate, which is interpreted as the position on a density function for the Student's t distribution or the normal distribution if it's called the z-score)
