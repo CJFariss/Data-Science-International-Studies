@@ -36,7 +36,7 @@
 ##
 ## Warning!: p-values are weird and confusing. Put another way: WTF is a p-value?
 ##
-## The p-value is a probability but it is not intuitive to think about. Even though p-values are confusing, they are used everywhere so we should try to understand what a p-value means and what it does not mean.
+## The p-value is a probability but it is not intuitive to think about. Even though p-values are confusing, they are used everywhere so we should try to understand what a p-value means and what it does not mean. The confusion arises from how we interpret the p-value as a probability. The intuitive interpretation is usually incorrect. And the correct interpretation is rather unintuitive.
 ##
 ## First, to calculate a p-value, we need to first calculate the estimate of interest (e.g., mean, correlation coefficient, regression coefficient). Remember the mean or any other estimate is our representation or summary of our data. Conceptually, we think of the true value of the parameter we are interested in as unobservable so it's theoretical/conceptual in nature. We call this the estimand or sometimes the population parameter (there are lots of ways to denote this idea). We cannot observe this entity but we can estimate it.
 ##
@@ -161,7 +161,7 @@ curve(expr=dt(x,df=length(x)), from=-6,to=6, n=101, xlab="t-statistic")
 abline(v=mean(x)/mean_se(x), col=2)
 
 ## 95% CI (this is wrong)
-## note to FARISS describe why this is a common mistake
+## this is a common mistake: 1.96 is a useful number only for sample sizes approximately larger than 1000.
 t.test(x)$estimate + 1.96*t.test(x)$stderr
 t.test(x)$estimate - 1.96*t.test(x)$stderr
 
@@ -288,8 +288,12 @@ table(test_CI_MU)
 ## So what does this all tell us? Essentially, if the CI contains 0, then the "true" estimate could also be 0 which is why choose to not claim a relationship is different from 0 (i.e., we fail to reject the null hypothesis).
 
 
+
+##########################################################################
+## Appendix
 ## Here, we will use the round function to determine how many digits the test above is TRUE before becoming FALSE
 ## THIS IS JUST FOR FUN!
+##########################################################################
 significant_digit <- 0
 test <- TRUE
 repeat{
