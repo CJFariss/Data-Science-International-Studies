@@ -210,7 +210,7 @@ t.test(x)$estimate - t.test(x)$statistic*t.test(x)$stderr
 
 
 ## set the parameters for a small simulation: sample size, mean, standard deviation
-sim_n <- 10
+sim_n <- 30
 MU <- .75
 SD <- 1
 
@@ -274,7 +274,7 @@ plot(test_CI_diff, test_se)
 plot(test_CI_diff, test_t)
 plot(test_CI_diff, test_p)
 
-## plot all the CIs from the simulation
+## plot all the CIs from the simulation that do and do not contain the "true" estimate
 par(mfrow=c(1,1), mar=c(4,4,1,1))
 plot(test_CI[[1]], c(1,1), xlim=c(-2,2), ylim=c(0,length(test_CI)), type="n")
 for(i in 1:length(test_CI)){
@@ -285,8 +285,48 @@ abline(v=MU, col=2)
 ## the CI generating procedure always produces intervals that contain the "true" estimate 95% or X%of the time.
 table(test_CI_MU)
 
+
+## plot all the CIs from the simulation that do and do not contain an estimate of 0
+par(mfrow=c(1,1), mar=c(4,4,1,1))
+plot(test_CI[[1]], c(1,1), xlim=c(-2,2), ylim=c(0,length(test_CI)), type="n")
+for(i in 1:length(test_CI)){
+  lines(test_CI[[i]], c(i,i), col=ifelse(test_CI_0[i], grey(.8),1), lwd=0.5)
+}
+abline(v=0, col=2)
+table(test_CI_0)
+
 ## So what does this all tell us? Essentially, if the CI contains 0, then the "true" estimate could also be 0 which is why choose to not claim a relationship is different from 0 (i.e., we fail to reject the null hypothesis).
 
+##########################################################################
+## Appendix:
+## difference in means simulation
+##########################################################################
+sim_n <- 300
+
+x_3 <- rnorm(sim_n, mean=3, sd=1)
+x_pi <- rnorm(sim_n, mean=pi, sd=1)
+
+
+mean(x_pi)
+mean_se(x_pi)
+mean(x_3)
+mean_se(x_3)
+
+##
+mean(x_pi) - mean(x_3)
+
+##
+par(mfrow=c(2,1))
+truehist(x_pi, col=grey(.98), xlim=c(0,6))
+abline(v=pi, col=2, lwd=2)
+abline(v=mean(x_pi), col=4, lwd=2)
+
+truehist(x_3, col=grey(.98), xlim=c(0,6))
+abline(v=3, col=2, lwd=2)
+abline(v=mean(x_3), col=4, lwd=2)
+
+##
+t.test(x_pi - x)
 
 
 ##########################################################################
