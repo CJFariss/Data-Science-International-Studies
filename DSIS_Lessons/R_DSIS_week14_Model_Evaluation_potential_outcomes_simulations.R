@@ -96,6 +96,7 @@ summary(fit)
 summary(fit)$coefficient[2,1] + summary(fit)$coefficient[1,1]
 
 ## Graph observed subject values by treatment indicator
+par(mfrow=c(1,1))
 plot(c(Y_obs_i[W_i==0], Y_obs_i[W_i==1]), col=c(W_i[W_i==0], W_i[W_i==1])+1)
 abline(h=mean(Y_obs_i[W_i==1]), col=grey(.9), lwd=2)
 abline(h=mean(Y_obs_i[W_i==0]), col=grey(.9), lwd=2)

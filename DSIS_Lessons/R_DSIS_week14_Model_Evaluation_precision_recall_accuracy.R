@@ -69,7 +69,7 @@ beta <- 1
 
 ## multiply alpha by beta (if its 0 it doesn't matter and the proportion of 1s and 0s is always 50/50).
 ## This is useful for illustrative purposes (see R_Demo_Measurement_latent_variable.R file for more information about the logit transformation of a continuous predictor variable)
-alpha <- -1.5*beta
+alpha <- 1.5*beta
 
 ## generate probabilities using the inverse logit function
 prob_y_true <- inv.logit(alpha + beta*x + rnorm(n))
@@ -81,17 +81,18 @@ y <- rbinom(1:n, size=1, prob=prob_y_true)
 
 table(y)
 
-## fit a logistic regression and estimate the probabity of y
+## fit a logistic regression and estimate the probability of y
 fit <- glm(y ~ x, family=binomial("logit"))
 prob_y <- predict(fit, type="response")
 
 summary(prob_y)
 
 cor(prob_y_true, prob_y)
+plot(prob_y_true, prob_y)
 
 ## though we know the true probability, but we can only estimate the probability with observed data
 ## use the estimated probability to generate binary predictions at a discrimination threshold, often called pi or theta
-threshold <- 0.5
+threshold <- 0.75
 y_hat <- ifelse(prob_y > threshold , 1, 0)
 
 table(y)
@@ -146,7 +147,7 @@ recall <- (TP) / (TP + FN)
 recall
 
 ## precision
-## this is equivalent to the proportion of true positives by all positive predicitions
+## this is equivalent to the proportion of true positives by all positive predictions
 ## if precision is low, there is a high false positive rate
 ## if precision is high, there is a low false positive rate
 precision <- (TP) / (TP + FP)

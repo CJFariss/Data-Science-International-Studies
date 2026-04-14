@@ -328,8 +328,30 @@ abline(v=3, col=2, lwd=2)
 abline(v=mean(x_3), col=4, lwd=2)
 
 ##
-t.test(x_pi - x)
+t.test(x_pi - x_3)
 
+
+## simulation
+sim_n <- seq(10,1000,1)
+sim_m <- 1000
+
+out_t <- out_p <- matrix(NA, nrow=length(sim_n), ncol=sim_m)
+for(i in 1:length(sim_n)){
+  for(j in 1:sim_m){
+    x_3 <- rnorm(sim_n[i], mean=3, sd=1)
+    x_pi <- rnorm(sim_n[i], mean=pi, sd=1)
+    #t.test(x_pi - x)
+    out_t[i,j] <- t.test(x_pi - x_3)$statistic
+    out_p[i,j] <- t.test(x_pi - x_3)$p.value
+  }
+}
+
+par(mfrow=c(1,1))
+plot(y=apply(out_t, 1, mean), x=sim_n)
+plot(y=apply(out_p, 1, mean), x=sim_n)
+abline(h=0.05, col=2)
+
+plot(y=apply(out_p, 1, mean), x=apply(out_t, 1, mean))
 
 ##########################################################################
 ## Appendix
