@@ -60,15 +60,15 @@ plot(x, col=3)
 ##########################################################################
 
 ## using the base pipe operator
-x <- rnorm(SIMS) |>
+x <- rnorm(SIMS*2) |>
   matrix(ncol = 2)
-x <- rnorm(SIMS) |> matrix(ncol = 2)
+x <- rnorm(SIMS*2) |> matrix(ncol = 2)
 
 ## plot the 2 columns in the x matrix
 plot(x, col=4)
 
 ## do everything at once and don't save the x matrix using the base pipe operator
-rnorm(SIMS) |>
+rnorm(SIMS*2) |>
   matrix(ncol = 2) |>
   plot(col=1) 
 
@@ -78,20 +78,33 @@ rnorm(SIMS) |>
 ##########################################################################
 
 ## using the tidyverse operator
-x <- rnorm(SIMS) %>%
+x <- rnorm(SIMS*2) %>%
     matrix(ncol = 2)
 ## plot the 2 columns in the x matrix
 plot(x, col=5)
 
 ## do everything at once and don't save the x matrix using the tidyverse pipe operator
-rnorm(SIMS) %>%
+rnorm(SIMS*2) %>%
   matrix(ncol = 2) %>%
   plot(col=6) 
 
 
-x <- rnorm(SIMS)
-x <-  matrix(x, ncol = 2)
-plot(x, col=6) 
+
+##
+rnorm(SIMS*2) |>
+  matrix(ncol = 2) |>
+  plot(col=1) 
+
+x <- rnorm(SIMS*2) |>
+  matrix(ncol = 2)
+plot(x, col=1) 
+
+
+x <- rnorm(SIMS*2)
+x <- matrix(x, ncol = 2)
+plot(x, col=1) 
+
+
 
 
 
